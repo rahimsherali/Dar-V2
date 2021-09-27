@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Dashboard</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
+              rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="assets/css/material-icons.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="assets/css/fontawesome.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="assets/vendor/spinkit.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/preloader.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="assets/css/app.css"
+              rel="stylesheet">
+
+        <!-- Dark Mode CSS (optional) -->
+        <link type="text/css"
+              href="assets/css/dark-mode.css"
+              rel="stylesheet">
+
+        <!-- Vector Maps -->
+        <link type="text/css"
+              href="assets/vendor/jqvmap/jqvmap.min.css"
+              rel="stylesheet">
+<Style>
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.5rem + 2px);}
+    
+    .navbar-nav .nav-link {
+    font-size: 0.9rem;}
+    .vl {
+  border-left: 1px solid #e8e8e8;
+  height: 30px;
+}
+.sidebar-brand-icon {
+    display: flex;
+    width: 70%;
+    height: auto;
+}
+[dir] .sidebar-light .open>.sidebar-menu-button {
+    background: #00a650;
+}
+.sidebar-light .open>.sidebar-menu-button, .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+    color: #ffffff;
+}
+.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+    color: #ffffff;
+}
+.leftMenu{
+   
+    margin: 5px 10px;
+    border-radius: 6px !important;
+    background: #a39161 !important;
+    color: white;
+    border-color: #a39161 !important;
+    padding: 5px 0px !important;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sidebar-heading {
+    line-height: 1.5rem;
+    font-size: .775rem;
+}
+.sidebar-heading {
+    font-weight: 600;
+    font-family: Arial, sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0px !important;
+}
+[dir] .card-header {
+    padding: 0.3rem 1rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+.activemenu {
+    background: #00a650 !important;
+    color: white !important;
+}
+.form-label {
+    color: #272c33;
+    text-transform: capitalize;
+    font-size: .8125rem;
+    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+label.form-label {
+    margin-bottom: 0rem;
+    margin-top: 4px;
+}
+.custom-control.custom-checkbox {
+    width: auto;
+    display: inline-table;
+}
+[dir] .custom-file-label:after {
+    padding: .5rem .75rem;
+    background-color: #00a650;
+}
+div#app-settings {
+    display: none;
+}
+.table thead th {
+    color: #272c33;
+    text-transform: capitalize;
+    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+[dir=ltr] .button-list>.btn, [dir=ltr] .button-list>.btn-group {
+    margin-left: 0rem;
+}
+
+[dir] .button-list>.btn, [dir] .button-list>.btn-group {
+    margin-bottom: 0rem;
+}
+.Tablebtn {
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .2rem .5rem !important;
+    border-radius: .25rem;}
+    .modal-backdrop.show {
+    opacity: 1;
+    display: none;
+}
+.reviewForm{
+   
+    margin-left: 20px;
+    font-size: initial;
+}
+.retable {
+    border: 1px solid #c3c4c5;
+    padding: 4px 0px;
+}
+li.sidebar-menu-item.open {
+    background: #f5f7fa;
+}
+    </Style>
+    </head>
+
+    <body class="layout-app layout-sticky-subnav ">
+
+   
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- Header -->
+
+                <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body"
+                     id="default-navbar"
+                     data-primary>
+
+                    <!-- Navbar toggler -->
+                    <button class="navbar-toggler d-block d-lg-none rounded-0"
+                            type="button"
+                            data-toggle="sidebar">
+                        <span class="material-icons">menu</span>
+                    </button>
+
+                    <!-- Navbar Brand -->
+                    <a href="index.html"
+                       class="navbar-brand mr-16pt d-lg-none">
+                        <img class="navbar-brand-icon mr-0 mr-lg-8pt"
+                             src="assets/images/Logo.svg"
+                             width="32"
+                             alt="Huma">
+                       
+                    </a>
+
+                    <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+
+                    <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;"
+                          action="https://huma.demo.frontendmatter.com/index.html">
+                        
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search Everything ...">
+                               <button class="btn"
+                                type="submit"><i class="material-icons">search</i></button>
+                    </form>
+
+                    <div class="flex"></div>
+
+                    <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
+                         style="white-space: nowrap;">
+                        <div class="nav-item dropdown d-none d-sm-flex">
+                            <a href="#"
+                               class="nav-link dropdown-toggle"
+                               data-toggle="dropdown">EN</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Select language</strong></div>
+                                <a class="dropdown-item active"
+                                   href="#">English</a>
+                                <a class="dropdown-item"
+                                   href="#">عربي</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vl mr-16pt"></div>
+                    <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                        <div class="nav-item mr-16pt dropdown dropdown-notifications">
+                            <button class="nav-link btn-flush dropdown-toggle"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    data-dropdown-disable-document-scroll
+                                    data-caret="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="badge badge-notifications badge-accent">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar
+                                     class="position-relative">
+                                    <div class="dropdown-header"><strong>System notifications</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">3 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 hours ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Adrian. D</strong>
+                                                    <span class="text-black-70">Wants to join your private group.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">1 day ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your deploy was successful.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vl mr-16pt" style="margin-top: 16px;"></div>
+                        <div class="nav-item dropdown d-none d-sm-flex">
+                            <a href="#"
+                               class="nav-link d-flex align-items-center dropdown-toggle"
+                               data-toggle="dropdown">
+                                <img width="32"
+                                     height="32"
+                                     class="rounded-circle mr-8pt"
+                                     src="assets/images/people/50/guy-3.jpg"
+                                     alt="account" />
+                                <span class="flex d-flex flex-column mr-8pt">
+                                    <span class="navbar-text-100">Laza Bogdan</span>
+                                    <small class="navbar-text-50">Administrator</small>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item"
+                                   href="edit-account.html">Edit Account</a>
+                                
+                                <a class="dropdown-item"
+                                   href="login.html">Logout</a>
+                            </div>
+                        </div>
+
+                        <!-- Notifications dropdown -->
+                       
+                        <!-- // END Notifications dropdown -->
+
+                        <!-- Notifications dropdown -->
+                       
+                        <!-- // END Notifications dropdown -->
+                    </div>
+
+                   
+
+                </div>
+
+
+
+                <div class="container-fluid page__container">
+                    <div class="page-section">
+
+                     
+
+                        
+                        <div class="row d-none" id="Mydiv">
+                
+                            <div class="col-sm-12 col-md-12">
+                                <div class="card" >
+                
+                                    <div class="card-header">
+                                           <h3 style="margin-bottom: 0rem;">Receiving a Child – Drop Child</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-row">
+                                            <div class=" col-md-6 col-sm-12">
+                                                <label class="form-label">Allocation House</label>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                                                    <label for="customCheck01" class="custom-control-label">Dz House</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                                                    <label for="customCheck02" class="custom-control-label">External House</label>
+                                                </div>
+                                            </div>
+                                            <div class=" col-md-6 col-sm-12">
+                                                <label class="form-label">Type Of Receiving</label>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                                                    <label for="customCheck01" class="custom-control-label">Pick UP</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                                                    <label for="customCheck02" class="custom-control-label">Drop Child</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class=" col-md-4 col-sm-12">
+                                                <label class="form-label">Date And Time</label>
+                                                <input type="text" class="form-control"  placeholder="Date And Time"   >
+                                                
+                                            </div>
+                                            <div class=" col-md-4 col-sm-12">
+                                                <label class="form-label" >Who Drop Child</label>
+                                                <input type="text" class="form-control"  placeholder="Select"   >
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class=" col-md-4 col-sm-12">
+                                                <label class="form-label">Person Name</label>
+                                                <input type="text" class="form-control"  placeholder="Person Name"   >
+                                                
+                                            </div>
+                                            <div class=" col-md-4 col-sm-12">
+                                                <label class="form-label">Person Contact No</label>
+                                                <input type="text" class="form-control"  placeholder="Person Contact No"   >
+                                            </div>
+                                            <div class=" col-md-4 col-sm-12">
+                                                <label class="form-label">Upload Documents</label>
+                                                <div class="custom-file">
+                                                    <input type="file" id="file1" class="custom-file-input">
+                                                    <label for="file" class="custom-file-label">Choose file</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class=" col-md-4 col-sm-12">
+                                                <label class="form-label">Date of Enrollment</label>
+                                                <input type="text" class="form-control"  placeholder="Time and Date"   >
+                                                
+                                            </div>
+                                            <div class=" col-md-4 col-sm-12">
+                                                <label class="form-label">Assign Department/section</label>
+                                                <input type="text" class="form-control"  placeholder="Department/section"   >
+                                            </div>
+                                        
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card-footer" style="text-align: end;">
+                                        <button type="button" class="btn btn-accent btn-rounded" style="background-color: #00a650;
+                                        border-color: #00a650;">Submit</button>
+                                        <button type="button" class="btn btn-accent btn-rounded" id="close" style="background-color: #ed1c24;
+                                        border-color: #ed2129;">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        <div class="card mb-lg-32pt">
+<div class="card-header">
+<div class="row">
+    <div class="col-md-9 col-sm-12"><h3 style="margin-bottom: 0px;">Receiving a Child</h3></div>
+    <div class="col-md-3 col-sm-12"><button type="button" class="btn btn-outline-accent" id="child" style="visibility: hidden;    width: 100%;">Receiving a Child </button></div>
+</div>
+</div>
+            <div class="table-responsive"
+                 data-toggle="lists"
+                 data-lists-sort-by="js-lists-values-employee-name"
+                 data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
+
+                <div class="card-header">
+                    <form class="form-inline">
+                        <label class="mr-sm-2 form-label"
+                               for="inlineFormFilterBy">Filter by:</label>
+                        <input type="text"
+                               class="form-control search mb-2 mr-sm-2 mb-sm-0"
+                               id="inlineFormFilterBy"
+                               placeholder="Search ...">
+
+                        <label class="sr-only"
+                               for="inlineFormRole">Role</label>
+                        <select id="inlineFormRole"
+                                class="custom-select mb-2 mr-sm-2 mb-sm-0">
+                            <option value="All Roles">All Roles</option>
+                        </select>
+
+                     
+
+                        <!-- <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+<input type="checkbox" class="custom-control-input" id="inlineFormPurchase">
+<label class="custom-control-label" for="inlineFormPurchase">Made a Purchase?</label>
+</div> -->
+                    </form>
+                </div>
+
+                <table class="table mb-0 thead-border-top-0 table-nowrap">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                <a href="javascript:void(0)"
+                                   class="sort"
+                                   data-sort="js-lists-values-employee-name">Person Name</a>
+                            </th>
+
+                            <th style="width: 200px;">
+                                <a href="javascript:void(0)"
+                                   class="sort"
+                                   data-sort="js-lists-values-employer-name">Date And Time</a>
+                            </th>
+
+                            <th class="text-center"
+                                style="width: 100px;">
+                                <a href="javascript:void(0)"
+                                   class="sort"
+                                   data-sort="js-lists-values-projects">Who Drop Child</a>
+                            </th>
+
+                            <th style="width: 60px;">Type Of Receiving</th>
+
+                            <th style="width: 120px;">
+                                <a href="javascript:void(0)"
+                                   class="sort"
+                                   data-sort="js-lists-values-activity">Person Contact No</a>
+                            </th>
+                            <th style="width: 150px;">
+                                <a href="javascript:void(0)"
+                                   class="sort"
+                                   data-sort="js-lists-values-earnings">Action</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="list"
+                           id="staff">
+
+                        <tr class="selected">
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;">
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Noshad</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">1</td>
+
+                            <td>
+                                None
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">Yes</td>
+                            <td class="js-lists-values-earnings small">
+                                <div class="button-list">
+                                    
+                                    
+                                    <button type="button" class="btn btn-accent Tablebtn">
+                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
+                                    </button>
+                                   
+                                   
+                                </div>
+                            </td>
+                           
+                        </tr>
+                        
+                        <tr class="">
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;">
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Azlal Ahmed</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">1</td>
+
+                            <td>
+                                None
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">Yes</td>
+                            <td class="js-lists-values-earnings small">
+                                <div class="button-list">
+                                    
+                                  
+                                    <button type="button" class="btn btn-accent Tablebtn">
+                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
+                                    </button>
+                                   
+                                   
+                                </div>
+                            </td>
+                           
+                        </tr>
+
+                        <tr class="selected">
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;">
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Rahim</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">1</td>
+
+                            <td>
+                                None
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">Yes</td>
+                            <td class="js-lists-values-earnings small">
+                                <div class="button-list">
+                                    
+                                   
+                                    <button type="button" class="btn btn-accent Tablebtn">
+                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
+                                    </button>
+                                   
+                                   
+                                </div>
+                            </td>
+                           
+                        </tr>
+                        
+                        <tr class="">
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;">
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Atif</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="#"
+                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
+                                </div>
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">1</td>
+
+                            <td>
+                                None
+                            </td>
+
+                            <td class="text-50 js-lists-values-activity small">Yes</td>
+                            <td class="js-lists-values-earnings small">
+                                <div class="button-list">
+                                    
+                                   
+                                    <button type="button" class="btn btn-accent Tablebtn">
+                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
+                                    </button>
+                                   
+                                   
+                                </div>
+                            </td>
+                           
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-footer p-8pt">
+
+                <ul class="pagination justify-content-start pagination-xsm m-0">
+                    <li class="page-item disabled">
+                        <a class="page-link"
+                           href="#"
+                           aria-label="Previous">
+                            <span aria-hidden="true"
+                                  class="material-icons">chevron_left</span>
+                            <span>Prev</span>
+                        </a>
+                    </li>
+                    <li class="page-item dropdown">
+                        <a class="page-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#"
+                           aria-label="Page">
+                            <span>1</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#"
+                               class="dropdown-item active">1</a>
+                            <a href="#"
+                               class="dropdown-item">2</a>
+                            <a href="#"
+                               class="dropdown-item">3</a>
+                            <a href="#"
+                               class="dropdown-item">4</a>
+                            <a href="#"
+                               class="dropdown-item">5</a>
+                        </div>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="#"
+                           aria-label="Next">
+                            <span>Next</span>
+                            <span aria-hidden="true"
+                                  class="material-icons">chevron_right</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- <div class="card-body bordet-top text-right">
+15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+</div> -->
+
+        </div>
+
+                       
+
+                       
+
+                    </div>
+                </div>
+
+                <div class="js-fix-footer footer border-top-2">
+                    <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
+                        <p class="measure-lead-max text-muted mb-0 small">
+                            Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <!-- // END drawer-layout__content -->
+
+            <!-- drawer -->
+            <div class="mdk-drawer js-mdk-drawer"
+                 id="default-drawer">
+                <div class="mdk-drawer__content">
+                    <div class="sidebar sidebar-light sidebar-left"
+                         data-perfect-scrollbar>
+
+                        <!-- Navbar toggler -->
+                        <a href="index - Copy.html"
+                           class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0"
+                           data-toggle="tooltip"
+                           data-title="Switch to Compact Vertical Layout"
+                           data-placement="right"
+                           data-boundary="window">
+                            <span class="material-icons">sync_alt</span>
+                        </a>
+
+                        <a href="index.html"
+                           class="sidebar-brand ">
+                            <img class="sidebar-brand-icon"
+                                 src="assets/images/logo/Logo.png"
+                                 alt="Huma">
+                        
+                        </a>
+                        <div class="sidebar-heading">Overview</div>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                                   href="index - Copy.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
+                                    <span class="sidebar-menu-text">Dashboard</span>
+                                </a>
+                            </li>
+                       
+
+                       
+
+                        
+                      
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                   data-toggle="collapse"
+                                   href="#dashboards_menu">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+                                    Application Catalog
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent"
+                                    id="dashboards_menu">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button"
+                                           href="Childcare.html">
+                                            <span class="sidebar-menu-text">Child Care</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Correspondence</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Budget and Planning</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Facility Maintenance</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Mainpower</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Customer Support</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Performance Management</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                            <li>
+                                
+                        <div class="sidebar-heading mt-3">Child Care Management</div>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                                 data-toggle="collapse"
+                                   href="Childcare.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span>
+                                    Dashboard
+                                
+                                </a>
+                            </li>
+                            <!-- <li class="sidebar-menu-item activemenu">
+                                <a class="sidebar-menu-button activemenu"
+                               
+                                   href="Registrachild.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">donut_large</span>
+                                   Registering a Case
+                                   
+                                </a>
+                            
+                            </li> -->
+                            <li class="sidebar-menu-item open">
+                                <a class="sidebar-menu-button activemenu"
+                                   data-toggle="collapse"
+                                   href="#dashboards_menu1">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu" >link</span>
+                                    Registering a Case
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent"
+                                    id="dashboards_menu1">
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button"
+                                           href="Registrachild.html">
+                                            <span class="sidebar-menu-text">Child registration</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item  active">
+                                        <a class="sidebar-menu-button"
+                                           href="ReceivingaChild.html">
+                                            <span class="sidebar-menu-text">Receiving a Child</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="Childallocation.html">
+                                            <span class="sidebar-menu-text">Child allocation</span>
+                                        </a>
+                                    </li>
+                                   
+                                   
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                               
+                                   href="IdentityManagement.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
+                                  Identity Management
+                                   
+                                </a>
+                                
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                
+                                   href="#">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
+                                    Development Plan
+                                
+                                </a>
+                            </li>
+                             <!-- <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                  
+                                   href="House.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">developer_board</span>
+                                   House Registration
+                                   
+                                </a>
+                            
+                            </li> -->
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                                   data-toggle="collapse"
+                                   href="#dashboards_menu2">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
+                                    House Registration
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent"
+                                    id="dashboards_menu2">
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button"
+                                           href="House.html">
+                                            <span class="sidebar-menu-text">Register House</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="HouseAppliance.html">
+                                            <span class="sidebar-menu-text">Appliance Master</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="HouseService.html">
+                                            <span class="sidebar-menu-text">Service Providers</span>
+                                        </a>
+                                    </li>
+                                   
+                                   
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                           
+                                   href="#">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
+                                   Educational Management
+                                   
+                                </a>
+                                
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                            
+                                   href="#">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
+                                    Psychological Management
+                                
+                                </a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                   
+                                   href="#">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
+                                   Talent Management
+                                   
+                                </a>
+                            
+                            </li>
+                        </ul>
+                            </li>
+                        </ul>
+                        <div class="sidebar-heading">Bussiness Support services</div>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- // END drawer -->
+        </div>
+        <!-- // END drawer-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="app"
+                          :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }"
+                          sidebar-type="light"
+                          sidebar-variant="bg-body"></app-settings>
+        </div>
+        <!-- jQuery -->
+        <script src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="assets/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="assets/js/app.js"></script>
+
+        <!-- Highlight.js -->
+        <script src="assets/js/hljs.js"></script>
+
+        <!-- Global Settings -->
+        <script src="assets/js/settings.js"></script>
+
+        <!-- Flatpickr -->
+        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/js/flatpickr.js"></script>
+
+        <!-- Moment.js -->
+        <script src="assets/vendor/moment.min.js"></script>
+        <script src="assets/vendor/moment-range.js"></script>
+
+        <!-- Chart.js -->
+        <script src="assets/vendor/Chart.min.js"></script>
+        <script src="assets/js/chartjs.js"></script>
+
+        <!-- Chart.js Samples -->
+        <script src="assets/js/page.analytics-dashboard.js"></script>
+
+        <!-- Vector Maps -->
+        <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="assets/js/vector-maps.js"></script>
+
+        <!-- List.js -->
+        <script src="assets/vendor/list.min.js"></script>
+        <script src="assets/js/list.js"></script>
+
+        <!-- Tables -->
+        <script src="assets/js/toggle-check-all.js"></script>
+        <script src="assets/js/check-selected-row.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+
+        <script>
+            $("#child").click(function(){
+                if($("#Mydiv").hasClass("d-none")){
+
+                    $("#Mydiv").removeClass("d-none")
+                }
+                else
+                {
+                    $("#Mydiv").addClass("d-none")
+                }
+            
+            });
+
+        </script>
+         <script>
+            $("#close").click(function(){
+                
+                $("#Mydiv").addClass("d-none")
+            });
+
+        </script>
+         <script>
+            $("#EditChlid").click(function(){
+                
+                $("#Mydiv").removeClass("d-none")
+            });
+
+        </script>
+    </body>
+
+
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:44:15 GMT -->
+</html>

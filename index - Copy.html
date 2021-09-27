@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Dashboard</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
+              rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="assets/css/material-icons.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="assets/css/fontawesome.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="assets/vendor/spinkit.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/preloader.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="assets/css/app.css"
+              rel="stylesheet">
+
+        <!-- Dark Mode CSS (optional) -->
+        <link type="text/css"
+              href="assets/css/dark-mode.css"
+              rel="stylesheet">
+
+        <!-- Vector Maps -->
+        <link type="text/css"
+              href="assets/vendor/jqvmap/jqvmap.min.css"
+              rel="stylesheet">
+              <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<Style>
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.5rem + 2px);}
+    
+    .navbar-nav .nav-link {
+    font-size: 0.9rem;}
+    .vl {
+  border-left: 1px solid #e8e8e8;
+  height: 30px;
+}
+.sidebar-brand-icon {
+    display: flex;
+    width: 70%;
+    height: auto;
+}
+[dir] .sidebar-light .open>.sidebar-menu-button {
+    background: #00a650;
+}
+.sidebar-light .open>.sidebar-menu-button, .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+    color: #ffffff;
+}
+.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+    color: #ffffff;
+}
+.leftMenu{
+   
+    margin: 5px 10px;
+    border-radius: 6px !important;
+    background: #a39161 !important;
+    color: white;
+    border-color: #a39161 !important;
+    padding: 5px 0px !important;
+    font-size: 15px;
+    font-weight: 500;
+}
+.sidebar-heading {
+    line-height: 1.5rem;
+    font-size: .775rem;
+}
+.sidebar-heading {
+    font-weight: 600;
+    font-family: Arial, sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0px !important;
+}
+[dir] .card-header {
+    padding: 0.3rem 1rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+div#app-settings {
+    display: none;
+}
+
+.box > .icon { text-align: center; position: relative; }
+.box > .icon > .image {     position: relative;
+    z-index: 2;
+    margin: auto;
+    width: 50px;
+    height: 51px;
+    border: 7px solid white;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #00a650;
+    vertical-align: middle;}
+.box > .icon:hover > .image { background: #333; }
+.box > .icon > .image > i { font-size: 15px !important; color: #fff !important; }
+.box > .icon:hover > .image > i { color: white !important; }
+.box > .icon > .info { margin-top: -13px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 0px 0; }
+.box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
+.box > .icon > .info > h3.title { font-family: "Roboto",sans-serif !important; font-size: 11px; color: #222; font-weight: 500; }
+.box > .icon > .info > p { font-family: "Roboto",sans-serif !important; font-size: 13px; color: #666; line-height: 1.5em; margin: 20px;}
+.box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
+.box > .icon > .info > .more a { font-family: "Roboto",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+.box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
+.box .space { height: 30px; }
+    </Style>
+    </head>
+
+    <body class="layout-app layout-sticky-subnav ">
+
+   
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- Header -->
+
+                <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body"
+                     id="default-navbar"
+                     data-primary>
+
+                    <!-- Navbar toggler -->
+                    <button class="navbar-toggler d-block d-lg-none rounded-0"
+                            type="button"
+                            data-toggle="sidebar">
+                        <span class="material-icons">menu</span>
+                    </button>
+
+                    <!-- Navbar Brand -->
+                    <a href="index.html"
+                       class="navbar-brand mr-16pt d-lg-none">
+                        <img class="navbar-brand-icon mr-0 mr-lg-8pt"
+                             src="assets/images/Logo.svg"
+                             width="32"
+                             alt="Huma">
+                       
+                    </a>
+
+                    <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+
+                    <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;"
+                          action="https://huma.demo.frontendmatter.com/index.html">
+                        
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search Everything ...">
+                               <button class="btn"
+                                type="submit"><i class="material-icons">search</i></button>
+                    </form>
+
+                    <div class="flex"></div>
+
+                    <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
+                         style="white-space: nowrap;">
+                        <div class="nav-item dropdown d-none d-sm-flex">
+                            <a href="#"
+                               class="nav-link dropdown-toggle"
+                               data-toggle="dropdown">EN</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Select language</strong></div>
+                                <a class="dropdown-item active"
+                                   href="#">English</a>
+                                <a class="dropdown-item"
+                                   href="#">عربي</a>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vl mr-16pt"></div>
+                    <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                        <div class="nav-item mr-16pt dropdown dropdown-notifications">
+                            <button class="nav-link btn-flush dropdown-toggle"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    data-dropdown-disable-document-scroll
+                                    data-caret="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="badge badge-notifications badge-accent">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar
+                                     class="position-relative">
+                                    <div class="dropdown-header"><strong>System notifications</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">3 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 hours ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Adrian. D</strong>
+                                                    <span class="text-black-70">Wants to join your private group.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">1 day ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your deploy was successful.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vl mr-16pt" style="margin-top: 16px;"></div>
+                        <div class="nav-item dropdown d-none d-sm-flex">
+                            <a href="#"
+                               class="nav-link d-flex align-items-center dropdown-toggle"
+                               data-toggle="dropdown">
+                                <img width="32"
+                                     height="32"
+                                     class="rounded-circle mr-8pt"
+                                     src="assets/images/people/50/guy-3.jpg"
+                                     alt="account" />
+                                <span class="flex d-flex flex-column mr-8pt">
+                                    <span class="navbar-text-100">Laza Bogdan</span>
+                                    <small class="navbar-text-50">Administrator</small>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item"
+                                   href="edit-account.html">Edit Account</a>
+                             
+                                <a class="dropdown-item"
+                                   href="login.html">Logout</a>
+                            </div>
+                        </div>
+
+                        <!-- Notifications dropdown -->
+                       
+                        <!-- // END Notifications dropdown -->
+
+                        <!-- Notifications dropdown -->
+                       
+                        <!-- // END Notifications dropdown -->
+                    </div>
+
+                   
+
+                </div>
+
+                <!-- // END Header -->
+
+                <div class="container-fluid page__container">
+                    <div class="page-section">
+
+                        <div class="page-separator">
+                            <div class="page-separator__text">My Dashboard</div>
+                        </div>
+                        <div class="row">
+                                
+                            <div class="col" style=" padding: 5px; ">
+                                <div class="box">							
+                                    <div class="icon">
+                                        
+                                        <div class="info" style="
+    background: #9ecbe8;     border-radius: 12px;
+">
+<div class="image" style="
+    
+    background: #a4cfe9;
+"><img src="assets/images/Childc.png" style="width: 50px;"></div>
+                                            <h3 class="title" style="
+    color: white !important;
+"><a href="#" style="
+    color: #010101;
+">Child Care</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </div> 
+                            </div>
+                            <div class="col" style=" padding: 5px; ">
+                                <div class="box">							
+                                    <div class="icon">
+                                        
+                                        <div class="info" style="
+    background: #e8abaa;     border-radius: 12px;
+">
+<div class="image" style="
+    
+    background: #e8abaa;
+"><img src="assets/images/Corspo.png" style="width: 50px;"></div>
+                                            <h3 class="title" style="
+    color: white !important;
+"><a href="#" style="
+    color: #010101;
+">Correspondence</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </div> 
+                            </div>
+                            <div class="col" style=" padding: 5px; ">
+                                <div class="box">							
+                                    <div class="icon">
+                                        
+                                        <div class="info" style="
+    background: #00a650;     border-radius: 12px;
+">
+<div class="image" style="
+    
+    background: #00a650;
+"><img src="assets/images/Log1.png" style="width: 50px;"></div>
+                                            <h3 class="title" style="
+    color: white !important;
+"><a href="#" style="
+    color: #010101;
+">Budget & Planning</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </div> 
+                            </div>
+                            <div class="col" style=" padding: 5px; ">
+                                <div class="box">							
+                                    <div class="icon">
+                                        
+                                        <div class="info" style="
+    background: #e3cca3;     border-radius: 12px;
+">
+<div class="image" style="
+    
+    background: #e3cca3;
+"><img src="assets/images/Log2.png" style="width: 50px;"></div>
+                                            <h3 class="title" style="
+    color: white !important;
+"><a href="#" style="
+    color: #010101;
+">Facility Maintenance</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </div> 
+                            </div>
+                            <div class="col" style=" padding: 5px; ">
+                                <div class="box">							
+                                    <div class="icon">
+                                        
+                                        <div class="info" style="
+    background: #a4cfe9;     border-radius: 12px;
+">
+<div class="image" style="
+    
+    background: #a4cfe9;
+"><img src="assets/images/Log3.png" style="width: 50px;"></div>
+                                            <h3 class="title" style="
+    color: white !important;
+"><a href="#" style="
+    color: #010101;
+">Mainpower</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </div> 
+                            </div>
+                            <div class="col" style=" padding: 5px; ">
+                                <div class="box">							
+                                    <div class="icon">
+                                        
+                                        <div class="info" style="
+    background: #00a650;     border-radius: 12px;
+">
+<div class="image" style="
+    
+    background: #00a650;
+"><img src="assets/images/Log4.png" style="width: 65px;"></div>
+                                            <h3 class="title" style="
+    color: white !important;
+"><a href="#" style="
+    color: #010101;
+">Customer Support</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </div> 
+                            </div>
+                            <div class="col" style=" padding: 5px; ">
+                                <div class="box">							
+                                    <div class="icon">
+                                        
+                                        <div class="info" style="
+    background: #e8abaa;     border-radius: 12px;
+">
+<div class="image" style="
+    
+    background: #e8abaa;
+"><img src="assets/images/Log5.png" style="width: 48px;"></div>
+                                            <h3 class="title" style="
+    color: white !important;
+"><a href="#" style="
+    color: #010101;
+">Performance Management</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                </div> 
+                            </div>
+
+                          
+                           
+                          
+                            <!-- /Boxes de Acoes -->
+                        </div>
+                        <div class="row card-group-row mb-lg-8pt d-none">
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: #9ecbe8;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Text Here</h3></div>
+                                       
+                                            <div class="" style="    float: right;
+                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
+    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">12,312</h3></div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: #e8abaa;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Text Here</h3></div>
+                                       
+                                            <div class="" style="    float: right;
+                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
+    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">12,312</h3></div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: #97e4ac;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Text Here</h3></div>
+                                       
+                                            <div class="" style="    float: right;
+                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
+    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">12,312</h3></div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: #e3cca3;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Text Here</h3></div>
+                                       
+                                            <div class="" style="    float: right;
+                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
+    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">12,312</h3></div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+
+                      
+
+
+                       
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4">
+                        <div class="card" style="background: #a4cfe9;
+                        color: white;">
+
+                            <div class="card-header" style="border-bottom: 1px solid #ffffff; background: #a4cfe9;
+                            color: white;">
+                                   <h3 style="margin-bottom: 0rem; color:white;"> Announcements</h3>
+                            </div>
+                            <div class="card-body" style="height: 425px;">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <div class="card" >
+
+                            <div class="card-header">
+                                   <h3 style="margin-bottom: 0rem;">Plan Achievement</h3>
+                            </div>
+                            <div class="card-body" style="height: 425px;">
+                                <figure class="highcharts-figure">
+                                    <div id="container"></div>
+                                  </figure>     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                
+            <div class="col-sm-12 col-md-8">
+                <div class="card" >
+
+                    <div class="card-header">
+                           <h3 style="margin-bottom: 0rem; display: inline;
+                           width: auto;">Tasks</h3>
+                           <span style="text-align: end;"><p style="margin-bottom: 0rem; display: inline;
+                            width: auto;
+                            float: right; margin-top: 0.5rem;color: #8a9199; "><u>View All</u></p></span>
+                    </div>
+                    <div class="card-body">
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="card" >
+
+                    <div class="card-header" >
+                           <h3 style="margin-bottom: 0rem; display: inline;
+                           width: auto;">Schedule</h3>
+                           <span style="text-align: end;"><p style="margin-bottom: 0rem; display: inline;
+                            width: auto; float: right; margin-top: 0.5rem;color: #8a9199; "><u>View All</u></p></span>
+                    </div>
+                    <div class="card-body">
+                 </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-lg-32pt">
+
+            <div class="table-responsive"
+                 data-toggle="lists"
+                 data-lists-sort-by="js-lists-values-employee-name"
+                 data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
+
+                <div class="card-header">
+                    <form class="form-inline">
+                        <h3 style="margin-bottom: 0rem; display: inline;
+                        width: auto;">Recent Purchase Requests</h3>
+
+                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                            <button type="button" class="btn btn-sm btn-outline-accent">Create New</button>
+                            <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>View All</u></p>
+                        </div>
+
+                        <!-- <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+<input type="checkbox" class="custom-control-input" id="inlineFormPurchase">
+<label class="custom-control-label" for="inlineFormPurchase">Made a Purchase?</label>
+</div> -->
+                    </form>
+                </div>
+
+                <table class="table mb-0 thead-border-top-0 table-nowrap">
+                   
+                    <tbody class="list"
+                           id="staff">
+
+                        <tr class="selected">
+
+                        
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;"> 
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Michael Smith</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td>
+
+                                <span class="badge badge-dark" style="padding: .25em 1em;
+                                text-align: center;
+                                border-radius: .25rem;
+                                font-size: 13px; background: #decb98;">Pending</span>
+
+                            </td>
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;"> 
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">10,000AED</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">12</td>
+
+                          
+
+                            <td class="text-50 js-lists-values-activity small">3 days ago</td>
+                            <td class="js-lists-values-earnings small">View Details</td>
+                            
+                        </tr>
+
+                        <tr>
+
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;">
+                                    
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Connie Smith</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td>
+
+                                <span class="badge badge-dark" style="padding: .25em 1em;
+                                text-align: center;
+                                border-radius: .25rem;
+                                font-size: 13px; background: #decb98;">Pending</span>
+
+                            </td>
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;"> 
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">10,000AED</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">42</td>
+
+                           
+
+                            <td class="text-50 js-lists-values-activity small">1 week ago</td>
+                            <td class="js-lists-values-earnings small">View Details</td>
+                            
+                        </tr>
+
+                        <tr>
+
+            
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;">
+                                    
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">John Connor</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td>
+
+                                <span class="badge badge-dark" style="padding: .25em 1em;
+                                text-align: center;
+                                border-radius: .25rem;
+                                font-size: 13px; background: #decb98;">Pending</span>
+
+                            </td>
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;"> 
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">10,000AED</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">31</td>
+
+                            
+
+                            <td class="text-50 js-lists-values-activity small">2 weeks ago</td>
+                            <td class="js-lists-values-earnings small">View Details</td>
+                            
+                        </tr>
+
+                        <tr class="selected">
+
+
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;">
+                                
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Laza Bogdan</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </td>
+                            <td>
+
+                                <span class="badge badge-dark" style="padding: .25em 1em;
+                                text-align: center;
+                                border-radius: .25rem;
+                                font-size: 13px; background: #decb98;">Pending</span>
+
+                            </td>
+                            <td>
+
+                                <div class="media flex-nowrap align-items-center"
+                                     style="white-space: nowrap;"> 
+                                    <div class="media-body">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="mb-0"><strong class="js-lists-values-employee-name">10,000AED</strong></p>
+                                            <small class="js-lists-values-employee-email text-50"></small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </td>
+
+                            <td class="text-center js-lists-values-projects small">44</td>
+
+                           
+
+                            <td class="text-50 js-lists-values-activity small">3 weeks ago</td>
+                            <td class="js-lists-values-earnings small">View Details</td>
+                            
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-footer p-8pt">
+
+                <ul class="pagination justify-content-start pagination-xsm m-0">
+                    <li class="page-item disabled">
+                        <a class="page-link"
+                           href="#"
+                           aria-label="Previous">
+                            <span aria-hidden="true"
+                                  class="material-icons">chevron_left</span>
+                            <span>Prev</span>
+                        </a>
+                    </li>
+                    <li class="page-item dropdown">
+                        <a class="page-link dropdown-toggle"
+                           data-toggle="dropdown"
+                           href="#"
+                           aria-label="Page">
+                            <span>1</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#"
+                               class="dropdown-item active">1</a>
+                            <a href="#"
+                               class="dropdown-item">2</a>
+                            <a href="#"
+                               class="dropdown-item">3</a>
+                            <a href="#"
+                               class="dropdown-item">4</a>
+                            <a href="#"
+                               class="dropdown-item">5</a>
+                        </div>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link"
+                           href="#"
+                           aria-label="Next">
+                            <span>Next</span>
+                            <span aria-hidden="true"
+                                  class="material-icons">chevron_right</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- <div class="card-body bordet-top text-right">
+15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+</div> -->
+
+        </div>
+
+                       
+
+                       
+
+                    </div>
+                </div>
+
+                <div class="js-fix-footer footer border-top-2">
+                    <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
+                        <p class="measure-lead-max text-muted mb-0 small">
+                            Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <!-- // END drawer-layout__content -->
+
+            <!-- drawer -->
+            <div class="mdk-drawer js-mdk-drawer"
+                 id="default-drawer">
+                <div class="mdk-drawer__content">
+                    <div class="sidebar sidebar-left sidebar-light"
+                         data-perfect-scrollbar>
+
+                        <!-- Navbar toggler -->
+                        <a href="index - Copy.html"
+                           class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0"
+                           data-toggle="tooltip"
+                           data-title="Switch to Compact Vertical Layout"
+                           data-placement="right"
+                           data-boundary="window">
+                            <span class="material-icons">sync_alt</span>
+                        </a>
+
+                        <a href="index - Copy.html"
+                           class="sidebar-brand ">
+                            <img class="sidebar-brand-icon"
+                                 src="assets/images/logo/Logo.png"
+                                 alt="Huma">
+                        
+                        </a>
+                        <div class="sidebar-heading">Overview</div>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item active">
+                                <a class="sidebar-menu-button"
+                                   href="index - Copy.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span>
+                                    <span class="sidebar-menu-text">Dashboard</span>
+                                </a>
+                            </li>
+                       
+
+                       
+
+                        
+                      
+                            <li class="sidebar-menu-item open">
+                                <a class="sidebar-menu-button"
+                                   data-toggle="collapse"
+                                   href="#dashboards_menu">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+                                    Application Catalog
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent"
+                                    id="dashboards_menu">
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button"
+                                           href="Childcare.html">
+                                            <span class="sidebar-menu-text">Child Care</span>
+                                        </a>
+                                       
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#l">
+                                            <span class="sidebar-menu-text">Correspondence</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Budget and Planning</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Facility Maintenance</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Mainpower</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Customer Support</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Performance Management</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sidebar-heading">Bussiness Support services</div>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+                  
+                    </div>
+                </div>
+            </div>
+            <!-- // END drawer -->
+        </div>
+        <!-- // END drawer-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="app"
+                          :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }"
+                          sidebar-type="light"
+                          sidebar-variant="bg-body"></app-settings>
+        </div>
+        <!-- jQuery -->
+        <script src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="assets/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="assets/js/app.js"></script>
+
+        <!-- Highlight.js -->
+        <script src="assets/js/hljs.js"></script>
+
+        <!-- Global Settings -->
+        <script src="assets/js/settings.js"></script>
+
+        <!-- Flatpickr -->
+        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/js/flatpickr.js"></script>
+
+        <!-- Moment.js -->
+        <script src="assets/vendor/moment.min.js"></script>
+        <script src="assets/vendor/moment-range.js"></script>
+
+        <!-- Chart.js -->
+        <script src="assets/vendor/Chart.min.js"></script>
+        <script src="assets/js/chartjs.js"></script>
+
+        <!-- Chart.js Samples -->
+        <script src="assets/js/page.analytics-dashboard.js"></script>
+
+        <!-- Vector Maps -->
+        <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="assets/js/vector-maps.js"></script>
+
+        <!-- List.js -->
+        <script src="assets/vendor/list.min.js"></script>
+        <script src="assets/js/list.js"></script>
+
+        <!-- Tables -->
+        <script src="assets/js/toggle-check-all.js"></script>
+        <script src="assets/js/check-selected-row.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+        <script>
+            Highcharts.chart('container', {
+  chart: {
+    type: 'spline'
+  },
+  title: {
+    text: 'Monthly Average Temperature'
+  },
+  subtitle: {
+    text: 'Source: WorldClimate.com'
+  },
+  xAxis: {
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  },
+  yAxis: {
+    title: {
+      text: 'Temperature'
+    },
+    labels: {
+      formatter: function () {
+        return this.value + '°';
+      }
+    }
+  },
+  tooltip: {
+    crosshairs: true,
+    shared: true
+  },
+  plotOptions: {
+    spline: {
+      marker: {
+        radius: 4,
+        lineColor: '#666666',
+        lineWidth: 1
+      }
+    }
+  },
+  series: [{
+    name: 'Tokyo',
+    marker: {
+      symbol: 'square'
+    },
+    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+      y: 26.5,
+      marker: {
+        symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+      }
+    }, 23.3, 18.3, 13.9, 9.6]
+
+  }, {
+    name: 'London',
+    marker: {
+      symbol: 'diamond'
+    },
+    data: [{
+      y: 3.9,
+      marker: {
+        symbol: 'url(https://www.highcharts.com/samples/graphics/snow.png)'
+      }
+    }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+  }]
+});
+        </script>
+    </body>
+
+
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:44:15 GMT -->
+</html>

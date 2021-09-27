@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Dashboard</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
+              rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="assets/css/material-icons.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css"
+              href="assets/css/fontawesome.css"
+              rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css"
+              href="assets/vendor/spinkit.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="assets/css/preloader.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="assets/css/app.css"
+              rel="stylesheet">
+
+        <!-- Dark Mode CSS (optional) -->
+        <link type="text/css"
+              href="assets/css/dark-mode.css"
+              rel="stylesheet">
+
+        <!-- Vector Maps -->
+        <link type="text/css"
+              href="assets/vendor/jqvmap/jqvmap.min.css"
+              rel="stylesheet">
+              
+<Style>
+     .clearfix {
+	 content: '';
+	 display: table;
+	 clear: both;
+}
+ .container {
+	 width: 100%;
+	 max-width: 1180px;
+	 margin: 0 auto;
+	 padding: 3em 1em;
+}
+ .download-cards {
+	 width: 100%;
+	 display: flex;
+	 flex-wrap: wrap;
+}
+ .download-card {
+	 display: flex;
+	 flex-direction: column;
+	 width: calc(100% - 2em);
+	 background: #fbfbfb;
+	 position: relative;
+	 border-radius: 4px;
+	 overflow: hidden;
+	 margin-bottom: 2em;
+	 box-shadow: 0 1px 25px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.06);
+	 border-bottom: 1px solid #d2d2d2;
+	 border-left: 1px solid #dadada;
+	 margin: 0 1em 2em 1em;
+}
+ @media (min-width: 700px) {
+	 .download-cards[data-view='grid-view'] .download-card {
+		 float: left;
+		 width: calc(50% - 2em);
+	}
+	 .download-cards[data-view='grid-view'] .download-card:nth-child(3) {
+		 clear: both;
+	}
+	 .download-cards[data-view='grid-view'] .download-card:nth-child(4) {
+		 clear: initial;
+	}
+}
+ @media (min-width: 1000px) {
+	 .download-cards[data-view='grid-view'] .download-card {
+		 width: calc((100% / 2) - 2em);
+	}
+	 .download-cards[data-view='grid-view'] .download-card:nth-child(3) {
+		 clear: initial;
+	}
+	 .download-cards[data-view='grid-view'] .download-card:nth-child(4) {
+		 clear: both;
+	}
+}
+ .download-card__icon-box {
+	 display: flex;
+	 align-items: center;
+	 background: #f1f1f1;
+	 padding: 2em;
+	 text-align: center;
+}
+ @media (min-width: 700px) {
+	 .download-card__icon-box {
+		 justify-content: center;
+	}
+}
+ .download-card__icon-box img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 185px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+ @media (min-width: 700px) {
+	 .download-cards[data-view='list-view'] .download-card__icon-box {
+		 width: 200px;
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 right: 0;
+		 bottom: 0;
+		 border-right: 1px solid #e6e6e6;
+	}
+}
+ .download-card__content-box {
+	 padding: 1em 1em 1em;
+	 flex: 1;
+}
+ @media (min-width: 700px) {
+	 .download-cards[data-view="list-view"] .download-card__content-box {
+		 padding-left: calc(200px + 2em);
+	}
+}
+ .download-card__content-box__catagory {
+	 text-transform: uppercase;
+	 letter-spacing: 2px;
+	 font-size: 10px;
+	 margin: 0 0 2em;
+}
+ .download-card__content-box__catagory::before {
+	 content: '| ';
+	 color: #ff4500;
+}
+ .download-card__content-box__title {
+	 line-height: 1;
+	 margin: 0 0 0.5em;
+	 font-size: 18px;
+}
+ .download-card__content-box__description {
+	 line-height: 1;
+	 padding: 0;
+	 margin: 0 0 1em;
+	 clear: both;
+	 color: #929292;
+	 font-size: 11px;
+}
+ .download-card__content-box .button {
+	 position: absolute;
+	 bottom: 2em;
+	 margin: 0;
+	 color: #ff4500;
+	 display: inline-block;
+	 text-transform: uppercase;
+	 letter-spacing: 1px;
+	 font-weight: bold;
+	 font-size: 13px;
+}
+ .dc-view-switcher {
+	 display: none;
+	 margin: 1em;
+	 text-align: right;
+}
+ @media (min-width: 700px) {
+	 .dc-view-switcher {
+		 display: block;
+	}
+}
+ .dc-view-switcher > button {
+	 font-family: 'fontAwesome';
+	 background-color: transparent;
+	 background-repeat: no-repeat;
+	 background-position: 0px 0px;
+	 border: none;
+	 cursor: pointer;
+	 font-size: 1.5em;
+	 vertical-align: middle;
+	 color: gray;
+	 opacity: 0.3;
+	 outline: none;
+	 transition: opacity 0.4s ease;
+}
+ .dc-view-switcher > button[data-trigger="list-view"]::before {
+	font-family: Material Icons; 
+    content: "\e241" !important;
+     display: flex;
+    align-items: center;
+    font-size: inherit;
+    color: inherit;
+}
+ .dc-view-switcher > button[data-trigger="grid-view"]::before {
+	font-family: Material Icons;
+    content: "\e5c3" !important;
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+    color: inherit;
+}
+ .dc-view-switcher > button[data-trigger].active {
+	 opacity: 1;
+}
+ 
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.5rem + 2px);}
+    
+    .navbar-nav .nav-link {
+    font-size: 0.9rem;}
+    .vl {
+  border-left: 1px solid #e8e8e8;
+  height: 30px;
+}
+.sidebar-brand-icon {
+    display: flex;
+    width: 70%;
+    height: auto;
+}
+[dir] .sidebar-light .open>.sidebar-menu-button {
+    background: #00a650;
+}
+.sidebar-light .open>.sidebar-menu-button, .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+    color: #ffffff;
+}
+.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+    color: #ffffff;
+}
+.leftMenu{
+   
+    margin: 5px 10px;
+    border-radius: 6px !important;
+    background: #a39161 !important;
+    color: white;
+    border-color: #a39161 !important;
+    padding: 5px 0px !important;
+    font-size: 15px;
+    font-weight: 500;
+}
+.sidebar-heading {
+    line-height: 1.5rem;
+    font-size: .775rem;
+}
+.sidebar-heading {
+    font-weight: 600;
+    font-family: Arial, sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0px !important;
+}
+[dir] .card-header {
+    padding: 0.3rem 1rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+.activemenu {
+    background: #00a650;
+    color: white !important;
+}
+div#app-settings {
+    display: none;
+}
+.active>.sidebar-menu-button .sidebar-menu-text:after {display:none;}
+
+
+
+input[type=range] {
+	-webkit-tap-highlight-color: transparent;
+}
+input[type=range], .range {
+	border-radius: 0.75em;
+	overflow: hidden;
+	margin-bottom: 1.5em;
+}
+input[type=range] {
+	background-color: #f5f7fa;
+	box-shadow:
+		0.3em 0.3em 0.4em var(--bs2) inset,
+		-0.3em -0.3em 0.4em var(--bs1) inset;
+	display: block;
+	padding: 0 0.1em;
+	width: 100%;
+	height: 1.5em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+input[type=range]:focus {
+	outline: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+	background-color: #255ff4;
+	border: 0;
+	border-radius: 50%;
+	box-shadow:
+		-0.3em -0.3em 0.5em #0937aa inset,
+		0 -0.2em 0.2em 0 #0004,
+		0.3em 0.9em 0.8em #0007;
+	cursor: pointer;
+	position: relative;
+	width: 1.3em;
+	height: 1.3em;
+	transition: all var(--transDur) linear;
+	z-index: 1;
+	-webkit-appearance: none;
+	appearance: none;
+}
+input[type=range]:focus::-webkit-slider-thumb {
+	background-color: #5583f6;
+	box-shadow:
+		-0.3em -0.3em 0.5em #0b46da inset,
+		0 -0.2em 0.2em 0 #0004,
+		0.3em 0.9em 0.8em #0007;
+}
+input[type=range]::-moz-range-thumb {
+	background-color: #255ff4;
+	border: 0;
+	border-radius: 50%;
+	box-shadow:
+		-0.3em -0.3em 0.5em #0937aa inset,
+		0 -0.2em 0.2em 0 #0004,
+		0.3em 0.9em 0.8em #0007;
+	cursor: pointer;
+	position: relative;
+	width: 1.3em;
+	height: 1.3em;
+	transform: translateZ(1px);
+	transition: all var(--transDur) linear;
+	z-index: 1;
+	-moz-appearance: none;
+	appearance: none;
+}
+input[type=range]:focus::-moz-range-thumb {
+	background-color: #5583f6;
+	box-shadow:
+		-0.3em -0.3em 0.5em #0b46da inset,
+		0 -0.2em 0.2em 0 #0004,
+		0.3em 0.9em 0.8em #0007;
+}
+input[type=range]::-moz-focus-outer {
+	border: 0;
+}
+.range {
+	position: relative;
+	height: 1.5em;
+}
+.range__ticks {
+    justify-content: space-evenly;
+    align-items: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    display: flex;
+    left: 0em;
+    width: calc(100% - 1.5em);
+    height: 100%;
+}
+.range__tick, .range__tick-text {
+	display: inline-block;
+}
+.range__tick {
+	color: var(--tick);
+	font-size: 0.5em;
+	text-align: center;
+	width: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.range__tick-text {
+	transform: translateX(-50%);
+}
+
+
+[slider] {
+  position: relative;
+  height: 14px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 0px 0 10px 0;
+}
+
+[slider] > div {
+  position: absolute;
+  left: 13px;
+  right: 15px;
+  height: 14px;
+}
+
+[slider] > div > [inverse-left] {
+  position: absolute;
+  left: 0;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+[slider] > div > [inverse-right] {
+  position: absolute;
+  right: 0;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+[slider] > div > [range] {
+  position: absolute;
+  left: 0;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #00a650;
+}
+
+[slider] > div > [thumb] {
+  position: absolute;
+  top: -7px;
+  z-index: 2;
+  height: 28px;
+  width: 28px;
+  text-align: left;
+  margin-left: -11px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  background-color: #FFF;
+  border-radius: 50%;
+  outline: none;
+}
+
+[slider] > input[type=range] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+  height: 14px;
+  top: -2px;
+  width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+div[slider] > input[type=range]::-ms-track {
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: transparent;
+}
+
+div[slider] > input[type=range]:focus {
+  outline: none;
+}
+
+div[slider] > input[type=range]::-ms-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type=range]::-moz-range-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+  -webkit-appearance: none;
+}
+
+div[slider] > input[type=range]::-ms-fill-lower {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-fill-upper {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-tooltip {
+  display: none;
+}
+
+[slider] > div > [sign] {
+  opacity: 0;
+  position: absolute;
+  margin-left: -11px;
+  top: -39px;
+  z-index:3;
+  background-color: #1ABC9C;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  -webkit-border-radius: 28px;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+[slider] > div > [sign]:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  border-radius: 16px;
+  top: 19px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top-width: 16px;
+  border-top-style: solid;
+  border-top-color: #1ABC9C;
+}
+
+[slider] > div > [sign] > span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+[slider]:hover > div > [sign] {
+  opacity: 1;
+}
+ul.a {
+    list-style-type: disclosure-closed;
+    padding: 0px 20px;
+}
+
+    </Style>
+    </head>
+
+    <body class="layout-app layout-sticky-subnav ">
+
+   
+
+        <div class="mdk-drawer-layout js-mdk-drawer-layout"
+             data-push
+             data-responsive-width="992px">
+            <div class="mdk-drawer-layout__content page-content">
+
+                <!-- Header -->
+
+                <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body"
+                     id="default-navbar"
+                     data-primary>
+
+                    <!-- Navbar toggler -->
+                    <button class="navbar-toggler d-block d-lg-none rounded-0"
+                            type="button"
+                            data-toggle="sidebar">
+                        <span class="material-icons">menu</span>
+                    </button>
+
+                    <!-- Navbar Brand -->
+                    <a href="index.html"
+                       class="navbar-brand mr-16pt d-lg-none">
+                        <img class="navbar-brand-icon mr-0 mr-lg-8pt"
+                             src="assets/images/Logo.svg"
+                             width="32"
+                             alt="Huma">
+                       
+                    </a>
+
+                    <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+
+                    <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;"
+                          action="https://huma.demo.frontendmatter.com/index.html">
+                        
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search Everything ...">
+                               <button class="btn"
+                                type="submit"><i class="material-icons">search</i></button>
+                    </form>
+
+                    <div class="flex"></div>
+
+                    <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
+                         style="white-space: nowrap;">
+                        <div class="nav-item dropdown d-none d-sm-flex">
+                            <a href="#"
+                               class="nav-link dropdown-toggle"
+                               data-toggle="dropdown">EN</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Select language</strong></div>
+                                <a class="dropdown-item active"
+                                   href="#">English</a>
+                                <a class="dropdown-item"
+                                   href="#">عربي</a>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vl mr-16pt"></div>
+                    <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                        <div class="nav-item mr-16pt dropdown dropdown-notifications">
+                            <button class="nav-link btn-flush dropdown-toggle"
+                                    type="button"
+                                    data-toggle="dropdown"
+                                    data-dropdown-disable-document-scroll
+                                    data-caret="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="badge badge-notifications badge-accent">2</span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div data-perfect-scrollbar
+                                     class="position-relative">
+                                    <div class="dropdown-header"><strong>System notifications</strong></div>
+                                    <div class="list-group list-group-flush mb-0">
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action unread">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">3 minutes ago</small>
+
+                                                <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">5 hours ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+                                                    <strong class="text-black-100">Adrian. D</strong>
+                                                    <span class="text-black-70">Wants to join your private group.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                        <a href="javascript:void(0);"
+                                           class="list-group-item list-group-item-action">
+                                            <span class="d-flex align-items-center mb-1">
+                                                <small class="text-black-50">1 day ago</small>
+
+                                            </span>
+                                            <span class="d-flex">
+                                                <span class="avatar avatar-xs mr-2">
+                                                    <span class="avatar-title rounded-circle bg-light">
+                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                    </span>
+                                                </span>
+                                                <span class="flex d-flex flex-column">
+
+                                                    <span class="text-black-70">Your deploy was successful.</span>
+                                                </span>
+                                            </span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vl mr-16pt" style="margin-top: 16px;"></div>
+                        <div class="nav-item dropdown d-none d-sm-flex">
+                            <a href="#"
+                               class="nav-link d-flex align-items-center dropdown-toggle"
+                               data-toggle="dropdown">
+                                <img width="32"
+                                     height="32"
+                                     class="rounded-circle mr-8pt"
+                                     src="assets/images/people/50/guy-3.jpg"
+                                     alt="account" />
+                                <span class="flex d-flex flex-column mr-8pt">
+                                    <span class="navbar-text-100">Laza Bogdan</span>
+                                    <small class="navbar-text-50">Administrator</small>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-header"><strong>Account</strong></div>
+                                <a class="dropdown-item"
+                                   href="edit-account.html">Edit Account</a>
+                                <a class="dropdown-item"
+                                   href="login.html">Logout</a>
+                            </div>
+                        </div>
+
+                        <!-- Notifications dropdown -->
+                       
+                        <!-- // END Notifications dropdown -->
+
+                        <!-- Notifications dropdown -->
+                       
+                        <!-- // END Notifications dropdown -->
+                    </div>
+
+                   
+
+                </div>
+
+                <!-- // END Header -->
+
+                <div class="container-fluid page__container">
+                    <div class="page-section">
+                        <div class="card ">
+<div class="row" style="display: inline-flex;
+padding: 0px 20px;">
+<div class="col-12 mt-4 pt-3"><h3 style="font-family: Arial, sans-serif;
+    font-weight: 300;">Show Results For</h3></div>
+    <div class="col-4">
+        <div class="">
+            <h5 class="font-size-14 mb-3" style="font-family: Arial, sans-serif;
+            font-weight: 300;">age</h5>
+            <div class="form-check mt-2" style="DISPLAY: inline;
+            width: auto;">
+                <input class="form-check-input" type="checkbox" id="productdiscountCheck1">
+                <label class="form-check-label" for="productdiscountCheck1">
+                    Less than 10
+                </label>
+            </div>
+
+            <div class="form-check mt-2" style="DISPLAY: inline;
+            width: auto;">
+                <input class="form-check-input" type="checkbox" id="productdiscountCheck2">
+                <label class="form-check-label" for="productdiscountCheck2">
+                    10 or more
+                </label>
+            </div>
+
+            <div class="form-check mt-2" style="DISPLAY: inline;
+            width: auto;">
+                <input class="form-check-input" type="checkbox" id="productdiscountCheck3" checked="">
+                <label class="form-check-label" for="productdiscountCheck3">
+                    20 or more
+                </label>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="">
+            <h5 class="font-size-14 mb-3" style="font-family: Arial, sans-serif;
+            font-weight: 300;">Gender</h5>
+            <div class="form-check mt-2" style="DISPLAY: inline;
+            width: auto;">
+                <input class="form-check-input" type="checkbox" id="productdiscountCheck1">
+                <label class="form-check-label" for="productdiscountCheck1">
+                    Both
+                </label>
+            </div>
+
+            <div class="form-check mt-2" style="DISPLAY: inline;
+            width: auto;">
+                <input class="form-check-input" type="checkbox" id="productdiscountCheck2">
+                <label class="form-check-label" for="productdiscountCheck2">
+                    Male
+                </label>
+            </div>
+
+            <div class="form-check mt-2" style="DISPLAY: inline;
+            width: auto;">
+                <input class="form-check-input" type="checkbox" id="productdiscountCheck3" checked="">
+                <label class="form-check-label" for="productdiscountCheck3">
+                    Female
+                </label>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="">
+            <h5 class="font-size-14 mb-3" style="font-family: Arial, sans-serif;
+            font-weight: 300;">Age Range</h5>
+           <div slider id="slider-distance">
+            <div>
+              <div inverse-left style="width:70%;"></div>
+              <div inverse-right style="width:70%;"></div>
+              <div range style="left:30%;right:40%;"></div>
+              <span thumb style="left:30%;"></span>
+              <span thumb style="left:60%;"></span>
+              <div sign style="left:30%;">
+                <span id="value">30</span>
+              </div>
+              <div sign style="left:60%;">
+                <span id="value">60</span>
+              </div>
+            </div>
+            <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+            this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+            var children = this.parentNode.childNodes[1].childNodes;
+            children[1].style.width=value+'%';
+            children[5].style.left=value+'%';
+            children[7].style.left=value+'%';children[11].style.left=value+'%';
+            children[11].childNodes[1].innerHTML=this.value;" />
+          
+            <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+            this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+            var children = this.parentNode.childNodes[1].childNodes;
+            children[3].style.width=(100-value)+'%';
+            children[5].style.right=(100-value)+'%';
+            children[9].style.left=value+'%';children[13].style.left=value+'%';
+            children[13].childNodes[1].innerHTML=this.value;" />
+          </div>
+
+        </div>
+    </div>
+    <div class="col-8">
+    <form class="search-form navbar-search d-none d-md-flex " style="    width: 100%; border-radius: 10px;" action="https://huma.demo.frontendmatter.com/index.html">
+                        
+        <input type="text" class="form-control" placeholder="Search By Name ...">
+            
+    </form>
+</div>
+<div class="col-4"><button type="button" class="btn btn-sm btn-primary-dodger-blue" style="background: #00a650;
+    width: 100%;
+    border: #00a650;">Fillter </button></div>
+</div>
+
+                        <div class="container" style="padding-top: 20px;">
+                            <div class="dc-view-switcher">
+                              <button data-trigger="grid-view"></button>
+                              <button data-trigger="list-view" class="active"></button>
+                            </div>
+                            <div data-view="list-view" class="download-cards">
+                               
+                              <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                    display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/1.png" /></div>
+                                       
+                                    </div>
+                                    <div class="col">
+                                <div class="download-card__content-box">
+                                  <div class="content">
+                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                    <p class="download-card__content-box__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="download-card__content-box__description">
+                                        <ul class="a">
+                                            <li style="margin-bottom: -3px;">Coffee</li>
+                                            <li style="margin-bottom: -3px;">Tea</li>
+                                            <li style="margin-bottom: -3px;">Coca Cola</li>
+                                          </ul>
+
+                                    </p>
+                                    <a href="Childprofile - Copy.html" type="button" class="btn btn-secondary btn-sm">Read More</a>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                              </article>
+                              <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                    display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/2.png" /></div>
+                                       
+                                    </div>
+                                    <div class="col">
+                                <div class="download-card__content-box">
+                                  <div class="content">
+                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                    <p class="download-card__content-box__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="download-card__content-box__description">
+                                        <ul class="a">
+                                            <li style="margin-bottom: -3px;">Coffee</li>
+                                            <li style="margin-bottom: -3px;">Tea</li>
+                                            <li style="margin-bottom: -3px;">Coca Cola</li>
+                                          </ul>
+
+                                    </p>
+                                    <a href="Childprofile - Copy.html" type="button" class="btn btn-secondary btn-sm">Read More</a>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                              </article>
+                              <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                    display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/3.png" /></div>
+                                       
+                                    </div>
+                                    <div class="col">
+                                <div class="download-card__content-box">
+                                  <div class="content">
+                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                    <p class="download-card__content-box__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="download-card__content-box__description">
+                                        <ul class="a">
+                                            <li style="margin-bottom: -3px;">Coffee</li>
+                                            <li style="margin-bottom: -3px;">Tea</li>
+                                            <li style="margin-bottom: -3px;">Coca Cola</li>
+                                          </ul>
+
+                                    </p>
+                                    <a href="Childprofile - Copy.html" type="button" class="btn btn-secondary btn-sm">Read More</a>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                              </article>
+                              <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                    display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/4.png" /></div>
+                                       
+                                    </div>
+                                    <div class="col">
+                                <div class="download-card__content-box">
+                                  <div class="content">
+                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                    <p class="download-card__content-box__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="download-card__content-box__description">
+                                        <ul class="a">
+                                            <li style="margin-bottom: -3px;">Coffee</li>
+                                            <li style="margin-bottom: -3px;">Tea</li>
+                                            <li style="margin-bottom: -3px;">Coca Cola</li>
+                                          </ul>
+
+                                    </p>
+                                    <a href="Childprofile - Copy.html" type="button" class="btn btn-secondary btn-sm">Read More</a>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                              </article>
+                              <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                    display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/5.png" /></div>
+                                       
+                                    </div>
+                                    <div class="col">
+                                <div class="download-card__content-box">
+                                  <div class="content">
+                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                    <p class="download-card__content-box__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="download-card__content-box__description">
+                                        <ul class="a">
+                                            <li style="margin-bottom: -3px;">Coffee</li>
+                                            <li style="margin-bottom: -3px;">Tea</li>
+                                            <li style="margin-bottom: -3px;">Coca Cola</li>
+                                          </ul>
+
+                                    </p>
+                                    <a href="Childprofile - Copy.html" type="button" class="btn btn-secondary btn-sm">Read More</a>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                              </article>
+                              <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                    display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/6.png" /></div>
+                                       
+                                    </div>
+                                    <div class="col">
+                                <div class="download-card__content-box">
+                                  <div class="content">
+                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                    <p class="download-card__content-box__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="download-card__content-box__description">
+                                        <ul class="a">
+                                            <li style="margin-bottom: -3px;">Coffee</li>
+                                            <li style="margin-bottom: -3px;">Tea</li>
+                                            <li style="margin-bottom: -3px;">Coca Cola</li>
+                                          </ul>
+
+                                    </p>
+                                    <a href="Childprofile - Copy.html" type="button" class="btn btn-secondary btn-sm">Read More</a>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                              </article>
+                              <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                    display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" /></div>
+                                       
+                                    </div>
+                                    <div class="col">
+                                <div class="download-card__content-box">
+                                  <div class="content">
+                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                    <p class="download-card__content-box__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p class="download-card__content-box__description">
+                                        <ul class="a">
+                                            <li style="margin-bottom: -3px;">Coffee</li>
+                                            <li style="margin-bottom: -3px;">Tea</li>
+                                            <li style="margin-bottom: -3px;">Coca Cola</li>
+                                          </ul>
+
+                                    </p>
+                                    <a href="Childprofile - Copy.html" type="button" class="btn btn-secondary btn-sm">Read More</a>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                              </article>
+
+                           
+                            </div>
+                          </div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+
+                <div class="js-fix-footer footer border-top-2">
+                    <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
+                        <p class="measure-lead-max text-muted mb-0 small">
+                            Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <!-- // END drawer-layout__content -->
+
+            <!-- drawer -->
+            <div class="mdk-drawer js-mdk-drawer"
+                 id="default-drawer">
+                <div class="mdk-drawer__content">
+                    <div class="sidebar sidebar-light sidebar-left"
+                         data-perfect-scrollbar>
+
+                        <!-- Navbar toggler -->
+                        <a href="index - Copy.html"
+                           class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0"
+                           data-toggle="tooltip"
+                           data-title="Switch to Compact Vertical Layout"
+                           data-placement="right"
+                           data-boundary="window">
+                            <span class="material-icons">sync_alt</span>
+                        </a>
+
+                        <a href="index - Copy.html"
+                           class="sidebar-brand ">
+                            <img class="sidebar-brand-icon"
+                                 src="assets/images/logo/Logo.png"
+                                 alt="Huma">
+                        
+                        </a>
+                        <div class="sidebar-heading">Overview</div>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                                   href="index - Copy.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
+                                    <span class="sidebar-menu-text">Dashboard</span>
+                                </a>
+                            </li>
+                       
+
+                       
+
+                        
+                      
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                   data-toggle="collapse"
+                                   href="#dashboards_menu">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+                                    Application Catalog
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent"
+                                    id="dashboards_menu">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button"
+                                           href="Childcare.html">
+                                            <span class="sidebar-menu-text">Child Care</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Correspondence</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Budget and Planning</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Facility Maintenance</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Mainpower</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Customer Support</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="#">
+                                            <span class="sidebar-menu-text">Performance Management</span>
+                                        </a>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                            <li>
+                                
+                        <div class="sidebar-heading mt-3">Child Care Management</div>
+                        <ul class="sidebar-menu">
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                                 
+                                   href="Childcare.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span>
+                                    Dashboard
+                                
+                                </a>
+                            </li>
+                            <!-- <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                  
+                                   href="Registrachild.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                   Registering a Case
+                                   
+                                </a>
+                            
+                            </li> -->
+                            <li class="sidebar-menu-item activemenu">
+                                <a class="sidebar-menu-button activemenu" href="Childprofile.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">folder</span>
+                                  Child profile's
+                                   
+                                </a>
+                            
+                            </li>
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                                   
+                                   href="Registrachild - Copy.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left " >link</span>
+                                    Registering a Case
+                                    <span class="ml-auto Roundd">1</span>
+                                </a>
+                                <!-- <ul class="sidebar-submenu collapse sm-indent"
+                                    id="dashboards_menu1">
+                                    <li class="sidebar-menu-item active">
+                                        <a class="sidebar-menu-button"
+                                           href="Registrachild.html">
+                                            <span class="sidebar-menu-text">Child registration</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="ReceivingaChild.html">
+                                            <span class="sidebar-menu-text">Receiving a Child</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="Childallocation.html">
+                                            <span class="sidebar-menu-text">Child allocation</span>
+                                        </a>
+                                    </li>
+                                   
+                                   
+                                </ul> -->
+                            </li>
+                            <!-- <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                 
+                                   href="IdentityManagement.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
+                                  Identity Management
+                                   
+                                </a>
+                                
+                            </li> -->
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                               
+                                   href="Identity ManagementNew.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">view_compact</span>
+                                  Identity Management
+                                  <span class="ml-auto Roundd">2</span>
+                                   
+                                </a>
+                                
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                   
+                                   href="#">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
+                                    Development Plan
+                                
+                                </a>
+                            </li>
+                            <!-- <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                  
+                                   href="House.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">developer_board</span>
+                                   House Registration
+                                   
+                                </a>
+                            
+                            </li> -->
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button "
+                                   data-toggle="collapse"
+                                   href="#dashboards_menu2">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
+                                    House Registration
+                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                </a>
+                                <ul class="sidebar-submenu collapse sm-indent"
+                                    id="dashboards_menu2">
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button"
+                                           href="House.html">
+                                            <span class="sidebar-menu-text">Register House</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="HouseAppliance.html">
+                                            <span class="sidebar-menu-text">Appliance Master</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           href="HouseService.html">
+                                            <span class="sidebar-menu-text">Service Providers</span>
+                                        </a>
+                                    </li>
+                                   
+                                   
+                                </ul>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                              
+                                   href="#">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
+                                   Educational Management
+                                   
+                                </a>
+                                
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                 
+                                   href="components_menu">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
+                                    Psychological Management
+                                
+                                </a>
+                            </li>
+                            <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
+                                  
+                                   href="#">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
+                                   Talent Management
+                                   
+                                </a>
+                            
+                            </li>
+                        </ul>
+                            </li>
+                        </ul>
+                        <div class="sidebar-heading">Bussiness Support services</div>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+                        <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+                     
+                    </div>
+                </div>
+            </div>
+            <!-- // END drawer -->
+        </div>
+        <!-- // END drawer-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="app"
+                          :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }"
+                          sidebar-type="light"
+                          sidebar-variant="bg-body"></app-settings>
+        </div>
+        <!-- jQuery -->
+        <script src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="assets/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="assets/js/app.js"></script>
+
+        <!-- Highlight.js -->
+        <script src="assets/js/hljs.js"></script>
+
+        <!-- Global Settings -->
+        <script src="assets/js/settings.js"></script>
+
+        <!-- Flatpickr -->
+        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/js/flatpickr.js"></script>
+
+        <!-- Moment.js -->
+        <script src="assets/vendor/moment.min.js"></script>
+        <script src="assets/vendor/moment-range.js"></script>
+
+        <!-- Chart.js -->
+        <script src="assets/vendor/Chart.min.js"></script>
+        <script src="assets/js/chartjs.js"></script>
+
+        <!-- Chart.js Samples -->
+        <script src="assets/js/page.analytics-dashboard.js"></script>
+
+        <!-- Vector Maps -->
+        <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="assets/js/vector-maps.js"></script>
+
+        <!-- List.js -->
+        <script src="assets/vendor/list.min.js"></script>
+        <script src="assets/js/list.js"></script>
+
+        <!-- Tables -->
+        <script src="assets/js/toggle-check-all.js"></script>
+        <script src="assets/js/check-selected-row.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+        <script>
+var downloadGrid = (function(){
+  
+  "use strict";
+  
+  var $cardContainer = $('.download-cards');
+  var $downloadCard  = $('.download-card__content-box');
+  var $viewTrigger   = $('button').attr('data', 'trigger');
+
+  function swapTriggerActiveClass(e) {   
+    $viewTrigger.removeClass('active');
+    $(e.target).addClass('active');
+  }
+
+  function swapView(e) {
+    var $currentView = $(e.target).attr('data-trigger');
+    $cardContainer.attr('data-view', $currentView);
+  }
+
+  $(document).ready(function(){
+    // Event Listener
+    $viewTrigger.click(function(e){
+      swapTriggerActiveClass(e);
+      swapView(e);        
+    });  
+  });
+  
+})();
+    
+
+
+        </script>
+        <script>
+            window.addEventListener("DOMContentLoaded",() => {
+	let range1 = new NeumorphicRange({
+			element: "#range1",
+			tick: 1
+		}),
+		range2 = new NeumorphicRange({
+			element: "#range2",
+			tick: 4
+		}),
+		range3 = new NeumorphicRange({
+			element:"#range3",
+			tick: 10
+		});
+});
+
+class NeumorphicRange {
+	constructor(args) {
+		this.el = document.querySelector(args.element);
+		this.min = +this.el.min || 0;
+		this.max = +this.el.max || 100;
+		this.step = +this.el.step || 1;
+		this.tick = args.tick || this.step;
+		this.addTicks();
+	}
+	addTicks() {
+		// div to contain everything
+		let wrap = document.createElement("div");
+		wrap.className = "range";
+		this.el.parentElement.insertBefore(wrap,this.el);
+		wrap.appendChild(this.el);
+
+		// div to contain the ticks
+		let ticks = document.createElement("div");
+		ticks.className = "range__ticks";
+		wrap.appendChild(ticks);
+
+		// draw the ticks
+		for (let t = this.min; t <= this.max; t += this.tick) {
+			// zero-width span to allow proper space between each tick
+			let tick = document.createElement("span");
+			tick.className = "range__tick";
+			ticks.appendChild(tick);
+
+			let tickText = document.createElement("span");
+			tickText.className = "range__tick-text";
+			tick.appendChild(tickText);
+			tickText.textContent = t;
+		}
+	}
+}
+        </script>
+    </body>
+
+
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:44:15 GMT -->
+</html>
