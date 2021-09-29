@@ -10,11 +10,19 @@
           content="IE=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Dashboard</title>
-
+    <!-- TreeView -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link type="text/css"
+          href="./assets/vendor/Treeview.css"
+          rel="stylesheet">
+    
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots"
           content="noindex">
+          
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
           rel="stylesheet">
@@ -61,6 +69,13 @@
 
           <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" /> -->
+	
+	<style>
+		.fc-event-title-container {
+    background-color: #3788d8!important;
+}
+		</style>
+	
    <style>
        .hori-timeline .events {
     border-top: 3px solid #e9ecef;
@@ -561,17 +576,17 @@ button:focus {
                                                 <a href="#abc2" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
                                                     <span class="h2 mb-0 mr-3">3</span>
                                                     <span class="flex d-flex flex-column">
-                                                        <strong class="card-title">Documents</strong>
+                                                        <strong class="card-title">Timeline</strong>
                                                         
                                                     </span>
                                                 </a>
                                             </div>
                                             <div class="col-auto border-left border-right">
-                                                <a href="#" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                <a href="#xyz2" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
                                                     <span class="h2 mb-0 mr-3">4</span>
                                                     <span class="flex d-flex flex-column">
-                                                        <strong class="card-title">Archived</strong>
-                                                        <small class="card-subtitle text-50">Past Projects</small>
+                                                        <strong class="card-title">Documents</strong>
+                                                        
                                                     </span>
                                                 </a>
                                             </div>
@@ -669,6 +684,50 @@ button:focus {
                                                 </ul>
                                             </div>
                                             </div>
+                                            <div id="xyz2" class="tab-pane  " style="background-color: #fff!important; height: 426px;
+                                            overflow-x: scroll;" >
+                                            <div class="col-md-4">
+                                                <ul id="tree1">
+                                                    <li><a href="#">TECH</a>
+                                    
+                                                        <ul>
+                                                            <li>Company Maintenance</li>
+                                                            <li>Employees
+                                                                <ul>
+                                                                    <li>Reports
+                                                                        <ul>
+                                                                            <li>Report1</li>
+                                                                            <li>Report2</li>
+                                                                            <li>Report3</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>Employee Maint.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Human Resources</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>XRP
+                                                        <ul>
+                                                            <li>Company Maintenance</li>
+                                                            <li>Employees
+                                                                <ul>
+                                                                    <li>Reports
+                                                                        <ul>
+                                                                            <li>Report1</li>
+                                                                            <li>Report2</li>
+                                                                            <li>Report3</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>Employee Maint.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Human Resources</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </div>
                                     </div>
                                     
                                 </div>
@@ -721,15 +780,7 @@ button:focus {
 
 
                                 </div> -->
-                                <div class="row  mb-3" style="padding: 0px 10px;">
-                                    <div class="col-12">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" style="color: #ffffff;
-                            border-color: #00a650;
-                            background: #00a650; width: 100%;">
-                                            Edit Child Info
-                                        </button>
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -743,7 +794,7 @@ button:focus {
                                             <h3 style="margin-bottom: 0px; font-family: sans-serif;
                                     font-weight: 500;
                                     font-size: large;">
-                                                Medications
+                                                Child Identity Service
                                             </h3>
                                         </div>
                                         <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
@@ -782,8 +833,8 @@ button:focus {
                                         <div class="col-md-9 col-sm-12">
                                             <h3 style="margin-bottom: 0px; font-family: sans-serif;
                                     font-weight: 500;
-                                    font-size: large;">
-                                                Health Checks
+                                    font-size: large">
+                                                House Facilitation Service
                                             </h3>
                                         </div>
                                         <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
@@ -823,7 +874,7 @@ button:focus {
                                             <h3 style="margin-bottom: 0px; font-family: sans-serif;
                                     font-weight: 500;
                                     font-size: large;">
-                                                Social Worker
+                                                Register A <br>Case
                                             </h3>
                                         </div>
                                         <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
@@ -863,7 +914,7 @@ button:focus {
                                             <h3 style="margin-bottom: 0px; font-family: sans-serif;
                                     font-weight: 500;
                                     font-size: large;">
-                                                Study
+                                                Request a Letter/Certificate
                                             </h3>
                                         </div>
                                         <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
@@ -895,6 +946,47 @@ button:focus {
                                 </div>
                             </div>
                         </div>
+                        <div class="col-3">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12">
+                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
+                                    font-weight: 500;
+                                    font-size: large;">
+                                                Request a </br> Risk
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="margin: auto;">
+                                    <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
+                                        <img src="assets/images/study.png" alt="Avatar" class="avatar-img">
+                                    </div>
+
+                                </div>
+                                <div class="card-footer" style="background: aliceblue;">
+                                    <div class="row" style="padding: 0px 10px;">
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Age</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">5Y 4M</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Height</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">100 cm</label>
+                                        </div>
+                                        <div class="col-4" style="margin: auto;
+                                    text-align: center;
+                                ">
+                                            <i class="material-icons">visibility</i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
 
 
 
@@ -1372,6 +1464,7 @@ $(document).ready(function(){
 
 
     </script>
+
     <script>
             window.addEventListener("DOMContentLoaded",() => {
 	let range1 = new NeumorphicRange({
@@ -1425,13 +1518,14 @@ class NeumorphicRange {
 }
     </script>
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
    
 <script>
     $(document).ready(function() {
 
 $('.owl-carousel').owlCarousel({
-mouseDrag:true,
+// mouseDrag:true,
 
 loop:true,
 margin:2,
@@ -1494,6 +1588,7 @@ $('.owl-item .show').parent().next().children('.item').addClass('next');
 
 });
 </script>
+<script src="./assets/vendor/Treeview.js"></script>
 
 </body>
 
