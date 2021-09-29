@@ -14,7 +14,7 @@
     <!-- TreeView -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link type="text/css" href="./assets/vendor/Treeview.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/Treeview.css" rel="stylesheet">
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -37,323 +37,18 @@
 
     <!-- App CSS -->
     <link type="text/css" href="./assets/css/app.css" rel="stylesheet">
+    <!-- Child Profile Details CSS -->
+    <link type="text/css" href="./assets/css/Child_profile_details.css" rel="stylesheet">
 
     <!-- Dark Mode CSS (optional) -->
     <link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
     <!-- Full Calender -->
-    <link rel="stylesheet" href="./assets/vendor/fullcalendermain.css">
-    <script src="./assets/vendor/fullcalender.js"></script>
+    <link rel="stylesheet" href="./assets/css/fullcalendermain.css">
+    <script src="./assets/js/fullcalender.js"></script>
     <!-- Vector Maps -->
     <link type="text/css" href="./assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" /> -->
-    <style>
-        hr {
-            margin: auto!important;
-            width: 80%!important;
-            top: 10px;
-            /* bottom: 10px; */
-            /* padding: 10px; */
-            margin-bottom: 10px!important;
-        }
-        
-        .activity-level li.active {
-            background-color: #00a650;
-        }
-        
-        .activity-level li {
-            display: inline-block;
-            width: 15%;
-            height: 4px;
-            margin: 0 3px;
-            background-color: #ccc;
-        }
-        
-        .dropdown-menu-left,
-        .dropdown-menu {
-            box-shadow: 6px 9px 21px -11px rgba(0, 0, 0, 0.75)!important;
-            -webkit-box-shadow: 6px 9px 21px -11px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 6px 9px 21px -11px rgba(0, 0, 0, 0.75);
-        }
-    </style>
-    <style>
-        [dir] .badge-primary {
-            background-color: #00a650!important;
-            padding: 6px 30px 6px 30px!important;
-            font-size: 12px!important;
-        }
-    </style>
-
-    <style>
-        .hori-timeline .events {
-            border-top: 3px solid #e9ecef;
-        }
-        
-        .hori-timeline .events .event-list {
-            display: block;
-            position: relative;
-            text-align: center;
-            padding-top: 70px;
-            margin-right: 0;
-        }
-        
-        .hori-timeline .events .event-list:before {
-            content: "";
-            position: absolute;
-            height: 36px;
-            border-right: 2px dashed #dee2e6;
-            top: 0;
-        }
-        
-        .hori-timeline .events .event-list .event-date {
-            position: absolute;
-            top: 38px;
-            left: 0;
-            right: 0;
-            width: 75px;
-            margin: 0 auto;
-            border-radius: 4px;
-            padding: 2px 4px;
-        }
-        
-        @media (min-width: 1140px) {
-            .hori-timeline .events .event-list {
-                display: inline-block;
-                width: 24%;
-                padding-top: 45px;
-            }
-            .hori-timeline .events .event-list .event-date {
-                top: -12px;
-            }
-        }
-        
-        .bg-soft-primary {
-            background-color: rgba(64, 144, 203, .3)!important;
-        }
-        
-        .bg-soft-success {
-            background-color: rgba(71, 189, 154, .3)!important;
-        }
-        
-        .bg-soft-danger {
-            background-color: rgba(231, 76, 94, .3)!important;
-        }
-        
-        .bg-soft-warning {
-            background-color: rgba(249, 213, 112, .3)!important;
-        }
-    </style>
-    <Style>
-        [dir] th {
-            font-weight: 500!important;
-        }
-        
-        .form-control {
-            display: block;
-            width: 100%;
-            height: calc(1.5em + 0.5rem + 2px);
-        }
-        
-        .navbar-nav .nav-link {
-            font-size: 0.9rem;
-        }
-        
-        .vl {
-            border-left: 1px solid #e8e8e8;
-            height: 30px;
-        }
-        
-        .sidebar-brand-icon {
-            display: flex;
-            width: 70%;
-            height: auto;
-        }
-        
-        [dir] .sidebar-light .open>.sidebar-menu-button {
-            background: #00a650;
-        }
-        
-        .sidebar-light .open>.sidebar-menu-button,
-        .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
-            color: #ffffff;
-        }
-        
-        .sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
-            color: #ffffff;
-        }
-        
-        .leftMenu {
-            margin: 5px 10px;
-            border-radius: 6px !important;
-            background: #a39161 !important;
-            color: white;
-            border-color: #a39161 !important;
-            padding: 5px 0px !important;
-            font-size: 15px;
-            font-weight: 500;
-        }
-        
-        .sidebar-heading {
-            line-height: 1.5rem;
-            font-size: .775rem;
-        }
-        
-        .sidebar-heading {
-            font-weight: 600;
-            font-family: Arial, sans-serif !important;
-            text-transform: uppercase;
-            letter-spacing: 0px !important;
-        }
-        
-        [dir] .card-header {
-            padding: 0.3rem 1rem;
-            margin-bottom: 0;
-            background-color: #fff;
-        }
-        
-        .activemenu {
-            background: #00a650;
-            color: white !important;
-        }
-        
-        div#app-settings {
-            display: none;
-        }
-        
-        .active>.sidebar-menu-button .sidebar-menu-text:after {
-            display: none;
-        }
-        
-        .form-label {
-            color: #272c33;
-            text-transform: uppercase;
-            font-size: .8125rem;
-            font-family: inherit;
-            font-weight: 200;
-            letter-spacing: 2px;
-        }
-    </Style>
-
-    <style>
-        body {
-            color: #000;
-            overflow-x: hidden;
-            height: 100%;
-            background-repeat: no-repeat
-        }
-        
-        .card {
-            box-shadow: 0px 4px 8px 0px #BDBDBD
-        }
-        
-        .profile-pic {
-            width: 100px !important;
-            height: 100px;
-            box-shadow: 0px 4px 8px 0px #BDBDBD
-        }
-        
-        .owl-nav {
-            position: relative!important;
-            top: -44px!important;
-        }
-        
-        .owl-carousel .owl-nav button.owl-next,
-        .owl-carousel .owl-nav button.owl-prev {
-            background: 0 0;
-            color: #00a650 !important;
-            border: none;
-            padding: 5px 20px !important;
-            font: inherit;
-            font-size: 50px !important
-        }
-        
-        .owl-carousel,
-        .owl-theme,
-        .owl-loaded,
-        .owl-drag {
-            height: 452px!important;
-        }
-        
-        .owl-carousel .owl-nav button.owl-next:hover,
-        .owl-carousel .owl-nav button.owl-prev:hover {
-            color: #0D47A1 !important;
-            background-color: transparent !important
-        }
-        
-        .owl-dots {
-            display: none
-        }
-        
-        button:focus {
-            -moz-box-shadow: none !important;
-            -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-            outline-width: 0
-        }
-        
-        .item {
-            display: none
-        }
-        
-        .next {
-            display: block !important;
-            position: relative;
-            transform: scale(0.8);
-            transition-duration: 0.3s;
-            opacity: 0.6
-        }
-        
-        .prev {
-            display: block !important;
-            position: relative;
-            transform: scale(0.8);
-            transition-duration: 0.3s;
-            opacity: 0.6
-        }
-        
-        .item.show {
-            display: block;
-            transition-duration: 0.4s
-        }
-        
-        @media screen and (max-width: 999px) {
-            .next,
-            .prev {
-                transform: scale(1);
-                opacity: 1
-            }
-            .item {
-                display: block !important
-            }
-        }
-        
-        #xyz::-webkit-scrollbar-track,
-        #abc2::-webkit-scrollbar-track,
-        #xyz2::-webkit-scrollbar-track,
-        #abc3::-webkit-scrollbar-track {
-            --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            background-color: #F5F5F5;
-        }
-        
-        #xyz::-webkit-scrollbar,
-        #abc2::-webkit-scrollbar,
-        #xyz2::-webkit-scrollbar,
-        #abc3::-webkit-scrollbar {
-            width: 12px;
-            background-color: #F5F5F5;
-        }
-        
-        #xyz::-webkit-scrollbar-thumb,
-        #abc2::-webkit-scrollbar-thumb,
-        #xyz2::-webkit-scrollbar-thumb,
-        #abc3::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-            background-color: #707070;
-        }
-    </style>
+    <!-- Owl Carousel CSS -->
+    <link href="./assets/css/owl.carousel.min.css" rel="stylesheet" />
 </head>
 
 <body class="layout-app layout-sticky-subnav ">
@@ -508,7 +203,9 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card ">
+                                        <i class="fas fa-pencil-alt" style="text-align: right; padding-top: 14px; font-size: 24px; color: #00a650;"></i>
                                         <div class="avatar avatar-xxl" style="    margin: auto; padding: 5px 5px;">
+
                                             <img src="./assets/images/1.png" alt="Avatar" class="avatar-img rounded-circle" style="border: 4px solid #00a650;">
                                         </div>
                                         <label class="col-form-label form-label" style="margin: auto; letter-spacing: 0px; font-size: 20px;">Azlal Ahmed</label>
@@ -523,35 +220,9 @@
                                             <li></li>
                                         </ul>
                                         <p class="m-t-15 text-muted text-center ">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <div class="row" style="padding: 0px 10px;">
-                                            <!-- <table class="table">
-                                                <tr>
-                                                    <th>Age:</th>
-                                                    <td>12</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>Height:</th>
-                                                    <td>12ft</th>
-                                                </tr>
-                                                <tr>
-                                                    <th>Weight:</th>
-                                                    <td>60Kg</th>
-                                                </tr>
 
 
-                                            </table> -->
 
-                                        </div>
-
-                                        <div class="row  mb-3" style="padding: 0px 10px;">
-                                            <div class="col-12">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" style="color: #ffffff;
-                            border-color: #00a650;
-                            background: #00a650; width: 100%;">
-                                            Edit Child Info
-                                        </button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -595,7 +266,7 @@
                                     <div class="card-header p-0 nav">
                                         <div class="row no-gutters" role="tablist">
                                             <div class="col-auto">
-                                                <a href="#abc" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start active">
+                                                <a href="#Associations" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start active">
                                                     <span class="h2 mb-0 mr-3">1</span>
                                                     <span class="flex d-flex flex-column">
                                                         <strong class="card-title">Associations</strong>
@@ -604,7 +275,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-auto border-left border-right">
-                                                <a id="cll" href="#xyz" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                <a id="cll" href="#Planner" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
                                                     <span class="h2 mb-0 mr-3">2</span>
                                                     <span class="flex d-flex flex-column">
                                                         <strong class="card-title">Planner</strong>
@@ -613,7 +284,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-auto border-left border-right">
-                                                <a href="#abc2" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                <a href="#Timeline" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
                                                     <span class="h2 mb-0 mr-3">3</span>
                                                     <span class="flex d-flex flex-column">
                                                         <strong class="card-title">Timeline</strong>
@@ -622,7 +293,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-auto border-left border-right">
-                                                <a href="#xyz2" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                <a href="#Documents" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
                                                     <span class="h2 mb-0 mr-3">4</span>
                                                     <span class="flex d-flex flex-column">
                                                         <strong class="card-title">Documents</strong>
@@ -631,7 +302,7 @@
                                                 </a>
                                             </div>
                                             <div class="col-auto border-left border-right">
-                                                <a href="#abc3" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                <a href="#Tasks" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
                                                     <span class="h2 mb-0 mr-3">5</span>
                                                     <span class="flex d-flex flex-column">
                                                         <strong class="card-title">My Tasks</strong>
@@ -643,9 +314,7 @@
                                         </div>
                                     </div>
                                     <div class=" card-body tab-content">
-                                        <div id="abc" class="tab-pane active" style="background: #e4e4e4;
-                                                border-radius: 10px;
-                                                padding-top: 10px;">
+                                        <div id="Associations" class=" tabBody tab-pane active">
                                             <div class="container-fluid px-3 px-sm-5 text-center">
                                                 <div class="owl-carousel owl-theme">
                                                     <div class="item first prev">
@@ -655,7 +324,7 @@
                                                             <p class="content mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
                                                             <div class="flex" style="max-width: 100%">
 
-                                                                <span class="badge badge-primary">Family-Father</span>
+                                                                <span class="badge badge-primary">Father</span>
 
                                                             </div>
                                                         </div>
@@ -702,7 +371,7 @@
 
 
 
-                                        <div id="xyz" class="tab-pane active  " style="background-color: #fff!important; height: 452px; overflow-y: scroll;">
+                                        <div id="Planner" class=" tabBody tab-pane active ">
                                             <div class="flex" style="max-width: 100%">
 
                                                 <div class="button-list">
@@ -722,8 +391,7 @@
                                             </div>
                                             <div id='calendar' class=" active" style="height: 600px; width: 100%;padding: 14px;"></div>
                                         </div>
-                                        <div id="abc2" class="tab-pane  " style="background-color: #fff!important; height: 452px;
-                                            overflow-x: scroll;">
+                                        <div id="Timeline" class=" tabBody tab-pane ">
                                             <div class="hori-timeline" dir="ltr" style="margin-top: 70px;">
                                                 <ul class="list-inline events">
                                                     <li class="list-inline-item event-list">
@@ -769,8 +437,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div id="xyz2" class="tab-pane  " style="background-color: #fff!important; height: 452px;
-                                            overflow-y: scroll;">
+                                        <div id="Documents" class=" tabBody tab-pane">
 
                                             <div class="col-md-4">
                                                 <ul id="tree1">
@@ -814,8 +481,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div id="abc3" class="tab-pane  " style="background-color: #fff!important; height: 452px;
-                                            overflow-y: scroll;">
+                                        <div id="Tasks" class=" tabBody tab-pane">
                                             <div class="page-section" style="    padding-left: 10px;
                                                 padding-right: 20px;">
 
@@ -1881,7 +1547,17 @@
 
     <!-- App Settings (safe to remove) -->
     <script src="assets/js/app-settings.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js" integrity="sha512-Hyk+1XSRfagqzuSHE8M856g295mX1i5rfSV5yRugcYFlvQiE3BKgg5oFRfX45s7I8qzMYFa8gbFy9xMFbX7Lqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("#Planner").removeClass("active");
+            // Event Listener
+            $viewTrigger.click(function(e) {
+                swapTriggerActiveClass(e);
+                swapView(e);
+            });
+        });
+    </script>
     <script>
         var downloadGrid = (function() {
 
@@ -1970,21 +1646,7 @@
             calendar.render();
         });
     </script>
-    <script>
-        $(document).ready(function() {
 
-            $("#xyz").removeClass("active");
-            // Event Listener
-
-
-
-
-            $viewTrigger.click(function(e) {
-                swapTriggerActiveClass(e);
-                swapView(e);
-            });
-        });
-    </script>
 
     <script>
         window.addEventListener("DOMContentLoaded", () => {
@@ -2105,7 +1767,7 @@
 
         });
     </script>
-    <script src="./assets/vendor/Treeview.js"></script>
+    <script src="./assets/js/Treeview.js"></script>
 
 </body>
 
