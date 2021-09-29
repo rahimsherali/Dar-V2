@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
-      dir="ltr">
+<html lang="en" dir="ltr">
 
     
 <!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
@@ -22,6 +21,10 @@
         <!-- Perfect Scrollbar -->
         <link type="text/css"
               href="assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+        <!-- Slick Carousel -->
+        <link type="text/css"
+              href="assets/css/slick-carousel.css"
               rel="stylesheet">
 
         <!-- Material Design Icons -->
@@ -59,9 +62,41 @@
               <link type="text/css"
               href="src/css/smart_wizard_all.css"
               rel="stylesheet">
+                <!-- Flatpickr -->
+        <link type="text/css"
+        href="assets/css/flatpickr.css"
+        rel="stylesheet">
+  <link type="text/css"
+        href="assets/css/flatpickr-airbnb.css"
+        rel="stylesheet">
+
+  <!-- DateRangePicker -->
+  <link type="text/css"
+        href="assets/vendor/daterangepicker.css"
+        rel="stylesheet">
+
+  <!-- Quill Theme -->
+  <link type="text/css"
+        href="assets/css/quill.css"
+        rel="stylesheet">
+
+  <!-- Touchspin -->
+  <link type="text/css"
+        href="assets/css/bootstrap-touchspin.css"
+        rel="stylesheet">
+
+  <!-- Select2 -->
+  <link type="text/css"
+        href="assets/vendor/select2/select2.min.css"
+        rel="stylesheet">
+  <link type="text/css"
+        href="assets/css/select2.css"
+        rel="stylesheet">
 <Style>
 
-
+.sw-theme-arrows > .tab-content > .tab-pane {
+    padding: 10px 30px;
+}
 
 
 .logo-container{
@@ -1069,23 +1104,26 @@ label.form-label {
 <div class="row" style="    display: contents;">
   <br />
   <p style="
+  
   margin: 0px auto;
+  text-align: left;
+  align-content: lef;
+  margin-left: 13px;
+
 ">
-    <label>Theme:</label>
-    <select id="theme_selector">
-      <option value="default">Default</option>
-      <option value="arrows" selected>Arrows</option>
-      <option value="dots">Dots</option>
-      <option value="progress">Progress</option>
+   
+    <select class="btn" id="theme_selector" style="border: 1px solid green;">
+      <option value="default">Style - Default</option>
+      <option value="arrows" selected>Style - Arrows</option>
+      <option value="dots">Style - Dots</option>
+      <option value="progress">Style - Progress</option>
     </select>
 
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="checkbox" id="is_justified" value="1" checked />
-    <label for="is_justified">Justified</label>
+    
 
-    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div style="display: none;">
     <label>Animation:</label>
-    <select id="animation">
+    <select id="animation" style="border: 1px solid green;">
           <option value="none">None</option>
           <option value="fade">Fade</option>
           <option value="slide-horizontal" selected>Slide Horizontal</option>
@@ -1093,13 +1131,11 @@ label.form-label {
           <option value="slide-swing">Slide Swing</option>
     </select>
 
-  
-
-    &nbsp;&nbsp;&nbsp;&nbsp;
     <label>External Buttons:</label>
     <button class="btn btn-secondary" id="prev-btn" type="button">Go Previous</button>
     <button class="btn btn-secondary" id="next-btn" type="button">Go Next</button>
     <button class="btn btn-danger" id="reset-btn" type="button">Reset Wizard</button>
+</div>
   </p>
   <br />
 
@@ -1108,71 +1144,257 @@ label.form-label {
     <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" href="#step-1">
-            <strong>Step 1</strong> <br>Identity Child
+            <strong>Step 1</strong> <br>Identity Information
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#step-2">
-            <strong>Step 2</strong> <br>Identity Child
+            <strong>Step 2</strong> <br>Identity Details
           </a>
         </li>
+      
         <li class="nav-item">
-          <a class="nav-link" href="#step-3">
-            <strong>Step 3</strong> <br>Identity Child
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#step-4">
-            <strong>Step 4</strong> <br>Identity Child
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#step-5">
-            <strong>Step 5</strong> <br>Identity Child
+          <a class="nav-link " href="#step-3">
+            <strong>Step 3</strong> <br>Committee Approval
           </a>
         </li>
     </ul>
 
     <div class="tab-content">
         <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
-            <h3>Identity Childn</h3>
-            <div class="row">
-                                                       
-                
-    
-              <div class="card-body">
-                
-              </div>
+            <h3>Identity Information</h3>
+      
+            <div class="row" style="display: contents;">
+                  <div class="form-row">
+                      <div class=" col-md-6 col-sm-12">
+                          <label class="form-label">Does Child has an Identity</label>
+                          <div class="flex"
+                          style="max-width: 100%">
+                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                             <input checked=""
+                                    type="checkbox"
+                                    id="subscribe"
+                                    class="custom-control-input">
+                             <label class="custom-control-label"
+                                    for="subscribe">Yes</label>
+                         </div>
+                         <label class="form-label mb-0"
+                                for="subscribe">Yes</label>
+
+                     </div>
+                      </div>
+                  </div>
+                  
+                  <div class="form-row">
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Child Full Name</label>
+                          <input type="text" class="form-control"  placeholder="First name"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter full Name" >
+                          
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label" style="visibility: hidden;" >Does Child has an Identity</label>
+                          <input type="text" class="form-control"  placeholder="Middle name"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Middle Name" >
+                          
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label" style="visibility: hidden;">Does Child has an Identity</label>
+                          <input type="text" class="form-control"  placeholder="Last name"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Last Name" >
+                          
+                      </div>
+                  </div>
+                  
+                  <div class="form-row">
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label " >Committee Status</label>
+                          <input type="text" class="form-control"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter full Name" >
+                          
+                      </div>
+                      <div class=" col-md-8 col-sm-12">
+                          <label class="form-label" >Committee Comments</label>
+                          <input type="text" class="form-control"  placeholder="Comments"  data-toggle="tooltip" data-html="true" title="Enter Middle Name" >
+                          
+                      </div>
+                      
+                  </div>
+
+                  
+                 
+            
              
           </div>
       
           </div>
         <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-            <h3>Review</h3>
-            <div class="row" style="display: contents;">
-            
+            <h3>Identity Details</h3>
+            <div class="row" style="display: contents; ">
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                       <label class="form-label">Child Full Name: </label>
+                       <span style="font-size: 18px; font-weight: 400;">Azlal Ahmed</span>
+                        
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Committee Status: </label>
+                        <span style="font-size: 18px; font-weight: 400;">Approved</span>
+                         
+                     </div>
+                     <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Committee Comments: </label>
+                        <span style="font-size: 18px; font-weight: 400;">XYZ</span>
+                         
+                     </div>
+                    
+                </div>
+
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Requsting Health Card</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Requsting HC"   >
+                        
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Outcome Of Health Card Request</label>
+                        <input type="text" class="form-control"  placeholder="Outcome Of Health Card Request"   >
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Issuing Health Card</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Issuing Health Card"   >
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Upload Health Card No file chosen</label>
+                        <div class="custom-file">
+                            <input type="file" id="file1" class="custom-file-input">
+                            <label for="file" class="custom-file-label">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Requsting Birth Certificate</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Requsting BC"   >
+                        
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Outcome Of Birth Certificate Request</label>
+                        <input type="text" class="form-control"  placeholder="Outcome Of BC Request"   >
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Issuing Birth Certificate</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Issuing BC"   >
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Upload Birth Certificate</label>
+                        <div class="custom-file">
+                            <input type="file" id="file1" class="custom-file-input">
+                            <label for="file" class="custom-file-label">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Requsting Emirates ID</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Requsting Emirates ID"   >
+                        
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Outcome Of Emirates ID Request</label>
+                        <input type="text" class="form-control"  placeholder="Outcome Of Emirates ID Request"   >
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Issuing Emirates ID</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Issuing Emirates ID"   >
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Upload Emirates ID No file chosen</label>
+                        <div class="custom-file">
+                            <input type="file" id="file1" class="custom-file-input">
+                            <label for="file" class="custom-file-label">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Requsting Passport</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Requsting Passport"   >
+                        
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Outcome Of Passport Request</label>
+                        <input type="text" class="form-control"  placeholder="Outcome Of Passport Request"   >
+                    </div>
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Date Of Issuing Passport</label>
+                        <input type="text" class="form-control"  placeholder="Date Of Issuing Passport"   >
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class=" col-md-4 col-sm-12">
+                        <label class="form-label">Upload Passport</label>
+                        <div class="custom-file">
+                            <input type="file" id="file1" class="custom-file-input">
+                            <label for="file" class="custom-file-label">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+
+
           </div>
       
           </div>
-        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-          <h3>Approve</h3>
+        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-5">
+          <h3>Committee Approval</h3>
           <div class="row" style="    display: contents;">
-           
-        </div>
-        
-        </div>
-        <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
-            <h3>Receiving a Child</h3>
-            <div class="row" style="    display: contents;">
-           
-          </div>
-       
-       
-          </div>
-        <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5">
-          <h3>Child Allocation</h3>
-          <div class="row" style="    display: contents;">
-           
+            <div class="form-row">
+                <div class=" col-md-6 col-sm-12">
+                    <label class="form-label">Allocation Dz House</label>
+                    <select id="custom-select7"
+                    class="form-control custom-select">
+                <option selected>Select Allocation Dz House</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">Other</option>
+            </select>
+                    
+                </div>
+                <div class=" col-md-6 col-sm-12 mt-4">
+                    <label class="form-label">Allocation Care Giver</label>
+                    <div class="custom-control custom-checkbox">
+                        <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                        <label for="customCheck01" class="custom-control-label">CareGiver 1</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                        <label for="customCheck02" class="custom-control-label">CareGiver 2</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input id="customCheck03" type="checkbox" checked="" class="custom-control-input">
+                        <label for="customCheck03" class="custom-control-label">CareGiver 3</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class=" col-md-6 col-sm-12">
+                    <label class="form-label">Allocation DZFC Social Worker</label>
+                    <input type="text" class="form-control"  placeholder="Social Worker"   >
+                </div>
+                <div class=" col-md-6 col-sm-12">
+                    <label class="form-label" >Child Pocket Money</label>
+                    <input type="text" class="form-control"  placeholder="Child Pocket Money"   >
+                </div>
+                
+            </div>
         </div>
       
         </div>
@@ -1315,21 +1537,29 @@ label.form-label {
                                 </a>
                             
                             </li> -->
-                            <li class="sidebar-menu-item ">
-                              <a class="sidebar-menu-button " >
+                            <li class="sidebar-menu-item open">
+                              <a class="sidebar-menu-button " data-toggle="collapse" href="#dashboards_menu1">
                                   <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">link</span>
                                   Registering a Case
-                                  <span class="ml-auto Roundd">1</span>
+                                  <span class="ml-auto Rounddopen">1</span>
                               </a>
                              
                           </li>
-                            <li class="sidebar-menu-item open">
-                                <a class="sidebar-menu-button activemenu"
+                            <!-- <li class="sidebar-menu-item">
+                                <a class="sidebar-menu-button"
                                
-                                   href="Identity ManagementNew.html" data-toggle="collapse" href="#dashboards_menu1">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">view_compact</span>
+                                   href="IdentityManagement.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
                                   Identity Management
-                                  <span class="ml-auto Rounddopen">2</span>
+                                   
+                                </a>
+                                
+                            </li> -->
+                            <li class="sidebar-menu-item ">
+                                <a class="sidebar-menu-button  activemenu"   href="Identity ManagementNew.html">
+                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu ">view_compact</span>
+                                  Identity Management
+                                  <span class="ml-auto Roundd">2</span>
                                    
                                 </a>
                                 
@@ -1472,6 +1702,12 @@ label.form-label {
         <!-- Flatpickr -->
         <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
         <script src="assets/js/flatpickr.js"></script>
+        
+ 
+         <!-- DateRangePicker -->
+         <script src="assets/vendor/moment.min.js"></script>
+         <script src="assets/vendor/daterangepicker.js"></script>
+         <script src="assets/js/daterangepicker.js"></script>
 
         <!-- Moment.js -->
         <script src="assets/vendor/moment.min.js"></script>
@@ -1483,6 +1719,9 @@ label.form-label {
 
         <!-- Chart.js Samples -->
         <script src="assets/js/page.analytics-dashboard.js"></script>
+
+        <!-- slick js -->
+        <script src="assets/js/slick.js"></script>
 
         <!-- Vector Maps -->
         <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
@@ -1496,6 +1735,50 @@ label.form-label {
         <!-- Tables -->
         <script src="assets/js/toggle-check-all.js"></script>
         <script src="assets/js/check-selected-row.js"></script>
+        <script src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="assets/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="assets/js/app.js"></script>
+
+        <!-- Highlight.js -->
+        <script src="assets/js/hljs.js"></script>
+
+        <!-- Touchspin -->
+        <script src="assets/vendor/jquery.bootstrap-touchspin.js"></script>
+        <script src="assets/js/touchspin.js"></script>
+
+        <!-- Flatpickr -->
+        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/js/flatpickr.js"></script>
+
+        <!-- DateRangePicker -->
+        <script src="assets/vendor/moment.min.js"></script>
+        <script src="assets/vendor/daterangepicker.js"></script>
+        <script src="assets/js/daterangepicker.js"></script>
+
+        <!-- jQuery Mask Plugin -->
+        <script src="assets/vendor/jquery.mask.min.js"></script>
+
+        <!-- Quill -->
+        <script src="assets/vendor/quill.min.js"></script>
+        <script src="assets/js/quill.js"></script>
+
+        <!-- Select2 -->
+        <script src="assets/vendor/select2/select2.min.js"></script>
+        <script src="assets/js/select2.js"></script>
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>

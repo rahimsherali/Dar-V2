@@ -21,43 +21,100 @@
 
     <!-- Perfect Scrollbar -->
     <link type="text/css"
-          href="assets/vendor/perfect-scrollbar.css"
+          href="./assets/vendor/perfect-scrollbar.css"
           rel="stylesheet">
 
     <!-- Material Design Icons -->
     <link type="text/css"
-          href="assets/css/material-icons.css"
+          href="./assets/css/material-icons.css"
           rel="stylesheet">
 
     <!-- Font Awesome Icons -->
     <link type="text/css"
-          href="assets/css/fontawesome.css"
+          href="./assets/css/fontawesome.css"
           rel="stylesheet">
 
     <!-- Preloader -->
     <link type="text/css"
-          href="assets/vendor/spinkit.css"
+          href="./assets/vendor/spinkit.css"
           rel="stylesheet">
     <link type="text/css"
-          href="assets/css/preloader.css"
+          href="./assets/css/preloader.css"
           rel="stylesheet">
 
     <!-- App CSS -->
     <link type="text/css"
-          href="assets/css/app.css"
+          href="./assets/css/app.css"
           rel="stylesheet">
 
     <!-- Dark Mode CSS (optional) -->
     <link type="text/css"
           href="assets/css/dark-mode.css"
           rel="stylesheet">
-
+ <!-- Full Calender -->
+ <link rel="stylesheet" href="./assets/vendor/fullcalendermain.css">
+ <script src="./assets/vendor/fullcalender.js"></script>
     <!-- Vector Maps -->
     <link type="text/css"
-          href="assets/vendor/jqvmap/jqvmap.min.css"
+          href="./assets/vendor/jqvmap/jqvmap.min.css"
           rel="stylesheet">
 
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" /> -->
+   <style>
+       .hori-timeline .events {
+    border-top: 3px solid #e9ecef;
+}
+.hori-timeline .events .event-list {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+    margin-right: 0;
+}
+.hori-timeline .events .event-list:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed #dee2e6;
+    top: 0;
+}
+.hori-timeline .events .event-list .event-date {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    width: 75px;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+@media (min-width: 1140px) {
+    .hori-timeline .events .event-list {
+        display: inline-block;
+        width: 24%;
+        padding-top: 45px;
+    }
+    .hori-timeline .events .event-list .event-date {
+        top: -12px;
+    }
+}
+.bg-soft-primary {
+    background-color: rgba(64,144,203,.3)!important;
+}
+.bg-soft-success {
+    background-color: rgba(71,189,154,.3)!important;
+}
+.bg-soft-danger {
+    background-color: rgba(231,76,94,.3)!important;
+}
+.bg-soft-warning {
+    background-color: rgba(249,213,112,.3)!important;
+}
+   </style>
     <Style>
+        [dir] th {
+    font-weight: 500!important;}
 
         .form-control {
             display: block;
@@ -143,6 +200,96 @@
             letter-spacing: 2px;
         }
     </Style>
+
+<style>
+    body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    
+    background-repeat: no-repeat
+}
+    .card {
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
+
+.profile-pic {
+    width: 100px !important;
+    height: 100px;
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
+.owl-nav{
+    position: relative!important;
+    top: -44px!important;
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    color: #00a650 !important;
+    border: none;
+    padding: 5px 20px !important;
+    font: inherit;
+    font-size: 50px !important
+}
+.owl-carousel, .owl-theme, .owl-loaded, .owl-drag{
+    height: 426px!important;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    color: #0D47A1 !important;
+    background-color: transparent !important
+}
+
+.owl-dots {
+    display: none
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.item {
+    display: none
+}
+
+.next {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.prev {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.item.show {
+    display: block;
+    transition-duration: 0.4s
+}
+
+@media screen and (max-width: 999px) {
+
+    .next,
+    .prev {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    .item {
+        display: block !important
+    }
+}
+</style> 
 </head>
 
 <body class="layout-app layout-sticky-subnav ">
@@ -171,7 +318,7 @@
                 <a href="index.html"
                    class="navbar-brand mr-16pt d-lg-none">
                     <img class="navbar-brand-icon mr-0 mr-lg-8pt"
-                         src="assets/images/Logo.svg"
+                         src="./assets/images/Logo.svg"
                          width="32"
                          alt="Huma">
 
@@ -297,7 +444,7 @@
                             <img width="32"
                                  height="32"
                                  class="rounded-circle mr-8pt"
-                                 src="assets/images/people/50/guy-3.jpg"
+                                 src="./assets/images/people/50/guy-3.jpg"
                                  alt="account" />
                             <span class="flex d-flex flex-column mr-8pt">
                                 <span class="navbar-text-100">Laza Bogdan</span>
@@ -331,25 +478,33 @@
                         <div class="col-3">
                             <div class="card ">
                                 <div class="avatar avatar-xxl" style="    margin: auto; padding: 5px 5px;">
-                                    <img src="assets/images/1.png" alt="Avatar" class="avatar-img rounded-circle" style="border: 4px solid #00a650;">
+                                    <img src="./assets/images/1.png" alt="Avatar" class="avatar-img rounded-circle" style="border: 4px solid #00a650;">
                                 </div>
                                 <label class="col-form-label form-label" style="margin: auto; letter-spacing: 0px; font-size: 20px;">Azlal Ahmed</label>
                                 <div class="row" style="padding: 0px 10px;">
-                                    <div class="col-4">
-                                        <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Age</label>
-                                        <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">5Y 4M</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Height</label>
-                                        <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">100 cm</label>
-                                    </div>
-                                    <div class="col-4">
-                                        <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">weight</label>
-                                        <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">30 kg</label>
-                                    </div>
+                                    <table class="table"> 
+                                        <tr>
+                                            <th>Age:</th>
+                                            <td>12</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Height:</th>
+                                            <td>12ft</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Weight:</th>
+                                            <td>60Kg</th>
+                                        </tr> 
+                                       
+                                        
+                                    </table>
 
                                 </div>
-                                <div class="row mt-2 mb-3" style="padding: 0px 10px;">
+
+                                
+
+
+                                <!-- <div class="row mt-2 mb-3" style="padding: 0px 10px;">
                                     <div class="col-12">
                                         <label class="col-form-label form-label" style="margin: auto; display: block; padding: 0px; letter-spacing: 0px; color: #000000;">category</label>
                                         <div class="flex" style="max-width: 100%">
@@ -364,7 +519,208 @@
                                     </div>
 
 
+                                </div> -->
+                                <div class="row  mb-3" style="padding: 0px 10px;">
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" style="color: #ffffff;
+                            border-color: #00a650;
+                            background: #00a650; width: 100%;">
+                                            Edit Child Info
+                                        </button>
+                                    </div>
                                 </div>
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="col-lg-9 d-flex align-items-center">
+                            <div class="flex" style="max-width: 100%">
+
+                                <div class="card dashboard-area-tabs p-relative o-hidden mb-0">
+                                    <div class="card-header p-0 nav">
+                                        <div class="row no-gutters" role="tablist">
+                                            <div class="col-auto">
+                                                <a href="#abc" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start active">
+                                                    <span class="h2 mb-0 mr-3">1</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Associations</strong>
+                                                       
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-auto border-left border-right">
+                                                <a href="#xyz" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                    <span class="h2 mb-0 mr-3">2</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Planner</strong>
+                                                        
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-auto border-left border-right">
+                                                <a href="#abc2" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                    <span class="h2 mb-0 mr-3">3</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Documents</strong>
+                                                        
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-auto border-left border-right">
+                                                <a href="#" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                    <span class="h2 mb-0 mr-3">4</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Archived</strong>
+                                                        <small class="card-subtitle text-50">Past Projects</small>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div  class=" card-body tab-content" >
+                                                <div id="abc" class="tab-pane active" style="background: #e4e4e4;
+                                                border-radius: 10px;
+                                                padding-top: 10px;">
+                                                    <div class="container-fluid px-3 px-sm-5 text-center">
+                                                        <div class="owl-carousel owl-theme">
+                                                            <div class="item first prev">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">Marielle Haag</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item show">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">Ximena Vegara</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item next">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">John Paul</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item last">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">William Doe</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                          
+                                       
+                                          
+                                            <div id="xyz" class="tab-pane  " style="background-color: #fff!important; height: 426px; overflow: scroll;" >
+                                               
+                                                <div id='calendar' class="active" style="height: 600px; width: 100%;padding: 14px;"></div>
+                                            </div>
+                                            <div id="abc2" class="tab-pane  " style="background-color: #fff!important; height: 426px;
+                                            overflow-x: scroll;" >
+                                            <div class="hori-timeline" dir="ltr" style="margin-top: 70px;">
+                                                <ul class="list-inline events">
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-primary text-primary">2 June</div>
+                                                            <h5 class="font-size-16">Event One</h5>
+                                                            <p class="text-muted">It will be as simple as occidental in fact it will be Occidental Cambridge friend</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-success text-success">5 June</div>
+                                                            <h5 class="font-size-16">Event Two</h5>
+                                                            <p class="text-muted">Everyone realizes why a new common language one could refuse translators.</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-danger text-danger">7 June</div>
+                                                            <h5 class="font-size-16">Event Three</h5>
+                                                            <p class="text-muted">If several languages coalesce the grammar of the resulting simple and regular</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-warning text-warning">8 June</div>
+                                                            <h5 class="font-size-16">Event Four</h5>
+                                                            <p class="text-muted">Languages only differ in their pronunciation and their most common words.</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3" style="margin-top: -14%;">
+                            <div class="card ">
+                    
+                               <div class="row" style="padding: 0px 10px;">
+                                    <table class="table"> 
+                                        <tr>
+                                            <th>National ID:</th>
+                                            <td>1212121</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Caregiver</th>
+                                            <td>Abdul Saleem</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Weight:</th>
+                                            <td>60Kg</th>
+                                        </tr> 
+                                       
+                                        
+                                    </table>
+
+                                </div>
+
+                                
+
+
+                                <!-- <div class="row mt-2 mb-3" style="padding: 0px 10px;">
+                                    <div class="col-12">
+                                        <label class="col-form-label form-label" style="margin: auto; display: block; padding: 0px; letter-spacing: 0px; color: #000000;">category</label>
+                                        <div class="flex" style="max-width: 100%">
+
+                                            <span class="badge badge-accent">Accent</span>
+                                            <span class="badge badge-primary">Primary</span>
+                                            <span class="badge badge-dark">Dark</span>
+                                            <span class="badge badge-secondary">Secondary</span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div> -->
                                 <div class="row  mb-3" style="padding: 0px 10px;">
                                     <div class="col-12">
                                         <button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" style="color: #ffffff;
@@ -376,94 +732,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-9">
-                            <div class="card ">
-                                <div class="flex"
-                                     style="max-width: 100%">
-
-                                    <div class="card dashboard-area-tabs p-relative o-hidden mb-0">
-                                        <div class="card-header p-0 nav">
-                                            <div class="row no-gutters"
-                                                 role="tablist">
-                                                <div class="col-auto">
-                                                    <a href="#"
-                                                       data-toggle="tab"
-                                                       role="tab"
-                                                       aria-selected="true"
-                                                       class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start active">
-                                                        <span class="h2 mb-0 mr-3">1</span>
-                                                        <span class="flex d-flex flex-column">
-                                                            <strong class="card-title">Active</strong>
-                                                            <small class="card-subtitle text-50">Ongoing Projects</small>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto border-left border-right">
-                                                    <a href="#"
-                                                       data-toggle="tab"
-                                                       role="tab"
-                                                       aria-selected="false"
-                                                       class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
-                                                        <span class="h2 mb-0 mr-3">2</span>
-                                                        <span class="flex d-flex flex-column">
-                                                            <strong class="card-title">Archived</strong>
-                                                            <small class="card-subtitle text-50">Past Projects</small>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto border-left border-right">
-                                                    <a href="#"
-                                                       data-toggle="tab"
-                                                       role="tab"
-                                                       aria-selected="false"
-                                                       class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
-                                                        <span class="h2 mb-0 mr-3">3</span>
-                                                        <span class="flex d-flex flex-column">
-                                                            <strong class="card-title">Archived</strong>
-                                                            <small class="card-subtitle text-50">Past Projects</small>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto border-left border-right">
-                                                    <a href="#"
-                                                       data-toggle="tab"
-                                                       role="tab"
-                                                       aria-selected="false"
-                                                       class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
-                                                        <span class="h2 mb-0 mr-3">4</span>
-                                                        <span class="flex d-flex flex-column">
-                                                            <strong class="card-title">Archived</strong>
-                                                            <small class="card-subtitle text-50">Past Projects</small>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto border-left border-right">
-                                                    <a href="#"
-                                                       data-toggle="tab"
-                                                       role="tab"
-                                                       aria-selected="false"
-                                                       class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
-                                                        <span class="h2 mb-0 mr-3">5</span>
-                                                        <span class="flex d-flex flex-column">
-                                                            <strong class="card-title">Archived</strong>
-                                                            <small class="card-subtitle text-50">Past Projects</small>
-                                                        </span>
-                                                    </a>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="card-body tab-content" style="    height: 236px;">
-                                            <div class="tab-pane active text-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam eaque error laborum ipsum consequatur nobis dicta totam facilis corporis, porro cupiditate inventore minus vero neque accusamus illo temporibus officiis natus.</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="row">
+
+                    <div class="row" style="margin-top: 40px;">
                         <div class="col-3">
                             <div class="card ">
                                 <div class="card-header">
@@ -999,15 +1270,104 @@ var downloadGrid = (function(){
     $cardContainer.attr('data-view', $currentView);
   }
 
-  $(document).ready(function(){
+ 
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      initialDate: '2020-09-12',
+      navLinks: true, // can click day/week names to navigate views
+      nowIndicator: true,
+
+      weekNumbers: true,
+      weekNumberCalculation: 'ISO',
+
+      editable: true,
+      selectable: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2020-09-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2020-09-07',
+          end: '2020-09-10'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2020-09-09T16:00:00'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2020-09-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2020-09-11',
+          end: '2020-09-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2020-09-12T10:30:00',
+          end: '2020-09-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2020-09-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2020-09-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2020-09-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2020-09-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2020-09-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2020-09-28'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+$(document).ready(function(){
+    //  $('#xyz').css('display','none');
     // Event Listener
+   
+
+
+
     $viewTrigger.click(function(e){
       swapTriggerActiveClass(e);
       swapView(e);
     });
   });
 
-})();
+
+
 
 
 
@@ -1064,6 +1424,77 @@ class NeumorphicRange {
 	}
 }
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   
+<script>
+    $(document).ready(function() {
+
+$('.owl-carousel').owlCarousel({
+mouseDrag:true,
+
+loop:true,
+margin:2,
+nav:true,
+responsive:{
+0:{
+items:1
+},
+600:{
+items:1
+},
+1000:{
+items:3
+}
+}
+});
+
+$('.owl-prev').click(function() {
+$active = $('.owl-item .item.show');
+$('.owl-item .item.show').removeClass('show');
+$('.owl-item .item').removeClass('next');
+$('.owl-item .item').removeClass('prev');
+$active.addClass('next');
+if($active.is('.first')) {
+$('.owl-item .last').addClass('show');
+$('.first').addClass('next');
+$('.owl-item .last').parent().prev().children('.item').addClass('prev');
+}
+else {
+$active.parent().prev().children('.item').addClass('show');
+if($active.parent().prev().children('.item').is('.first')) {
+$('.owl-item .last').addClass('prev');
+}
+else {
+$('.owl-item .show').parent().prev().children('.item').addClass('prev');
+}
+}
+});
+
+$('.owl-next').click(function() {
+$active = $('.owl-item .item.show');
+$('.owl-item .item.show').removeClass('show');
+$('.owl-item .item').removeClass('next');
+$('.owl-item .item').removeClass('prev');
+$active.addClass('prev');
+if($active.is('.last')) {
+$('.owl-item .first').addClass('show');
+$('.owl-item .first').parent().next().children('.item').addClass('prev');
+}
+else {
+$active.parent().next().children('.item').addClass('show');
+if($active.parent().next().children('.item').is('.last')) {
+$('.owl-item .first').addClass('next');
+}
+else {
+$('.owl-item .show').parent().next().children('.item').addClass('next');
+}
+}
+});
+
+});
+</script>
+
 </body>
 
 
