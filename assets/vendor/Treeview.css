@@ -62,3 +62,8 @@
     padding:0px 0px 0px 0px;
     outline: 0;
 }
+.fa, .fas {
+    font-weight: 900;
+    font-size: 20px!important;
+    margin-right: 10px!important;
+}
