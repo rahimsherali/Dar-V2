@@ -20,14 +20,20 @@ $.fn.extend({
             var branch = $(this); //li with children ul
             branch.prepend("<i class='fas fa-folder " + closedClass + "'></i>");
             branch.addClass('branch');
-            branch.on('click', function (e) {
+            branch.on('click' ,function (e) {
                 if (this == e.target) {
                     var icon = $(this).children('i:first');
                     icon.toggleClass(openedClass + " " + closedClass);
                     $(this).children().children().toggle();
                 }
+                 
             })
+           
             branch.children().children().toggle();
+            var icon =   $(this).children('i:first');
+            debugger;
+icon.toggleClass(openedClass + " " + closedClass);
+$(this).children().children().toggle();
         });
         //fire event from the dynamically added icon
       tree.find('.branch .indicator').each(function(){
