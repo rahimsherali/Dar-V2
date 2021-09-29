@@ -49,6 +49,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" /> -->
     <style>
+        hr {
+            margin: auto!important;
+            width: 80%!important;
+            top: 10px;
+            /* bottom: 10px; */
+            /* padding: 10px; */
+            margin-bottom: 10px!important;
+        }
+        
+        .activity-level li.active {
+            background-color: #00a650;
+        }
+        
+        .activity-level li {
+            display: inline-block;
+            width: 15%;
+            height: 4px;
+            margin: 0 3px;
+            background-color: #ccc;
+        }
+        
+        .dropdown-menu-left,
+        .dropdown-menu {
+            box-shadow: 6px 9px 21px -11px rgba(0, 0, 0, 0.75)!important;
+            -webkit-box-shadow: 6px 9px 21px -11px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 6px 9px 21px -11px rgba(0, 0, 0, 0.75);
+        }
+    </style>
+    <style>
         [dir] .badge-primary {
             background-color: #00a650!important;
             padding: 6px 30px 6px 30px!important;
@@ -243,7 +272,7 @@
         .owl-theme,
         .owl-loaded,
         .owl-drag {
-            height: 426px!important;
+            height: 452px!important;
         }
         
         .owl-carousel .owl-nav button.owl-next:hover,
@@ -303,7 +332,7 @@
         #abc2::-webkit-scrollbar-track,
         #xyz2::-webkit-scrollbar-track,
         #abc3::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             background-color: #F5F5F5;
         }
@@ -321,7 +350,7 @@
         #xyz2::-webkit-scrollbar-thumb,
         #abc3::-webkit-scrollbar-thumb {
             border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
             background-color: #707070;
         }
     </style>
@@ -483,8 +512,19 @@
                                             <img src="./assets/images/1.png" alt="Avatar" class="avatar-img rounded-circle" style="border: 4px solid #00a650;">
                                         </div>
                                         <label class="col-form-label form-label" style="margin: auto; letter-spacing: 0px; font-size: 20px;">Azlal Ahmed</label>
+                                        <p class="text-muted text-center ">Active | Male | Born 23.05.1992</p>
+                                        <hr>
+                                        <p class="text-muted m-t-15 text-center " style="margin: 10px!important;">Activity Level: 87%</p>
+                                        <ul class="list-unstyled activity-level text-center">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <p class="m-t-15 text-muted text-center ">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                         <div class="row" style="padding: 0px 10px;">
-                                            <table class="table">
+                                            <!-- <table class="table">
                                                 <tr>
                                                     <th>Age:</th>
                                                     <td>12</th>
@@ -499,7 +539,7 @@
                                                 </tr>
 
 
-                                            </table>
+                                            </table> -->
 
                                         </div>
 
@@ -662,11 +702,27 @@
 
 
 
-                                        <div id="xyz" class="tab-pane active  " style="background-color: #fff!important; height: 426px; overflow-y: scroll;">
+                                        <div id="xyz" class="tab-pane active  " style="background-color: #fff!important; height: 452px; overflow-y: scroll;">
+                                            <div class="flex" style="max-width: 100%">
 
+                                                <div class="button-list">
+                                                    <button type="button" class="btn btn-accent">All</button>
+                                                    <button type="button" class="btn btn-primary">Primary Health Care</button>
+                                                    <button type="button" class="btn btn-secondary">Health Care</button>
+                                                    <button type="button" class="btn btn-dark">Education</button>
+                                                    <button type="button" class="btn btn-accent">Psychological</button>
+                                                    <button type="button" class="btn btn-primary">Mental</button>
+                                                    <button type="button" class="btn btn-secondary">Mental</button>
+                                                    <button type="button" class="btn btn-dark">Social</button>
+                                                    <button type="button" class="btn btn-accent">Pre-independence</button>
+                                                    <button type="button" class="btn btn-primary">Social Empowerment</button>
+                                                </div>
+                                                <hr style="width: 100%!important;">
+
+                                            </div>
                                             <div id='calendar' class=" active" style="height: 600px; width: 100%;padding: 14px;"></div>
                                         </div>
-                                        <div id="abc2" class="tab-pane  " style="background-color: #fff!important; height: 426px;
+                                        <div id="abc2" class="tab-pane  " style="background-color: #fff!important; height: 452px;
                                             overflow-x: scroll;">
                                             <div class="hori-timeline" dir="ltr" style="margin-top: 70px;">
                                                 <ul class="list-inline events">
@@ -713,7 +769,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div id="xyz2" class="tab-pane  " style="background-color: #fff!important; height: 426px;
+                                        <div id="xyz2" class="tab-pane  " style="background-color: #fff!important; height: 452px;
                                             overflow-y: scroll;">
 
                                             <div class="col-md-4">
@@ -758,7 +814,7 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div id="abc3" class="tab-pane  " style="background-color: #fff!important; height: 426px;
+                                        <div id="abc3" class="tab-pane  " style="background-color: #fff!important; height: 452px;
                                             overflow-y: scroll;">
                                             <div class="page-section" style="    padding-left: 10px;
                                                 padding-right: 20px;">
@@ -1273,18 +1329,28 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-9 col-sm-12">
-                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
-                                    font-weight: 500;
-                                    font-size: large;">
+                                            <h3 class="card-title ">
                                                 Child Identity Service
                                             </h3>
                                         </div>
-                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <div class="col-md-3 col-sm-12" style="text-align: right;">
+                                                    <i class="material-icons">more_vert</i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-left">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="card-body" style="margin: auto;">
                                     <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
-                                        <img src="assets/images/1098028.png" alt="Avatar" class="avatar-img">
+                                        <img src="assets/images/Child.png" alt="Avatar" class="avatar-img">
                                     </div>
 
                                 </div>
@@ -1313,18 +1379,27 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-9 col-sm-12">
-                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
-                                    font-weight: 500;
-                                    font-size: large">
+                                            <h3 class="card-title">
                                                 House Facilitation Service
                                             </h3>
                                         </div>
-                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <div class="col-md-3 col-sm-12" style="text-align: right;">
+                                                    <i class="material-icons">more_vert</i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-left">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body" style="margin: auto;">
                                     <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
-                                        <img src="assets/images/1877835.png" alt="Avatar" class="avatar-img">
+                                        <img src="assets/images/House.png" alt="Avatar" class="avatar-img">
                                     </div>
 
                                 </div>
@@ -1353,18 +1428,27 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-9 col-sm-12">
-                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
-                                    font-weight: 500;
-                                    font-size: large;">
+                                            <h3 class="card-title">
                                                 Register A <br>Case
                                             </h3>
                                         </div>
-                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <div class="col-md-3 col-sm-12" style="text-align: right;">
+                                                    <i class="material-icons">more_vert</i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-left">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body" style="margin: auto;">
                                     <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
-                                        <img src="assets/images/Social.png" class="avatar-img">
+                                        <img src="assets/images/Registration.png" class="avatar-img">
                                     </div>
 
                                 </div>
@@ -1393,18 +1477,27 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-9 col-sm-12">
-                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
-                                    font-weight: 500;
-                                    font-size: large;">
+                                            <h3 class="card-title">
                                                 Request a Letter/Certificate
                                             </h3>
                                         </div>
-                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <div class="col-md-3 col-sm-12" style="text-align: right;">
+                                                    <i class="material-icons">more_vert</i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-left">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body" style="margin: auto;">
                                     <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
-                                        <img src="assets/images/study.png" alt="Avatar" class="avatar-img">
+                                        <img src="assets/images/Certificate.png" alt="Avatar" class="avatar-img">
                                     </div>
 
                                 </div>
@@ -1433,18 +1526,27 @@
                                 <div class="card-header">
                                     <div class="row">
                                         <div class="col-md-9 col-sm-12">
-                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
-                                    font-weight: 500;
-                                    font-size: large;">
+                                            <h3 class="card-title">
                                                 Request a </br> Risk
                                             </h3>
                                         </div>
-                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <div class="col-md-3 col-sm-12" style="text-align: right;">
+                                                    <i class="material-icons">more_vert</i>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-left">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="card-body" style="margin: auto;">
                                     <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
-                                        <img src="assets/images/study.png" alt="Avatar" class="avatar-img">
+                                        <img src="assets/images/Risk.png" alt="Avatar" class="avatar-img">
                                     </div>
 
                                 </div>
