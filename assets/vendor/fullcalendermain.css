@@ -197,6 +197,9 @@ When it's NOT activated, the fc-button classes won't even be in the DOM.
   /* "primary" coloring */
 
 }
+.fc-event-title-container{
+      background-color: #3788d8!important;
+}
 .fc .fc-button-primary {
     color: #fff;
     color: var(--fc-button-text-color, #fff);
