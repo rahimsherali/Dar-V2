@@ -2,1052 +2,1275 @@
 <html lang="en"
       dir="ltr">
 
-    
+
 <!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible"
-              content="IE=edge">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Dashboard</title>
-
-        <!-- Prevent the demo from appearing in search engines -->
-        <meta name="robots"
-              content="noindex">
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
-              rel="stylesheet">
-
-        <!-- Perfect Scrollbar -->
-        <link type="text/css"
-              href="assets/vendor/perfect-scrollbar.css"
-              rel="stylesheet">
-
-        <!-- Material Design Icons -->
-        <link type="text/css"
-              href="assets/css/material-icons.css"
-              rel="stylesheet">
-
-        <!-- Font Awesome Icons -->
-        <link type="text/css"
-              href="assets/css/fontawesome.css"
-              rel="stylesheet">
-
-        <!-- Preloader -->
-        <link type="text/css"
-              href="assets/vendor/spinkit.css"
-              rel="stylesheet">
-        <link type="text/css"
-              href="assets/css/preloader.css"
-              rel="stylesheet">
-
-        <!-- App CSS -->
-        <link type="text/css"
-              href="assets/css/app.css"
-              rel="stylesheet">
-
-        <!-- Dark Mode CSS (optional) -->
-        <link type="text/css"
-              href="assets/css/dark-mode.css"
-              rel="stylesheet">
-
-        <!-- Vector Maps -->
-        <link type="text/css"
-              href="assets/vendor/jqvmap/jqvmap.min.css"
-              rel="stylesheet">
-<Style>
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.5rem + 2px);}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+    <!-- TreeView -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link type="text/css"
+          href="./assets/vendor/Treeview.css"
+          rel="stylesheet">
     
-    .navbar-nav .nav-link {
-    font-size: 0.9rem;}
-    .vl {
-  border-left: 1px solid #e8e8e8;
-  height: 30px;
-}
-.sidebar-brand-icon {
-    display: flex;
-    width: 70%;
-    height: auto;
-}
-[dir] .sidebar-light .open>.sidebar-menu-button {
-    background: #00a650;
-}
-.sidebar-light .open>.sidebar-menu-button, .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
-    color: #ffffff;
-}
-.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
-    color: #ffffff;
-}
-.leftMenu{
-   
-    margin: 5px 10px;
-    border-radius: 6px !important;
-    background: #a39161 !important;
-    color: white;
-    border-color: #a39161 !important;
-    padding: 5px 0px !important;
-    font-size: 15px;
-    font-weight: 500;
-}
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots"
+          content="noindex">
+          
 
-.sidebar-heading {
-    line-height: 1.5rem;
-    font-size: .775rem;
-}
-.sidebar-heading {
-    font-weight: 600;
-    font-family: Arial, sans-serif !important;
-    text-transform: uppercase;
-    letter-spacing: 0px !important;
-}
-[dir] .card-header {
-    padding: 0.3rem 1rem;
-    margin-bottom: 0;
-    background-color: #fff;
-}
-.activemenu {
-    background: #00a650 !important;
-    color: white !important;
-}
-.form-label {
-    color: #272c33;
-    text-transform: capitalize;
-    font-size: .8125rem;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0px;
-}
-label.form-label {
-    margin-bottom: 0rem;
-    margin-top: 4px;
-}
-.custom-control.custom-checkbox {
-    width: auto;
-    display: inline-table;
-}
-[dir] .custom-file-label:after {
-    padding: .5rem .75rem;
-    background-color: #00a650;
-}
-div#app-settings {
-    display: none;
-}
-.table thead th {
-    color: #272c33;
-    text-transform: capitalize;
-    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0px;
-}
-[dir=ltr] .button-list>.btn, [dir=ltr] .button-list>.btn-group {
-    margin-left: 0rem;
-}
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
+          rel="stylesheet">
 
-[dir] .button-list>.btn, [dir] .button-list>.btn-group {
-    margin-bottom: 0rem;
+    <!-- Perfect Scrollbar -->
+    <link type="text/css"
+          href="./assets/vendor/perfect-scrollbar.css"
+          rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css"
+          href="./assets/css/material-icons.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css"
+          href="./assets/css/fontawesome.css"
+          rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css"
+          href="./assets/vendor/spinkit.css"
+          rel="stylesheet">
+    <link type="text/css"
+          href="./assets/css/preloader.css"
+          rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css"
+          href="./assets/css/app.css"
+          rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css"
+          href="assets/css/dark-mode.css"
+          rel="stylesheet">
+ <!-- Full Calender -->
+ <link rel="stylesheet" href="./assets/vendor/fullcalendermain.css">
+ <script src="./assets/vendor/fullcalender.js"></script>
+    <!-- Vector Maps -->
+    <link type="text/css"
+          href="./assets/vendor/jqvmap/jqvmap.min.css"
+          rel="stylesheet">
+
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" /> -->
+   <style>
+       .hori-timeline .events {
+    border-top: 3px solid #e9ecef;
 }
-.Tablebtn {
+.hori-timeline .events .event-list {
+    display: block;
+    position: relative;
     text-align: center;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .2rem .5rem !important;
-    border-radius: .25rem;}
-    .modal-backdrop.show {
-    opacity: 1;
-    display: none;
+    padding-top: 70px;
+    margin-right: 0;
 }
-.reviewForm{
-   
-    margin-left: 20px;
-    font-size: initial;
+.hori-timeline .events .event-list:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed #dee2e6;
+    top: 0;
 }
-.retable {
-    border: 1px solid #c3c4c5;
-    padding: 4px 0px;
+.hori-timeline .events .event-list .event-date {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    width: 75px;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 2px 4px;
 }
-li.sidebar-menu-item.open {
-    background: #f5f7fa;
+@media (min-width: 1140px) {
+    .hori-timeline .events .event-list {
+        display: inline-block;
+        width: 24%;
+        padding-top: 45px;
+    }
+    .hori-timeline .events .event-list .event-date {
+        top: -12px;
+    }
 }
+.bg-soft-primary {
+    background-color: rgba(64,144,203,.3)!important;
+}
+.bg-soft-success {
+    background-color: rgba(71,189,154,.3)!important;
+}
+.bg-soft-danger {
+    background-color: rgba(231,76,94,.3)!important;
+}
+.bg-soft-warning {
+    background-color: rgba(249,213,112,.3)!important;
+}
+   </style>
+    <Style>
+        [dir] th {
+    font-weight: 500!important;}
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.5rem + 2px);
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 0.9rem;
+        }
+
+        .vl {
+            border-left: 1px solid #e8e8e8;
+            height: 30px;
+        }
+
+        .sidebar-brand-icon {
+            display: flex;
+            width: 70%;
+            height: auto;
+        }
+
+        [dir] .sidebar-light .open > .sidebar-menu-button {
+            background: #00a650;
+        }
+
+        .sidebar-light .open > .sidebar-menu-button, .sidebar-light .open > .sidebar-menu-button .sidebar-menu-toggle-icon {
+            color: #ffffff;
+        }
+
+            .sidebar-light .open > .sidebar-menu-button .sidebar-menu-icon {
+                color: #ffffff;
+            }
+
+        .leftMenu {
+            margin: 5px 10px;
+            border-radius: 6px !important;
+            background: #a39161 !important;
+            color: white;
+            border-color: #a39161 !important;
+            padding: 5px 0px !important;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .sidebar-heading {
+            line-height: 1.5rem;
+            font-size: .775rem;
+        }
+
+        .sidebar-heading {
+            font-weight: 600;
+            font-family: Arial, sans-serif !important;
+            text-transform: uppercase;
+            letter-spacing: 0px !important;
+        }
+
+        [dir] .card-header {
+            padding: 0.3rem 1rem;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
+
+        .activemenu {
+            background: #00a650;
+            color: white !important;
+        }
+
+        div#app-settings {
+            display: none;
+        }
+
+        .active > .sidebar-menu-button .sidebar-menu-text:after {
+            display: none;
+        }
+
+        .form-label {
+            color: #272c33;
+            text-transform: uppercase;
+            font-size: .8125rem;
+            font-family: inherit;
+            font-weight: 200;
+            letter-spacing: 2px;
+        }
     </Style>
-    </head>
 
-    <body class="layout-app layout-sticky-subnav ">
+<style>
+    body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    
+    background-repeat: no-repeat
+}
+    .card {
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
 
-   
+.profile-pic {
+    width: 100px !important;
+    height: 100px;
+    box-shadow: 0px 4px 8px 0px #BDBDBD
+}
+.owl-nav{
+    position: relative!important;
+    top: -44px!important;
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    color: #00a650 !important;
+    border: none;
+    padding: 5px 20px !important;
+    font: inherit;
+    font-size: 50px !important
+}
+.owl-carousel, .owl-theme, .owl-loaded, .owl-drag{
+    height: 426px!important;
+}
 
-        <div class="mdk-drawer-layout js-mdk-drawer-layout"
-             data-push
-             data-responsive-width="992px">
-            <div class="mdk-drawer-layout__content page-content">
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    color: #0D47A1 !important;
+    background-color: transparent !important
+}
 
-                <!-- Header -->
+.owl-dots {
+    display: none
+}
 
-                <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body"
-                     id="default-navbar"
-                     data-primary>
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
 
-                    <!-- Navbar toggler -->
-                    <button class="navbar-toggler d-block d-lg-none rounded-0"
-                            type="button"
-                            data-toggle="sidebar">
-                        <span class="material-icons">menu</span>
+.item {
+    display: none
+}
+
+.next {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.prev {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6
+}
+
+.item.show {
+    display: block;
+    transition-duration: 0.4s
+}
+
+@media screen and (max-width: 999px) {
+
+    .next,
+    .prev {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    .item {
+        display: block !important
+    }
+}
+</style> 
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout"
+         data-push
+         data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body"
+                 id="default-navbar"
+                 data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0"
+                        type="button"
+                        data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="index.html"
+                   class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt"
+                         src="./assets/images/Logo.svg"
+                         width="32"
+                         alt="Huma">
+
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+
+                <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;"
+                      action="https://huma.demo.frontendmatter.com/index.html">
+
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Search Everything ...">
+                    <button class="btn"
+                            type="submit">
+                        <i class="material-icons">search</i>
                     </button>
+                </form>
 
-                    <!-- Navbar Brand -->
-                    <a href="index.html"
-                       class="navbar-brand mr-16pt d-lg-none">
-                        <img class="navbar-brand-icon mr-0 mr-lg-8pt"
-                             src="assets/images/Logo.svg"
-                             width="32"
-                             alt="Huma">
-                       
-                    </a>
+                <div class="flex"></div>
 
-                    <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
+                     style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#"
+                           class="nav-link dropdown-toggle"
+                           data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active"
+                               href="#">English</a>
+                            <a class="dropdown-item"
+                               href="#">عربي</a>
 
-                    <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;"
-                          action="https://huma.demo.frontendmatter.com/index.html">
-                        
-                        <input type="text"
-                               class="form-control"
-                               placeholder="Search Everything ...">
-                               <button class="btn"
-                                type="submit"><i class="material-icons">search</i></button>
-                    </form>
-
-                    <div class="flex"></div>
-
-                    <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
-                         style="white-space: nowrap;">
-                        <div class="nav-item dropdown d-none d-sm-flex">
-                            <a href="#"
-                               class="nav-link dropdown-toggle"
-                               data-toggle="dropdown">EN</a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div class="dropdown-header"><strong>Select language</strong></div>
-                                <a class="dropdown-item active"
-                                   href="#">English</a>
-                                <a class="dropdown-item"
-                                   href="#">عربي</a>
-                               
-                            </div>
                         </div>
                     </div>
-                    <div class="vl mr-16pt"></div>
-                    <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
-                        <div class="nav-item mr-16pt dropdown dropdown-notifications">
-                            <button class="nav-link btn-flush dropdown-toggle"
-                                    type="button"
-                                    data-toggle="dropdown"
-                                    data-dropdown-disable-document-scroll
-                                    data-caret="false">
-                                <i class="material-icons">notifications</i>
-                                <span class="badge badge-notifications badge-accent">2</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div data-perfect-scrollbar
-                                     class="position-relative">
-                                    <div class="dropdown-header"><strong>System notifications</strong></div>
-                                    <div class="list-group list-group-flush mb-0">
+                </div>
+                <div class="vl mr-16pt"></div>
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    <div class="nav-item mr-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown"
+                                data-dropdown-disable-document-scroll
+                                data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar
+                                 class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
 
-                                        <a href="javascript:void(0);"
-                                           class="list-group-item list-group-item-action unread">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">3 minutes ago</small>
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
 
-                                                <span class="ml-auto unread-indicator bg-accent"></span>
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
 
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-accent">account_circle</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-
-                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
                                                 </span>
                                             </span>
-                                        </a>
+                                            <span class="flex d-flex flex-column">
 
-                                        <a href="javascript:void(0);"
-                                           class="list-group-item list-group-item-action">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">5 hours ago</small>
-
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
                                             </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-primary">group_add</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-                                                    <strong class="text-black-100">Adrian. D</strong>
-                                                    <span class="text-black-70">Wants to join your private group.</span>
-                                                </span>
-                                            </span>
-                                        </a>
+                                        </span>
+                                    </a>
 
-                                        <a href="javascript:void(0);"
-                                           class="list-group-item list-group-item-action">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">1 day ago</small>
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
 
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-
-                                                    <span class="text-black-70">Your deploy was successful.</span>
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
                                                 </span>
                                             </span>
-                                        </a>
+                                            <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                            </span>
+                                        </span>
+                                    </a>
 
-                                    </div>
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                            </span>
+                                            <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="vl mr-16pt" style="margin-top: 16px;"></div>
-                        <div class="nav-item dropdown d-none d-sm-flex">
-                            <a href="#"
-                               class="nav-link d-flex align-items-center dropdown-toggle"
-                               data-toggle="dropdown">
-                                <img width="32"
-                                     height="32"
-                                     class="rounded-circle mr-8pt"
-                                     src="assets/images/people/50/guy-3.jpg"
-                                     alt="account" />
-                                <span class="flex d-flex flex-column mr-8pt">
-                                    <span class="navbar-text-100">Laza Bogdan</span>
-                                    <small class="navbar-text-50">Administrator</small>
-                                </span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div class="dropdown-header"><strong>Account</strong></div>
-                                <a class="dropdown-item"
-                                   href="edit-account.html">Edit Account</a>
-                                
-                                <a class="dropdown-item"
-                                   href="login.html">Logout</a>
-                            </div>
+                    </div>
+                    <div class="vl mr-16pt" style="margin-top: 16px;"></div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#"
+                           class="nav-link d-flex align-items-center dropdown-toggle"
+                           data-toggle="dropdown">
+                            <img width="32"
+                                 height="32"
+                                 class="rounded-circle mr-8pt"
+                                 src="./assets/images/people/50/guy-3.jpg"
+                                 alt="account" />
+                            <span class="flex d-flex flex-column mr-8pt">
+                                <span class="navbar-text-100">Laza Bogdan</span>
+                                <small class="navbar-text-50">Administrator</small>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item"
+                               href="edit-account.html">Edit Account</a>
+                            <a class="dropdown-item"
+                               href="login.html">Logout</a>
                         </div>
-
-                        <!-- Notifications dropdown -->
-                       
-                        <!-- // END Notifications dropdown -->
-
-                        <!-- Notifications dropdown -->
-                       
-                        <!-- // END Notifications dropdown -->
                     </div>
 
-                   
-
+                    <!-- Notifications dropdown -->
+                    <!-- // END Notifications dropdown -->
+                    <!-- Notifications dropdown -->
+                    <!-- // END Notifications dropdown -->
                 </div>
 
 
-                <div class="container-fluid page__container">
-                    <div class="page-section">
 
-                     
+            </div>
 
-                        
-                        <div class="row d-none" id="Mydiv">
-                
-                            <div class="col-sm-12 col-md-12">
-                                <div class="card" >
-                
-                                    <div class="card-header">
-                                           <h3 style="margin-bottom: 0rem;">Child Allocation – Inside DZFC</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-row">
-                                            <div class=" col-md-6 col-sm-12">
-                                                <label class="form-label">Allocation Dz House</label>
-                                                <input type="text" class="form-control"  placeholder="Select"   >
-                                                
-                                            </div>
-                                            <div class=" col-md-6 col-sm-12">
-                                                <label class="form-label">Allocation Care Giver</label>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
-                                                    <label for="customCheck01" class="custom-control-label">CareGiver 1</label>
-                                                </div>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
-                                                    <label for="customCheck02" class="custom-control-label">CareGiver 2</label>
-                                                </div>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input id="customCheck03" type="checkbox" checked="" class="custom-control-input">
-                                                    <label for="customCheck03" class="custom-control-label">CareGiver 3</label>
-                                                </div>
-                                            </div>
-                                        </div>
+            <!-- // END Header -->
+
+            <div class="container-fluid page__container">
+                <div class="page-section">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card ">
+                                <div class="avatar avatar-xxl" style="    margin: auto; padding: 5px 5px;">
+                                    <img src="./assets/images/1.png" alt="Avatar" class="avatar-img rounded-circle" style="border: 4px solid #00a650;">
+                                </div>
+                                <label class="col-form-label form-label" style="margin: auto; letter-spacing: 0px; font-size: 20px;">Azlal Ahmed</label>
+                                <div class="row" style="padding: 0px 10px;">
+                                    <table class="table"> 
+                                        <tr>
+                                            <th>Age:</th>
+                                            <td>12</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Height:</th>
+                                            <td>12ft</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Weight:</th>
+                                            <td>60Kg</th>
+                                        </tr> 
+                                       
                                         
-                                        <div class="form-row">
-                                            <div class=" col-md-6 col-sm-12">
-                                                <label class="form-label">Allocation DZFC Social Worker</label>
-                                                <input type="text" class="form-control"  placeholder="Social Worker"   >
+                                    </table>
+
+                                </div>
+
+                                
+
+
+                                <!-- <div class="row mt-2 mb-3" style="padding: 0px 10px;">
+                                    <div class="col-12">
+                                        <label class="col-form-label form-label" style="margin: auto; display: block; padding: 0px; letter-spacing: 0px; color: #000000;">category</label>
+                                        <div class="flex" style="max-width: 100%">
+
+                                            <span class="badge badge-accent">Accent</span>
+                                            <span class="badge badge-primary">Primary</span>
+                                            <span class="badge badge-dark">Dark</span>
+                                            <span class="badge badge-secondary">Secondary</span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div> -->
+                                <div class="row  mb-3" style="padding: 0px 10px;">
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary btn-rounded" style="color: #ffffff;
+                            border-color: #00a650;
+                            background: #00a650; width: 100%;">
+                                            Edit Child Info
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="col-lg-9 d-flex align-items-center">
+                            <div class="flex" style="max-width: 100%">
+
+                                <div class="card dashboard-area-tabs p-relative o-hidden mb-0">
+                                    <div class="card-header p-0 nav">
+                                        <div class="row no-gutters" role="tablist">
+                                            <div class="col-auto">
+                                                <a href="#abc" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start active">
+                                                    <span class="h2 mb-0 mr-3">1</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Associations</strong>
+                                                       
+                                                    </span>
+                                                </a>
                                             </div>
-                                            <div class=" col-md-6 col-sm-12">
-                                                <label class="form-label" >Child Pocket Money</label>
-                                                <input type="text" class="form-control"  placeholder="Child Pocket Money"   >
+                                            <div class="col-auto border-left border-right">
+                                                <a href="#xyz" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                    <span class="h2 mb-0 mr-3">2</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Planner</strong>
+                                                        
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-auto border-left border-right">
+                                                <a href="#abc2" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                    <span class="h2 mb-0 mr-3">3</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Timeline</strong>
+                                                        
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="col-auto border-left border-right">
+                                                <a href="#xyz2" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
+                                                    <span class="h2 mb-0 mr-3">4</span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="card-title">Documents</strong>
+                                                        
+                                                    </span>
+                                                </a>
                                             </div>
                                             
                                         </div>
+                                    </div>
+                                    <div  class=" card-body tab-content" >
+                                                <div id="abc" class="tab-pane active" style="background: #e4e4e4;
+                                                border-radius: 10px;
+                                                padding-top: 10px;">
+                                                    <div class="container-fluid px-3 px-sm-5 text-center">
+                                                        <div class="owl-carousel owl-theme">
+                                                            <div class="item first prev">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">Marielle Haag</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item show">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">Ximena Vegara</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item next">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">John Paul</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item last">
+                                                                <div class="card border-0 py-3 px-4">
+                                                                    <div class="row justify-content-center"> <img src="./assets/images/icon/1.jpg" class="img-fluid profile-pic mb-4 mt-3"> </div>
+                                                                    <h6 class="mb-3 mt-2">William Doe</h6>
+                                                                    <p class="content mb-5 mx-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                          
                                        
+                                          
+                                            <div id="xyz" class="tab-pane  " style="background-color: #fff!important; height: 426px; overflow: scroll;" >
+                                               
+                                                <div id='calendar' class="active" style="height: 600px; width: 100%;padding: 14px;"></div>
+                                            </div>
+                                            <div id="abc2" class="tab-pane  " style="background-color: #fff!important; height: 426px;
+                                            overflow-x: scroll;" >
+                                            <div class="hori-timeline" dir="ltr" style="margin-top: 70px;">
+                                                <ul class="list-inline events">
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-primary text-primary">2 June</div>
+                                                            <h5 class="font-size-16">Event One</h5>
+                                                            <p class="text-muted">It will be as simple as occidental in fact it will be Occidental Cambridge friend</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-success text-success">5 June</div>
+                                                            <h5 class="font-size-16">Event Two</h5>
+                                                            <p class="text-muted">Everyone realizes why a new common language one could refuse translators.</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-danger text-danger">7 June</div>
+                                                            <h5 class="font-size-16">Event Three</h5>
+                                                            <p class="text-muted">If several languages coalesce the grammar of the resulting simple and regular</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-inline-item event-list">
+                                                        <div class="px-4">
+                                                            <div class="event-date bg-soft-warning text-warning">8 June</div>
+                                                            <h5 class="font-size-16">Event Four</h5>
+                                                            <p class="text-muted">Languages only differ in their pronunciation and their most common words.</p>
+                                                            <div>
+                                                                <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </div>
+                                            <div id="xyz2" class="tab-pane  " style="background-color: #fff!important; height: 426px;
+                                            overflow-x: scroll;" >
+                                            <div class="col-md-4">
+                                                <ul id="tree1">
+                                                    <li><a href="#">TECH</a>
+                                    
+                                                        <ul>
+                                                            <li>Company Maintenance</li>
+                                                            <li>Employees
+                                                                <ul>
+                                                                    <li>Reports
+                                                                        <ul>
+                                                                            <li>Report1</li>
+                                                                            <li>Report2</li>
+                                                                            <li>Report3</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>Employee Maint.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Human Resources</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>XRP
+                                                        <ul>
+                                                            <li>Company Maintenance</li>
+                                                            <li>Employees
+                                                                <ul>
+                                                                    <li>Reports
+                                                                        <ul>
+                                                                            <li>Report1</li>
+                                                                            <li>Report2</li>
+                                                                            <li>Report3</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>Employee Maint.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Human Resources</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            </div>
                                     </div>
-                                    <div class="card-footer" style="text-align: end;">
-                                        <button type="button" class="btn btn-accent btn-rounded" style="background-color: #00a650;
-                                        border-color: #00a650;">Submit</button>
-                                        <button type="button" class="btn btn-accent btn-rounded" id="close" style="background-color: #ed1c24;
-                                        border-color: #ed2129;">Cancel</button>
-                                    </div>
+                                    
                                 </div>
+
                             </div>
                         </div>
-                        <div class="row d-none" id="Mydiv11">
-                
-                            <div class="col-sm-12 col-md-12">
-                                <div class="card" >
-                
-                                    <div class="card-header">
-                                           <h3 style="margin-bottom: 0rem;">Child Allocation – Foster Family</h3>
-                                    </div>
-                                    <div class="card-body">
-                                       <div class="form-row">
-                                            <div class=" col-md-4 col-sm-12">
-                                                <label class="form-label">Allocation Foster Family</label>
-                                                <input type="text" class="form-control"  placeholder="Foster Family"   >
-                                            </div>
-                                            <div class=" col-md-4 col-sm-12">
-                                                <label class="form-label" >Allocation External House</label>
-                                                <input type="text" class="form-control"  placeholder="Select"   >
-                                            </div>
-                                            <div class=" col-md-4 col-sm-12">
-                                                <label class="form-label" >Allocation DZFC Social Worker</label>
-                                                <input type="text" class="form-control"  placeholder="Social Worker"   >
-                                            </div>
-                                        </div>
-                                       
-                                    </div>
-                                    <div class="card-footer" style="text-align: end;">
-                                        <button type="button" class="btn btn-accent btn-rounded" style="background-color: #00a650;
-                                        border-color: #00a650;">Submit</button>
-                                        <button type="button" class="btn btn-accent btn-rounded" id="close11" style="background-color: #ed1c24;
-                                        border-color: #ed2129;">Cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        <div class="card mb-lg-32pt">
-<div class="card-header">
-<div class="row">
-    <div class="col-md-6 col-sm-12"><h3 style="margin-bottom: 0px;">Child allocation</h3></div>
-    <div class="col-md-3 col-sm-12"><button type="button" class="btn btn-outline-accent d-none" id="child" style="    width: 100%;">Child Inside DZFC</button></div>
-    <div class="col-md-3 col-sm-12"><button type="button" class="btn btn-outline-accent d-none" id="child11" style="    width: 100%;">Child Foster Family</button></div>
-</div>
-</div>
-            <div class="table-responsive"
-                 data-toggle="lists"
-                 data-lists-sort-by="js-lists-values-employee-name"
-                 data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
-
-                <div class="card-header">
-                    <form class="form-inline">
-                        <label class="mr-sm-2 form-label"
-                               for="inlineFormFilterBy">Filter by:</label>
-                        <input type="text"
-                               class="form-control search mb-2 mr-sm-2 mb-sm-0"
-                               id="inlineFormFilterBy"
-                               placeholder="Search ...">
-
-                        <label class="sr-only"
-                               for="inlineFormRole">Role</label>
-                        <select id="inlineFormRole"
-                                class="custom-select mb-2 mr-sm-2 mb-sm-0">
-                            <option value="All Roles">All Roles</option>
-                        </select>
-
-                     
-
-                        <!-- <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-<input type="checkbox" class="custom-control-input" id="inlineFormPurchase">
-<label class="custom-control-label" for="inlineFormPurchase">Made a Purchase?</label>
-</div> -->
-                    </form>
-                </div>
-
-                <table class="table mb-0 thead-border-top-0 table-nowrap">
-                    <thead>
-                        <tr>
-
-                            <th>
-                                <a href="javascript:void(0)"
-                                   class="sort"
-                                   data-sort="js-lists-values-employee-name">Allocation</a>
-                            </th>
-
-                            <th style="width: 200px;">
-                                <a href="javascript:void(0)"
-                                   class="sort"
-                                   data-sort="js-lists-values-employer-name">Social Worker</a>
-                            </th>
-
-                            
-
-                            <th style="width: 60px;">Child Pocket Money</th>
-
-                            <th style="width: 150px; text-align: center;">
-                                <a href="javascript:void(0)"
-                                   class="sort"
-                                   data-sort="js-lists-values-earnings">Inside DZFC</a>
-                            </th>
-                            <th style="width: 150px; text-align: center;">
-                                <a href="javascript:void(0)"
-                                   class="sort"
-                                   data-sort="js-lists-values-earnings">Foster Family</a>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="list"
-                           id="staff">
-
-                        <tr class="selected">
-
-                            <td>
-
-                                <div class="media flex-nowrap align-items-center"
-                                     style="white-space: nowrap;">
-                                    <div class="media-body">
-
-                                        <div class="d-flex flex-column">
-                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Noshad</strong></p>
-                                            <small class="js-lists-values-employee-email text-50"></small>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </td>
-
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <a href="#"
-                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
-                                </div>
-                            </td>
-
-                          
-
-                            <td class="text-50 js-lists-values-activity small">Yes</td>
-                            <td class="js-lists-values-earnings small text-center">
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                            <td class="js-lists-values-earnings small text-center">
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid1"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                           
-                        </tr>
                         
-                        <tr class="">
-
-                            <td>
-
-                                <div class="media flex-nowrap align-items-center"
-                                     style="white-space: nowrap;">
-                                    <div class="media-body">
-
-                                        <div class="d-flex flex-column">
-                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Azlal Ahmed</strong></p>
-                                            <small class="js-lists-values-employee-email text-50"></small>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </td>
-
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <a href="#"
-                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
-                                </div>
-                            </td>
-
-                         
-
-                            <td class="text-50 js-lists-values-activity small">Yes</td>
-                            <td class="js-lists-values-earnings small text-center">
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                            <td class="js-lists-values-earnings small text-center">
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid1"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                           
-                        </tr>
-
-                        <tr class="selected">
-
-                            <td>
-
-                                <div class="media flex-nowrap align-items-center"
-                                     style="white-space: nowrap;">
-                                    <div class="media-body">
-
-                                        <div class="d-flex flex-column">
-                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Rahim</strong></p>
-                                            <small class="js-lists-values-employee-email text-50"></small>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </td>
-
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <a href="#"
-                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
-                                </div>
-                            </td>
-
-                            <td class="text-50 js-lists-values-activity small">Yes</td>
-
-                         
-                            <td class="js-lists-values-earnings small text-center">
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                            <td class="js-lists-values-earnings small text-center">
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid1"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                           
-                        </tr>
-                        
-                        <tr class="">
-
-                            <td>
-
-                                <div class="media flex-nowrap align-items-center"
-                                     style="white-space: nowrap;">
-                                    <div class="media-body">
-
-                                        <div class="d-flex flex-column">
-                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Atif</strong></p>
-                                            <small class="js-lists-values-employee-email text-50"></small>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </td>
-
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <a href="#"
-                                       class="text-70"><span class="js-lists-values-employer-name">07-08-2020</span></a>
-                                </div>
-                            </td>
-
-                            <td class="text-50 js-lists-values-activity small">Yes</td>
-                            <td class="js-lists-values-earnings small text-center"> 
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                            <td class="js-lists-values-earnings small text-center">
-                                <div class="button-list">
-                                    <button type="button" class="btn btn-accent Tablebtn">
-                                        <i class="fa fa-pencil-alt" aria-hidden="true" id="EditChlid1"></i>
-                                    </button>
-                                   
-                                   
-                                </div>
-                            </td>
-                           
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="card-footer p-8pt">
-
-                <ul class="pagination justify-content-start pagination-xsm m-0">
-                    <li class="page-item disabled">
-                        <a class="page-link"
-                           href="#"
-                           aria-label="Previous">
-                            <span aria-hidden="true"
-                                  class="material-icons">chevron_left</span>
-                            <span>Prev</span>
-                        </a>
-                    </li>
-                    <li class="page-item dropdown">
-                        <a class="page-link dropdown-toggle"
-                           data-toggle="dropdown"
-                           href="#"
-                           aria-label="Page">
-                            <span>1</span>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="#"
-                               class="dropdown-item active">1</a>
-                            <a href="#"
-                               class="dropdown-item">2</a>
-                            <a href="#"
-                               class="dropdown-item">3</a>
-                            <a href="#"
-                               class="dropdown-item">4</a>
-                            <a href="#"
-                               class="dropdown-item">5</a>
-                        </div>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link"
-                           href="#"
-                           aria-label="Next">
-                            <span>Next</span>
-                            <span aria-hidden="true"
-                                  class="material-icons">chevron_right</span>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- <div class="card-body bordet-top text-right">
-15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
-</div> -->
-
-        </div>
-
-                       
-
-                       
-
                     </div>
-                </div>
 
-                <div class="js-fix-footer footer border-top-2">
-                    <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
-                        <p class="measure-lead-max text-muted mb-0 small">
-                            Copyht &copy; Abu Dhabi Government. All rights reserved</p>
-                    </div>
+                    <div class="row">
+                        <div class="col-3" style="margin-top: -14%;">
+                            <div class="card ">
                     
-                </div>
+                               <div class="row" style="padding: 0px 10px;">
+                                    <table class="table"> 
+                                        <tr>
+                                            <th>National ID:</th>
+                                            <td>1212121</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Caregiver</th>
+                                            <td>Abdul Saleem</th>
+                                        </tr> 
+                                        <tr>
+                                            <th>Weight:</th>
+                                            <td>60Kg</th>
+                                        </tr> 
+                                       
+                                        
+                                    </table>
 
-            </div>
-            <!-- // END drawer-layout__content -->
+                                </div>
 
-            <!-- drawer -->
-            <div class="mdk-drawer js-mdk-drawer"
-                 id="default-drawer">
-                <div class="mdk-drawer__content">
-                    <div class="sidebar sidebar-light sidebar-left"
-                         data-perfect-scrollbar>
-
-                        <!-- Navbar toggler -->
-                        <a href="index - Copy.html"
-                           class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0"
-                           data-toggle="tooltip"
-                           data-title="Switch to Compact Vertical Layout"
-                           data-placement="right"
-                           data-boundary="window">
-                            <span class="material-icons">sync_alt</span>
-                        </a>
-
-                        <a href="index.html"
-                           class="sidebar-brand ">
-                            <img class="sidebar-brand-icon"
-                                 src="assets/images/logo/Logo.png"
-                                 alt="Huma">
-                        
-                        </a>
-                        <div class="sidebar-heading">Overview</div>
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item ">
-                                <a class="sidebar-menu-button "
-                                   href="index - Copy.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
-                                    <span class="sidebar-menu-text">Dashboard</span>
-                                </a>
-                            </li>
-                       
-
-                       
-
-                        
-                      
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   data-toggle="collapse"
-                                   href="#dashboards_menu">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
-                                    Application Catalog
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menu">
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button"
-                                           href="Childcare.html">
-                                            <span class="sidebar-menu-text">Child Care</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Correspondence</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Budget and Planning</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Facility Maintenance</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Mainpower</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Customer Support</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Performance Management</span>
-                                        </a>
-                                    </li>
-                                   
-                                </ul>
-                            </li>
-                            <li>
                                 
-                        <div class="sidebar-heading mt-3">Child Care Management</div>
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item ">
-                                <a class="sidebar-menu-button "
-                                 data-toggle="collapse"
-                                   href="Childcare.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span>
-                                    Dashboard
-                                
-                                </a>
-                            </li>
-                            <!-- <li class="sidebar-menu-item activemenu">
-                                <a class="sidebar-menu-button activemenu"
+
+
+                                <!-- <div class="row mt-2 mb-3" style="padding: 0px 10px;">
+                                    <div class="col-12">
+                                        <label class="col-form-label form-label" style="margin: auto; display: block; padding: 0px; letter-spacing: 0px; color: #000000;">category</label>
+                                        <div class="flex" style="max-width: 100%">
+
+                                            <span class="badge badge-accent">Accent</span>
+                                            <span class="badge badge-primary">Primary</span>
+                                            <span class="badge badge-dark">Dark</span>
+                                            <span class="badge badge-secondary">Secondary</span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div> -->
                                
-                                   href="Registrachild.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">donut_large</span>
-                                   Registering a Case
-                                   
-                                </a>
-                            
-                            </li> -->
-                            <li class="sidebar-menu-item open">
-                                <a class="sidebar-menu-button activemenu"
-                                   data-toggle="collapse"
-                                   href="#dashboards_menu1">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu" >link</span>
-                                    Registering a Case
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menu1">
-                                    <li class="sidebar-menu-item ">
-                                        <a class="sidebar-menu-button"
-                                           href="Registrachild.html">
-                                            <span class="sidebar-menu-text">Child registration</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item  ">
-                                        <a class="sidebar-menu-button"
-                                           href="ReceivingaChild.html">
-                                            <span class="sidebar-menu-text">Receiving a Child</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button"
-                                           href="Childallocation.html">
-                                            <span class="sidebar-menu-text">Child allocation</span>
-                                        </a>
-                                    </li>
-                                   
-                                   
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                               
-                                   href="IdentityManagement.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
-                                  Identity Management
-                                   
-                                </a>
-                                
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                
-                                   href="#">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
-                                    Development Plan
-                                
-                                </a>
-                            </li>
-                            <!-- <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                  
-                                   href="House.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">developer_board</span>
-                                   House Registration
-                                   
-                                </a>
-                            
-                            </li> -->
-                            <li class="sidebar-menu-item ">
-                                <a class="sidebar-menu-button "
-                                   data-toggle="collapse"
-                                   href="#dashboards_menu2">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                    House Registration
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menu2">
-                                    <li class="sidebar-menu-item ">
-                                        <a class="sidebar-menu-button"
-                                           href="House.html">
-                                            <span class="sidebar-menu-text">Register House</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="HouseAppliance.html">
-                                            <span class="sidebar-menu-text">Appliance Master</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="HouseService.html">
-                                            <span class="sidebar-menu-text">Service Providers</span>
-                                        </a>
-                                    </li>
-                                   
-                                   
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                           
-                                   href="#">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
-                                   Educational Management
-                                   
-                                </a>
-                                
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                            
-                                   href="#">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
-                                    Psychological Management
-                                
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   
-                                   href="#">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
-                                   Talent Management
-                                   
-                                </a>
-                            
-                            </li>
-                        </ul>
-                            </li>
-                        </ul>
-                        <div class="sidebar-heading">Bussiness Support services</div>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
-                       
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-3">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12">
+                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
+                                    font-weight: 500;
+                                    font-size: large;">
+                                                Child Identity Service
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="margin: auto;">
+                                    <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
+                                        <img src="assets/images/1098028.png" alt="Avatar" class="avatar-img">
+                                    </div>
+
+                                </div>
+                                <div class="card-footer" style="background: aliceblue;">
+                                    <div class="row" style="padding: 0px 10px;">
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Age</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">5Y 4M</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Height</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">100 cm</label>
+                                        </div>
+                                        <div class="col-4" style="margin: auto;
+                                    text-align: center;
+                                ">
+                                            <i class="material-icons">visibility</i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12">
+                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
+                                    font-weight: 500;
+                                    font-size: large">
+                                                House Facilitation Service
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="margin: auto;">
+                                    <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
+                                        <img src="assets/images/1877835.png" alt="Avatar" class="avatar-img">
+                                    </div>
+
+                                </div>
+                                <div class="card-footer" style="background: aliceblue;">
+                                    <div class="row" style="padding: 0px 10px;">
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Age</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">5Y 4M</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Height</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">100 cm</label>
+                                        </div>
+                                        <div class="col-4" style="margin: auto;
+                                    text-align: center;
+                                ">
+                                            <i class="material-icons">visibility</i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12">
+                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
+                                    font-weight: 500;
+                                    font-size: large;">
+                                                Register A <br>Case
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="margin: auto;">
+                                    <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
+                                        <img src="assets/images/Social.png" class="avatar-img">
+                                    </div>
+
+                                </div>
+                                <div class="card-footer" style="background: aliceblue;">
+                                    <div class="row" style="padding: 0px 10px;">
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Age</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">5Y 4M</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Height</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">100 cm</label>
+                                        </div>
+                                        <div class="col-4" style="margin: auto;
+                                    text-align: center;
+                                ">
+                                            <i class="material-icons">visibility</i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12">
+                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
+                                    font-weight: 500;
+                                    font-size: large;">
+                                                Request a Letter/Certificate
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="margin: auto;">
+                                    <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
+                                        <img src="assets/images/study.png" alt="Avatar" class="avatar-img">
+                                    </div>
+
+                                </div>
+                                <div class="card-footer" style="background: aliceblue;">
+                                    <div class="row" style="padding: 0px 10px;">
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Age</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">5Y 4M</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Height</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">100 cm</label>
+                                        </div>
+                                        <div class="col-4" style="margin: auto;
+                                    text-align: center;
+                                ">
+                                            <i class="material-icons">visibility</i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12">
+                                            <h3 style="margin-bottom: 0px; font-family: sans-serif;
+                                    font-weight: 500;
+                                    font-size: large;">
+                                                Request a </br> Risk
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-3 col-sm-12" style="text-align: right;"> <i class="material-icons">more_vert</i></div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="margin: auto;">
+                                    <div class="avatar avatar-xxl" style="    margin: auto; padding: 10px 10px;">
+                                        <img src="assets/images/study.png" alt="Avatar" class="avatar-img">
+                                    </div>
+
+                                </div>
+                                <div class="card-footer" style="background: aliceblue;">
+                                    <div class="row" style="padding: 0px 10px;">
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Age</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">5Y 4M</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <label class="col-form-label form-label" style="margin: auto; padding: 0px; letter-spacing: 0px; color: #000000;">Height</label>
+                                            <label class="col-form-label form-label" style="margin: auto;padding: 0px;letter-spacing: 0px;font-size: 12px;font-family: Arial, sans-serif;font-weight: 500;color: #7e6d72;">100 cm</label>
+                                        </div>
+                                        <div class="col-4" style="margin: auto;
+                                    text-align: center;
+                                ">
+                                            <i class="material-icons">visibility</i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+
+                    </div>
+
+
+
                 </div>
             </div>
-            <!-- // END drawer -->
-        </div>
-        <!-- // END drawer-layout -->
 
-        <!-- App Settings FAB -->
-        <div id="app-settings">
-            <app-settings layout-active="app"
-                          :layout-location="{
+            <div class="js-fix-footer footer border-top-2">
+                <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
+                    <p class="measure-lead-max text-muted mb-0 small">
+                        Copyht &copy; Abu Dhabi Government. All rights reserved
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- // END drawer-layout__content -->
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer"
+             id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-light sidebar-left"
+                     data-perfect-scrollbar>
+
+                    <!-- Navbar toggler -->
+                    <a href="index - Copy.html"
+                       class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0"
+                       data-toggle="tooltip"
+                       data-title="Switch to Compact Vertical Layout"
+                       data-placement="right"
+                       data-boundary="window">
+                        <span class="material-icons">sync_alt</span>
+                    </a>
+
+                    <a href="index - Copy.html"
+                       class="sidebar-brand ">
+                        <img class="sidebar-brand-icon"
+                             src="assets/images/logo/Logo.png"
+                             alt="Huma">
+
+                    </a>
+                    <div class="sidebar-heading">Overview</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button "
+                               href="index - Copy.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
+                                <span class="sidebar-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               data-toggle="collapse"
+                               href="#dashboards_menu">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+                                Application Catalog
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent"
+                                id="dashboards_menu">
+                                <li class="sidebar-menu-item active">
+                                    <a class="sidebar-menu-button"
+                                       href="Childcare.html">
+                                        <span class="sidebar-menu-text">Child Care</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="sidebar-menu-text">Correspondence</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="sidebar-menu-text">Budget and Planning</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="sidebar-menu-text">Facility Maintenance</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="sidebar-menu-text">Mainpower</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="sidebar-menu-text">Customer Support</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="sidebar-menu-text">Performance Management</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+
+                            <div class="sidebar-heading mt-3">Child Care Management</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button "
+                                       href="Childcare.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span>
+                                        Dashboard
+
+                                    </a>
+                                </li>
+                                <!-- <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+
+                                       href="Registrachild.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                       Registering a Case
+
+                                    </a>
+
+                                </li> -->
+                                <li class="sidebar-menu-item activemenu">
+                                    <a class="sidebar-menu-button activemenu" href="Childprofile.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">people</span>
+                                        Children's Profile
+
+                                    </a>
+
+                                </li>
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button "
+                                       href="Registrachild.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">link</span>
+                                        Registering a Case
+                                        <span class="ml-auto Roundd">1</span>
+                                    </a>
+                                    <!-- <ul class="sidebar-submenu collapse sm-indent"
+                                        id="dashboards_menu1">
+                                        <li class="sidebar-menu-item active">
+                                            <a class="sidebar-menu-button"
+                                               href="Registrachild.html">
+                                                <span class="sidebar-menu-text">Child registration</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="ReceivingaChild.html">
+                                                <span class="sidebar-menu-text">Receiving a Child</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="Childallocation.html">
+                                                <span class="sidebar-menu-text">Child allocation</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul> -->
+                                </li>
+                                <!-- <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+
+                                       href="IdentityManagement.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
+                                      Identity Management
+
+                                    </a>
+
+                                </li> -->
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button "
+                                       href="Identity ManagementNew.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">view_compact</span>
+                                        Identity Management
+                                        <span class="ml-auto Roundd">2</span>
+
+                                    </a>
+
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
+                                        Development Plan
+
+                                    </a>
+                                </li>
+                                <!-- <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+
+                                       href="House.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">developer_board</span>
+                                       House Registration
+
+                                    </a>
+
+                                </li> -->
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button "
+                                       data-toggle="collapse"
+                                       href="#dashboards_menu2">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  ">link</span>
+                                        House Registration
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent"
+                                        id="dashboards_menu2">
+                                        <li class="sidebar-menu-item ">
+                                            <a class="sidebar-menu-button"
+                                               href="House.html">
+                                                <span class="sidebar-menu-text">Register House</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="HouseAppliance.html">
+                                                <span class="sidebar-menu-text">Appliance Master</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="HouseService.html">
+                                                <span class="sidebar-menu-text">Service Providers</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
+                                        Educational Management
+
+                                    </a>
+
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="components_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
+                                        Psychological Management
+
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="#">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
+                                        Talent Management
+
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="sidebar-heading">Bussiness Support services</div>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+    <!-- App Settings FAB -->
+    <div id="app-settings">
+        <app-settings layout-active="app"
+                      :layout-location="{
       'compact': 'compact-index.html',
       'mini': 'mini-index.html',
       'app': 'index.html',
@@ -1055,97 +1278,312 @@ li.sidebar-menu-item.open {
       'sticky': 'sticky-index.html',
       'default': 'fixed-index.html'
     }"
-                          sidebar-type="light"
-                          sidebar-variant="bg-body"></app-settings>
-        </div>
-        <!-- jQuery -->
-        <script src="assets/vendor/jquery.min.js"></script>
+                      sidebar-type="light"
+                      sidebar-variant="bg-body"></app-settings>
+    </div>
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
 
-        <!-- Bootstrap -->
-        <script src="assets/vendor/popper.min.js"></script>
-        <script src="assets/vendor/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
 
-        <!-- Perfect Scrollbar -->
-        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+    <!-- Perfect Scrollbar -->
+    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
-        <!-- DOM Factory -->
-        <script src="assets/vendor/dom-factory.js"></script>
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
 
-        <!-- MDK -->
-        <script src="assets/vendor/material-design-kit.js"></script>
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
 
-        <!-- App JS -->
-        <script src="assets/js/app.js"></script>
+    <!-- App JS -->
+    <script src="assets/js/app.js"></script>
 
-        <!-- Highlight.js -->
-        <script src="assets/js/hljs.js"></script>
+    <!-- Highlight.js -->
+    <script src="assets/js/hljs.js"></script>
 
-        <!-- Global Settings -->
-        <script src="assets/js/settings.js"></script>
+    <!-- Global Settings -->
+    <script src="assets/js/settings.js"></script>
 
-        <!-- Flatpickr -->
-        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
-        <script src="assets/js/flatpickr.js"></script>
+    <!-- Flatpickr -->
+    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
 
-        <!-- Moment.js -->
-        <script src="assets/vendor/moment.min.js"></script>
-        <script src="assets/vendor/moment-range.js"></script>
+    <!-- Moment.js -->
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/moment-range.js"></script>
 
-        <!-- Chart.js -->
-        <script src="assets/vendor/Chart.min.js"></script>
-        <script src="assets/js/chartjs.js"></script>
+    <!-- Chart.js -->
+    <script src="assets/vendor/Chart.min.js"></script>
+    <script src="assets/js/chartjs.js"></script>
 
-        <!-- Chart.js Samples -->
-        <script src="assets/js/page.analytics-dashboard.js"></script>
+    <!-- Chart.js Samples -->
+    <script src="assets/js/page.analytics-dashboard.js"></script>
 
-        <!-- Vector Maps -->
-        <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
-        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
-        <script src="assets/js/vector-maps.js"></script>
+    <!-- Vector Maps -->
+    <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+    <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="assets/js/vector-maps.js"></script>
 
-        <!-- List.js -->
-        <script src="assets/vendor/list.min.js"></script>
-        <script src="assets/js/list.js"></script>
+    <!-- List.js -->
+    <script src="assets/vendor/list.min.js"></script>
+    <script src="assets/js/list.js"></script>
 
-        <!-- Tables -->
-        <script src="assets/js/toggle-check-all.js"></script>
-        <script src="assets/js/check-selected-row.js"></script>
+    <!-- Tables -->
+    <script src="assets/js/toggle-check-all.js"></script>
+    <script src="assets/js/check-selected-row.js"></script>
 
-        <!-- App Settings (safe to remove) -->
-        <script src="assets/js/app-settings.js"></script>
+    <!-- App Settings (safe to remove) -->
+    <script src="assets/js/app-settings.js"></script>
+    <script>
+var downloadGrid = (function(){
 
-       
-         <script>
-            $("#close").click(function(){
-                
-                $("#Mydiv").addClass("d-none")
-            });
+  "use strict";
 
-        </script>
-         <script>
-            $("#EditChlid").click(function(){
-                
-                $("#Mydiv").removeClass("d-none")
-            });
+  var $cardContainer = $('.download-cards');
+  var $downloadCard  = $('.download-card__content-box');
+  var $viewTrigger   = $('button').attr('data', 'trigger');
 
-        </script>
-               <script>
-                $("#EditChlid1").click(function(){
-                    
-                    $("#Mydiv11").removeClass("d-none")
-                });
-    
-            </script>
+  function swapTriggerActiveClass(e) {
+    $viewTrigger.removeClass('active');
+    $(e.target).addClass('active');
+  }
 
+  function swapView(e) {
+    var $currentView = $(e.target).attr('data-trigger');
+    $cardContainer.attr('data-view', $currentView);
+  }
 
- <script>
-    $("#close11").click(function(){
-        
-        $("#Mydiv11").addClass("d-none")
+ 
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+      initialDate: '2020-09-12',
+      navLinks: true, // can click day/week names to navigate views
+      nowIndicator: true,
+
+      weekNumbers: true,
+      weekNumberCalculation: 'ISO',
+
+      editable: true,
+      selectable: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2020-09-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2020-09-07',
+          end: '2020-09-10'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2020-09-09T16:00:00'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2020-09-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2020-09-11',
+          end: '2020-09-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2020-09-12T10:30:00',
+          end: '2020-09-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2020-09-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2020-09-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2020-09-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2020-09-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2020-09-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2020-09-28'
+        }
+      ]
     });
 
+    calendar.render();
+  });
+
 </script>
-    </body>
+$(document).ready(function(){
+    //  $('#xyz').css('display','none');
+    // Event Listener
+   
+
+
+
+    $viewTrigger.click(function(e){
+      swapTriggerActiveClass(e);
+      swapView(e);
+    });
+  });
+
+
+
+
+
+
+    </script>
+
+    <script>
+            window.addEventListener("DOMContentLoaded",() => {
+	let range1 = new NeumorphicRange({
+			element: "#range1",
+			tick: 1
+		}),
+		range2 = new NeumorphicRange({
+			element: "#range2",
+			tick: 4
+		}),
+		range3 = new NeumorphicRange({
+			element:"#range3",
+			tick: 10
+		});
+});
+
+class NeumorphicRange {
+	constructor(args) {
+		this.el = document.querySelector(args.element);
+		this.min = +this.el.min || 0;
+		this.max = +this.el.max || 100;
+		this.step = +this.el.step || 1;
+		this.tick = args.tick || this.step;
+		this.addTicks();
+	}
+	addTicks() {
+		// div to contain everything
+		let wrap = document.createElement("div");
+		wrap.className = "range";
+		this.el.parentElement.insertBefore(wrap,this.el);
+		wrap.appendChild(this.el);
+
+		// div to contain the ticks
+		let ticks = document.createElement("div");
+		ticks.className = "range__ticks";
+		wrap.appendChild(ticks);
+
+		// draw the ticks
+		for (let t = this.min; t <= this.max; t += this.tick) {
+			// zero-width span to allow proper space between each tick
+			let tick = document.createElement("span");
+			tick.className = "range__tick";
+			ticks.appendChild(tick);
+
+			let tickText = document.createElement("span");
+			tickText.className = "range__tick-text";
+			tick.appendChild(tickText);
+			tickText.textContent = t;
+		}
+	}
+}
+    </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   
+<script>
+    $(document).ready(function() {
+
+$('.owl-carousel').owlCarousel({
+// mouseDrag:true,
+
+loop:true,
+margin:2,
+nav:true,
+responsive:{
+0:{
+items:1
+},
+600:{
+items:1
+},
+1000:{
+items:3
+}
+}
+});
+
+$('.owl-prev').click(function() {
+$active = $('.owl-item .item.show');
+$('.owl-item .item.show').removeClass('show');
+$('.owl-item .item').removeClass('next');
+$('.owl-item .item').removeClass('prev');
+$active.addClass('next');
+if($active.is('.first')) {
+$('.owl-item .last').addClass('show');
+$('.first').addClass('next');
+$('.owl-item .last').parent().prev().children('.item').addClass('prev');
+}
+else {
+$active.parent().prev().children('.item').addClass('show');
+if($active.parent().prev().children('.item').is('.first')) {
+$('.owl-item .last').addClass('prev');
+}
+else {
+$('.owl-item .show').parent().prev().children('.item').addClass('prev');
+}
+}
+});
+
+$('.owl-next').click(function() {
+$active = $('.owl-item .item.show');
+$('.owl-item .item.show').removeClass('show');
+$('.owl-item .item').removeClass('next');
+$('.owl-item .item').removeClass('prev');
+$active.addClass('prev');
+if($active.is('.last')) {
+$('.owl-item .first').addClass('show');
+$('.owl-item .first').parent().next().children('.item').addClass('prev');
+}
+else {
+$active.parent().next().children('.item').addClass('show');
+if($active.parent().next().children('.item').is('.last')) {
+$('.owl-item .first').addClass('next');
+}
+else {
+$('.owl-item .show').parent().next().children('.item').addClass('next');
+}
+}
+});
+
+});
+</script>
+<script src="./assets/vendor/Treeview.js"></script>
+
+</body>
 
 
 <!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:44:15 GMT -->
