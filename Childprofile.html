@@ -775,12 +775,20 @@
                                         </div>
                                     </div>
                                     <div class="mr-4 mb-2">
-                                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="advanced" style="color: #5cb85c;float: right;"> 
+                                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="advanced collapsed" style="color: #5cb85c;float: right;"> 
                                             Advance Search With Filters 
-                                            <i class="fa fa-angle-down"></i> 
+                                            <i class="fa "></i> 
                                         </a>
 
-
+                                        <style>
+                                            [data-toggle="collapse"] .fa:before {
+                                                content: "\f107";
+                                            }
+                                            
+                                            [data-toggle="collapse"].collapsed .fa:before {
+                                                content: "\f105";
+                                            }
+                                        </style>
                                         <div class="collapse" id="collapseExample">
                                             <div class=" card-body tab-content">
                                                 <ul class="nav ">
