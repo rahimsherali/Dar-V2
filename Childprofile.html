@@ -11,6 +11,87 @@
     <title>Dashboard</title>
 
     <style>
+        /* Switch 1 Specific Styles Start */
+        
+        .box_1 {
+            background: #eee;
+        }
+        
+        input[type="checkbox"].switch_1 {
+            font-size: 14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 3.5em;
+            height: 1.5em;
+            background: #ddd;
+            border-radius: 3em;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        
+        input[type="checkbox"].switch_1:checked {
+            background: #0ebeff;
+        }
+        
+        input[type="checkbox"].switch_1:after {
+            position: absolute;
+            content: "";
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            background: #fff;
+            -webkit-box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+            box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+            -webkit-transform: scale(.7);
+            transform: scale(.7);
+            left: 0;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        
+        input[type="checkbox"].switch_1:checked:after {
+            left: calc(100% - 1.5em);
+        }
+        /* Switch 1 Specific Style End */
+        /* Switch 2 Specific Style Start */
+        
+        svg.checkbox {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        svg.checkbox .is_checked {
+            opacity: 0;
+            fill: yellow;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: translateX(200%) rotate(45deg);
+            transform: translateX(200%) rotate(45deg);
+            -webkit-transition: all .35s;
+            transition: all .35s;
+        }
+        
+        svg.checkbox .is_unchecked {
+            opacity: 1;
+            fill: #fff;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+            -webkit-transition: all .35s;
+            transition: all .35s;
+        }
+        /* Switch 4 Specific Style End */
+        
         .bootstrap-select>.dropdown-toggle.bs-placeholder {
             background-color: transparent!important;
             border: 1px solid;
@@ -70,8 +151,12 @@
 
     <!-- Vector Maps -->
     <link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+
     <!-- DateRangePicker -->
     <link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
+
+    <!-- card-Check Box -->
+    <link type="text/css" href="assets/css/card-checkBox.css" rel="stylesheet">
 
     <Style>
         .form-label {
@@ -832,7 +917,7 @@
                                                     <a style="font-size: 20px;" class="nav-link active" data-toggle="tab" href="#basic">Basic</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#location">Location</a>
+                                                    <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#location">Identity</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#case">Case</a>
@@ -913,6 +998,16 @@
                                                                     <option value="1">Dropped</option>
                                                                     
                                                                 </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input class="custom-control-input" type="checkbox" value="" id="invalidCheck01" required="" checked="">
+                                                                    <label class="custom-control-label" for="invalidCheck01">
+                                                                        Child Identity
+                                                                    </label>
+                                                                </div>
                                                             </div>
                                                         </div>
 
@@ -1005,7 +1100,67 @@
 
 
                                             <div id="location" class=" tabBody tab-pane  ">
-                                                b
+                                                <div class=" col-md-4 col-sm-12 ">
+
+                                                    <div class="form-group ">
+                                                        <label class="form-label">Committee Apprvoed<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Name"></i></label>
+
+                                                        <input style="top: 4px;" type="checkbox" class="switch_1 ml-3 mt-2">
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <div class="row mt-3">
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox">
+                                                            <div class="option_inner google">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-file-medical"></i></div>
+                                                              <div class="name">Health Card</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox">
+                                                            <div class="option_inner facebook">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract"></i></div>
+                                                              <div class="name">Birth Certificate</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox" checked>
+                                                            <div class="option_inner twitter">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-passport"></i></div>
+                                                              <div class="name">Passport</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox">
+                                                            <div class="option_inner instagram">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-id-card"></i></div>
+                                                              <div class="name">Emirates ID</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+
+
                                             </div>
                                             <div id="case" class=" tabBody tab-pane ">
                                                 c
@@ -1724,6 +1879,8 @@
     <script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
     <script src="assets/js/Jquery-autocomplete.js"></script>
 
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
 
 
