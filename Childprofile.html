@@ -10,6 +10,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
 
+    <style>
+        .bootstrap-select>.dropdown-toggle.bs-placeholder {
+            background-color: transparent!important;
+            border: 1px solid;
+        }
+        
+        .bootstrap-select .dropdown-toggle:focus,
+        .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+            outline: thin dotted #5cb85c!important;
+            outline: 0px auto -webkit-focus-ring-color!important;
+            outline-offset: 0px!important;
+        }
+        
+        .bdate {
+            position: absolute;
+            display: flex;
+        }
+    </style>
+
+
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
 
@@ -17,6 +37,8 @@
 
     <!-- Perfect Scrollbar -->
     <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+
 
     <!-- Material Design Icons -->
     <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
@@ -30,15 +52,26 @@
 
     <!-- App CSS -->
     <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/vendor/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+
     <!-- Tabs Filter CSS -->
     <link type="text/css" href="assets/css/tabsfilter.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+
 
     <!-- Dark Mode CSS (optional) -->
     <link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
 
+    <!-- Dark Mode CSS (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
     <!-- Vector Maps -->
     <link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+    <!-- DateRangePicker -->
+    <link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
 
     <Style>
         .form-label {
@@ -770,502 +803,598 @@
                                     <div class="form-group ml-3 mr-3 mt-3">
 
                                         <div style="height:42px; border: 1px solid #aeaeae!important;" class="search-form search-form--dark input-group-lg">
-                                            <input type="text" class="form-control" placeholder="Search in List" id="searchSample01">
+                                            <input type="search" class="form-control" placeholder="Search in List" id="searchSample01">
                                             <button class="btn" type="button"><i class="material-icons" style="font-size: 24px!important;">search</i></button>
                                         </div>
                                     </div>
-                                    <div class="mr-4 mb-2">
-                                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="advanced collapsed" style="color: #5cb85c;float: right;"> 
+                                </div>
+
+
+                                <div class="mr-4 mb-2">
+                                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="advanced collapsed" style="color: #5cb85c;float: right;"> 
                                             Advance Search With Filters 
                                             <i class="fa "></i> 
                                         </a>
 
-                                        <style>
-                                            [data-toggle="collapse"] .fa:before {
-                                                content: "\f107";
-                                            }
-                                            
-                                            [data-toggle="collapse"].collapsed .fa:before {
-                                                content: "\f105";
-                                            }
-                                        </style>
-                                        <div class="collapse" id="collapseExample">
-                                            <div class=" card-body tab-content">
-                                                <ul class="nav ">
-                                                    <li class="nav-item">
-                                                        <a style="font-size: 20px;" class="nav-link active" data-toggle="tab" href="#basic">Basic</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#location">Location</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#case">Case</a>
-                                                    </li>
-                                                </ul>
-                                                <div id="basic" class=" tabBody tab-pane active">
-                                                    <form action="" class="mt-3 ml-3">
-                                                        <div class="form-row">
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                <label class="form-label">Age Group<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Age"></i></label>
-                                                                <select id="custom-select7" class="custom-select">
+                                    <style>
+                                        [data-toggle="collapse"] .fa:before {
+                                            content: "\f107";
+                                        }
+                                        
+                                        [data-toggle="collapse"].collapsed .fa:before {
+                                            content: "\f105";
+                                        }
+                                    </style>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class=" card-body tab-content">
+                                            <ul class="nav ">
+                                                <li class="nav-item">
+                                                    <a style="font-size: 20px;" class="nav-link active" data-toggle="tab" href="#basic">Basic</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#location">Location</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#case">Case</a>
+                                                </li>
+                                            </ul>
+                                            <div id="basic" class=" tabBody tab-pane active">
+                                                <form action="" class="mt-3 ml-3">
+                                                    <div class="form-row">
+
+                                                        <div class=" col-md-4 col-sm-12 ">
+
+                                                            <div class="form-group ">
+                                                                <label class="form-label">Name<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Name"></i></label>
+
+                                                                <input style="height: 36px;" type="text" class="form-control" id="childName">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12 ">
+
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Mother Name:</label>
+                                                                <input style="height: 36px;" type="text" class="form-control" id="motherName">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Age:</label>
+                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Age">
+                                                                 
+                                                                    <option value="1">0-8</option>
+                                                                    <option value="2">8-16</option>
+                                                                    <option value="3">16-24</option>
+                                                                    <option value="3">24+</option> 
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+
+                                                            <div class="form-group ">
+
+
+
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <label class="form-label" for="exampleInputEmail1">DOB (from):</label>
+                                                                        <input style="height: 36px; " type="date" class="form-control " id=""></div>
+                                                                    <div class="col-6">
+                                                                        <label class="form-label" for="exampleInputEmail1">DOB (to):</label>
+                                                                        <input style="height: 36px; " type="date" class="form-control " id=""></div>
+
+                                                                </div>
+
+
+                                                            </div>
+
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Association:</label>
+                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Association">
+                                                                 
+                                                                    <option value="1">Has Mother</option>
+                                                                    <option value="1">Has Father</option>
+                                                                    <option value="1">Has Relatives</option>
+                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Receiving Type:</label>
+                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Receiving Type">
+                                                                 
+                                                                    <option value="1">Picked Up</option>
+                                                                    <option value="1">Dropped</option>
+                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        <!-- <div class=" col-md-4 col-sm-12">
+                                                            <label class="form-label">Age Group<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Age"></i></label>
+                                                            <select id="custom-select7" class="custom-select">
                                                             <option selected="">Select</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">Other</option>
                                                          </select>
 
-                                                            </div>
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                <label class="form-label">Location</label>
-                                                                <select id="custom-select7" class="custom-select">
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <label class="form-label">Location</label>
+                                                            <select id="custom-select7" class="custom-select">
                                                                <option selected="">Select</option>
                                                                <option value="1">1</option>
                                                                <option value="2">2</option>
                                                                <option value="3">Other</option>
                                                             </select>
 
-                                                            </div>
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                <label class="form-label">Supervisor</label>
-                                                                <select id="custom-select7" class="custom-select">
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <label class="form-label">Supervisor</label>
+                                                            <select id="custom-select7" class="custom-select">
                                                                <option selected="">Select</option>
                                                                <option value="1">1</option>
                                                                <option value="2">2</option>
                                                                <option value="3">Other</option>
                                                             </select>
 
-                                                            </div>
-                                                            <div class=" col-md-4 col-sm-12 mt-3">
-                                                                <label class="form-label">Age Group</label>
-                                                                <select id="custom-select7" class="custom-select">
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12 mt-3">
+                                                            <label class="form-label">Age Group</label>
+                                                            <select id="custom-select7" class="custom-select">
                                                                <option selected="">Select</option>
                                                                <option value="1">1</option>
                                                                <option value="2">2</option>
                                                                <option value="3">Other</option>
                                                             </select>
 
-                                                            </div>
-                                                            <div class=" col-md-4 col-sm-12 mt-3">
-                                                                <label class="form-label">Age Group</label>
-                                                                <select id="custom-select7" class="custom-select">
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12 mt-3">
+                                                            <label class="form-label">Age Group</label>
+                                                            <select id="custom-select7" class="custom-select">
                                                                <option selected="">Select</option>
                                                                <option value="1">1</option>
                                                                <option value="2">2</option>
                                                                <option value="3">Other</option>
                                                             </select>
 
-                                                            </div>
-                                                            <!-- <div class=" col-md-4 col-sm-12">
+                                                        </div> -->
+
+
+                                                        <!-- <div class=" col-md-4 col-sm-12">
                                                         <label class="form-label">Supe</label>
                                                         <input style="height: 38px!important;" type="text" class="form-control" placeholder="Middle name" data-toggle="tooltip" data-html="true" title="" data-original-title="Enter Middle Name">
 
                                                     </div> -->
 
 
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <button type="search" class="btn btn-primary">Search</button>
+                                                            <button type="reset" class="btn btn-secondary">Clear</button>
+
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <button type="submit" class="btn btn-primary btn-md btn-block mt-3">Search</button>
 
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-
-
-                                                <div id="location" class=" tabBody tab-pane  ">
-                                                    b
-                                                </div>
-                                                <div id="case" class=" tabBody tab-pane ">
-                                                    c
-                                                </div>
-
+                                                    </div>
+                                                </form>
                                             </div>
+
+
+
+                                            <div id="location" class=" tabBody tab-pane  ">
+                                                b
+                                            </div>
+                                            <div id="case" class=" tabBody tab-pane ">
+                                                c
+                                            </div>
+
                                         </div>
                                     </div>
-
-
-
                                 </div>
 
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="container" style="padding-top: 20px;">
+                        <div class="">
+                            <div class="row mb-32pt">
+                                <div class="col-lg-2">
+                                    <div class="dc-view-switcher">
+                                        <button data-trigger="grid-view"></button>
+                                        <button data-trigger="list-view" class="active"></button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6"></div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <div class="flex" style="max-width: 100%">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination pagination-sm ">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">first_page</span>
+                                                        <span class="sr-only">First</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                        <span class="sr-only">Prev</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#" aria-label="1">
+                                                        <span>1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="2">
+                                                        <span>2</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="3">
+                                                        <span>3</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="4">
+                                                        <span>4</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Last</span>
+                                                        <span aria-hidden="true" class="material-icons">last_page</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div data-view="list-view" class="download-cards">
+                            <article class="download-card">
+                                <div class="row">
 
-
-
-
-
-                        <div class="container" style="padding-top: 20px;">
-                            <div class="">
-                                <div class="row mb-32pt">
-                                    <div class="col-lg-2">
-                                        <div class="dc-view-switcher">
-                                            <button data-trigger="grid-view"></button>
-                                            <button data-trigger="list-view" class="active"></button>
+                                    <div class="col" style="width: auto; display: contents;">
+                                        <div class="download-card__icon-box">
+                                            <img src="assets/images/1.png" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6"></div>
-                                    <div class="col-lg-4 d-flex align-items-center">
-                                        <div class="flex" style="max-width: 100%">
-                                            <nav aria-label="Page navigation example">
-                                                <ul class="pagination pagination-sm ">
-                                                    <li class="page-item disabled">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true" class="material-icons">first_page</span>
-                                                            <span class="sr-only">First</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item disabled">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                                            <span class="sr-only">Prev</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item active">
-                                                        <a class="page-link" href="#" aria-label="1">
-                                                            <span>1</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="2">
-                                                            <span>2</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="3">
-                                                            <span>3</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="4">
-                                                            <span>4</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span class="sr-only">Next</span>
-                                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span class="sr-only">Last</span>
-                                                            <span aria-hidden="true" class="material-icons">last_page</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
+                                    <div class="col">
+
+
+                                        <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="download-card__content-box">
+                                            <div class="content">
+                                                <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                                <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                                <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book.
+                                                </p>
+                                                <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
+                                              margin-top: 10px;
+                                              float: right;
+                                              margin-bottom: 5px;
+                                              ">Read More</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
+                                     display: contents;">
+                                        <div class="download-card__icon-box"><img src="assets/images/2.png" /></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="download-card__content-box">
+                                            <div class="content">
+                                                <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                                <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                                <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book.
+                                                </p>
+                                                <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
+                                              margin-top: 10px;
+                                              float: right;
+                                              margin-bottom: 5px;
+                                              ">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div data-view="list-view" class="download-cards">
-                                <article class="download-card">
-                                    <div class="row">
-
-                                        <div class="col" style="width: auto; display: contents;">
-                                            <div class="download-card__icon-box">
-                                                <img src="assets/images/1.png" />
-                                            </div>
-                                        </div>
-                                        <div class="col">
-
-
-                                            <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
-                                                <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
-                                                    <span class="material-icons"> more_vert</span>
-                                                </a>
-
-
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Create Child Identity</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Register A Case</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Assign House</a>
-
-
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="download-card__content-box">
-                                                <div class="content">
-                                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
-                                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
-                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                        and scrambled it to make a type specimen book.
-                                                    </p>
-                                                    <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
-                                              margin-top: 10px;
-                                              float: right;
-                                              margin-bottom: 5px;
-                                              ">Read More</a>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="download-card">
-                                    <div class="row">
-                                        <div class="col" style="width: auto;
+                            </article>
+                            <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
                                      display: contents;">
-                                            <div class="download-card__icon-box"><img src="assets/images/2.png" /></div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
-                                                <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
-                                                    <span class="material-icons"> more_vert</span>
-                                                </a>
+                                        <div class="download-card__icon-box"><img src="assets/images/3.png" /></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
 
 
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Create Child Identity</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Register A Case</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Assign House</a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
 
 
-                                                </div>
                                             </div>
-                                            <div class="download-card__content-box">
-                                                <div class="content">
-                                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
-                                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
-                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                        and scrambled it to make a type specimen book.
-                                                    </p>
-                                                    <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
+                                        </div>
+                                        <div class="download-card__content-box">
+                                            <div class="content">
+                                                <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                                <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                                <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book.
+                                                </p>
+                                                <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
                                               margin-top: 10px;
                                               float: right;
                                               margin-bottom: 5px;
                                               ">Read More</a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </article>
-                                <article class="download-card">
-                                    <div class="row">
-                                        <div class="col" style="width: auto;
+                                </div>
+                            </article>
+                            <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
                                      display: contents;">
-                                            <div class="download-card__icon-box"><img src="assets/images/3.png" /></div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
-                                                <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
-                                                    <span class="material-icons"> more_vert</span>
-                                                </a>
+                                        <div class="download-card__icon-box"><img src="assets/images/4.png" /></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
 
 
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Create Child Identity</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Register A Case</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Assign House</a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
 
 
-                                                </div>
                                             </div>
-                                            <div class="download-card__content-box">
-                                                <div class="content">
-                                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
-                                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
-                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                        and scrambled it to make a type specimen book.
-                                                    </p>
-                                                    <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
+                                        </div>
+                                        <div class="download-card__content-box">
+                                            <div class="content">
+                                                <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                                <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                                <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book.
+                                                </p>
+                                                <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
                                               margin-top: 10px;
                                               float: right;
                                               margin-bottom: 5px;
                                               ">Read More</a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </article>
-                                <article class="download-card">
-                                    <div class="row">
-                                        <div class="col" style="width: auto;
+                                </div>
+                            </article>
+                            <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
                                      display: contents;">
-                                            <div class="download-card__icon-box"><img src="assets/images/4.png" /></div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
-                                                <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
-                                                    <span class="material-icons"> more_vert</span>
-                                                </a>
+                                        <div class="download-card__icon-box"><img src="assets/images/5.png" /></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
 
 
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Create Child Identity</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Register A Case</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Assign House</a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
 
 
-                                                </div>
                                             </div>
-                                            <div class="download-card__content-box">
-                                                <div class="content">
-                                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
-                                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
-                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                        and scrambled it to make a type specimen book.
-                                                    </p>
-                                                    <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
+                                        </div>
+                                        <div class="download-card__content-box">
+                                            <div class="content">
+                                                <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                                <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                                <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book.
+                                                </p>
+                                                <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
                                               margin-top: 10px;
                                               float: right;
                                               margin-bottom: 5px;
                                               ">Read More</a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </article>
-                                <article class="download-card">
-                                    <div class="row">
-                                        <div class="col" style="width: auto;
+                                </div>
+                            </article>
+                            <article class="download-card">
+                                <div class="row">
+                                    <div class="col" style="width: auto;
                                      display: contents;">
-                                            <div class="download-card__icon-box"><img src="assets/images/5.png" /></div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
-                                                <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
-                                                    <span class="material-icons"> more_vert</span>
-                                                </a>
+                                        <div class="download-card__icon-box"><img src="assets/images/6.png" /></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
 
 
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Create Child Identity</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Register A Case</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Assign House</a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
 
 
-                                                </div>
                                             </div>
-                                            <div class="download-card__content-box">
-                                                <div class="content">
-                                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
-                                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
-                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                        and scrambled it to make a type specimen book.
-                                                    </p>
-                                                    <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
+                                        </div>
+                                        <div class="download-card__content-box">
+                                            <div class="content">
+                                                <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                                <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+                                                <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book.
+                                                </p>
+                                                <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
                                               margin-top: 10px;
                                               float: right;
                                               margin-bottom: 5px;
                                               ">Read More</a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </article>
-                                <article class="download-card">
-                                    <div class="row">
-                                        <div class="col" style="width: auto;
-                                     display: contents;">
-                                            <div class="download-card__icon-box"><img src="assets/images/6.png" /></div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
-                                                <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
-                                                    <span class="material-icons"> more_vert</span>
-                                                </a>
-
-
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Create Child Identity</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Register A Case</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="#">Assign House</a>
-
-
-                                                </div>
-                                            </div>
-                                            <div class="download-card__content-box">
-                                                <div class="content">
-                                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
-                                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
-                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                                        and scrambled it to make a type specimen book.
-                                                    </p>
-                                                    <a href="Childprofiledetail.html" type="button" class="btn btn-secondary btn-rounded btn-sm" style="
-                                              margin-top: 10px;
-                                              float: right;
-                                              margin-bottom: 5px;
-                                              ">Read More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="">
-                                <div class="row mb-32pt">
-                                    <div class="col-lg-2">
-                                    </div>
-                                    <div class="col-lg-6"></div>
-                                    <div class="col-lg-4 d-flex align-items-center">
-                                        <div class="flex" style="max-width: 100%">
-                                            <nav aria-label="Page navigation example">
-                                                <ul class="pagination pagination-sm ">
-                                                    <li class="page-item disabled">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true" class="material-icons">first_page</span>
-                                                            <span class="sr-only">First</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item disabled">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                                            <span class="sr-only">Prev</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item active">
-                                                        <a class="page-link" href="#" aria-label="1">
-                                                            <span>1</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="2">
-                                                            <span>2</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="3">
-                                                            <span>3</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="4">
-                                                            <span>4</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span class="sr-only">Next</span>
-                                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span class="sr-only">Last</span>
-                                                            <span aria-hidden="true" class="material-icons">last_page</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="">
+                            <div class="row mb-32pt">
+                                <div class="col-lg-2">
+                                </div>
+                                <div class="col-lg-6"></div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <div class="flex" style="max-width: 100%">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination pagination-sm ">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">first_page</span>
+                                                        <span class="sr-only">First</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                        <span class="sr-only">Prev</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#" aria-label="1">
+                                                        <span>1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="2">
+                                                        <span>2</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="3">
+                                                        <span>3</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="4">
+                                                        <span>4</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Last</span>
+                                                        <span aria-hidden="true" class="material-icons">last_page</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
                             </div>
@@ -1273,17 +1402,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <div class="js-fix-footer footer border-top-2">
-                <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
-                    <p class="measure-lead-max text-muted mb-0 small">
-                        Copyht &copy; Abu Dhabi Government. All rights reserved</p>
-                </div>
-
-            </div>
-
         </div>
         <!-- // END drawer-layout__content -->
 
@@ -1511,6 +1629,19 @@
     </div>
     <!-- // END drawer-layout -->
 
+
+
+    <div class="js-fix-footer footer border-top-2">
+        <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
+            <p class="measure-lead-max text-muted mb-0 small">
+                Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+        </div>
+
+    </div>
+
+    </div>
+
+
     <!-- App Settings FAB -->
     <div id="app-settings">
         <app-settings layout-active="app" :layout-location="{
@@ -1522,6 +1653,7 @@
       'default': 'fixed-index.html'
     }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
     </div>
+
     <!-- jQuery -->
     <script src="assets/vendor/jquery.min.js"></script>
 
@@ -1562,6 +1694,9 @@
     <!-- Chart.js Samples -->
     <script src="assets/js/page.analytics-dashboard.js"></script>
 
+    <!-- Select 2 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js" integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Vector Maps -->
     <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
     <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
@@ -1571,11 +1706,29 @@
     <script src="assets/vendor/list.min.js"></script>
     <script src="assets/js/list.js"></script>
 
+    <!-- DateRangePicker -->
 
+    <script src="assets/vendor/daterangepicker.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
 
 
     <!-- App Settings (safe to remove) -->
     <script src="assets/js/app-settings.js"></script>
+
+    <!-- App Settings (safe to remove) -->
+
+
+
+    <!-- jQuery UI Autocomplte -->
+
+    <script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/js/Jquery-autocomplete.js"></script>
+
+
+
+
+
+
     <script>
         var downloadGrid = (function() {
 
@@ -1655,8 +1808,13 @@
                     tickText.textContent = t;
                 }
             }
+
+
+
+
         }
     </script>
+
 </body>
 
 
