@@ -1271,13 +1271,61 @@
                                 </div>
                             </p>
                             <br />
+                            <div data-view="list-view" class="download-cards">
+                                <article class="download-card">
+                                    <div class="row">
+
+                                        <div class="col" style="width: auto; display: contents;">
+                                            <div class="download-card__icon-box">
+                                                <img src="assets/images/1.png" style="    width: 125px;">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+
+
+                                            <div class="btn-group mr-2 mt-2 d-flex flex-row-reverse">
+                                                <a href="#" class="dropdown-toggle" data-caret="false" data-toggle="dropdown">
+                                                    <span class="material-icons"> more_vert</span>
+                                                </a>
+
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Register A Case</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="download-card__content-box">
+                                                <div class="content">
+                                                    <h2 class="download-card__content-box__catagory">Age: 14Year</h2>
+                                                    <h3 class="download-card__content-box__title">Azlal Ahmed</h3>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </article>
+
+
+
+
+
+                            </div>
 
                             <div id="smartwizard">
 
                                 <ul class="nav">
                                     <li class="nav-item">
                                         <a class="nav-link" href="#step-1">
-                                            <strong>Step 1</strong> <br>Define Source
+                                            <strong>Step 1</strong> <br>Source
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -1292,14 +1340,30 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link " href="#step-4">
-                                            <strong>Step 4</strong> <br>Family Details
+                                            <strong>Step 4</strong> <br>Family 
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link " href="#step-5">
-                                            <strong>Step 5</strong> <br>Registration Complete
+                                            <strong>Step 5</strong> <br>Approvals
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#step-6">
+                                            <strong>Step 6</strong> <br>Receive
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#step-7">
+                                            <strong>Step 7</strong> <br>Allocate
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#step-8">
+                                            <strong>Step 8</strong> <br>Complete
+                                        </a>
+                                    </li>
+
                                 </ul>
 
                                 <div class="tab-content" id="tabcontentdiv">
@@ -1325,8 +1389,8 @@
 
                                                                     <select id="custom-select6"
                                                                             class="form-control custom-select">
-                                                                        <option selected>Select the source</option>
-                                                                        <option value="1">Abu dhabi Police</option>
+                                                                        <option>Select the source</option>
+                                                                        <option value="1" selected>Abu dhabi Police</option>
                                                                         <option value="2">XYZ institute</option>
                                                                         <option value="3">Other</option>
                                                                     </select>
@@ -1359,18 +1423,19 @@
                                             <div class="list-group-item">
                                                 <div class="form-group row align-items-center mb-0" id="innerstep2">
                                                     <div class=" col-md-12 col-sm-12">
-                                                        <h3>Please update basic info about the child ? </h3>
-                                                        
+
+                                                        <div class=" col-md-12 col-sm-12">
                                                             <div class="form-row">
 
                                                                 <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
                                                                     <label class="form-label p-0">Does Child has an Identity:</label>
+                                                                    <br />
 
-                                                                    <br/>
                                                                     <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
                                                                         <input checked="" type="checkbox" id="subscribe" class="custom-control-input">
                                                                         <label class="custom-control-label" for="subscribe">Yes</label>
                                                                     </div>
+
 
                                                                 </div>
 
@@ -1385,18 +1450,11 @@
 
                                                             </div>
 
-
-
-
-
-
-
-
                                                             <br />
                                                             <div class="form-row">
                                                                 <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
                                                                     <label class="form-label p-0">Full Name:</label>
-                                                                    <input type="text" class="form-control" placeholder="Comments">
+                                                                    <input type="text" class="form-control" placeholder="Comments" value="Azlal">
 
                                                                 </div>
                                                                 <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
@@ -1406,7 +1464,7 @@
                                                                 </div>
                                                                 <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
                                                                     <label class="form-label p-0">Last Name:</label>
-                                                                    <input type="text" class="form-control" placeholder="Comments">
+                                                                    <input type="text" class="form-control" placeholder="Comments" value="Ahmed">
 
                                                                 </div>
                                                             </div>
@@ -1416,8 +1474,8 @@
                                                                 <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
                                                                     <label class="form-label p-0">Gender:</label>
                                                                     <select id="custom-select" class="form-control custom-select">
-                                                                        <option selected="">Select Gender</option>
-                                                                        <option value="1">Male</option>
+                                                                        <option>Select Gender</option>
+                                                                        <option value="1" selected>Male</option>
                                                                         <option value="2">Female</option>
                                                                         <option value="3">Other</option>
                                                                     </select>
@@ -1425,21 +1483,24 @@
                                                                 </div>
                                                                 <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
                                                                     <label class="form-label p-0">Date Of Birth:</label>
-                                                                    <input class="form-control flatpickr-input active" placeholder="" tabindex="0" type="text" readonly="readonly">
+                                                                    <input class="form-control flatpickr-input active" placeholder="" tabindex="0" type="text"
+                                                                           value="12 May 1984" readonly="readonly">
 
                                                                 </div>
                                                                 <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
                                                                     <label class="form-label p-0">Child AgeGroup:</label>
                                                                     <select id="custom-select2" class="form-control custom-select">
-                                                                        <option selected="">Select Child age group </option>
+                                                                        <option>Select Child age group </option>
                                                                         <option value="1">0 - 8 </option>
                                                                         <option value="2">8 - 16</option>
                                                                         <option value="3">16 - 24</option>
-                                                                        <option value="3">24+</option>
+                                                                        <option value="3" selected>24+</option>
                                                                     </select>
 
                                                                 </div>
                                                             </div>
+                                                        </div>
+
                                                     </div>
 
 
@@ -1454,7 +1515,6 @@
                                         <div class="row" style="    display: contents;">
                                             <div class="list-group-item">
 
-                                                <h3>Please update documents received against the child ? </h3>
 
                                                 <div class="form-row">
                                                     <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
@@ -1482,7 +1542,36 @@
 
                                                     </div>
                                                 </div>
-                                                <br/>
+                                                <br />
+
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <label class="option_item">
+
+                                                            <div class="option_inner google">
+
+                                                                <div class="icon"><i style="font-size: 36px;" class="fas fa-file-medical" aria-hidden="true"></i></div>
+                                                                <div class="name">Child Identity</div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <label class="option_item">
+
+                                                            <div class="option_inner google">
+
+                                                                <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+                                                                <div class="name">Vaccination Certificate</div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+
+                                                    </div>
+
+                                                </div>
+                                                <br />
+
                                                 <div class="form-row">
                                                     <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
                                                         <label class="form-label p-0">Court Report:</label>
@@ -1509,22 +1598,64 @@
 
                                                     </div>
                                                 </div>
+
+                                                <br />
+
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <label class="option_item">
+
+                                                            <div class="option_inner google">
+
+                                                                <div class="icon"><i style="font-size: 36px;" class="fas fa-file-medical" aria-hidden="true"></i></div>
+                                                                <div class="name">Court Report</div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <label class="option_item">
+                                                            <div class="row">
+                                                                <div class="option_inner google">
+
+                                                                    <div class="icon"><i style="font-size: 36px;" class="fas fa-file-medical" aria-hidden="true"></i></div>
+                                                                    <div class="name">ABC Doc</div>
+                                                                </div>
+                                                                <div class="option_inner google">
+
+                                                                    <div class="icon"><i style="font-size: 36px;" class="fas fa-file-medical" aria-hidden="true"></i></div>
+                                                                    <div class="name">XYZ Doc</div>
+                                                                </div>
+                                                                <div class="option_inner google">
+
+                                                                    <div class="icon"><i style="font-size: 36px;" class="fas fa-file-medical" aria-hidden="true"></i></div>
+                                                                    <div class="name">QRS Doc</div>
+                                                                </div>
+
+                                                            </div>
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+
                                             </div>
                                         </div>
 
                                     </div>
                                     <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+
                                         <div class="row" style="    display: contents;">
 
                                             <div class="list-group-item">
                                                 <div class="form-group row align-items-center mb-0" id="innerstep2">
                                                     <div class=" col-md-12 col-sm-12">
-                                                        <h3>Does Child has parents or relatives ? </h3>
+                                                        <h3>Parents and Relatives </h3>
 
 
                                                         <div class="form-row">
                                                             <div class=" col-md-12 col-sm-12">
-                                                                <label class="form-label">Does Child has </label>
                                                                 <br />
                                                                 <div class="row">
                                                                     <div class="col-4">
@@ -1532,7 +1663,7 @@
                                                                         <label for="customCheck01">Mother</label>
                                                                         <br />
                                                                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
-                                                                            <input checked="" type="checkbox" id="subscribe4" class="custom-control-input">
+                                                                            <input checked="true" type="checkbox" id="subscribe4" class="custom-control-input">
                                                                             <label class="custom-control-label" for="subscribe4">Yes</label>
                                                                         </div>
                                                                     </div>
@@ -1542,7 +1673,7 @@
                                                                         <label for="customCheck01">Father</label>
                                                                         <br />
                                                                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
-                                                                            <input checked="" type="checkbox" id="subscribe5" class="custom-control-input">
+                                                                            <input type="checkbox" id="subscribe5" class="custom-control-input">
                                                                             <label class="custom-control-label" for="subscribe5">Yes</label>
                                                                         </div>
                                                                     </div>
@@ -1552,7 +1683,7 @@
                                                                         <label for="customCheck01">Relative</label>
                                                                         <br />
                                                                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
-                                                                            <input checked="" type="checkbox" id="subscribe6" class="custom-control-input">
+                                                                            <input checked="true" type="checkbox" id="subscribe6" class="custom-control-input">
                                                                             <label class="custom-control-label" for="subscribe6">Yes</label>
                                                                         </div>
                                                                     </div>
@@ -1568,11 +1699,11 @@
                                                         <div class="form-row">
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <label class="form-label">Mother's Details</label>
-                                                                <input type="text" class="form-control" placeholder="Mother Name">
+                                                                <input type="text" class="form-control" placeholder="Mother Name" value="Zubaida">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <input type="text" class="form-control" placeholder="Contact No">
+                                                                <input type="text" class="form-control" placeholder="Contact No" value="1st january 1962">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <div class="custom-file mt-3">
@@ -1582,14 +1713,34 @@
                                                             </div>
                                                         </div>
                                                         <br />
-                                                        <div class="form-row">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-12">
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-12">
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <label class="option_item">
+
+                                                                    <div class="option_inner google">
+
+                                                                        <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="form-row" style="display:none">
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <label class="form-label">Father's Details</label>
                                                                 <input type="text" class="form-control" placeholder="Father Name">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <input type="text" class="form-control" placeholder="Contact No">
+                                                                <input type="text" class="form-control" placeholder="Contact No" value="00971-554472532">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <div class="custom-file mt-3">
@@ -1602,11 +1753,11 @@
                                                         <div class="form-row">
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <label class="form-label">Relative Details</label>
-                                                                <input type="text" class="form-control" placeholder="Relative Name">
+                                                                <input type="text" class="form-control" placeholder="Relative Name" value="Noshad Latif">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <input type="text" class="form-control" placeholder="Contact No">
+                                                                <input type="text" class="form-control" placeholder="Contact No" value="00971-554472532">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <div class="custom-file mt-3">
@@ -1615,16 +1766,643 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-12">
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-12">
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <label class="option_item">
+
+                                                                    <div class="option_inner google">
+
+                                                                        <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+
+                                                                    </div>
+                                                                </label>
+
+                                                                <label class="option_item">
+
+                                                                    <div class="option_inner google">
+
+                                                                        <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+
+                                                                    </div>
+                                                                </label>
+                                                                <label class="option_item">
+
+                                                                    <div class="option_inner google">
+
+                                                                        <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <br />
+
+                                                        <div class="form-row">
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                <label class="form-label">Relative Details</label>
+                                                                <input type="text" class="form-control" placeholder="Relative Name" value="Noshad Latif">
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
+                                                                <input type="text" class="form-control" placeholder="Contact No" value="00971-554472532">
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                <div class="custom-file mt-3">
+                                                                    <input type="file" id="file" class="custom-file-input">
+                                                                    <label for="file" class="custom-file-label" style="top: 10px;">Choose file</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-12">
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-12">
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-12">
+                                                                <label class="option_item">
+
+                                                                    <div class="option_inner google">
+
+                                                                        <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+
+                                                                    </div>
+                                                                </label>
+
+                                                                <label class="option_item">
+
+                                                                    <div class="option_inner google">
+
+                                                                        <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+
+                                                                    </div>
+                                                                </label>
+                                                                <label class="option_item">
+
+                                                                    <div class="option_inner google">
+
+                                                                        <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract" aria-hidden="true"></i></div>
+
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5">
+
+
+                                        <div class="row" style="display: contents;">
+
+                                            <div class="row" style="    display: contents;">
+
+
+
+                                                <div class="list-group-item" style="display:none">
+                                                    <div class="form-group row align-items-center mb-0" id="innerstep2">
+                                                        <div class=" col-md-12 col-sm-12">
+
+
+
+
+                                                            <div class="form-row">
+                                                                <div class=" col-md-6 col-sm-12 " style="    margin-bottom: 10px;">
+                                                                    <label class="form-label col-md-4 p-0">Identity of child:</label>
+                                                                    <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                          border-color: #00a650; margin-left: 20px;">
+                                                                        Perview Doc
+                                                                    </button>
+                                                                    <div class="custom-control custom-radio mt-3" style="    width: auto;
+                          display: inline; margin-left: 20px;">
+                                                                        <input id="radioStacked112" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                                                                        <label for="radioStacked112" class="custom-control-label">Confidential</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class=" col-md-6 col-sm-12 " style="    margin-bottom: 10px;">
+                                                                    <label class="form-label col-md-4 p-0">Case Report:</label>
+                                                                    <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                      border-color: #00a650; margin-left: 20px;">
+                                                                        Perview Doc
+                                                                    </button>
+                                                                    <div class="custom-control custom-radio mt-3" style="    width: auto;
+                      display: inline; margin-left: 20px;">
+                                                                        <input id="radioStacked212" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                                                                        <label for="radioStacked212" class="custom-control-label">Confidential</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class=" col-md-6 col-sm-12 " style="    margin-bottom: 10px;">
+                                                                    <label class="form-label col-md-4 p-0">Police request:</label>
+                                                                    <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                      border-color: #00a650; margin-left: 20px;">
+                                                                        Perview Doc
+                                                                    </button>
+                                                                    <div class="custom-control custom-radio mt-3" style="    width: auto;
+                      display: inline; margin-left: 20px;">
+                                                                        <input id="radioStacked312" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                                                                        <label for="radioStacked312" class="custom-control-label">Confidential</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-row">
+                                                                <div class=" col-md-6 col-sm-12 " style="  display: initial;  ">
+                                                                    <label class="form-label p-0">Chlidren After Head Status:</label>
+                                                                    <select id="custom-select3" class="form-control custom-select">
+                                                                        <option selected="">Select Chlidren After Head Status</option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">Other</option>
+                                                                    </select>
+
+                                                                </div>
+                                                                <div class=" col-md-6 col-sm-12 " style=" display: initial;  ">
+                                                                    <label class="form-label p-0">Chlidren After Head Comments:</label>
+                                                                    <input type="text" class="form-control" placeholder="Comments">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class=" col-md-6 col-sm-6 " style="  display: initial;  ">
+                                                                    <label class="form-label  p-0">Family Care Dep Status:</label>
+                                                                    <select id="custom-select4" class="form-control custom-select">
+                                                                        <option selected="">Select Family Care Dep Status</option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">Other</option>
+                                                                    </select>
+
+                                                                </div>
+                                                                <div class=" col-md-6 col-sm-12 " style=" display: initial; ">
+                                                                    <label class="form-label  p-0">Family care Dep Comments:</label>
+                                                                    <input type="text" class="form-control " placeholder="Comments">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class=" col-md-6 col-sm-12 " style="  display: initial;">
+                                                                    <label class="form-label  p-0">Committee Status:</label>
+                                                                    <select id="custom-select5" class="form-control custom-select">
+                                                                        <option selected="">Select Committee Status</option>
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">Other</option>
+                                                                    </select>
+
+                                                                </div>
+                                                                <div class=" col-md-6 col-sm-12 " style=" display: initial; ">
+                                                                    <label class="form-label p-0">Committee Comments:</label>
+                                                                    <input type="text" class="form-control" placeholder="Comments">
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </br>
+
+                                                <div class="list-group-item">
+                                                    <div class="form-group row align-items-center mb-0" id="innerstep2">
+                                                        <div class=" col-md-12 col-sm-12">
+
+                                                            <div class="card mb-lg-32pt">
+
+                                                                <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
+
+                                                                    <table class="table mb-0 thead-border-top-0 table-nowrap">
+                                                                        <thead>
+                                                                            <tr>
+
+
+
+                                                                                <th style="width: 48px;">
+                                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Department</a>
+                                                                                </th>
+                                                                                <th style="width: 48px;">
+                                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
+                                                                                </th>
+
+                                                                                <th style="width: 150px;">
+                                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Comments</a>
+                                                                                </th>
+
+                                                                                <th style="width: 48px;">
+                                                                                    <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-from">Date</a>
+                                                                                </th>
+                                                                                <th style="width: 48px;">
+                                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">By</a>
+                                                                                </th>
+
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody class="list" id="leaves">
+                                                                            <tr>
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">Children Affairs Head</small>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <small class="js-lists-values-status text-50 mb-4pt">Approved</small>
+                                                                                        <span class="indicator-line rounded bg-primary"></span>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">
+
+                                                                                        Approved from childeren affairs
+                                                                                    </small>
+                                                                                </td>
+
+
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                                </td>
+
+
+
+                                                                                <td class="pr-0">
+                                                                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                        <div class="avatar avatar-32pt mr-8pt">
+
+                                                                                            <span class="avatar-title rounded-circle">TP</span>
+
+                                                                                        </div>
+                                                                                        <div class="media-body">
+
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="flex d-flex flex-column">
+                                                                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                                </div>
+
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">Family care Department</small>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <small class="js-lists-values-status text-50 mb-4pt">Approved</small>
+                                                                                        <span class="indicator-line rounded bg-primary"></span>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">I Approve as documents are available</small>
+                                                                                </td>
+
+
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                                </td>
+
+
+
+                                                                                <td class="pr-0">
+                                                                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                        <div class="avatar avatar-32pt mr-8pt">
+
+                                                                                            <span class="avatar-title rounded-circle">TP</span>
+
+                                                                                        </div>
+                                                                                        <div class="media-body">
+
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="flex d-flex flex-column">
+                                                                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                                </div>
+
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">Committee Affairs Head</small>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <small class="js-lists-values-status text-50 mb-4pt">Approved</small>
+                                                                                        <span class="indicator-line rounded bg-primary"></span>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">
+                                                                                        I approve as committee affairs head
+                                                                                    </small>
+                                                                                </td>
+
+
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                                </td>
+
+
+
+                                                                                <td class="pr-0">
+                                                                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                        <div class="avatar avatar-32pt mr-8pt">
+
+                                                                                            <span class="avatar-title rounded-circle">TP</span>
+
+                                                                                        </div>
+                                                                                        <div class="media-body">
+
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="flex d-flex flex-column">
+                                                                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                                </div>
+
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                            <tr>
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">Director General</small>
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <small class="js-lists-values-status text-50 mb-4pt">Approved</small>
+                                                                                        <span class="indicator-line rounded bg-primary"></span>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <small class="js-lists-values-policy text-50">
+                                                                                        I approve as Director
+                                                                                    </small>
+                                                                                </td>
+
+
+
+
+                                                                                <td>
+                                                                                    <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                                </td>
+
+
+
+                                                                                <td class="pr-0">
+                                                                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                        <div class="avatar avatar-32pt mr-8pt">
+
+                                                                                            <span class="avatar-title rounded-circle">TP</span>
+
+                                                                                        </div>
+                                                                                        <div class="media-body">
+
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="flex d-flex flex-column">
+                                                                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                                </div>
+
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+
+                                                                <div class="card-footer p-8pt">
+
+                                                                    <ul class="pagination justify-content-start pagination-xsm m-0">
+                                                                        <li class="page-item disabled">
+                                                                            <a class="page-link" href="#" aria-label="Previous">
+                                                                                <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                                                <span>Prev</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="page-item dropdown">
+                                                                            <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
+                                                                                <span>1</span>
+                                                                            </a>
+                                                                            <div class="dropdown-menu">
+                                                                                <a href="#" class="dropdown-item active">1</a>
+                                                                                <a href="#" class="dropdown-item">2</a>
+                                                                                <a href="#" class="dropdown-item">3</a>
+                                                                                <a href="#" class="dropdown-item">4</a>
+                                                                                <a href="#" class="dropdown-item">5</a>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="page-item">
+                                                                            <a class="page-link" href="#" aria-label="Next">
+                                                                                <span>Next</span>
+                                                                                <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                </div>
+                                                                <!-- <div class="card-body bordet-top text-right">
+                                  15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+                                </div> -->
+
+                                                            </div>
+
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
 
+
                                     </div>
-                                    <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5"></div>
+
+
+                                    <div id="step-6" class="tab-pane" role="tabpanel" aria-labelledby="step-6">
+
+                                        <h3>Receiving a Child</h3>
+                                        <div class="row" style="    display: contents;">
+                                            <div class="form-row">
+                                                <div class=" col-md-6 col-sm-12">
+                                                    <label class="form-label">Allocation House</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                                                        <label for="customCheck01" class="custom-control-label">Dz House</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                                                        <label for="customCheck02" class="custom-control-label">External House</label>
+                                                    </div>
+                                                </div>
+                                                <div class=" col-md-6 col-sm-12">
+                                                    <label class="form-label">Type Of Receiving</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                                                        <label for="customCheck01" class="custom-control-label">Pick UP</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                                                        <label for="customCheck02" class="custom-control-label">Drop Child</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="form-row">
+                                                <div class=" col-md-4 col-sm-12">
+                                                    <label class="form-label">Date And Time</label>
+                                                    <input id="flatpickrSample04" type="hidden" class="form-control flatpickr-input" placeholder="Flatpickr date time example" data-toggle="flatpickr" data-flatpickr-enable-time="true" data-flatpickr-alt-format="F j, Y at H:i" data-flatpickr-date-format="Y-m-d H:i" value="2018-10-07 15:35">
+
+
+                                                </div>
+                                                <div class=" col-md-4 col-sm-12">
+                                                    <label class="form-label">Who Drop Child</label>
+                                                    <select id="custom-select6" class="form-control custom-select">
+                                                        <option selected="">Select Who Drop Child</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">Other</option>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+                                            <br />
+                                            <div class="form-row">
+                                                <div class=" col-md-4 col-sm-12">
+                                                    <label class="form-label">Person Name</label>
+                                                    <input type="text" class="form-control" placeholder="Person Name">
+
+                                                </div>
+                                                <div class=" col-md-4 col-sm-12">
+                                                    <label class="form-label">Person Contact No</label>
+                                                    <input type="text" class="form-control" placeholder="Person Contact No">
+                                                </div>
+                                                <div class=" col-md-4 col-sm-12">
+                                                    <label class="form-label">Upload Documents</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" id="file1" class="custom-file-input">
+                                                        <label for="file" class="custom-file-label">Choose file</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <br />
+                                            <div class="form-row">
+                                                <div class=" col-md-4 col-sm-12">
+                                                    <label class="form-label">Date of Enrollment</label>
+                                                    <input type="text" class="form-control" placeholder="Time and Date">
+
+                                                </div>
+                                                <div class=" col-md-4 col-sm-12">
+                                                    <label class="form-label">Assign Department/section</label>
+                                                    <input type="text" class="form-control" placeholder="Department/section">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div id="step-7" class="tab-pane" role="tabpanel" aria-labelledby="step-7">
+
+                                   
+                                        <div class="row" style="    display: contents;">
+                                            <div class="form-row">
+                                                <div class=" col-md-6 col-sm-12">
+                                                    <label class="form-label">Allocation Dz House</label>
+                                                    <select id="custom-select7" class="form-control custom-select">
+                                                        <option selected="">Select Allocation Dz House</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">Other</option>
+                                                    </select>
+
+                                                </div>
+                                                <div class=" col-md-6 col-sm-12 mt-4">
+                                                    <label class="form-label">Allocation Care Giver</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                                                        <label for="customCheck01" class="custom-control-label">CareGiver 1</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                                                        <label for="customCheck02" class="custom-control-label">CareGiver 2</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input id="customCheck03" type="checkbox" checked="" class="custom-control-input">
+                                                        <label for="customCheck03" class="custom-control-label">CareGiver 3</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div class="form-row">
+                                                <div class=" col-md-6 col-sm-12">
+                                                    <label class="form-label">Allocation DZFC Social Worker</label>
+                                                    <input type="text" class="form-control" placeholder="Social Worker">
+                                                </div>
+                                                <div class=" col-md-6 col-sm-12">
+                                                    <label class="form-label">Child Pocket Money</label>
+                                                    <input type="text" class="form-control" placeholder="Child Pocket Money">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div id="step-8" class="tab-pane" role="tabpanel" aria-labelledby="step-8">
+
+
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
 
                         </div>
                     </div>
@@ -2042,7 +2820,7 @@
                 },
                 toolbarSettings: {
                     toolbarPosition: 'both', // both bottom
-                    //toolbarExtraButtons: [btnFinish, btnCancel]
+                   // toolbarExtraButtons: [btnFinish, btnCancel]
                 }
             });
 
