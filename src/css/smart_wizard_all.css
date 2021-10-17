@@ -24,6 +24,14 @@
   position: relative;
   overflow: hidden;
 }
+.myclass {
+    height: 326.891px!important;
+}
+
+.myclasstwo {
+    height: 424.688px!important;
+}
+
 
 .sw .toolbar {
   padding: .8rem;
