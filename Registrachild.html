@@ -1319,6 +1319,11 @@
                                                             </div>
 
                                                             <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
+                                                                <label class="form-label p-0">Receiving Date :</label>
+                                                                <input type="text" class="form-control" placeholder="Receiving Date">
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
                                                                 <label class="form-label p-0">Child Picture:</label>
                                                                 <div class="custom-file">
                                                                     <input type="file" id="file" class="custom-file-input">
@@ -1422,6 +1427,35 @@
 
                                                             </div>
                                                         </div>
+                                                        <br/>
+                                                        <div class="form-row">
+                                                            <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
+                                                                <label class="form-label p-0">Educational Grade :</label>
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                        <option selected="">Select Grade</option>
+                                                                        <option value="1">Nursery</option>
+                                                                        <option value="2">Primary</option>
+                                                                        <option value="2">Intermediate</option>
+                                                                        <option value="3">Graduation</option>
+                                                                    </select>
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
+                                                                <label class="form-label p-0">Status:</label>
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                    <option selected="">Select Status</option>
+                                                                    <option value="1">Temporary</option>
+                                                                    <option value="2">Permanant</option>
+                                                                    <option value="3">Other</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
+                                                                
+
+                                                            </div>
+                                                        </div>
+
 
 
                                                     </div>
@@ -1552,17 +1586,21 @@
                                                         </div>
                                                         <br />
                                                         <div id="motherPortion" class="form-row">
-                                                            <div class=" col-md-4 col-sm-12">
+                                                            <div class=" col-md-3 col-sm-12">
                                                                 <label class="form-label">Mother's Details</label>
                                                                 <input type="text" class="form-control" placeholder="Mother Name">
                                                             </div>
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <input type="text" class="form-control" placeholder="Contact No">
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                                <input type="text" class="form-control" placeholder="Date of Birth">
                                                             </div>
-                                                            <div class=" col-md-4 col-sm-12">
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                                <input type="text" class="form-control" placeholder="Contact Number">
+                                                            </div>
+                                                            <div class=" col-md-3 col-sm-12">
                                                                 
-                                                                    <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
+                                                                <label class="form-label">&nbsp;</label>
                                                                     <select id="custom-select" class="form-control custom-select">
                                                                             <option selected="">Select Nationality</option>
                                                                             <option value="1">UAE</option>
@@ -1601,26 +1639,30 @@
                                                         <br/>
                                                         <div id="fatherPortion" class="form-row" style="visibility:visible;">
                                                            
-                                                            <div class=" col-md-4 col-sm-12">
+                                                            <div class=" col-md-3 col-sm-12">
                                                                 <label class="form-label">Father's Details</label>
-                                                                <input type="text" class="form-control" placeholder="Father Name">
+                                                                <input type="text" class="form-control" placeholder="Father's Name">
                                                             </div>
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <input type="text" class="form-control" placeholder="Contact No">
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                                <input type="text" class="form-control" placeholder="Date of Birth">
                                                             </div>
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                
-                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <select id="custom-select" class="form-control custom-select">
-                                                                        <option selected="">Select Nationality</option>
-                                                                        <option value="1">UAE</option>
-                                                                        <option value="2">Oman</option>
-                                                                        <option value="3">ABC</option>
-                                                                    </select>
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                                <input type="text" class="form-control" placeholder="Contact Number">
+                                                            </div>
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                               
+                                                                    <select id="custom-select" class="form-control custom-select">
+                                                                            <option selected="">Select Nationality</option>
+                                                                            <option value="1">UAE</option>
+                                                                            <option value="2">Oman</option>
+                                                                            <option value="3">ABC</option>
+                                                                        </select>
 
-                                                            
-                                                        </div>
+                                                                
+                                                            </div>
                                                    
                                                             <div class="col-12"><br/></div>
                                                             <div class=" col-md-4 col-sm-12">
@@ -1647,26 +1689,30 @@
                                                         </div>
                                                         <br />
                                                         <div id="relativePortion" class="form-row" style="visibility: visible;">
-                                                            <div class=" col-md-4 col-sm-12">
+                                                            <div class=" col-md-3 col-sm-12">
                                                                 <label class="form-label">Relative's Details</label>
-                                                                <input type="text" class="form-control" placeholder="Relative Name">
+                                                                <input type="text" class="form-control" placeholder="Relative's Name">
                                                             </div>
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <input type="text" class="form-control" placeholder="Contact No">
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                                <input type="text" class="form-control" placeholder="Date of Birth">
                                                             </div>
-                                                            <div class=" col-md-4 col-sm-12">
-                                                                
-                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
-                                                                <select id="custom-select" class="form-control custom-select">
-                                                                        <option selected="">Select Nationality</option>
-                                                                        <option value="1">UAE</option>
-                                                                        <option value="2">Oman</option>
-                                                                        <option value="3">ABC</option>
-                                                                    </select>
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                                <input type="text" class="form-control" placeholder="Contact Number">
+                                                            </div>
+                                                            <div class=" col-md-3 col-sm-12">
+                                                                <label class="form-label">&nbsp;</label>
+                                                               
+                                                                    <select id="custom-select" class="form-control custom-select">
+                                                                            <option selected="">Select Nationality</option>
+                                                                            <option value="1">UAE</option>
+                                                                            <option value="2">Oman</option>
+                                                                            <option value="3">ABC</option>
+                                                                        </select>
 
-                                                            
-                                                        </div>
+                                                                
+                                                            </div>
                                                    
                                                             <div class="col-12"><br/></div>
                                                             <div class=" col-md-4 col-sm-12">
