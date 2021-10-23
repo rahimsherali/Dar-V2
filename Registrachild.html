@@ -1234,7 +1234,27 @@
 
                                                 <div class="page-section">
 
+                                                    <div class="form-group row align-items-left mb-0" style="justify-content: center;">
+                                                        <div class=" col-md-4 col-sm-4 text-left">
+                                                            <h5 class="mb-4">File Number : CH-210908-0005 </h5>
+                                                        </div>
 
+
+                                                        <div class="col-4">
+                                                            <h4 class="mb-4"></h4>
+                                                                                                                        
+                                                        </div>
+                                                        <div class="col-4" id="othertext" >
+                                                          
+                                                        </div>
+                                                        <!-- <div class="col-8" style="height: 100px;">
+
+                                                        </div> -->
+
+
+
+
+                                                    </div>
 
                                                     <div class="form-group row align-items-center mb-0" style="justify-content: center;">
                                                         <div class=" col-md-12 col-sm-12 text-center">
@@ -1265,17 +1285,6 @@
 
 
                                                     </div>
-
-
-
-
-
-
-
-
-
-
-
 
                                                 </div>
 
@@ -1375,6 +1384,46 @@
 
                                                             </div>
                                                         </div>
+
+                                                        <br/>
+
+                                                        <div class="form-row">
+                                                            <div class=" col-md-4 col-sm-12 " style="  display: initial;  ">
+                                                                <label class="form-label p-0">Nationality :</label>
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                        <option selected="">Select Nationality</option>
+                                                                        <option value="1">UAE</option>
+                                                                        <option value="2">Oman</option>
+                                                                        <option value="3">ABC</option>
+                                                                    </select>
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
+                                                                <label class="form-label p-0">Mental State:</label>
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                    <option selected="">Select State</option>
+                                                                    <option value="1">Perception</option>
+                                                                    <option value="2">Pain</option>
+                                                                    <option value="3">Belief</option>
+                                                                    <option value="3">Desire</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12 " style=" display: initial;  ">
+                                                                <label class="form-label p-0">Health State:</label>
+                                                                <select id="custom-select2" class="form-control custom-select">
+                                                                        <option selected="">Select state </option>
+                                                                        <option value="1">Stress</option>
+                                                                        <option value="1">Chronic pain</option>
+                                                                        <option value="2">Depression</option>
+                                                                        <option value="3">Injury</option>
+                                                                        <option value="3">Other</option>
+                                                                    </select>
+
+                                                            </div>
+                                                        </div>
+
+
                                                     </div>
 
 
@@ -1382,6 +1431,8 @@
                                                 </div>
 
                                             </div>
+
+                                   
                                         </div>
 
                                     </div>
@@ -1510,14 +1561,46 @@
                                                                 <input type="text" class="form-control" placeholder="Contact No">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
-                                                                <div class="custom-file mt-3">
-                                                                    <input type="file" id="file1" class="custom-file-input">
-                                                                    <label for="file" class="custom-file-label" style="top: 10px;">Choose file</label>
-                                                                </div>
+                                                                
+                                                                    <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
+                                                                    <select id="custom-select" class="form-control custom-select">
+                                                                            <option selected="">Select Nationality</option>
+                                                                            <option value="1">UAE</option>
+                                                                            <option value="2">Oman</option>
+                                                                            <option value="3">ABC</option>
+                                                                        </select>
+
+                                                                
                                                             </div>
                                                         </div>
                                                         <br />
-                                                        <div id="fatherPortion" class="form-row" style="visibility: hidden;">
+                                                        <div id="motherPortion" class="form-row">
+                                                            <div class=" col-md-4 col-sm-12">
+                                                               
+                                                                
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                    <option selected="">Select Maritial Status</option>
+                                                                    <option value="1">Divorces</option>
+                                                                    <option value="2">MArried</option>
+                                                                    <option value="3">ABC</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                
+                                                                <input type="text" class="form-control" placeholder="Identification Number">
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                <div class="custom-file">
+                                                                    
+                                                                    <label for="file" class="custom-file-label" >Choose file</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <br/>
+                                                        <div id="fatherPortion" class="form-row" style="visibility:visible;">
+                                                           
                                                             <div class=" col-md-4 col-sm-12">
                                                                 <label class="form-label">Father's Details</label>
                                                                 <input type="text" class="form-control" placeholder="Father Name">
@@ -1527,16 +1610,45 @@
                                                                 <input type="text" class="form-control" placeholder="Contact No">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
-                                                                <div class="custom-file mt-3">
-                                                                    <input type="file" id="file" class="custom-file-input">
-                                                                    <label for="file" class="custom-file-label" style="top: 10px;">Choose file</label>
+                                                                
+                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                        <option selected="">Select Nationality</option>
+                                                                        <option value="1">UAE</option>
+                                                                        <option value="2">Oman</option>
+                                                                        <option value="3">ABC</option>
+                                                                    </select>
+
+                                                            
+                                                        </div>
+                                                   
+                                                            <div class="col-12"><br/></div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                               
+                                                                
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                    <option selected="">Select Maritial Status</option>
+                                                                    <option value="1">Divorces</option>
+                                                                    <option value="2">MArried</option>
+                                                                    <option value="3">ABC</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                
+                                                                <input type="text" class="form-control" placeholder="Identification Number">
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                <div class="custom-file">
+                                                                    
+                                                                    <label for="file" class="custom-file-label" >Choose file</label>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <br />
-                                                        <div id="relativePortion" class="form-row" style="visibility: hidden;">
+                                                        <div id="relativePortion" class="form-row" style="visibility: visible;">
                                                             <div class=" col-md-4 col-sm-12">
-                                                                <label class="form-label">Relative Details</label>
+                                                                <label class="form-label">Relative's Details</label>
                                                                 <input type="text" class="form-control" placeholder="Relative Name">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
@@ -1544,9 +1656,38 @@
                                                                 <input type="text" class="form-control" placeholder="Contact No">
                                                             </div>
                                                             <div class=" col-md-4 col-sm-12">
-                                                                <div class="custom-file mt-3">
-                                                                    <input type="file" id="file" class="custom-file-input">
-                                                                    <label for="file" class="custom-file-label" style="top: 10px;">Choose file</label>
+                                                                
+                                                                <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                        <option selected="">Select Nationality</option>
+                                                                        <option value="1">UAE</option>
+                                                                        <option value="2">Oman</option>
+                                                                        <option value="3">ABC</option>
+                                                                    </select>
+
+                                                            
+                                                        </div>
+                                                   
+                                                            <div class="col-12"><br/></div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                               
+                                                                
+                                                                <select id="custom-select" class="form-control custom-select">
+                                                                    <option selected="">Select Maritial Status</option>
+                                                                    <option value="1">Divorces</option>
+                                                                    <option value="2">MArried</option>
+                                                                    <option value="3">ABC</option>
+                                                                </select>
+
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                
+                                                                <input type="text" class="form-control" placeholder="Identification Number">
+                                                            </div>
+                                                            <div class=" col-md-4 col-sm-12">
+                                                                <div class="custom-file">
+                                                                    
+                                                                    <label for="file" class="custom-file-label" >Choose file</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1585,19 +1726,19 @@
                 <div class="sidebar sidebar-left ps ps--active-y" data-perfect-scrollbar="">
 
                     <!-- Navbar toggler -->
-                    <a href="index - Copy.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right"
+                    <a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right"
                         data-boundary="window" data-original-title="" title="">
                         <span class="material-icons">sync_alt</span>
                     </a>
 
-                    <a href="index - Copy.html" class="sidebar-brand ">
+                    <a href="index.html" class="sidebar-brand ">
                         <img class="sidebar-brand-icon" src="assets/images/logo/accent-teal-100@2x.png" alt="Huma">
 
                     </a>
                     <div class="sidebar-heading">Overview</div>
                     <ul class="sidebar-menu">
                         <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button " href="index - Copy.html">
+                            <a class="sidebar-menu-button " href="index.html">
                                 <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
                                 <span class="sidebar-menu-text">Dashboard</span>
                             </a>
@@ -1664,12 +1805,20 @@
                                     </a>
                                 </li>
 
-                                <li class="sidebar-menu-item activemenu">
-                                    <a class="sidebar-menu-button activemenu" href="Childprofile.html">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">people</span> Children's Profile
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Childprofile.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">people</span> Children's Profile
 
                                     </a>
 
+                                </li>
+
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="MyTasks.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">message</span> My Tasks
+        
+                                    </a>
+        
                                 </li>
 
                             </ul>
@@ -1680,9 +1829,9 @@
                                 <span class="ml-auto sidebar-menu-toggle-icon"></span>
                             </a>
                             <ul class="" id="dashboards_menu2" style="">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button" href="Registrachild.html">
-                                        <span class="sidebar-menu-text">Register </span>
+                                <li class="sidebar-menu-item activemenu">
+                                    <a class="sidebar-menu-button activemenu" href="Registrachild.html">
+                                        <span class="sidebar-menu-text activemenu">Register </span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
