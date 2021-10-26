@@ -89,9 +89,6 @@
   <link type="text/css"
         href="assets/css/select2.css"
         rel="stylesheet">
-        <link type="text/css"
-        href="assets/css/dropzone.css"
-        rel="stylesheet">
 <Style>
 
 .sw-theme-arrows > .tab-content > .tab-pane {
@@ -1101,7 +1098,7 @@ label.form-label {
 
                 <div class="container-fluid page__container">
                     <div class="page-section">
-      <div class="card mb-lg-32pt">
+        <!-- <div class="card mb-lg-32pt">
 
 <div class="row" style="    display: contents;">
   <br />
@@ -1146,25 +1143,24 @@ label.form-label {
     <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" href="#step-1">
-            <strong>Step 1</strong> <br>Basic
+            <strong>Step 1</strong> <br>Inbound
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#step-2">
-            <strong>Step 2</strong> <br>Attachment
+            <strong>Step 2</strong> <br>Review
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#step-3">
-            <strong>Step 3</strong> <br>Tasks
+            <strong>Step 3</strong> <br>Approve
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#step-4">
-              <strong>Step 3</strong> <br>Approval
-            </a>
-          </li>
-      
+          <a class="nav-link " href="#step-4">
+            <strong>Step 4</strong> <br>Receiving a Child
+          </a>
+        </li>
     </ul>
 
     <div class="tab-content">
@@ -1174,166 +1170,154 @@ label.form-label {
             <div class="row" style="display: contents;">
                   <div class="form-row">
                       <div class=" col-md-6 col-sm-12">
-                          <label class="form-label">Reference No</label>
-                          
-                        
-                            <input type="text" class="form-control"  placeholder="Reference no Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Reference no" >
+                          <label class="form-label">Does Child has an Identity</label>
+                          <div class="flex"
+                          style="max-width: 100%">
+                         <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                             <input checked=""
+                                    type="checkbox"
+                                    id="subscribe"
+                                    class="custom-control-input">
+                             <label class="custom-control-label"
+                                    for="subscribe">Yes</label>
+                         </div>
+                         <label class="form-label mb-0"
+                                for="subscribe">Yes</label>
 
-                     
-                      
-                  </div></div>
+                     </div>
+                      </div>
+                  </div>
                   <div class="form-row">
                       <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Title</label>
-                          <input type="text" class="form-control"  placeholder="Title Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Title" >
+                          <label class="form-label">Child Full Name</label>
+                          <input type="text" class="form-control"  placeholder="First name"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter full Name" >
+                          
                       </div>
                       <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Description</label>
-                          <input type="text" class="form-control"  placeholder="Description Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Description" >
+                          <label class="form-label" style="visibility: hidden;" >Does Child has an Identity</label>
+                          <input type="text" class="form-control"  placeholder="Middle name"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Middle Name" >
+                          
                       </div>
-                          <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Type</label>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label" style="visibility: hidden;">Does Child has an Identity</label>
+                          <input type="text" class="form-control"  placeholder="Last name"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Last Name" >
+                          
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Gender</label>
+                          <select id="custom-select"
+                          class="form-control custom-select">
+                      <option selected>Select Gender</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Other</option>
+                  </select>
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Date of Birth</label>
+                          <input id="flatpickrSample01"
+                          type="hidden"
+                          class="form-control flatpickr-input"
+                          data-toggle="flatpickr"
+                          value="today">
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Child age group</label>
                           <select id="custom-select2"
                           class="form-control custom-select">
                       <option selected>Select Child age group </option>
-                      <option value="1">Letter</option>
-                      <option value="2">Email</option>
-                      <option value="3">Memo</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
                       <option value="3">Other</option>
                   </select>
                       </div>
                   </div>
                   <div class="form-row">
                       <div class=" col-md-12 col-sm-12">
-                          <label class="form-label">Priority</label>
+                          <label class="form-label">Does Child has Parent</label>
                           <div class="custom-control custom-checkbox">
                               <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
-                              <label for="customCheck01" class="custom-control-label">Heigh</label>
+                              <label for="customCheck01" class="custom-control-label">Mother</label>
                           </div>
                           <div class="custom-control custom-checkbox">
                               <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
-                              <label for="customCheck02" class="custom-control-label">Medium</label>
+                              <label for="customCheck02" class="custom-control-label">Father</label>
                           </div>
                           <div class="custom-control custom-checkbox">
                               <input id="customCheck03" type="checkbox" checked="" class="custom-control-input">
-                              <label for="customCheck03" class="custom-control-label">Low</label>
+                              <label for="customCheck03" class="custom-control-label">Relative</label>
                           </div>
                       </div>
                   </div>
                   <div class="form-row">
-                  <div class=" col-md-6 col-sm-12">
-                    <label class="form-label">Type</label>
-                    <select id="custom-select2"
-                    class="form-control custom-select">
-                <option selected>Classification </option>
-                <option value="1">Confidential</option>
-                <option value="2">Internal</option>
-                <option value="3">Public</option>
-              
-            </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class=" col-md-12 col-sm-12">
-                    <label class="form-label">Source</label>
-                    <div class="custom-control custom-checkbox">
-                        <input id="customChecka1" type="checkbox" checked="" class="custom-control-input">
-                        <label for="customChecka1" class="custom-control-label">Internal</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input id="customChecka2" type="checkbox" checked="" class="custom-control-input">
-                        <label for="customChecka2" class="custom-control-label">External</label>
-                    </div>
-                   
-                </div>
-            </div>
-                  <div class="form-row">
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">Form Organization</label>
-                        <select id="custom-selectC2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
-            
-          </select>
-                    </div>
                       <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">From Department</label>
-                          <select id="custom-selecta2"
-                    class="form-control custom-select">
-                    <option selected>Select</option>
-                <option >A </option>
-                <option value="1">b</option>
-                <option value="2">c</option>
-                <option value="3">d</option>
-              
-            </select>
+                          <label class="form-label">Mother's Details</label>
+                          <input type="text" class="form-control"  placeholder="Mother Name"   >
                       </div>
                       <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">To Department</label>
-                        <select id="custom-selectb2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
-            
-          </select>
-                    </div>
-                  
+                          <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
+                          <input type="text" class="form-control"  placeholder="Contact No"   >
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <div class="custom-file mt-3">
+                              <input type="file" id="file1" class="custom-file-input">
+                              <label for="file" class="custom-file-label" style="top: 10px;">Choose file</label>
+                          </div>
+                      </div>
                   </div>
                   <div class="form-row">
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">Assign To</label>
-                        <select id="custom-selectC2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
-            
-          </select>
-                    </div>
                       <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">CC</label>
-                          <input type="text" class="form-control"  placeholder=" Email Here"   >
+                          <label class="form-label">Father's Details</label>
+                          <input type="text" class="form-control"  placeholder="Father Name"   >
                       </div>
                       <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">BCC</label>
-                        <input type="text" class="form-control"  placeholder=" Email Here"   >
-                    </div>
-                   
+                          <label class="form-label" style="    visibility: hidden;">Date of Birth</label>
+                          <input type="text" class="form-control"  placeholder="Contact No"   >
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <div class="custom-file mt-3">
+                              <input type="file" id="file" class="custom-file-input">
+                              <label for="file" class="custom-file-label" style="top: 10px;">Choose file</label>
+                          </div>
+                      </div>
                   </div>
                   <div class="form-row">
-                     
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Correspondence Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Identity of child</label>
+                          <div class="custom-file">
+                              <input type="file" id="file" class="custom-file-input">
+                              <label for="file" class="custom-file-label">Choose file</label>
+                          </div>
                       </div>
                       <div class=" col-md-4 col-sm-12">
-                        <label class="form-label"
-                        for="dateRangePickerSampleB01">Closure</label>
-                 <input id="dateRangePickerSampleB01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
+                          <label class="form-label">Vaccination certificate</label>
+                          <div class="custom-file">
+                              <input type="file" id="file" class="custom-file-input">
+                              <label for="file" class="custom-file-label">Choose file</label>
+                          </div>
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Case Report</label>
+                          <div class="custom-file">
+                              <input type="file" id="file" class="custom-file-input">
+                              <label for="file" class="custom-file-label">Choose file</label>
+                          </div>
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Court Report</label>
+                          <div class="custom-file">
+                              <input type="file" id="file" class="custom-file-input">
+                              <label for="file" class="custom-file-label">Choose file</label>
+                          </div>
+                      </div>
+                      <div class=" col-md-4 col-sm-12">
+                          <label class="form-label">Police request</label>
+                          <div class="custom-file">
+                              <input type="file" id="file" class="custom-file-input">
+                              <label for="file" class="custom-file-label">Choose file</label>
+                          </div>
                       </div>
                   </div>
             
@@ -1342,618 +1326,549 @@ label.form-label {
       
           </div>
         <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-            <h3>Documents</h3>
-            <div class="row" >
-                <div class="col-sm-12 col-md-3">
-                    <div class="page-separator">
-                        <div class="page-separator__text">Attachment</div>
-                    </div>
-                   
-                </div>
-                <div class="col-sm-12 col-md-9 d-flex align-items-center">
-                    <div class="flex"
-                         style="max-width: 100%">
+            <h3>Review</h3>
+            <div class="row" style="display: contents;">
+              <div class="form-row" style="    margin-bottom: 10px;">
+                  <div class=" col-md-4 col-sm-12 retable">
+                      <label class="form-label">Does Child has an Identity:</label>
+                      <label class="form-label reviewForm">Yes</label>
+                     
+                      
+                  </div>
+                  <div class=" col-md-6 col-sm-12 retable">
+                      <label class="form-label">Child Full Name:</label>
+                      <label class="form-label reviewForm">Muhammad Azlal Ahmed</label>
+                      
+                  </div>
+                  <div class=" col-md-2 col-sm-12 retable">
+                      <label class="form-label">Gender:</label>
+                      <label class="form-label reviewForm">Male</label>
+                  </div>
+              </div>
+             
+              <div class="form-row" style="    margin-bottom: 10px;">
+                  
+                  <div class=" col-md-4 col-sm-12 retable">
+                      <label class="form-label">Date of Birth:</label>
+                      <label class="form-label reviewForm">07-08-2020</label>
+                  </div>
+                  <div class=" col-md-4 col-sm-12 retable">
+                      <label class="form-label">Child age group:</label>
+                      <label class="form-label reviewForm">0 - 5 Years</label>
+                  </div>
+                  <div class=" col-md-4 col-sm-12 retable">
+                      <label class="form-label">Does Child has Parent:</label>
+                      <label class="form-label reviewForm">No</label>
+                  </div>
+              </div>
+              
+              
+              
+              <div class="form-row" >
+                  <div class=" col-md-6 col-sm-12 " style="    margin-bottom: 10px;">
+                      <label class="form-label col-md-4 p-0">Identity of child:</label>
+                      <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                          border-color: #00a650; margin-left: 20px;">Perview Doc</button>
+                          <div class="custom-control custom-radio mt-3" style="    width: auto;
+                          display: inline; margin-left: 20px;">
+                              <input id="radioStacked112" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                              <label for="radioStacked112" class="custom-control-label">Confidential</label>
+                          </div>
+                  </div>
+                 
+                  <div class=" col-md-6 col-sm-12 " style="    margin-bottom: 10px;">
+                      <label class="form-label col-md-4 p-0">Case Report:</label>
+                      <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                      border-color: #00a650; margin-left: 20px;">Perview Doc</button>
+                      <div class="custom-control custom-radio mt-3" style="    width: auto;
+                      display: inline; margin-left: 20px;">
+                          <input id="radioStacked212" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                          <label for="radioStacked212" class="custom-control-label">Confidential</label>
+                      </div>
+                  </div>
+                  <div class=" col-md-6 col-sm-12 " style="    margin-bottom: 10px;">
+                      <label class="form-label col-md-4 p-0">Police request:</label>
+                      <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                      border-color: #00a650; margin-left: 20px;">Perview Doc</button>
+                      <div class="custom-control custom-radio mt-3" style="    width: auto;
+                      display: inline; margin-left: 20px;">
+                          <input id="radioStacked312" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                          <label for="radioStacked312" class="custom-control-label">Confidential</label>
+                      </div>
+                  </div>
+              </div>
 
-                        <div class="dropzone dropzone-multiple w-100 mb-24pt"
-                             data-toggle="dropzone"
-                             data-dropzone-multiple
-                             data-dropzone-url="http://"
-                             data-dropzone-files='["assets/images/256_daniel-gaffey-1060698-unsplash.jpg", "assets/images/256_rsz_clem-onojeghuo-150467-unsplash.jpg", "assets/images/256_rsz_florian-perennes-594195-unsplash.jpg"]'>
-
-                            <div class="fallback">
-                                <div class="custom-file">
-                                    <input type="file"
-                                           class="custom-file-input"
-                                           id="customFileUploadMultiple"
-                                           multiple>
-                                    <label class="custom-file-label"
-                                           for="customFileUploadMultiple">Choose file</label>
-                                </div>
-                            </div>
-
-                            <ul class="dz-preview dz-preview-multiple list-group list-group-flush mt-16pt">
-                                <li class="list-group-item">
-                                    <div class="form-row align-items-center">
-                                        <div class="col-auto">
-                                            <div class="avatar">
-                                                <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
-                                                     class="avatar-img rounded"
-                                                     alt="..."
-                                                     data-dz-thumbnail>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="font-weight-bold"
-                                                 data-dz-name>...</div>
-                                            <p class="small text-muted mb-0"
-                                               data-dz-size>...</p>
-                                        </div>
-                                        <div class="col-auto">
-                                            <a href="#"
-                                               class="text-muted-light"
-                                               data-dz-remove>
-                                                <i class="material-icons">close</i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                       
-                    </div>
-                </div>
+              <div class="form-row" >
+                  <div class=" col-md-6 col-sm-12 " style="  display: initial;  ">
+                      <label class="form-label p-0">Chlidren After Head Status:</label>
+                      <select id="custom-select3"
+                      class="form-control custom-select">
+                  <option selected>Select Chlidren After Head Status</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">Other</option>
+              </select>
+                  
+                  </div>
+                  <div class=" col-md-6 col-sm-12 " style=" display: initial;  ">
+                      <label class="form-label p-0">Chlidren After Head Comments:</label>
+                      <input type="text" class="form-control"  placeholder="Comments"   >
+                  
+                  </div>
+              </div>
+              <div class="form-row" >
+                  <div class=" col-md-6 col-sm-6 " style="  display: initial;  ">
+                      <label class="form-label  p-0">Family Care Dep Status:</label>
+                      <select id="custom-select4"
+                      class="form-control custom-select">
+                  <option selected>Select Family Care Dep Status</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">Other</option>
+              </select>
+                  
+                  </div>
+                  <div class=" col-md-6 col-sm-12 " style=" display: initial; ">
+                      <label class="form-label  p-0">Family care Dep Comments:</label>
+                      <input type="text" class="form-control "  placeholder="Comments"   >
+                  
+                  </div>
+              </div>
+              <div class="form-row" >
+                  <div class=" col-md-6 col-sm-12 " style="  display: initial;">
+                      <label class="form-label  p-0">Committee Status:</label>
+                      <select id="custom-select5"
+                      class="form-control custom-select">
+                  <option selected>Select Committee Status</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">Other</option>
+              </select>
+                  
+                  </div>
+                  <div class=" col-md-6 col-sm-12 " style=" display: initial; ">
+                      <label class="form-label p-0">Committee Comments:</label>
+                      <input type="text" class="form-control"  placeholder="Comments"   >
+                  
+                  </div>
+              </div>
           </div>
       
           </div>
         <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-          <h3>Tasks And Procedures</h3>
-          <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                        <label class="form-label">Title</label>
-                        <input type="text" class="form-control"  placeholder="Title Here"   >
-                </div>        
-            </div>
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                    <label class="form-label">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>    
-            </div>
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                    <label class="form-label">Assign To</label>
-                        <input type="text" class="form-control"  placeholder="Title Here"   >
-            </div>    
-            </div>
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                    <label class="form-label">Notes</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea12" rows="3"></textarea>
-            </div>    
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-6">
-                <div class="form-row">
-                        <label class="form-label">Assign To</label>
-                        <input type="text" class="form-control"  placeholder="Assign To Here"   >
-                </div> 
-                  
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <div class="form-row">
-                        <label class="form-label">Assign To</label>
-                        
-                
-                <select id="custom-Tasks-Prio"
-                class="form-control custom-select">
-            <option selected>Select </option>
-            <option value="1">High</option>
-            <option value="2">Medium</option>
-            <option value="3">Low</option>
-               </select>   
-    </div>   
-            </div>
-        
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                       
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Due Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-                </div> 
-                  
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                       
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Reminder Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-    </div>   
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                        <label class="form-label">Frequency</label>
-                         
-                <select id="custom-Tasks-Frequency"
-                class="form-control custom-select">
-            <option selected>Select </option>
-            <option value="1">Daily</option>
-            <option value="2">weekly</option>
-            <option value="3">Yearly</option>
-               </select> 
-                        
-    </div>   
-            </div>
-        
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                <label class="form-label">Notes</label>
-                <textarea class="form-control" id="exampleFormControlTextarea111A" rows="3"></textarea>
-            </div>
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                <button class="btn mt-4" style="    background: #00a650; color: white;" type="button">Add <span class="material-icons sidebar-menu-icon " style=" margin-left: 10px; ">arrow_forward</span></button>
-            </div></div></div>
-
-            <div class="TableTask mt-3" style="max-height: 350px ; height: auto; overflow-y: scroll;">
-                <div class="card mb-0">
-
-                    <div class="table-responsive"
-                         data-toggle="lists"
-                         data-lists-sort-by="js-lists-values-date"
-                         data-lists-sort-desc="true"
-                         data-lists-values='["js-lists-values-name", "js-lists-values-company", "js-lists-values-phone", "js-lists-values-date"]'>
-
-                        <table class="table mb-0 thead-border-top-0 table-nowrap">
-                            <thead>
-                                <tr>
-
-
-                                    <th>
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-name">Department</a>
-                                    </th>
-
-                                    <th style="width: 150px;">
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-company">Status</a>
-                                    </th>
-
-                                    <th style="width: 37px;">Comments</th>
-
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-phone">Date</a>
-                                    </th>
-
-                                    <th style="width: 120px;">
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-date">By</a>
-                                    </th>
-                                 
-                                </tr>
-                            </thead>
-                            <tbody class="list"
-                                   id="contacts">
-
-                                <tr>
-
-                                  
-
-
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
-                                          
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-phone text-50">Provide approval</small>
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-date text-50">19 February 2019</small>
-                                    </td>
-                                 
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">BN</span>
-
-                                            </div>
-                                            <div class="media-body">
-
-                                                <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Billy Nunez</strong></p>
-                                                    <small class="js-lists-values-email text-50">annabell.kris@yahoo.com</small>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
-                                <tr>
-
-                                   
-                                   
-
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
-                                                 
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-phone text-50">Information or documents</small>
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-date text-50">18 February 2019</small>
-                                    </td>
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">TP</span>
-
-                                            </div>
-                                            <div class="media-body">
-
-                                                <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
-                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                                <tr>
-
-                                  
-
-
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
-                                          
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-phone text-50">Provide approval</small>
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-date text-50">19 February 2019</small>
-                                    </td>
-                                 
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">BN</span>
-
-                                            </div>
-                                            <div class="media-body">
-
-                                                <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Billy Nunez</strong></p>
-                                                    <small class="js-lists-values-email text-50">annabell.kris@yahoo.com</small>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
-                                <tr>
-
-                                   
-                                   
-
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
-                                                 
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-phone text-50">Information or documents</small>
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-date text-50">18 February 2019</small>
-                                    </td>
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">TP</span>
-
-                                            </div>
-                                            <div class="media-body">
-
-                                                <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
-                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                             
-
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="card-footer p-8pt">
-
-                        <ul class="pagination justify-content-start pagination-xsm m-0">
-                            <li class="page-item disabled">
-                                <a class="page-link"
-                                   href="#"
-                                   aria-label="Previous">
-                                    <span aria-hidden="true"
-                                          class="material-icons">chevron_left</span>
-                                    <span>Prev</span>
-                                </a>
-                            </li>
-                            <li class="page-item dropdown">
-                                <a class="page-link dropdown-toggle"
-                                   data-toggle="dropdown"
-                                   href="#"
-                                   aria-label="Page">
-                                    <span>1</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a href="#"
-                                       class="dropdown-item active">1</a>
-                                    <a href="#"
-                                       class="dropdown-item">2</a>
-                                    <a href="#"
-                                       class="dropdown-item">3</a>
-                                    <a href="#"
-                                       class="dropdown-item">4</a>
-                                    <a href="#"
-                                       class="dropdown-item">5</a>
-                                </div>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link"
-                                   href="#"
-                                   aria-label="Next">
-                                    <span>Next</span>
-                                    <span aria-hidden="true"
-                                          class="material-icons">chevron_right</span>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
+          <h3>Approve</h3>
+          <div class="row" style="    display: contents;">
+            <div class="form-row" style="    margin-bottom: 10px;">
+                <div class=" col-md-4 col-sm-12 retable">
+                    <label class="form-label">Does Child has an Identity:</label>
+                    <label class="form-label reviewForm">Yes</label>
                    
-
+                    
                 </div>
-
+                <div class=" col-md-6 col-sm-12 retable">
+                    <label class="form-label">Child Full Name:</label>
+                    <label class="form-label reviewForm">Muhammad Azlal Ahmed</label>
+                    
+                </div>
+                <div class=" col-md-2 col-sm-12 retable">
+                    <label class="form-label">Gender:</label>
+                    <label class="form-label reviewForm">Male</label>
+                </div>
             </div>
+           
+            <div class="form-row" style="    margin-bottom: 10px;">
+                
+                <div class=" col-md-4 col-sm-12 retable">
+                    <label class="form-label">Date of Birth:</label>
+                    <label class="form-label reviewForm">07-08-2020</label>
+                </div>
+                <div class=" col-md-4 col-sm-12 retable">
+                    <label class="form-label">Child age group:</label>
+                    <label class="form-label reviewForm">0 - 5 Years</label>
+                </div>
+                <div class=" col-md-4 col-sm-12 retable">
+                    <label class="form-label">Does Child has Parent:</label>
+                    <label class="form-label reviewForm">No</label>
+                </div>
+            </div>
+            <div class="form-row" style="    margin-bottom: 10px;">
+                
+                <div class=" col-md-4 col-sm-12 retable">
+                    <label class="form-label">initial Child Name:</label>
+                    <label class="form-label reviewForm">No</label>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="form-row" >
+                <div class=" col-md-12 col-sm-12 " >
+                    <label class="form-label col-md-3 p-0">Identity of child:</label>
+                    <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                        border-color: #00a650; margin-left: 20px;">Perview Doc</button>
+                        <div class="custom-control custom-radio mt-3" style="    width: auto;
+                        display: inline; margin-left: 20px;">
+                            <input id="radioStacked1112"  type="radio" class="custom-control-input" >
+                            <label for="radioStacked1112" class="custom-control-label">Confidential</label>
+                        </div>
+                </div>
+               
+                <div class=" col-md-12 col-sm-12 " >
+                    <label class="form-label col-md-3 p-0">Case Report:</label>
+                    <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                    border-color: #00a650; margin-left: 20px;">Perview Doc</button>
+                    <div class="custom-control custom-radio mt-3" style="    width: auto;
+                    display: inline; margin-left: 20px;">
+                        <input id="radioStacked2112"  type="radio" class="custom-control-input" >
+                        <label for="radioStacked2112" class="custom-control-label">Confidential</label>
+                    </div>
+                </div>
+                <div class=" col-md-12 col-sm-12 " >
+                    <label class="form-label col-md-3 p-0">Police request:</label>
+                    <button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color: #00a650;
+                    border-color: #00a650; margin-left: 20px;">Perview Doc</button>
+                    <div class="custom-control custom-radio mt-3" style="    width: auto;
+                    display: inline; margin-left: 20px;">
+                        <input id="radioStacked3112"  type="radio" class="custom-control-input">
+                        <label for="radioStacked3112" class="custom-control-label">Confidential</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row" >
+                <div class=" col-md-6 col-sm-12 " style="display: initial;">
+                    <label class="form-label  p-0">Director General Status:</label>
+                    <select id="custom-select6"
+                      class="form-control custom-select">
+                  <option selected>Select Director General Status</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">Other</option>
+              </select>
+                
+                </div>
+                <div class=" col-md-6 col-sm-12 " style=" display: initial;">
+                    <label class="form-label p-0">Director General Comments:</label>
+                    <input type="text" class="form-control"  placeholder="Comments"   >
+                
+                </div>
+            </div>
+            <div class="form-row" >
+                <div class=" col-md-6 col-sm-12 " style="  display: initial;">
+                    <label class="form-label p-0">Informed to Police</label>
+                    <input type="text" class="form-control"  placeholder="Comments"   >
+                
+                </div>
+            </div>
+        </div>
         
         </div>
-        <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-            <h3>Approval</h3>
-            <h3>Approval</h3>
-            <div class="row" >
-              <div class="col-sm-12 col-md-3">
-                  <div class="page-separator">
-                      <div class="page-separator__text">Comments/ Notes</div>
-                  </div>
-                  <p class="card-subtitle text-70 mb-16pt mb-lg-0"></p>
-              </div>
-              <div class="col-sm-12 col-md-9 d-flex align-items-center">
-                  <div class="flex"
-                       style="max-width: 100%">
-                      <div style="height: 150px;"
-                           data-toggle="quill"
-                           data-quill-placeholder="Quill WYSIWYG editor"
-                           data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                          <p>Hello World!</p>
-                          <p>Some initial <strong>bold</strong> text</p>
-                          <p><br></p>
-                      </div>
-  
-                  </div>
-              </div>
-          </div>
-           
-          <div class="row" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: end;">
-                  <button type="button" class="btn btn-accent-dodger-blue" style="    background-color: #d9534f;
-                  border-color: #d9534f;">
-                      <i class="material-icons icon--left">arrow_back</i>Send Back
-                  </button>
-                  <button type="button" class="btn btn-accent-dodger-blue" style="background-color: #5cb85c;
-                  border-color: #5cb85c;">
-                     Approve
-                     <i class="material-icons icon--left pl-2">arrow_forward</i> 
-                  </button>
-                  
-              </div>
-          </div>
-          <div class="row" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: start;">
-               <input type="checkbox" id="myCheck" onclick="myFunction()"> Next Approve Requierd
-  
-              <div id="text" style="display:none">
-              
-              <div class="row">
+        <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+            <h3>Receiving a Child</h3>
+            <div class="row" style="    display: contents;">
+              <div class="form-row">
                   <div class=" col-md-6 col-sm-12">
-                      <label class="form-label">Send for Approval</label>
-                      <select id="custom-select2"
+                      <label class="form-label">Allocation House</label>
+                      <div class="custom-control custom-checkbox">
+                          <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                          <label for="customCheck01" class="custom-control-label">Dz House</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                          <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                          <label for="customCheck02" class="custom-control-label">External House</label>
+                      </div>
+                  </div>
+                  <div class=" col-md-6 col-sm-12">
+                      <label class="form-label">Type Of Receiving</label>
+                      <div class="custom-control custom-checkbox">
+                          <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
+                          <label for="customCheck01" class="custom-control-label">Pick UP</label>
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                          <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
+                          <label for="customCheck02" class="custom-control-label">Drop Child</label>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="form-row">
+                  <div class=" col-md-4 col-sm-12">
+                      <label class="form-label">Date And Time</label>
+                      <input id="flatpickrSample04"
+                      type="text"
+                      class="form-control"
+                      placeholder="Flatpickr date time example"
+                      data-toggle="flatpickr"
+                      data-flatpickr-enable-time="true"
+                      data-flatpickr-alt-format="F j, Y at H:i"
+                      data-flatpickr-date-format="Y-m-d H:i"
+                      value="2018-10-07 15:35">
+                      
+                  </div>
+                  <div class=" col-md-4 col-sm-12">
+                      <label class="form-label" >Who Drop Child</label>
+                      <select id="custom-select6"
                       class="form-control custom-select">
-                  <option selected>Select </option>
-                  <option value="1">Azlal</option>
-                  <option value="2">Rahim</option>
-                  <option value="3">Noshad</option>
-                  <option value="3">Amrat</option>
+                  <option selected>Select Who Drop Child</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">Other</option>
               </select>
+                      
                   </div>
-              </div>
-              
-          </div>
                   
               </div>
-          </div>
-          <div class="row" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: start;">
-               <input type="checkbox" id="myCheck12" onclick="myFunction1()"> Approval History
-  
-              <div id="text12" style="display:none">
               
-              <div class="row">
-                  <div class=" col-md-12 col-sm-12">
-                      <ul class="list-group">
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                        </ul>
-                     
+              <div class="form-row">
+                  <div class=" col-md-4 col-sm-12">
+                      <label class="form-label">Person Name</label>
+                      <input type="text" class="form-control"  placeholder="Person Name"   >
+                      
+                  </div>
+                  <div class=" col-md-4 col-sm-12">
+                      <label class="form-label">Person Contact No</label>
+                      <input type="text" class="form-control"  placeholder="Person Contact No"   >
+                  </div>
+                  <div class=" col-md-4 col-sm-12">
+                      <label class="form-label">Upload Documents</label>
+                      <div class="custom-file">
+                          <input type="file" id="file1" class="custom-file-input">
+                          <label for="file" class="custom-file-label">Choose file</label>
+                      </div>
                   </div>
               </div>
+              <div class="form-row">
+                  <div class=" col-md-4 col-sm-12">
+                      <label class="form-label">Date of Enrollment</label>
+                      <input type="text" class="form-control"  placeholder="Time and Date"   >
+                      
+                  </div>
+                  <div class=" col-md-4 col-sm-12">
+                      <label class="form-label">Assign Department/section</label>
+                      <input type="text" class="form-control"  placeholder="Department/section"   >
+                  </div>
               
-          </div>
-                  
               </div>
-          </div>
-  
-          
           </div>
        
+       
+          </div>
         
     </div>
 </div>
 
       </div>
-        </div> 
+        </div> -->
        
-       
+        <div class="card mb-lg-32pt">
+
+         
+                <div class="card-header">
+                    <form class="form-inline">
+                        <h3 style="margin-bottom: 0rem; display: inline;
+                        width: auto;">Company</h3>
+
+                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                          
+                            <a href="InboundformCompany.html" style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>Create New</u></a>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="row" style="    padding: 10px;">
+                    <div class="col-sm-12 col-md-4">
+
+                        <div class="form-group">
+                            <label class="form-label"
+                                   for="selecta1">Search By Name</label>
+                            <select id="selecta1"
+                                    data-toggle="select"
+                                    multiple
+                                    class="form-control">
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+
+                        <div class="form-group">
+                            <label class="form-label"
+                                   for="selecta2">Search By Company</label>
+                            <select id="selecta2"
+                                    data-toggle="select"
+                                    multiple
+                                    class="form-control">
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+
+                        <div class="form-group">
+                            <label class="form-label"
+                                   for="selecta3">Search By Hire Date</label>
+                            <select id="selecta3"
+                                    data-toggle="select"
+                                    multiple
+                                    class="form-control">
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+
+                        <div class="form-group">
+                            <label class="form-label"
+                                   for="selecta4">Search By Job</label>
+                            <select id="selecta4"
+                                    data-toggle="select"
+                                    multiple
+                                    class="form-control">
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+
+                        <div class="form-group">
+                            <label class="form-label"
+                                   for="selecta5">Search By Status</label>
+                            <select id="selecta5"
+                                    data-toggle="select"
+                                    multiple
+                                    class="form-control">
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+
+                        <div class="form-group">
+                            <label class="form-label"
+                                   for="selecta6" style="visibility: hidden; display: block;">Search By Date</label>
+                                   <button type="button" class="btn btn-accent" style="     background: #00a650;
+                                   border-color: #00a650;   width: 100%;">Search</button>
+                           
+                        </div>
+                    </div>
+                    </div>
+                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
+
+                <table class="table mb-0 thead-border-top-0 table-nowrap">
+                   <thead>
+                    <tr><th>Name</th>
+                    <th>Joined</th>
+                    <th>Job</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                   </tr></thead>
+                    <tbody class="list" id="staff"><tr>
+                            <td>Rahim </td>
+                            <td>   23-02-2021
+                            </td>
+                          
+                        <td>Maid</td>
+                        <td>Villa Dubai</td>
+                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                        text-align: center;
+                        border-radius: .25rem;
+                        font-size: 13px; background: #decb98;">Pending</span> </td>
+               
+                    <td><a href="#"><u>View</u></a> </td>
+                        </tr><tr>
+                            <td>Rahim </td>
+                            <td>   23-02-2021
+                            </td>
+                           
+                        <td>Maid</td>
+                        <td>Villa Dubai</td>
+                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                        text-align: center;
+                        border-radius: .25rem;
+                        font-size: 13px; background: #91dea8;">Aporoved</span> </td>
+                
+                    <td><a href="#"><u>View</u></a> </td>
+                        </tr><tr>
+                            <td>Rahim </td>
+                            <td>   23-02-2021
+                            </td>
+                          
+                        <td>Maid</td>
+                        <td>Villa Dubai</td>
+                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                        text-align: center;
+                        border-radius: .25rem;
+                        font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
+                   
+                    <td><a href="#"><u>View</u></a> </td>
+                        </tr><tr>
+                            <td>Rahim </td>
+                            <td>   23-02-2021
+                            </td>
+                           
+                        <td>Maid</td>
+                        <td>Villa Dubai</td>
+                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                        text-align: center;
+                        border-radius: .25rem;
+                        font-size: 13px; background: #decb98;">Pending</span> </td>
+               
+                    <td><a href="#"><u>View</u></a> </td>
+                        </tr></tbody>
+                </table>
+            </div>
+
+            <div class="card-footer p-8pt">
+
+                <ul class="pagination justify-content-start pagination-xsm m-0">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true" class="material-icons">chevron_left</span>
+                            <span>Prev</span>
+                        </a>
+                    </li>
+                    <li class="page-item dropdown">
+                        <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
+                            <span>1</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item active">1</a>
+                            <a href="#" class="dropdown-item">2</a>
+                            <a href="#" class="dropdown-item">3</a>
+                            <a href="#" class="dropdown-item">4</a>
+                            <a href="#" class="dropdown-item">5</a>
+                        </div>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span>Next</span>
+                            <span aria-hidden="true" class="material-icons">chevron_right</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        
+
+        </div>
+      
     
     </div>
      </div>
@@ -2039,7 +1954,7 @@ label.form-label {
                                     </li>
                                     <li class="sidebar-menu-item">
                                         <a class="sidebar-menu-button"
-                                           href="#">
+                                           href="manpower.html">
                                             <span class="sidebar-menu-text">Mainpower</span>
                                         </a>
                                     </li>
@@ -2065,41 +1980,30 @@ label.form-label {
                             <li class="sidebar-menu-item ">
                                 <a class="sidebar-menu-button "
                         
-                                   href="Correspondence.html">
+                                   href="manpower.html">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span>
                                     Dashboard
                                 
                                 </a>
                             </li>
-                            <li class="sidebar-menu-item open">
-                              <a class="sidebar-menu-button activemenu"  href="Inbound.html">
-                                  <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">link</span>
-                                Inbound
-                                  <span class="ml-auto Rounddopen">1</span>
+                            <li class="sidebar-menu-item ">
+                              <a class="sidebar-menu-button "  href="resourseinner.html">
+                                  <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">link</span>
+                                Resourse
+                                  <span class="ml-auto Roundd">1</span>
                               </a>
                              
                           </li>
-                          <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                           
-                               href="Outbound.html">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">view_compact</span>
-                             OutBound
-                              <span class="ml-auto Roundd">2</span>
+                       
+                          <li class="sidebar-menu-item open">
+                            <a class="sidebar-menu-button activemenu"
                                
-                            </a>
-                            
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button"
-                               
-                               href="Achivedcorrespondence.html">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
-                                Archived Correspondence
-                            
+                               href="Companyinner.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">content_copy</span>
+                              Company
+                              <span class="ml-auto Rounddopen">2</span>
                             </a>
                         </li>
-                        
                    
                         <li class="sidebar-menu-item">
                             <a class="sidebar-menu-button"
@@ -2243,9 +2147,6 @@ label.form-label {
         <!-- Select2 -->
         <script src="assets/vendor/select2/select2.min.js"></script>
         <script src="assets/js/select2.js"></script>
-         <!-- Dropzone -->
-         <script src="assets/vendor/dropzone.min.js"></script>
-         <script src="assets/js/dropzone.js"></script>
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
@@ -2365,36 +2266,6 @@ label.form-label {
             });
 
         });
-    </script>
-      <script>
-        function myFunction() {
-  // Get the checkbox
-  var checkBox = document.getElementById("myCheck");
-  // Get the output text
-  var text = document.getElementById("text");
-
-  // If the checkbox is checked, display the output text
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-}
-    </script>
-    <script>
-        function myFunction1() {
-  // Get the checkbox
-  var checkBox12 = document.getElementById("myCheck12");
-  // Get the output text
-  var text12 = document.getElementById("text12");
-
-  // If the checkbox is checked, display the output text
-  if (checkBox12.checked == true){
-    text12.style.display = "block";
-  } else {
-    text12.style.display = "none";
-  }
-}
     </script>
     </body>
 
