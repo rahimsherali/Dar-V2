@@ -1521,92 +1521,78 @@ label.form-label {
                 <button class="btn mt-4" style="    background: #00a650; color: white;" type="button">Add <span class="material-icons sidebar-menu-icon " style=" margin-left: 10px; ">arrow_forward</span></button>
             </div></div></div>
 
-            <div class="TableTask mt-3" style="max-height: 350px ; height: auto; overflow-y: scroll;">
-                <div class="card mb-0">
+            <br/>
+            <div class="flex" style="max-width: 100%">
+    
+                <div class="card dashboard-area-tabs p-relative o-hidden mb-lg-32pt">
+                   
 
-                    <div class="table-responsive"
-                         data-toggle="lists"
-                         data-lists-sort-by="js-lists-values-date"
-                         data-lists-sort-desc="true"
-                         data-lists-values='["js-lists-values-name", "js-lists-values-company", "js-lists-values-phone", "js-lists-values-date"]'>
+                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-date" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-lead&quot;, &quot;js-lists-values-project&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-budget&quot;, &quot;js-lists-values-date&quot;]">
 
                         <table class="table mb-0 thead-border-top-0 table-nowrap">
                             <thead>
                                 <tr>
 
-
-                                    <th>
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-name">Department</a>
-                                    </th>
-
-                                    <th style="width: 150px;">
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-company">Status</a>
-                                    </th>
-
-                                    <th style="width: 37px;">Comments</th>
+                                   
 
                                     <th style="width: 48px;">
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-phone">Date</a>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Order</a>
                                     </th>
 
-                                    <th style="width: 120px;">
-                                        <a href="javascript:void(0)"
-                                           class="sort"
-                                           data-sort="js-lists-values-date">By</a>
+                                    
+                                    <th style="width: 48px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Type</a>
                                     </th>
-                                 
+
+                                  
+                                    <th>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">Assigned To</a>
+                                    </th>
+
+                                    <th style="width: 48px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
+                                    </th>
+
+
+                                    <th style="width: 48px;">
+                                        <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-date">Due</a>
+                                    </th>
+                                    <th style="width: 24px;"></th>
                                 </tr>
                             </thead>
-                            <tbody class="list"
-                                   id="contacts">
-
-                                <tr>
+                            <tbody class="list" id="projects">
+                                <tr style="
+                                background-color: antiquewhite;
+                            ">
 
                                   
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <small class="js-lists-values-budget"><strong>Step-1 (Start)</strong></small>
+                                        <small class="text-50">Complete Documentation</small>
+                                    </div>
+                                </td>
 
+                                <td>
 
-                                    <td>
+                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                       
+                                        <div class="media-body">
 
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
-                                          
+                                            <div class="d-flex align-items-center">
+                                                <div class="flex d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-lead">Task</strong></p>                                                                                        
                                                 </div>
                                             </div>
+
                                         </div>
+                                    </div>
 
-                                    </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
+                                </td>
 
                                     <td>
-                                        <small class="js-lists-values-phone text-50">Provide approval</small>
-                                    </td>
 
-                                    <td>
-                                        <small class="js-lists-values-date text-50">19 February 2019</small>
-                                    </td>
-                                 
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
                                             <div class="avatar avatar-32pt mr-8pt">
 
                                                 <span class="avatar-title rounded-circle">BN</span>
@@ -1614,191 +1600,238 @@ label.form-label {
                                             </div>
                                             <div class="media-body">
 
-                                                <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Billy Nunez</strong></p>
-                                                    <small class="js-lists-values-email text-50">annabell.kris@yahoo.com</small>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex d-flex flex-column">
+                                                        <p class="mb-0"><strong class="js-lists-values-lead">Billy Nunez</strong></p>
+                                                        <small class="js-lists-values-email text-50">IT Assistant</small>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                         </div>
 
                                     </td>
-                                </tr>
-
-                                <tr>
-
-                                   
-                                   
 
                                     <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
-                                                 
-                                                </div>
-                                            </div>
+                                        <div class="d-flex flex-column">
+                                            <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
+                                            <span class="indicator-line rounded bg-warning"></span>
                                         </div>
-
                                     </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-phone text-50">Information or documents</small>
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-date text-50">18 February 2019</small>
-                                    </td>
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">TP</span>
-
-                                            </div>
-                                            <div class="media-body">
-
-                                                <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
-                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                                <tr>
 
                                   
 
+                                    <td>
+                                        <div class="d-flex flex-column">
+                                            <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
+                                        
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+
+                                <tr style="
+                                background-color: aliceblue;
+                            ">
+
+                                  
+                                    <td>
+                                        <div class="d-flex flex-column">
+                                            <small class="js-lists-values-budget"><strong>Step-2</strong></small>
+                                            <small class="text-50">Review Required</small>
+                                        </div>
+                                    </td>
 
                                     <td>
 
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
                                            
                                             <div class="media-body">
+
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex d-flex flex-column">
+                                                        <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                        <td>
+
+                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                <div class="avatar avatar-32pt mr-8pt">
+
+                                                    <span class="avatar-title rounded-circle">BN</span>
+
+                                                </div>
+                                                <div class="media-body">
+
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex d-flex flex-column">
+                                                            <p class="mb-0"><strong class="js-lists-values-lead">Rahim Khowaja</strong></p>
+                                                            <small class="js-lists-values-email text-50">IT Manager</small>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex flex-column">
+                                                <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
+                                                <span class="indicator-line rounded bg-warning"></span>
+                                            </div>
+                                        </td>
+
+                                      
+
+                                        <td>
+                                            <div class="d-flex flex-column">
+                                                <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
+                                            
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+
+                                    <tr style="
+                                    background-color: aliceblue;
+                                ">
+
+                                  
+                                        <td>
+                                            <div class="d-flex flex-column">
+                                                <small class="js-lists-values-budget"><strong>Step-2</strong></small>
+                                                <small class="text-50">Review Required</small>
+                                            </div>
+                                        </td>
+
+                                        <td>
+    
+                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                               
+                                                <div class="media-body">
+
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex d-flex flex-column">
+                                                            <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </td>
+    
+                                        <td>
+
+                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                <div class="avatar avatar-sm mr-8pt">
+                                                    <span class="avatar-title rounded bg-accent text-white">PM</span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="d-flex flex-column">
+                                                        <small class="js-lists-values-project"><strong>Noshad Latif</strong></small>
+                                                        <small class="js-lists-values-location text-50">Project Manager</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+    
+                                            <td>
                                                 <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
+                                                    <small class="js-lists-values-status text-50 mb-4pt">Pending</small>
+                                                    <span class="indicator-line rounded bg-warning"></span>
+                                                </div>
+                                            </td>
+    
                                           
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-phone text-50">Provide approval</small>
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-date text-50">19 February 2019</small>
-                                    </td>
-                                 
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">BN</span>
-
-                                            </div>
-                                            <div class="media-body">
-
+    
+                                            <td>
                                                 <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Billy Nunez</strong></p>
-                                                    <small class="js-lists-values-email text-50">annabell.kris@yahoo.com</small>
+                                                    <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
+                                                    <small class="text-danger">Overdue</small>
+                                                
                                                 </div>
+                                            </td>
+                                            
+                                        </tr>
 
-                                            </div>
-                                        </div>
+                                        <tr style="
+                                        background-color: gainsboro;
+                                    ">
 
-                                    </td>
-                                </tr>
-
-                                <tr>
-
-                                   
-                                   
-
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
+                                  
+                                            <td>
                                                 <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-company"><strong>Family Care Department</strong></small>
-                                                 
+                                                    <small class="js-lists-values-budget"><strong>Step-3 (Finish)</strong></small>
+                                                    <small class="text-50">Head Approval Required</small>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </td>
 
-                                    </td>
-
-                                    <td>
-
-                                        <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span>
-
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-phone text-50">Information or documents</small>
-                                    </td>
-
-                                    <td>
-                                        <small class="js-lists-values-date text-50">18 February 2019</small>
-                                    </td>
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center"
-                                             style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">TP</span>
-
-                                            </div>
-                                            <div class="media-body">
-
-                                                <div class="d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
-                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                            <td>
+        
+                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                   
+                                                    <div class="media-body">
+    
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex d-flex flex-column">
+                                                                <p class="mb-0"><strong class="js-lists-values-lead">Single Approval</strong></p>                                                                                        
+                                                            </div>
+                                                        </div>
+    
+                                                    </div>
                                                 </div>
+    
+                                            </td>
+        
+                                            <td>
 
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                             
+                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                    <div class="avatar avatar-32pt mr-8pt">
+    
+                                                        <img src="assets/images/people/110/guy-1.jpg" alt="Avatar" class="avatar-img rounded-circle">
+    
+                                                    </div>
+                                                    <div class="media-body">
+    
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex d-flex flex-column">
+                                                                <p class="mb-0"><strong class="js-lists-values-lead">Najeeb</strong></p>
+                                                                <small class="js-lists-values-email text-50">Project Lead</small>
+                                                            </div>
+                                                        </div>
+    
+                                                    </div>
+                                                </div>
+    
+                                            </td>
+        
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <small class="js-lists-values-status text-50 mb-4pt">Not Started</small>
+                                                        <span class="indicator-line rounded bg-warning"></span>
+                                                    </div>
+                                                </td>
+        
+                                              
+        
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
+                                                        <small class="text-danger"></small>
+                                                    
+                                                    </div>
+                                                </td>
+                                                
+                                            </tr>
 
                             </tbody>
                         </table>
@@ -1808,52 +1841,39 @@ label.form-label {
 
                         <ul class="pagination justify-content-start pagination-xsm m-0">
                             <li class="page-item disabled">
-                                <a class="page-link"
-                                   href="#"
-                                   aria-label="Previous">
-                                    <span aria-hidden="true"
-                                          class="material-icons">chevron_left</span>
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
                                     <span>Prev</span>
                                 </a>
                             </li>
                             <li class="page-item dropdown">
-                                <a class="page-link dropdown-toggle"
-                                   data-toggle="dropdown"
-                                   href="#"
-                                   aria-label="Page">
+                                <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
                                     <span>1</span>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a href="#"
-                                       class="dropdown-item active">1</a>
-                                    <a href="#"
-                                       class="dropdown-item">2</a>
-                                    <a href="#"
-                                       class="dropdown-item">3</a>
-                                    <a href="#"
-                                       class="dropdown-item">4</a>
-                                    <a href="#"
-                                       class="dropdown-item">5</a>
+                                    <a href="#" class="dropdown-item active">1</a>
+                                    <a href="#" class="dropdown-item">2</a>
+                                    <a href="#" class="dropdown-item">3</a>
+                                    <a href="#" class="dropdown-item">4</a>
+                                    <a href="#" class="dropdown-item">5</a>
                                 </div>
                             </li>
                             <li class="page-item">
-                                <a class="page-link"
-                                   href="#"
-                                   aria-label="Next">
+                                <a class="page-link" href="#" aria-label="Next">
                                     <span>Next</span>
-                                    <span aria-hidden="true"
-                                          class="material-icons">chevron_right</span>
+                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
                                 </a>
                             </li>
                         </ul>
 
                     </div>
-                   
+                    <!-- <div class="card-body bordet-top text-right">
+15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+</div> -->
 
                 </div>
-
             </div>
-        
+
         </div>
         <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
             <h3>Approval</h3>

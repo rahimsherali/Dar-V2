@@ -11,6 +11,10 @@
     <title>Dashboard</title>
 
     <style>
+        .card{
+
+            margin-bottom: 0.25rem !important;
+        }
         span.badge.badge-notifications.badge-accent {
             top: -10px;
             left: 40px;
@@ -937,10 +941,10 @@
                                                 <li class="nav-item">
                                                     <a style="font-size: 20px;" class="nav-link active" data-toggle="tab" href="#basic">Basic</a>
                                                 </li>
-                                                <li class="nav-item">
+                                                <li class="nav-item" style="display: none;">
                                                     <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#location">Identity</a>
                                                 </li>
-                                                <li class="nav-item">
+                                                <li class="nav-item" style="display: none;">
                                                     <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#case">Case</a>
                                                 </li>
                                             </ul>
@@ -951,7 +955,7 @@
                                                         <div class=" col-md-4 col-sm-12 ">
 
                                                             <div class="form-group ">
-                                                                <label class="form-label">Name<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Name"></i></label>
+                                                                <label class="form-label">Title<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Name"></i></label>
 
                                                                 <input style="height: 36px;" type="text" class="form-control" id="childName">
                                                             </div>
@@ -960,20 +964,20 @@
                                                         <div class=" col-md-4 col-sm-12 ">
 
                                                             <div class="form-group ">
-                                                                <label class="form-label" for="exampleInputEmail1">Mother Name:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Mother Name"></i></label>
+                                                                <label class="form-label" for="exampleInputEmail1">Reference No<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Mother Name"></i></label>
                                                                 <input style="height: 36px;" type="text" class="form-control" id="motherName">
                                                             </div>
 
                                                         </div>
                                                         <div class=" col-md-4 col-sm-12">
                                                             <div class="form-group ">
-                                                                <label class="form-label" for="exampleInputEmail1">Age:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Age"></i></label>
+                                                                <label class="form-label" for="exampleInputEmail1">Type <i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Age"></i></label>
                                                                 <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Age">
                                                                  
-                                                                    <option value="1">0-8</option>
-                                                                    <option value="2">8-16</option>
-                                                                    <option value="3">16-24</option>
-                                                                    <option value="3">24+</option> 
+                                                                    <option value="1">Letter</option>
+                                                                    <option value="2">Email</option>
+                                                                    <option value="3">Memo</option>
+                                                                    <option value="3">Other</option> 
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -985,10 +989,10 @@
 
                                                                 <div class="row">
                                                                     <div class="col-6">
-                                                                        <label class="form-label" for="exampleInputEmail1">DOB (from):<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Start Date"></i></label>
+                                                                        <label class="form-label" for="exampleInputEmail1">Created<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Start Date"></i></label>
                                                                         <input style="height: 36px; " type="date" class="form-control " id=""></div>
                                                                     <div class="col-6">
-                                                                        <label class="form-label" for="exampleInputEmail1">DOB (to):<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter End Date"></i></label>
+                                                                        <label class="form-label" for="exampleInputEmail1">Due:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter End Date"></i></label>
                                                                         <input style="height: 36px; " type="date" class="form-control " id=""></div>
 
                                                                 </div>
@@ -1000,28 +1004,29 @@
                                                         </div>
                                                         <div class=" col-md-4 col-sm-12">
                                                             <div class="form-group ">
-                                                                <label class="form-label" for="exampleInputEmail1">Association:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Select associations"></i></label>
+                                                                <label class="form-label" for="exampleInputEmail1">Priority:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Select associations"></i></label>
                                                                 <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Association">
                                                                  
-                                                                    <option value="1">Has Mother</option>
-                                                                    <option value="1">Has Father</option>
-                                                                    <option value="1">Has Relatives</option>
+                                                                    <option value="1">High</option>
+                                                                    <option value="1">Medium</option>
+                                                                    <option value="1">Low</option>
                                                                     
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class=" col-md-4 col-sm-12">
                                                             <div class="form-group ">
-                                                                <label class="form-label" for="exampleInputEmail1">Receiving Type:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Select recieving type"></i></label>
-                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Receiving Type">
+                                                                <label class="form-label" for="exampleInputEmail1">Classification:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Select recieving type"></i></label>
+                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Classification">
                                                                  
-                                                                    <option value="1">Picked Up</option>
-                                                                    <option value="1">Dropped</option>
+                                                                    <option value="1">Confidential</option>
+                                                                    <option value="1">Internal</option>
+                                                                    <option value="1">Public</option>
                                                                     
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class=" col-md-4 col-sm-12">
+                                                        <div class=" col-md-4 col-sm-12" style="display: none;">
                                                             <div class="form-group">
                                                                 <div class="custom-control custom-checkbox">
                                                                     <input class="custom-control-input" type="checkbox" value="" id="invalidCheck01" required="" checked="">
@@ -1207,7 +1212,7 @@
                     </div>
 
                     <div class="container" style="padding-top: 20px;">
-                        <div class="">
+                        <div class="row">
                             <div class="col-lg-4 d-flex align-items-center">
                                 <div class="flex" style="max-width: 100%">
                                     <nav aria-label="Page navigation example">
@@ -1260,6 +1265,10 @@
                                     </nav>
                                 </div>
                             </div>
+                            <div class="col-md-8" style="text-align: right;">
+                             <strong><a href="inboundform.html">
+                                <button type="button" class="btn btn-primary"> Create New Inbound</button>  </a></strong> 
+                            </div>
                             <div class="row mb-32pt">
                                 <div class="col-lg-2">
                                     <div class="dc-view-switcher d-none">
@@ -1276,7 +1285,7 @@
                             <div class="col-md-4">
                                 <div class="row">
 
-                                    <div class=" col-md-8 col-sm-12 ">
+                                    <div class=" col-md-10 col-sm-12 ">
 
                                         <div class="form-group ">
                                           
@@ -1285,20 +1294,52 @@
 
                                     </div>
 
-                                    <div class=" col-md-4 col-sm-12">
-                                        <div class="form-group ">
-                                          <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Group By">
-                                             
-                                                <option value="1">Date</option>
-                                                <option value="1">From</option>
-                                                
-                                            </select>
+                                    <div class=" col-md-2 col-sm-12">
+
+                                        <div class="btn-group mr-2 d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit;" aria-expanded="false">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right" style="">
+                                                <a class="dropdown-item" href="#">Latest First</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Oldest First</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Group By Department</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Group By Status</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Group By Priority</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">With Attachments</a>
+
+
+                                            </div>
                                         </div>
+
+
+                                     
                                     </div>
+
+                                    <div class="col-md-12">
+                                        <div class="btn-group mb-2">
+                                            <button type="button" class="btn btn-light">All</button>
+                                            <button type="button" class="btn btn-light">My Pending</button>
+                                            <button type="button" class="btn btn-light">My Created</button>
+                                           
+                                        </div>
+                                    <br/>
+                                    </div>
+                                    
                                     <div class="col-md-12">
                                         <div class="card">
+                                            <div class="col align-middle text-center" style="padding: 7px;background-color: #e4a93c1f;"><a href="inboundform.html" style="height: 10px;height: 10px;color: black;font-weight: 500;"><small>click here to review</small> </a> </div>
+
                                             <div class="card-header" style="
                                             border-radius: 4%; border:0px ">
+
                                                 <h6 style="margin-bottom: 0rem; display: inline;
            width: auto;">HR Policy for Vacation <div class="avatar avatar-sm mr-8pt" style="
     float: left;
@@ -1358,7 +1399,7 @@
 
                                     <div class="col-md-12">
                                         <div class="card">
-                        
+                                            <div class="col align-middle text-center" style="padding: 7px;background-color: #e4a93c1f;"><a href="inboundform.html" style="height: 10px;height: 10px;color: black;font-weight: 500;"><small>click here to Approve</small> </a> </div>
                                             <div class="card-header" style="
                                             border-radius: 4%; border:0px ">
                                                 <h6 style="margin-bottom: 0rem; display: inline;
@@ -1501,7 +1542,7 @@
 
                                     <div class="col-md-12">
                                         <div class="card">
-                        
+                                            <div class="col align-middle text-center" style="padding: 7px;background-color: #e4a93c1f;"><a href="inboundform.html" style="height: 10px;height: 10px;color: black;font-weight: 500;"><small>click here to Complete task</small> </a> </div>
                                             <div class="card-header" style="
                                             border-radius: 4%;">
                                                 <h6 style="margin-bottom: 0rem; display: inline;
@@ -1547,7 +1588,7 @@
                                                     <a id="cll" href="#Planner" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
                                                         <span class="h2 mb-0 mr-3">2</span>
                                                         <span class="flex d-flex flex-column">
-                                                            <strong class="card-title">Tasks</strong>
+                                                            <strong class="card-title">Procedure</strong>
                                                             
                                                         </span>
                                                     </a>
@@ -1561,15 +1602,7 @@
                                                         </span>
                                                     </a>
                                                 </div>
-                                                <div class="col-auto border-left border-right">
-                                                    <a href="#Documents" data-toggle="tab" role="tab" aria-selected="true" class="dashboard-area-tabs__tab card-body d-flex flex-row align-items-center justify-content-start">
-                                                        <span class="h2 mb-0 mr-3">4</span>
-                                                        <span class="flex d-flex flex-column">
-                                                            <strong class="card-title">Approvals</strong>
-                                                            
-                                                        </span>
-                                                    </a>
-                                                </div>
+                                               
                                                
                                             </div>
                                         </div>
@@ -1695,28 +1728,26 @@
                                                                 <thead>
                                                                     <tr>
                                 
-                                                                        <th style="width: 18px;" class="pr-0">
-                                                                            <div class="custom-control custom-checkbox">
-                                                                                <input type="checkbox" class="custom-control-input js-toggle-check-all" data-target="#projects" id="customCheckAll" data-domfactory-upgraded="toggle-check-all">
-                                                                                <label class="custom-control-label" for="customCheckAll"><span class="text-hide">Toggle all</span></label>
-                                                                            </div>
-                                                                        </th>
+                                                                       
                                 
-                                                                        <th style="width: 150px;">
-                                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-project">Project</a>
+                                                                        <th style="width: 48px;">
+                                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Order</a>
                                                                         </th>
-                                
+
+                                                                        
+                                                                        <th style="width: 48px;">
+                                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Type</a>
+                                                                        </th>
+
+                                                                      
                                                                         <th>
-                                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">Lead / Team</a>
+                                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">Assigned To</a>
                                                                         </th>
                                 
                                                                         <th style="width: 48px;">
                                                                             <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
                                                                         </th>
                                 
-                                                                        <th style="width: 48px;">
-                                                                            <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Budget</a>
-                                                                        </th>
                                 
                                                                         <th style="width: 48px;">
                                                                             <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-date">Due</a>
@@ -1724,30 +1755,35 @@
                                                                         <th style="width: 24px;"></th>
                                                                     </tr>
                                                                 </thead>
-                                                                <tbody class="list" id="projects"><tr>
+                                                                <tbody class="list" id="projects">
+                                                                    <tr style="
+                                                                    background-color: antiquewhite;
+                                                                ">
                                 
-                                                                        <td class="pr-0">
-                                                                            <div class="custom-control custom-checkbox">
-                                                                                <input type="checkbox" class="custom-control-input js-check-selected-row" id="customCheck1_1" data-domfactory-upgraded="check-selected-row">
-                                                                                <label class="custom-control-label" for="customCheck1_1"><span class="text-hide">Check</span></label>
-                                                                            </div>
-                                                                        </td>
+                                                                      
+                                                                    <td>
+                                                                        <div class="d-flex flex-column">
+                                                                            <small class="js-lists-values-budget"><strong>Step-1 (Start)</strong></small>
+                                                                            <small class="text-50">Complete Documentation</small>
+                                                                        </div>
+                                                                    </td>
+
+                                                                    <td>
                                 
-                                                                        <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-sm mr-8pt">
-                                                                                    <span class="avatar-title rounded bg-primary text-white">SM</span>
-                                                                                </div>
-                                                                                <div class="media-body">
-                                                                                    <div class="d-flex flex-column">
-                                                                                        <small class="js-lists-values-project"><strong>Social Media API</strong></small>
-                                                                                        <small class="js-lists-values-location text-50">Twitter</small>
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                           
+                                                                            <div class="media-body">
+                            
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-lead">Task</strong></p>                                                                                        
                                                                                     </div>
                                                                                 </div>
+                            
                                                                             </div>
-                                
-                                                                        </td>
+                                                                        </div>
+                            
+                                                                    </td>
                                 
                                                                         <td>
                                 
@@ -1762,7 +1798,7 @@
                                                                                     <div class="d-flex align-items-center">
                                                                                         <div class="flex d-flex flex-column">
                                                                                             <p class="mb-0"><strong class="js-lists-values-lead">Billy Nunez</strong></p>
-                                                                                            <small class="js-lists-values-email text-50">Quality Assurance</small>
+                                                                                            <small class="js-lists-values-email text-50">IT Assistant</small>
                                                                                         </div>
                                                                                     </div>
                                 
@@ -1773,66 +1809,43 @@
                                 
                                                                         <td>
                                                                             <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-status text-50 mb-4pt">QA</small>
+                                                                                <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
                                                                                 <span class="indicator-line rounded bg-warning"></span>
                                                                             </div>
                                                                         </td>
                                 
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-budget"><strong>$1,200</strong></small>
-                                                                                <small class="text-50">Invoice Sent</small>
-                                                                            </div>
-                                                                        </td>
+                                                                      
                                 
                                                                         <td>
                                                                             <div class="d-flex flex-column">
                                                                                 <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                                                                <small class="text-50">18 days</small>
+                                                                            
                                                                             </div>
                                                                         </td>
-                                                                        <td class="text-right">
-                                                                            <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                                        </td>
-                                                                    </tr><tr>
+                                                                        
+                                                                    </tr>
+
+                                                                    <tr style="
+                                                                    background-color: aliceblue;
+                                                                ">
                                 
-                                                                        <td class="pr-0">
-                                                                            <div class="custom-control custom-checkbox">
-                                                                                <input type="checkbox" class="custom-control-input js-check-selected-row" id="customCheck1_2" data-domfactory-upgraded="check-selected-row">
-                                                                                <label class="custom-control-label" for="customCheck1_2"><span class="text-hide">Check</span></label>
-                                                                            </div>
-                                                                        </td>
-                                
+                                                                      
                                                                         <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-sm mr-8pt">
-                                                                                    <span class="avatar-title rounded bg-accent text-white">PM</span>
-                                                                                </div>
-                                                                                <div class="media-body">
-                                                                                    <div class="d-flex flex-column">
-                                                                                        <small class="js-lists-values-project"><strong>Project Management App</strong></small>
-                                                                                        <small class="js-lists-values-location text-50">Github</small>
-                                                                                    </div>
-                                                                                </div>
+                                                                            <div class="d-flex flex-column">
+                                                                                <small class="js-lists-values-budget"><strong>Step-2</strong></small>
+                                                                                <small class="text-50">Review Required</small>
                                                                             </div>
-                                
                                                                         </td>
-                                
+    
                                                                         <td>
-                                
+                                    
                                                                             <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-32pt mr-8pt">
-                                
-                                                                                    <span class="avatar-title rounded-circle">TP</span>
-                                
-                                                                                </div>
+                                                                               
                                                                                 <div class="media-body">
                                 
                                                                                     <div class="d-flex align-items-center">
                                                                                         <div class="flex d-flex flex-column">
-                                                                                            <p class="mb-0"><strong class="js-lists-values-lead">Tony Parks</strong></p>
-                                                                                            <small class="js-lists-values-email text-50">iOS Development</small>
+                                                                                            <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
                                                                                         </div>
                                                                                     </div>
                                 
@@ -1840,241 +1853,182 @@
                                                                             </div>
                                 
                                                                         </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-status text-50 mb-4pt">Finished</small>
-                                                                                <span class="indicator-line rounded bg-accent"></span>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-budget"><strong>$12,500</strong></small>
-                                                                                <small class="text-50">Paid</small>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-date"><strong>18/02/2019</strong></small>
-                                                                                <small class="text-danger">Overdue</small>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="text-right">
-                                                                            <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                                        </td>
-                                                                    </tr><tr>
-                                
-                                                                        <td class="pr-0">
-                                                                            <div class="custom-control custom-checkbox">
-                                                                                <input type="checkbox" class="custom-control-input js-check-selected-row" id="customCheck1_3" data-domfactory-upgraded="check-selected-row">
-                                                                                <label class="custom-control-label" for="customCheck1_3"><span class="text-hide">Check</span></label>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-sm mr-8pt">
-                                                                                    <span class="avatar-title rounded bg-warning text-white">AD</span>
-                                                                                </div>
-                                                                                <div class="media-body">
-                                                                                    <div class="d-flex flex-column">
-                                                                                        <small class="js-lists-values-project"><strong>Advertising Platform</strong></small>
-                                                                                        <small class="js-lists-values-location text-50">Facebook</small>
+                                    
+                                                                            <td>
+                                    
+                                                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                    <div class="avatar avatar-32pt mr-8pt">
+                                    
+                                                                                        <span class="avatar-title rounded-circle">BN</span>
+                                    
+                                                                                    </div>
+                                                                                    <div class="media-body">
+                                    
+                                                                                        <div class="d-flex align-items-center">
+                                                                                            <div class="flex d-flex flex-column">
+                                                                                                <p class="mb-0"><strong class="js-lists-values-lead">Rahim Khowaja</strong></p>
+                                                                                                <small class="js-lists-values-email text-50">IT Manager</small>
+                                                                                            </div>
+                                                                                        </div>
+                                    
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                
-                                                                        </td>
-                                
-                                                                        <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-32pt mr-8pt">
-                                
-                                                                                    <img src="assets/images/people/110/guy-1.jpg" alt="Avatar" class="avatar-img rounded-circle">
-                                
+                                    
+                                                                            </td>
+                                    
+                                                                            <td>
+                                                                                <div class="d-flex flex-column">
+                                                                                    <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
+                                                                                    <span class="indicator-line rounded bg-warning"></span>
                                                                                 </div>
-                                                                                <div class="media-body">
+                                                                            </td>
+                                    
+                                                                          
+                                    
+                                                                            <td>
+                                                                                <div class="d-flex flex-column">
+                                                                                    <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
+                                                                                
+                                                                                </div>
+                                                                            </td>
+                                                                            
+                                                                        </tr>
+
+                                                                        <tr style="
+                                                                        background-color: aliceblue;
+                                                                    ">
                                 
-                                                                                    <div class="d-flex align-items-center">
-                                                                                        <div class="flex d-flex flex-column">
-                                                                                            <p class="mb-0"><strong class="js-lists-values-lead">Gilbert Barrett</strong></p>
-                                                                                            <small class="js-lists-values-email text-50">Marketing</small>
+                                                                      
+                                                                            <td>
+                                                                                <div class="d-flex flex-column">
+                                                                                    <small class="js-lists-values-budget"><strong>Step-2</strong></small>
+                                                                                    <small class="text-50">Review Required</small>
+                                                                                </div>
+                                                                            </td>
+        
+                                                                            <td>
+                                        
+                                                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                   
+                                                                                    <div class="media-body">
+                                    
+                                                                                        <div class="d-flex align-items-center">
+                                                                                            <div class="flex d-flex flex-column">
+                                                                                                <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
+                                                                                            </div>
+                                                                                        </div>
+                                    
+                                                                                    </div>
+                                                                                </div>
+                                    
+                                                                            </td>
+                                        
+                                                                            <td>
+                                
+                                                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                    <div class="avatar avatar-sm mr-8pt">
+                                                                                        <span class="avatar-title rounded bg-accent text-white">PM</span>
+                                                                                    </div>
+                                                                                    <div class="media-body">
+                                                                                        <div class="d-flex flex-column">
+                                                                                            <small class="js-lists-values-project"><strong>Noshad Latif</strong></small>
+                                                                                            <small class="js-lists-values-location text-50">Project Manager</small>
                                                                                         </div>
                                                                                     </div>
-                                
                                                                                 </div>
-                                                                            </div>
-                                
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-status text-50 mb-4pt">Finished</small>
-                                                                                <span class="indicator-line rounded bg-accent"></span>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-budget"><strong>$7,100</strong></small>
-                                                                                <small class="text-50">Paid</small>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-date"><strong>17/02/2019</strong></small>
-                                                                                <small class="text-50">15 days</small>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="text-right">
-                                                                            <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                                        </td>
-                                                                    </tr><tr>
-                                
-                                                                        <td class="pr-0">
-                                                                            <div class="custom-control custom-checkbox">
-                                                                                <input type="checkbox" class="custom-control-input js-check-selected-row" id="customCheck1_4" data-domfactory-upgraded="check-selected-row">
-                                                                                <label class="custom-control-label" for="customCheck1_4"><span class="text-hide">Check</span></label>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-sm mr-8pt">
-                                                                                    <span class="avatar-title rounded bg-light text-black-100">FD</span>
-                                                                                </div>
-                                                                                <div class="media-body">
+                                    
+                                                                            </td>
+                                        
+                                                                                <td>
                                                                                     <div class="d-flex flex-column">
-                                                                                        <small class="js-lists-values-project"><strong>Frontend Development</strong></small>
-                                                                                        <small class="js-lists-values-location text-50">Trello</small>
+                                                                                        <small class="js-lists-values-status text-50 mb-4pt">Pending</small>
+                                                                                        <span class="indicator-line rounded bg-warning"></span>
                                                                                     </div>
-                                                                                </div>
-                                                                            </div>
+                                                                                </td>
+                                        
+                                                                              
+                                        
+                                                                                <td>
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
+                                                                                        <small class="text-danger">Overdue</small>
+                                                                                    
+                                                                                    </div>
+                                                                                </td>
+                                                                                
+                                                                            </tr>
+            
+                                                                            <tr style="
+                                                                            background-color: gainsboro;
+                                                                        ">
                                 
-                                                                        </td>
-                                
-                                                                        <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-32pt mr-8pt">
-                                
-                                                                                    <img src="assets/images/people/110/guy-2.jpg" alt="Avatar" class="avatar-img rounded-circle">
-                                
-                                                                                </div>
-                                                                                <div class="media-body">
-                                
-                                                                                    <div class="d-flex align-items-center">
-                                                                                        <div class="flex d-flex flex-column">
-                                                                                            <p class="mb-0"><strong class="js-lists-values-lead">Ollie Wallace</strong></p>
-                                                                                            <small class="js-lists-values-email text-50">Design</small>
+                                                                      
+                                                                                <td>
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <small class="js-lists-values-budget"><strong>Step-3 (Finish)</strong></small>
+                                                                                        <small class="text-50">Head Approval Required</small>
+                                                                                    </div>
+                                                                                </td>
+            
+                                                                                <td>
+                                            
+                                                                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                       
+                                                                                        <div class="media-body">
+                                        
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="flex d-flex flex-column">
+                                                                                                    <p class="mb-0"><strong class="js-lists-values-lead">Single Approval</strong></p>                                                                                        
+                                                                                                </div>
+                                                                                            </div>
+                                        
                                                                                         </div>
                                                                                     </div>
+                                        
+                                                                                </td>
+                                            
+                                                                                <td>
                                 
-                                                                                </div>
-                                                                            </div>
-                                
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-status text-50 mb-4pt">Designing</small>
-                                                                                <span class="indicator-line rounded bg-primary"></span>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-budget"><strong>$4,200</strong></small>
-                                                                                <small class="text-50">Paid</small>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-date"><strong>16/02/2019</strong></small>
-                                                                                <small class="text-50">15 days</small>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="text-right">
-                                                                            <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                                        </td>
-                                                                    </tr><tr class="selected">
-                                
-                                                                        <td class="pr-0">
-                                                                            <div class="custom-control custom-checkbox">
-                                                                                <input type="checkbox" class="custom-control-input js-check-selected-row" checked="" id="customCheck1_5" data-domfactory-upgraded="check-selected-row">
-                                                                                <label class="custom-control-label" for="customCheck1_5"><span class="text-hide">Check</span></label>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-sm mr-8pt">
-                                                                                    <span class="avatar-title rounded bg-light text-black-100">DU</span>
-                                                                                </div>
-                                                                                <div class="media-body">
-                                                                                    <div class="d-flex flex-column">
-                                                                                        <small class="js-lists-values-project"><strong>Database Upgrade</strong></small>
-                                                                                        <small class="js-lists-values-location text-50">MySQL</small>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                
-                                                                        </td>
-                                
-                                                                        <td>
-                                
-                                                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                                <div class="avatar avatar-32pt mr-8pt">
-                                
-                                                                                    <img src="assets/images/people/110/guy-3.jpg" alt="Avatar" class="avatar-img rounded-circle">
-                                
-                                                                                </div>
-                                                                                <div class="media-body">
-                                
-                                                                                    <div class="d-flex align-items-center">
-                                                                                        <div class="flex d-flex flex-column">
-                                                                                            <p class="mb-0"><strong class="js-lists-values-lead">Ricardo Bell</strong></p>
-                                                                                            <small class="js-lists-values-email text-50">Web Development</small>
+                                                                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                                        <div class="avatar avatar-32pt mr-8pt">
+                                        
+                                                                                            <img src="assets/images/people/110/guy-1.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                        
+                                                                                        </div>
+                                                                                        <div class="media-body">
+                                        
+                                                                                            <div class="d-flex align-items-center">
+                                                                                                <div class="flex d-flex flex-column">
+                                                                                                    <p class="mb-0"><strong class="js-lists-values-lead">Najeeb</strong></p>
+                                                                                                    <small class="js-lists-values-email text-50">Project Lead</small>
+                                                                                                </div>
+                                                                                            </div>
+                                        
                                                                                         </div>
                                                                                     </div>
-                                
-                                                                                </div>
-                                                                            </div>
-                                
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-status text-50 mb-4pt">Waiting</small>
-                                                                                <span class="indicator-line rounded bg-danger"></span>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-budget"><strong>$130</strong></small>
-                                                                                <small class="text-danger">Overdue</small>
-                                                                            </div>
-                                                                        </td>
-                                
-                                                                        <td>
-                                                                            <div class="d-flex flex-column">
-                                                                                <small class="js-lists-values-date"><strong>01/12/2018</strong></small>
-                                                                                <small class="text-50">1 day</small>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="text-right">
-                                                                            <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                                        </td>
-                                                                    </tr></tbody>
+                                        
+                                                                                </td>
+                                            
+                                                                                    <td>
+                                                                                        <div class="d-flex flex-column">
+                                                                                            <small class="js-lists-values-status text-50 mb-4pt">Not Started</small>
+                                                                                            <span class="indicator-line rounded bg-warning"></span>
+                                                                                        </div>
+                                                                                    </td>
+                                            
+                                                                                  
+                                            
+                                                                                    <td>
+                                                                                        <div class="d-flex flex-column">
+                                                                                            <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
+                                                                                            <small class="text-danger"></small>
+                                                                                        
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    
+                                                                                </tr>
+
+                                                                </tbody>
                                                             </table>
                                                         </div>
                                 
@@ -2222,75 +2176,6 @@
                                                 </div>
 
                                             </div>
-                                            <div id="Documents" class=" tabBody tab-pane">
-    
-                                                <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-
-                                                    <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                                       <thead>
-                                                        <tr><th>Title</th>
-                                                        <th>Due</th>
-                                                        <th>From</th>
-                                                        <th>Priority</th>
-                                                        <th>Status</th>
-                                                        <th>Action</th>
-                                                       </tr></thead>
-                                                        <tbody class="list" id="staff"><tr>
-                                                                <td>Rahim </td>
-                                                                <td>   23-02-2021
-                                                                </td>
-                                                              
-                                                            <td>34321</td>
-                                                            <td>INbound</td>
-                                                        <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                                            text-align: center;
-                                                            border-radius: .25rem;
-                                                            font-size: 13px; background: #decb98;">Pending</span> </td>
-                                                   
-                                                        <td><a href="#"><u>View</u></a> </td>
-                                                            </tr><tr>
-                                                                <td>Rahim </td>
-                                                                <td>   23-02-2021
-                                                                </td>
-                                                               
-                                                            <td>34321</td>
-                                                            <td>INbound</td>
-                                                        <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                                            text-align: center;
-                                                            border-radius: .25rem;
-                                                            font-size: 13px; background: #91dea8;">Aporoved</span> </td>
-                                                    
-                                                        <td><a href="#"><u>View</u></a> </td>
-                                                            </tr><tr>
-                                                                <td>Rahim </td>
-                                                                <td>   23-02-2021
-                                                                </td>
-                                                              
-                                                            <td>34321</td>
-                                                            <td>INbound</td>
-                                                        <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                                            text-align: center;
-                                                            border-radius: .25rem;
-                                                            font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
-                                                       
-                                                        <td><a href="#"><u>View</u></a> </td>
-                                                            </tr><tr>
-                                                                <td>Rahim </td>
-                                                                <td>   23-02-2021
-                                                                </td>
-                                                               
-                                                            <td>34321</td>
-                                                            <td>INbound</td>
-                                                        <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                                            text-align: center;
-                                                            border-radius: .25rem;
-                                                            font-size: 13px; background: #decb98;">Pending</span> </td>
-                                                   
-                                                        <td><a href="#"><u>View</u></a> </td>
-                                                            </tr></tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
                                           
                                         </div>
     
@@ -2420,14 +2305,17 @@
                        
                        </a>
                    </li>
-                   <li class="sidebar-menu-item open">
-                     <a class="sidebar-menu-button activemenu"  href="Inbound.html">
-                         <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">link</span>
-                       Inbound
-                         <span class="ml-auto Rounddopen">1</span>
-                     </a>
+                   <li class="sidebar-menu-item ">
+                    <a class="sidebar-menu-button "
+                   
+                       href="Inbound.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">view_compact</span>
+                     InBound
+                      <span class="ml-auto Roundd">2</span>
+                       
+                    </a>
                     
-                 </li>
+                </li>
                  <li class="sidebar-menu-item ">
                    <a class="sidebar-menu-button "
                   
