@@ -89,9 +89,6 @@
   <link type="text/css"
         href="assets/css/select2.css"
         rel="stylesheet">
-        <link type="text/css"
-        href="assets/css/dropzone.css"
-        rel="stylesheet">
 <Style>
 
 .sw-theme-arrows > .tab-content > .tab-pane {
@@ -1101,883 +1098,423 @@ label.form-label {
 
                 <div class="container-fluid page__container">
                     <div class="page-section">
-      <div class="card mb-lg-32pt">
+       
+                        <div class="card mb-lg-32pt">
 
-<div class="row" style="    display: contents;">
-  <br />
-  <p style="
-  
-  margin: 0px auto;
-  text-align: left;
-  align-content: lef;
-  margin-left: 13px;
-
-">
-   
-    <select class="btn" id="theme_selector" style="border: 1px solid green;">
-      <option value="default">Style - Default</option>
-      <option value="arrows" selected>Style - Arrows</option>
-      <option value="dots">Style - Dots</option>
-      <option value="progress">Style - Progress</option>
-    </select>
-
-    
-
-    <div style="display: none;">
-    <label>Animation:</label>
-    <select id="animation" style="border: 1px solid green;">
-          <option value="none">None</option>
-          <option value="fade">Fade</option>
-          <option value="slide-horizontal" selected>Slide Horizontal</option>
-          <option value="slide-vertical">Slide Vertical</option>
-          <option value="slide-swing">Slide Swing</option>
-    </select>
-
-    <label>External Buttons:</label>
-    <button class="btn btn-secondary" id="prev-btn" type="button">Go Previous</button>
-    <button class="btn btn-secondary" id="next-btn" type="button">Go Next</button>
-    <button class="btn btn-danger" id="reset-btn" type="button">Reset Wizard</button>
-</div>
-  </p>
-  <br />
-
-  <div id="smartwizard">
-
-    <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#step-1">
-            <strong>Step 1</strong> <br>Basic
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#step-2">
-            <strong>Step 2</strong> <br>Attachment
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#step-3">
-            <strong>Step 3</strong> <br>Tasks
-          </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#step-4">
-              <strong>Step 3</strong> <br>Approval
-            </a>
-          </li>
-      
-    </ul>
-
-    <div class="tab-content">
-        <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
-            <h3>INBOUND</h3>
-      
-            <div class="row" style="display: contents;">
-                  <div class="form-row">
-                      <div class=" col-md-6 col-sm-12">
-                          <label class="form-label">Reference No</label>
-                          
-                        
-                            <input type="text" class="form-control"  placeholder="Reference no Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Reference no" >
-
-                     
-                      
-                  </div></div>
-                  <div class="form-row">
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Title</label>
-                          <input type="text" class="form-control"  placeholder="Title Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Title" >
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Description</label>
-                          <input type="text" class="form-control"  placeholder="Description Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Description" >
-                      </div>
-                          <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Type</label>
-                          <select id="custom-select2"
-                          class="form-control custom-select">
-                      <option selected>Select Child age group </option>
-                      <option value="1">Letter</option>
-                      <option value="2">Email</option>
-                      <option value="3">Memo</option>
-                      <option value="3">Other</option>
-                  </select>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class=" col-md-12 col-sm-12">
-                          <label class="form-label">Priority</label>
-                          <div class="custom-control custom-checkbox">
-                              <input id="customCheck01" type="checkbox" checked="" class="custom-control-input">
-                              <label for="customCheck01" class="custom-control-label">Heigh</label>
-                          </div>
-                          <div class="custom-control custom-checkbox">
-                              <input id="customCheck02" type="checkbox" checked="" class="custom-control-input">
-                              <label for="customCheck02" class="custom-control-label">Medium</label>
-                          </div>
-                          <div class="custom-control custom-checkbox">
-                              <input id="customCheck03" type="checkbox" checked="" class="custom-control-input">
-                              <label for="customCheck03" class="custom-control-label">Low</label>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                  <div class=" col-md-6 col-sm-12">
-                    <label class="form-label">Type</label>
-                    <select id="custom-select2"
-                    class="form-control custom-select">
-                <option selected>Classification </option>
-                <option value="1">Confidential</option>
-                <option value="2">Internal</option>
-                <option value="3">Public</option>
-              
-            </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class=" col-md-12 col-sm-12">
-                    <label class="form-label">Source</label>
-                    <div class="custom-control custom-checkbox">
-                        <input id="customChecka1" type="checkbox" checked="" class="custom-control-input">
-                        <label for="customChecka1" class="custom-control-label">Internal</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input id="customChecka2" type="checkbox" checked="" class="custom-control-input">
-                        <label for="customChecka2" class="custom-control-label">External</label>
-                    </div>
-                   
-                </div>
-            </div>
-                  <div class="form-row">
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">Form Organization</label>
-                        <select id="custom-selectC2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
+         
+                            <div class="card-header">
+                                <form class="form-inline">
+                                    <h3 style="margin-bottom: 0rem; display: inline;
+                                    width: auto;">Created By Me</h3>
             
-          </select>
-                    </div>
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">From Department</label>
-                          <select id="custom-selecta2"
-                    class="form-control custom-select">
-                    <option selected>Select</option>
-                <option >A </option>
-                <option value="1">b</option>
-                <option value="2">c</option>
-                <option value="3">d</option>
-              
-            </select>
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">To Department</label>
-                        <select id="custom-selectb2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
+                                    <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                                      
+                                        <a href="outboundform.html" style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>Create New</u></a>
+                                    </div>
             
-          </select>
-                    </div>
-                  
-                  </div>
-                  <div class="form-row">
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">Assign To</label>
-                        <select id="custom-selectC2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
-            
-          </select>
-                    </div>
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">CC</label>
-                          <input type="text" class="form-control"  placeholder=" Email Here"   >
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">BCC</label>
-                        <input type="text" class="form-control"  placeholder=" Email Here"   >
-                    </div>
-                   
-                  </div>
-                  <div class="form-row">
-                     
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Correspondence Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                        <label class="form-label"
-                        for="dateRangePickerSampleB01">Closure</label>
-                 <input id="dateRangePickerSampleB01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-                      </div>
-                  </div>
-            
-             
-          </div>
-      
-          </div>
-        <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-            <h3>Documents</h3>
-            <div class="row" >
-                <div class="col-sm-12 col-md-3">
-                    <div class="page-separator">
-                        <div class="page-separator__text">Attachment</div>
-                    </div>
-                   
-                </div>
-                <div class="col-sm-12 col-md-9 d-flex align-items-center">
-                    <div class="flex"
-                         style="max-width: 100%">
-
-                        <div class="dropzone dropzone-multiple w-100 mb-24pt"
-                             data-toggle="dropzone"
-                             data-dropzone-multiple
-                             data-dropzone-url="http://"
-                             data-dropzone-files='["assets/images/256_daniel-gaffey-1060698-unsplash.jpg", "assets/images/256_rsz_clem-onojeghuo-150467-unsplash.jpg", "assets/images/256_rsz_florian-perennes-594195-unsplash.jpg"]'>
-
-                            <div class="fallback">
-                                <div class="custom-file">
-                                    <input type="file"
-                                           class="custom-file-input"
-                                           id="customFileUploadMultiple"
-                                           multiple>
-                                    <label class="custom-file-label"
-                                           for="customFileUploadMultiple">Choose file</label>
-                                </div>
+                                </form>
                             </div>
-
-                            <ul class="dz-preview dz-preview-multiple list-group list-group-flush mt-16pt">
-                                <li class="list-group-item">
-                                    <div class="form-row align-items-center">
-                                        <div class="col-auto">
-                                            <div class="avatar">
-                                                <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
-                                                     class="avatar-img rounded"
-                                                     alt="..."
-                                                     data-dz-thumbnail>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="font-weight-bold"
-                                                 data-dz-name>...</div>
-                                            <p class="small text-muted mb-0"
-                                               data-dz-size>...</p>
-                                        </div>
-                                        <div class="col-auto">
-                                            <a href="#"
-                                               class="text-muted-light"
-                                               data-dz-remove>
-                                                <i class="material-icons">close</i>
-                                            </a>
-                                        </div>
+                            <div class="row" style="    padding: 10px;">
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta1">Search By Text</label>
+                                        <select id="selecta1"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta2">Search By Title</label>
+                                        <select id="selecta2"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta3">Search By Date</label>
+                                        <select id="selecta3"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta4">Search By Priority</label>
+                                        <select id="selecta4"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta5">Search By Status</label>
+                                        <select id="selecta5"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta6" style="visibility: hidden; display: block;">Search By Date</label>
+                                               <button type="button" class="btn btn-accent" style="     background: #00a650;
+                                               border-color: #00a650;   width: 100%;">Search</button>
+                                       
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
+            
+                            <table class="table mb-0 thead-border-top-0 table-nowrap">
+                               <thead>
+                                <tr><th>Title</th>
+                                <th>Due</th>
+                                <th>From</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                               </tr></thead>
+                                <tbody class="list" id="staff"><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                      
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #decb98;">Pending</span> </td>
+                           
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                       
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #91dea8;">Aporoved</span> </td>
+                            
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                      
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
+                               
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                       
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #decb98;">Pending</span> </td>
+                           
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr></tbody>
+                            </table>
+                        </div>
+            
+                        <div class="card-footer p-8pt">
+            
+                            <ul class="pagination justify-content-start pagination-xsm m-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                        <span>Prev</span>
+                                    </a>
+                                </li>
+                                <li class="page-item dropdown">
+                                    <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
+                                        <span>1</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item active">1</a>
+                                        <a href="#" class="dropdown-item">2</a>
+                                        <a href="#" class="dropdown-item">3</a>
+                                        <a href="#" class="dropdown-item">4</a>
+                                        <a href="#" class="dropdown-item">5</a>
                                     </div>
                                 </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span>Next</span>
+                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                    </a>
+                                </li>
                             </ul>
-
+            
                         </div>
-
-                       
-                    </div>
-                </div>
-          </div>
-      
-          </div>
-        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-          <h3>Tasks And Procedures</h3>
-          <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                        <label class="form-label">Title</label>
-                        <input type="text" class="form-control"  placeholder="Title Here"   >
-                </div>        
-            </div>
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                    <label class="form-label">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>    
-            </div>
-          
-            <div class="col-md-4">
-                <div class="form-row">
-                        <label class="form-label">Order</label>
-                        <input type="text" class="form-control"  placeholder="Order of step"   >
-                </div> 
-                  
-            </div>
-
-                <div class="col-md-4">
-                    <div class="form-row">
-                            <label class="form-label">Assign To ( Department / User )</label>
-                            <input type="text" class="form-control"  placeholder="Assign To Here"   >
-                    </div> 
-                      
-                </div>
-                <div class="col-md-4">
-                    <div class="form-row">
-                            <label class="form-label">Priority</label>
-                            
                     
-                    <select id="custom-Tasks-Prio"
-                    class="form-control custom-select">
-                <option selected>Select </option>
-                <option value="1">High</option>
-                <option value="2">Medium</option>
-                <option value="3">Low</option>
-                   </select>   
-                </div>   
-                </div>
-          
-            <div class="col-md-6 col-md-12">
-                <div class="form-row">
-                    <label class="form-label">Notes</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea12" rows="3"></textarea>
-            </div>    
-            </div>
-        </div>
-       
-        <div class="row" >
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
+            
+                    </div>
+                    <div class="card mb-lg-32pt">
+            
                        
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Due Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-                </div> 
-                  
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                       
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Reminder Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-    </div>   
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                        <label class="form-label">Frequency</label>
-                         
-                <select id="custom-Tasks-Frequency"
-                class="form-control custom-select">
-            <option selected>Select </option>
-            <option value="1">Daily</option>
-            <option value="2">weekly</option>
-            <option value="3">Yearly</option>
-               </select> 
-                        
-    </div>   
-            </div>
-        
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                <label class="form-label">Notes</label>
-                <textarea class="form-control" id="exampleFormControlTextarea111A" rows="3"></textarea>
-            </div>
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                <button class="btn mt-4" style="    background: #00a650; color: white;" type="button">Add <span class="material-icons sidebar-menu-icon " style=" margin-left: 10px; ">arrow_forward</span></button>
-            </div></div></div>
-
-            <br/>
-            <div class="flex" style="max-width: 100%">
-    
-                <div class="card dashboard-area-tabs p-relative o-hidden mb-lg-32pt">
-                   
-
-                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-date" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-lead&quot;, &quot;js-lists-values-project&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-budget&quot;, &quot;js-lists-values-date&quot;]">
-
-                        <table class="table mb-0 thead-border-top-0 table-nowrap">
-                            <thead>
-                                <tr>
-
-                                   
-
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Order</a>
-                                    </th>
-
-                                    
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Type</a>
-                                    </th>
-
-                                  
-                                    <th>
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">Assigned To</a>
-                                    </th>
-
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
-                                    </th>
-
-
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-date">Due</a>
-                                    </th>
-                                    <th style="width: 24px;"></th>
-                                </tr>
-                            </thead>
-                            <tbody class="list" id="projects">
-                                <tr style="
-                                background-color: antiquewhite;
-                            ">
-
-                                  
-                                <td>
-                                    <div class="d-flex flex-column">
-                                        <small class="js-lists-values-budget"><strong>Step-1 (Start)</strong></small>
-                                        <small class="text-50">Complete Documentation</small>
-                                    </div>
-                                </td>
-
-                                <td>
-
-                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                       
-                                        <div class="media-body">
-
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-lead">Task</strong></p>                                                                                        
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                            <div class="avatar avatar-32pt mr-8pt">
-
-                                                <span class="avatar-title rounded-circle">BN</span>
-
-                                            </div>
-                                            <div class="media-body">
-
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex d-flex flex-column">
-                                                        <p class="mb-0"><strong class="js-lists-values-lead">Billy Nunez</strong></p>
-                                                        <small class="js-lists-values-email text-50">IT Assistant</small>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-                                        <div class="d-flex flex-column">
-                                            <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
-                                            <span class="indicator-line rounded bg-warning"></span>
-                                        </div>
-                                    </td>
-
-                                  
-
-                                    <td>
-                                        <div class="d-flex flex-column">
-                                            <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                        
-                                        </div>
-                                    </td>
-                                    
-                                </tr>
-
-                                <tr style="
-                                background-color: aliceblue;
-                            ">
-
-                                  
-                                    <td>
-                                        <div class="d-flex flex-column">
-                                            <small class="js-lists-values-budget"><strong>Step-2</strong></small>
-                                            <small class="text-50">Review Required</small>
-                                        </div>
-                                    </td>
-
-                                    <td>
-
-                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                           
-                                            <div class="media-body">
-
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex d-flex flex-column">
-                                                        <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                        <td>
-
-                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                <div class="avatar avatar-32pt mr-8pt">
-
-                                                    <span class="avatar-title rounded-circle">BN</span>
-
-                                                </div>
-                                                <div class="media-body">
-
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex d-flex flex-column">
-                                                            <p class="mb-0"><strong class="js-lists-values-lead">Rahim Khowaja</strong></p>
-                                                            <small class="js-lists-values-email text-50">IT Manager</small>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </td>
-
-                                        <td>
-                                            <div class="d-flex flex-column">
-                                                <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
-                                                <span class="indicator-line rounded bg-warning"></span>
-                                            </div>
-                                        </td>
-
+                            <div class="card-header">
+                                <form class="form-inline">
+                                    <h3 style="margin-bottom: 0rem; display: inline;
+                                    width: auto;">Assigned To Me</h3>
+            
+                                    <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
                                       
-
-                                        <td>
-                                            <div class="d-flex flex-column">
-                                                <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                            
-                                            </div>
-                                        </td>
-                                        
-                                    </tr>
-
-                                    <tr style="
-                                    background-color: aliceblue;
-                                ">
-
-                                  
-                                        <td>
-                                            <div class="d-flex flex-column">
-                                                <small class="js-lists-values-budget"><strong>Step-2</strong></small>
-                                                <small class="text-50">Review Required</small>
-                                            </div>
-                                        </td>
-
-                                        <td>
-    
-                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                               
-                                                <div class="media-body">
-
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex d-flex flex-column">
-                                                            <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </td>
-    
-                                        <td>
-
-                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                <div class="avatar avatar-sm mr-8pt">
-                                                    <span class="avatar-title rounded bg-accent text-white">PM</span>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="d-flex flex-column">
-                                                        <small class="js-lists-values-project"><strong>Noshad Latif</strong></small>
-                                                        <small class="js-lists-values-location text-50">Project Manager</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </td>
-    
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-status text-50 mb-4pt">Pending</small>
-                                                    <span class="indicator-line rounded bg-warning"></span>
-                                                </div>
-                                            </td>
-    
-                                          
-    
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                                    <small class="text-danger">Overdue</small>
-                                                
-                                                </div>
-                                            </td>
-                                            
-                                        </tr>
-
-                                        <tr style="
-                                        background-color: gainsboro;
-                                    ">
-
-                                  
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-budget"><strong>Step-3 (Finish)</strong></small>
-                                                    <small class="text-50">Head Approval Required</small>
-                                                </div>
-                                            </td>
-
-                                            <td>
-        
-                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                   
-                                                    <div class="media-body">
-    
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="flex d-flex flex-column">
-                                                                <p class="mb-0"><strong class="js-lists-values-lead">Single Approval</strong></p>                                                                                        
-                                                            </div>
-                                                        </div>
-    
-                                                    </div>
-                                                </div>
-    
-                                            </td>
-        
-                                            <td>
-
-                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                    <div class="avatar avatar-32pt mr-8pt">
-    
-                                                        <img src="assets/images/people/110/guy-1.jpg" alt="Avatar" class="avatar-img rounded-circle">
-    
-                                                    </div>
-                                                    <div class="media-body">
-    
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="flex d-flex flex-column">
-                                                                <p class="mb-0"><strong class="js-lists-values-lead">Najeeb</strong></p>
-                                                                <small class="js-lists-values-email text-50">Project Lead</small>
-                                                            </div>
-                                                        </div>
-    
-                                                    </div>
-                                                </div>
-    
-                                            </td>
-        
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <small class="js-lists-values-status text-50 mb-4pt">Not Started</small>
-                                                        <span class="indicator-line rounded bg-warning"></span>
-                                                    </div>
-                                                </td>
-        
-                                              
-        
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                                        <small class="text-danger"></small>
-                                                    
-                                                    </div>
-                                                </td>
-                                                
-                                            </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="card-footer p-8pt">
-
-                        <ul class="pagination justify-content-start pagination-xsm m-0">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                    <span>Prev</span>
-                                </a>
-                            </li>
-                            <li class="page-item dropdown">
-                                <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
-                                    <span>1</span>
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item active">1</a>
-                                    <a href="#" class="dropdown-item">2</a>
-                                    <a href="#" class="dropdown-item">3</a>
-                                    <a href="#" class="dropdown-item">4</a>
-                                    <a href="#" class="dropdown-item">5</a>
+                                        <!-- <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>Create New</u></p> -->
+                                    </div>
+            
+                                </form>
+                            </div>
+                            <div class="row" style="    padding: 10px;">
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selectb1">Search By Text</label>
+                                        <select id="selectb1"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span>Next</span>
-                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                </a>
-                            </li>
-                        </ul>
-
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selectb2">Search By Title</label>
+                                        <select id="selectb2"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selectb3">Search By Date</label>
+                                        <select id="selectb3"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selectb4">Search By Priority</label>
+                                        <select id="selectb4"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selectb5">Search By Status</label>
+                                        <select id="selectb5"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selectb6" style="visibility: hidden; display: block;">Search By Date</label>
+                                               <button type="button" class="btn btn-accent" style="     background: #00a650;
+                                               border-color: #00a650;   width: 100%;">Search</button>
+                                       
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
+            
+                            <table class="table mb-0 thead-border-top-0 table-nowrap">
+                               <thead>
+                                <tr><th>Title</th>
+                                <th>Due</th>
+                                <th>From</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                               </tr></thead>
+                                <tbody class="list" id="staff"><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                      
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #decb98;">Pending</span> </td>
+                           
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                       
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #91dea8;">Aporoved</span> </td>
+                            
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                      
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
+                               
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr><tr>
+                                        <td>Rahim </td>
+                                        <td>   23-02-2021
+                                        </td>
+                                       
+                                    <td>34321</td>
+                                    <td>Outbound</td>
+                                <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                    text-align: center;
+                                    border-radius: .25rem;
+                                    font-size: 13px; background: #decb98;">Pending</span> </td>
+                           
+                                <td><a href="#"><u>View</u></a> </td>
+                                    </tr></tbody>
+                            </table>
+                        </div>
+            
+                        <div class="card-footer p-8pt">
+            
+                            <ul class="pagination justify-content-start pagination-xsm m-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                        <span>Prev</span>
+                                    </a>
+                                </li>
+                                <li class="page-item dropdown">
+                                    <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
+                                        <span>1</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item active">1</a>
+                                        <a href="#" class="dropdown-item">2</a>
+                                        <a href="#" class="dropdown-item">3</a>
+                                        <a href="#" class="dropdown-item">4</a>
+                                        <a href="#" class="dropdown-item">5</a>
+                                    </div>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span>Next</span>
+                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                    </a>
+                                </li>
+                            </ul>
+            
+                        </div>
+                    
+            
                     </div>
-                    <!-- <div class="card-body bordet-top text-right">
-15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
-</div> -->
-
-                </div>
-            </div>
 
         </div>
-        <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-          
-            <h3>Approval</h3>
-            <div class="row" >
-              <div class="col-sm-12 col-md-3">
-                  <div class="page-separator">
-                      <div class="page-separator__text">Comments/ Notes</div>
-                  </div>
-                  <p class="card-subtitle text-70 mb-16pt mb-lg-0"></p>
-              </div>
-              <div class="col-sm-12 col-md-9 d-flex align-items-center">
-                  <div class="flex"
-                       style="max-width: 100%">
-                      <div style="height: 150px;"
-                           data-toggle="quill"
-                           data-quill-placeholder="Quill WYSIWYG editor"
-                           data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                          <p>Hello World!</p>
-                          <p>Some initial <strong>bold</strong> text</p>
-                          <p><br></p>
-                      </div>
-  
-                  </div>
-              </div>
-          </div>
-           
-          <div class="row" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: end;">
-                  <button type="button" class="btn btn-accent-dodger-blue" style="    background-color: #d9534f;
-                  border-color: #d9534f;">
-                      <i class="material-icons icon--left">arrow_back</i>Send Back
-                  </button>
-                  <button type="button" class="btn btn-accent-dodger-blue" style="background-color: #5cb85c;
-                  border-color: #5cb85c;">
-                     Approve
-                     <i class="material-icons icon--left pl-2">arrow_forward</i> 
-                  </button>
-                  
-              </div>
-          </div>
-          <div class="row" style="display: none;" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: start;">
-               <input type="checkbox" id="myCheck" onclick="myFunction()"> Next Approve Requierd
-  
-              <div id="text" style="display:none">
-              
-              <div class="row">
-                  <div class=" col-md-6 col-sm-12">
-                      <label class="form-label">Send for Approval</label>
-                      <select id="custom-select2"
-                      class="form-control custom-select">
-                  <option selected>Select </option>
-                  <option value="1">Azlal</option>
-                  <option value="2">Rahim</option>
-                  <option value="3">Noshad</option>
-                  <option value="3">Amrat</option>
-              </select>
-                  </div>
-              </div>
-              
-          </div>
-                  
-              </div>
-          </div>
-          <div class="row" style="display: none;" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: start;">
-               <input type="checkbox" id="myCheck12" onclick="myFunction1()"> Approval History
-  
-              <div id="text12" style="display:none">
-              
-              <div class="row">
-                  <div class=" col-md-12 col-sm-12">
-                      <ul class="list-group">
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                        </ul>
-                     
-                  </div>
-              </div>
-              
-          </div>
-                  
-              </div>
-          </div>
-  
-          
-          </div>
-       
-        
-    </div>
-</div>
-
-      </div>
-        </div> 
-       
-       
-    
-    </div>
      </div>
                
 
@@ -2093,21 +1630,21 @@ label.form-label {
                                 
                                 </a>
                             </li>
-                            <li class="sidebar-menu-item open">
-                              <a class="sidebar-menu-button activemenu"  href="Inbound.html">
-                                  <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">link</span>
+                            <li class="sidebar-menu-item ">
+                              <a class="sidebar-menu-button "  href="Inbound.html">
+                                  <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">link</span>
                                 Inbound
-                                  <span class="ml-auto Rounddopen">1</span>
+                                  <span class="ml-auto Roundd">1</span>
                               </a>
                              
                           </li>
-                          <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
+                          <li class="sidebar-menu-item open">
+                            <a class="sidebar-menu-button activemenu"
                            
                                href="Outbound.html">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">view_compact</span>
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">view_compact</span>
                              OutBound
-                              <span class="ml-auto Roundd">2</span>
+                              <span class="ml-auto Rounddopen">2</span>
                                
                             </a>
                             
@@ -2265,9 +1802,6 @@ label.form-label {
         <!-- Select2 -->
         <script src="assets/vendor/select2/select2.min.js"></script>
         <script src="assets/js/select2.js"></script>
-         <!-- Dropzone -->
-         <script src="assets/vendor/dropzone.min.js"></script>
-         <script src="assets/js/dropzone.js"></script>
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
@@ -2313,7 +1847,7 @@ label.form-label {
                 },
                 toolbarSettings: {
                     toolbarPosition: 'both', // both bottom
-                   // toolbarExtraButtons: [btnFinish, btnCancel]
+                    toolbarExtraButtons: [btnFinish, btnCancel]
                 }
             });
 
@@ -2387,36 +1921,6 @@ label.form-label {
             });
 
         });
-    </script>
-      <script>
-        function myFunction() {
-  // Get the checkbox
-  var checkBox = document.getElementById("myCheck");
-  // Get the output text
-  var text = document.getElementById("text");
-
-  // If the checkbox is checked, display the output text
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-}
-    </script>
-    <script>
-        function myFunction1() {
-  // Get the checkbox
-  var checkBox12 = document.getElementById("myCheck12");
-  // Get the output text
-  var text12 = document.getElementById("text12");
-
-  // If the checkbox is checked, display the output text
-  if (checkBox12.checked == true){
-    text12.style.display = "block";
-  } else {
-    text12.style.display = "none";
-  }
-}
     </script>
     </body>
 
