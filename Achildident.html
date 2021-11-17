@@ -93,6 +93,10 @@
         href="assets/css/dropzone.css"
         rel="stylesheet">
 <Style>
+    .custom-control.custom-checkbox {
+    width: auto;
+    display: block !important;
+}
 
 .sw-theme-arrows > .tab-content > .tab-pane {
     padding: 10px 30px;
@@ -1146,22 +1150,22 @@ label.form-label {
     <ul class="nav">
         <li class="nav-item">
           <a class="nav-link" href="#step-1">
-            <strong>Step 1</strong> <br>Basic
+            <strong>Step 1</strong> <br>Select a Child 
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#step-2">
-            <strong>Step 2</strong> <br>Attachment
+            <strong>Step 2</strong> <br>Child Information
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#step-3">
-            <strong>Step 3</strong> <br>Tasks
+            <strong>Step 3</strong> <br>Committee Approval
           </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#step-4">
-              <strong>Step 3</strong> <br>Approval
+              <strong>Step 3</strong> <br>Complete 
             </a>
           </li>
       
@@ -1170,529 +1174,97 @@ label.form-label {
     <div class="tab-content">
         <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
             <div class="page-separator">
-                <div class="page-separator__text">Basic Info</div>
+                <div class="page-separator__text">Select a Child</div>
             </div>
       
             <div class="row" style="display: contents;">
-                  <div class="form-row">
-                    <div class=" col-md-4 col-sm-12">
-                    <div class="form-group">
-                        <label class="form-label">Source</label>
-                        <div class="custom-controls-stacked">
-                            <div class="custom-control custom-radio">
-                                <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input" checked="">
-                                <label for="radioStacked1" class="custom-control-label">Internal</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input">
-                                <label for="radioStacked2" class="custom-control-label">External</label>
-                            </div>
-                        </div>
-                    </div>
-</div>
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Reference No</label>
-                          
-                        
-                            <input type="text" class="form-control"  placeholder="Reference no Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Reference no" >
+                <div class="card mb-lg-32pt">
 
-                     
-                      
-                  </div>
-              
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Title</label>
-                          <input type="text" class="form-control"  placeholder="Title Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Title" >
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Description</label>
-                          <input type="text" class="form-control"  placeholder="Description Here"  placeholder="Select"data-toggle="tooltip" data-html="true" title="Enter Description" >
-                      </div>
-                          <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Type</label>
-                          <select id="custom-select2"
-                          class="form-control custom-select">
-                      <option selected>Select Type </option>
-                      <option value="1">Letter</option>
-                      <option value="2">Email</option>
-                      <option value="3">Memo</option>
-                      <option value="3">Other</option>
-                  </select>
-                      </div>
-                 
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">Priority</label>
-                          <select id="custom-select2"
-                          class="form-control custom-select">
-                          <option selected>High </option>
-                          <option value="1">Medium</option>
-                          <option value="2">Low</option>
-                           
-                          </select>
-                      </div>
-                 
-                  <div class=" col-md-4 col-sm-12">
-                    <label class="form-label">Classification</label>
-                        <select id="custom-select2"
-                        class="form-control custom-select">
-                        <option selected>Classification </option>
-                        <option value="1">Confidential</option>
-                        <option value="2">Internal</option>
-                        <option value="3">Public</option>
+                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
 
-                        </select>
-                </div>
-                <hr/>
-            </div>
-          <br/>
-            <div class="page-separator">
-                <div class="page-separator__text">Details</div>
-            </div>
+                        <div class="card-header">
+                            <form class="form-inline">
+                                <label class="mr-sm-2 form-label" for="inlineFormFilterBy">Filter by:</label>
+                                <input type="text" class="form-control search mb-2 mr-sm-2 mb-sm-0" id="inlineFormFilterBy" placeholder="Search ...">
 
-                  <div class="form-row">
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">Form Organization</label>
-                        <select id="custom-selectC2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
-            
-          </select>
-                    </div>
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">From Department</label>
-                          <select id="custom-selecta2"
-                    class="form-control custom-select">
-                    <option selected>Select</option>
-                <option >A </option>
-                <option value="1">b</option>
-                <option value="2">c</option>
-                <option value="3">d</option>
-              
-            </select>
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">To Department</label>
-                        <select id="custom-selectb2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
-            
-          </select>
-                    </div>
-                  
-                  </div>
-                  <div class="form-row">
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">Assign To</label>
-                        <select id="custom-selectC2"
-                  class="form-control custom-select">
-                  <option selected>Select</option>
-              <option >A </option>
-              <option value="1">b</option>
-              <option value="2">c</option>
-              <option value="3">d</option>
-            
-          </select>
-                    </div>
-                      <div class=" col-md-4 col-sm-12">
-                          <label class="form-label">CC</label>
-                          <input type="text" class="form-control"  placeholder=" Email Here"   >
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                        <label class="form-label">BCC</label>
-                        <input type="text" class="form-control"  placeholder=" Email Here"   >
-                    </div>
-                   
-                  </div>
-                  <div class="form-row">
-                     
-                    <div class=" col-md-4 col-sm-12">
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Correspondence Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-                      </div>
-                      <div class=" col-md-4 col-sm-12">
-                        <label class="form-label"
-                        for="dateRangePickerSampleB01">Closure</label>
-                         <input id="dateRangePickerSampleB01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-                      </div>
+                                <label class="sr-only" for="inlineFormRole">Role</label>
+                                <select id="inlineFormRole" class="custom-select mb-2 mr-sm-2 mb-sm-0">
+                                    <option value="All Roles">All Roles</option>
+                                </select>
 
-                      <div class=" col-md-4 col-sm-12">
-                        <label class="form-label"
-                        for="dateRangePickerSampleB01">Keywords</label>
-                        <input type="text" class="form-control"  placeholder=" Keywords Here"   >
-                      </div>
-
-
-                  </div>
-            
-             
-          </div>
-      
-          </div>
-        <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-            <h3>Documents</h3>
-            <div class="row" >
-                <div class="col-sm-12 col-md-3">
-                    <div class="page-separator">
-                        <div class="page-separator__text">Attachment</div>
-                    </div>
-                   
-                </div>
-                <div class="col-sm-12 col-md-9 d-flex align-items-center">
-                    <div class="flex"
-                         style="max-width: 100%">
-
-                        <div class="dropzone dropzone-multiple w-100 mb-24pt"
-                             data-toggle="dropzone"
-                             data-dropzone-multiple
-                             data-dropzone-url="http://"
-                             data-dropzone-files='["assets/images/256_daniel-gaffey-1060698-unsplash.jpg", "assets/images/256_rsz_clem-onojeghuo-150467-unsplash.jpg", "assets/images/256_rsz_florian-perennes-594195-unsplash.jpg"]'>
-
-                            <div class="fallback">
-                                <div class="custom-file">
-                                    <input type="file"
-                                           class="custom-file-input"
-                                           id="customFileUploadMultiple"
-                                           multiple>
-                                    <label class="custom-file-label"
-                                           for="customFileUploadMultiple">Choose file</label>
-                                </div>
-                            </div>
-
-                            <div class="card table-responsive">
-                                <table class="table table-flush table-nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>Title.</th>
-                                            <th>Date</th>
-                                            <th class="text-center">Size(mb)</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <tr>
-                                            <td><a href="sticky-billing-invoice.html" class="text-underline">10002331</a></td>
-                                            <td>26 Sep 2018</td>
-                                            <td class="text-center">9</td>
-                                            <td class="text-right">
-                                                <div class="d-inline-flex align-items-center">
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary mr-16pt">View Attachment <i class="icon--right material-icons">keyboard_arrow_right</i></a>
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary">Download <i class="icon--right material-icons">file_download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><a href="sticky-billing-invoice.html" class="text-underline">10003815</a></td>
-                                            <td>29 Apr 2018</td>
-                                            <td class="text-center">9</td>
-                                            <td class="text-right">
-                                                <div class="d-inline-flex align-items-center">
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary mr-16pt">View Attachment <i class="icon--right material-icons">keyboard_arrow_right</i></a>
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary">Download <i class="icon--right material-icons">file_download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><a href="sticky-billing-invoice.html" class="text-underline">10007382</a></td>
-                                            <td>31 Mar 2018</td>
-                                            <td class="text-center">9</td>
-                                            <td class="text-right">
-                                                <div class="d-inline-flex align-items-center">
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary mr-16pt">View Attachment <i class="icon--right material-icons">keyboard_arrow_right</i></a>
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary">Download <i class="icon--right material-icons">file_download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><a href="sticky-billing-invoice.html" class="text-underline">10004876</a></td>
-                                            <td>30 May 2018</td>
-                                            <td class="text-center">9</td>
-                                            <td class="text-right">
-                                                <div class="d-inline-flex align-items-center">
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary mr-16pt">View Attachment <i class="icon--right material-icons">keyboard_arrow_right</i></a>
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary">Download <i class="icon--right material-icons">file_download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><a href="sticky-billing-invoice.html" class="text-underline">10009392</a></td>
-                                            <td>30 Apr 2018</td>
-                                            <td class="text-center">9</td>
-                                            <td class="text-right">
-                                                <div class="d-inline-flex align-items-center">
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary mr-16pt">View Attachment <i class="icon--right material-icons">keyboard_arrow_right</i></a>
-                                                    <a href="sticky-billing-invoice.html" class="btn btn-sm btn-outline-secondary">Download <i class="icon--right material-icons">file_download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <ul style="display: none;" class="dz-preview dz-preview-multiple list-group list-group-flush mt-16pt">
-                                <li class="list-group-item">
-                                    <div class="form-row align-items-center">
-                                        <div class="col-auto">
-                                            <div class="avatar">
-                                                <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg"
-                                                     class="avatar-img rounded"
-                                                     alt="..."
-                                                     data-dz-thumbnail>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="font-weight-bold"
-                                                 data-dz-name>...</div>
-                                            <p class="small text-muted mb-0"
-                                               data-dz-size>...</p>
-                                        </div>
-                                        <div class="col-auto">
-                                            <a href="#"
-                                               class="text-muted-light"
-                                               data-dz-remove>
-                                                <i class="material-icons">close</i>
-                                            </a>
-                                        </div>
+                                <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                                    <label class="form-label mb-0" for="active">Active</label>
+                                    <div class="custom-control custom-checkbox-toggle ml-8pt">
+                                        <input checked="" type="checkbox" id="active" class="custom-control-input">
+                                        <label class="custom-control-label" for="active">Active</label>
                                     </div>
-                                </li>
-                            </ul>
+                                </div>
 
+         
+                            </form>
                         </div>
-
-                       
-                    </div>
-                </div>
-          </div>
-      
-          </div>
-        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-          <h3>Tasks And Procedures</h3>
-          <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                        <label class="form-label">Title</label>
-                        <input type="text" class="form-control"  placeholder="Title Here"   >
-                </div>        
-            </div>
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                    <label class="form-label">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>    
-            </div>
-          
-            <div class="col-md-4">
-                <div class="form-row">
-                        <label class="form-label">Order</label>
-                        <input type="text" class="form-control"  placeholder="Order of step"   >
-                </div> 
-                  
-            </div>
-
-                <div class="col-md-4">
-                    <div class="form-row">
-                            <label class="form-label">Assign To ( Department / User )</label>
-                            <input type="text" class="form-control"  placeholder="Assign To Here"   >
-                    </div> 
-                      
-                </div>
-                <div class="col-md-4">
-                    <div class="form-row">
-                            <label class="form-label">Priority</label>
-                            
-                    
-                    <select id="custom-Tasks-Prio"
-                    class="form-control custom-select">
-                <option selected>Select </option>
-                <option value="1">High</option>
-                <option value="2">Medium</option>
-                <option value="3">Low</option>
-                   </select>   
-                </div>   
-                </div>
-          
-            <div class="col-md-6 col-md-12">
-                <div class="form-row">
-                    <label class="form-label">Notes</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea12" rows="3"></textarea>
-            </div>    
-            </div>
-        </div>
-       
-        <div class="row" >
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                       
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Due Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-                </div> 
-                  
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                       
-                        <label class="form-label"
-                        for="dateRangePickerSampleA01">Reminder Date</label>
-                 <input id="dateRangePickerSampleA01"
-                        type="text"
-                        class="form-control"
-                        placeholder="Date example"
-                        data-toggle="daterangepicker"
-                        data-daterangepicker-drops="up"
-                        data-daterangepicker-start-date="2018/11/06"
-                        data-daterangepicker-single-date-picker="true">
-    </div>   
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="form-row">
-                        <label class="form-label">Frequency</label>
-                         
-                <select id="custom-Tasks-Frequency"
-                class="form-control custom-select">
-            <option selected>Select </option>
-            <option value="1">Daily</option>
-            <option value="2">weekly</option>
-            <option value="3">Yearly</option>
-               </select> 
-                        
-    </div>   
-            </div>
-        
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                <label class="form-label">Notes</label>
-                <textarea class="form-control" id="exampleFormControlTextarea111A" rows="3"></textarea>
-            </div>
-            </div>
-        </div>
-        <div class="row" >
-            <div class="col-sm-12 col-md-12">
-                <div class="form-row">
-                <button class="btn mt-4" style="    background: #00a650; color: white;" type="button">Add <span class="material-icons sidebar-menu-icon " style=" margin-left: 10px; ">arrow_forward</span></button>
-            </div></div></div>
-
-            <br/>
-            <div class="flex" style="max-width: 100%">
-    
-                <div class="card dashboard-area-tabs p-relative o-hidden mb-lg-32pt">
-                   
-
-                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-date" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-lead&quot;, &quot;js-lists-values-project&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-budget&quot;, &quot;js-lists-values-date&quot;]">
 
                         <table class="table mb-0 thead-border-top-0 table-nowrap">
                             <thead>
                                 <tr>
 
-                                   
-
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Order</a>
+                                    <th style="width: 18px;" class="pr-0">
+                                        <div class="custom-control custom-checkbox">
+                                        
+                                            <label class="custom-control-label" for="customCheckAllstaff"><span class="text-hide">Toggle all</span></label>
+                                        </div>
                                     </th>
 
-                                    
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-budget">Type</a>
-                                    </th>
-
-                                  
                                     <th>
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-lead">Assigned To</a>
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Employee</a>
                                     </th>
 
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
+                                    <th style="width: 150px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employer-name">Grade Level</a>
                                     </th>
 
-
-                                    <th style="width: 48px;">
-                                        <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-date">Due</a>
+                                    <th class="text-center" style="width: 48px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-projects">Gender</a>
                                     </th>
-                                    <th style="width: 24px;"></th>
+
+                                    <th style="width: 37px;">Status</th>
+
+                                    <th style="width: 120px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-activity">Source</a>
+                                    </th>
+                                    <th style="width: 51px;">
+                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-earnings">Date Of Birth</a>
+                                    </th>
+                                    <th style="width: 24px;" class="pl-0"></th>
                                 </tr>
                             </thead>
-                            <tbody class="list" id="projects">
-                                <tr style="
-                                background-color: antiquewhite;
-                            ">
+                            <tbody class="list" id="staff">
+                             
+                                <tr class="">
 
-                                  
-                                <td>
-                                    <div class="d-flex flex-column">
-                                        <small class="js-lists-values-budget"><strong>Step-1 (Start)</strong></small>
-                                        <small class="text-50">Complete Documentation</small>
-                                    </div>
-                                </td>
-
-                                <td>
-
-                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                       
-                                        <div class="media-body">
-
-                                            <div class="d-flex align-items-center">
-                                                <div class="flex d-flex flex-column">
-                                                    <p class="mb-0"><strong class="js-lists-values-lead">Task</strong></p>                                                                                        
-                                                </div>
-                                            </div>
-
+                                    <td class="pr-0">
+                                    
+                                        <div class="custom-control custom-radio">
+                                            <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                                            <label for="radioStacked4" class="custom-control-label"></label>
                                         </div>
-                                    </div>
-
-                                </td>
+                                 
+                                    
+                                    </td>
 
                                     <td>
 
                                         <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
                                             <div class="avatar avatar-32pt mr-8pt">
 
-                                                <span class="avatar-title rounded-circle">BN</span>
+                                                <span class="avatar-title rounded-circle">US</span>
 
                                             </div>
                                             <div class="media-body">
 
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex d-flex flex-column">
-                                                        <p class="mb-0"><strong class="js-lists-values-lead">Billy Nunez</strong></p>
-                                                        <small class="js-lists-values-email text-50">IT Assistant</small>
-                                                    </div>
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">Ubaid Saleem</strong></p>
+                                                    <small class="js-lists-values-employee-email text-50"></small>
                                                 </div>
 
                                             </div>
@@ -1701,45 +1273,50 @@ label.form-label {
                                     </td>
 
                                     <td>
-                                        <div class="d-flex flex-column">
-                                            <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
-                                            <span class="indicator-line rounded bg-warning"></span>
+                                        <div class="d-flex align-items-center">
+                                           
+                                            <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
                                         </div>
                                     </td>
 
-                                  
+                                    <td class="text-center js-lists-values-projects small">Male</td>
 
                                     <td>
-                                        <div class="d-flex flex-column">
-                                            <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                        
-                                        </div>
+
+                                        <a href="#" class="">Permanant</a>
+
                                     </td>
-                                    
+
+                                    <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
+                                    <td class="js-lists-values-earnings small">12 May 1984</td>
+                                    <td class="text-right pl-0">
+                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                    </td>
                                 </tr>
+                                <tr class="">
 
-                                <tr style="
-                                background-color: aliceblue;
-                            ">
-
-                                  
-                                    <td>
-                                        <div class="d-flex flex-column">
-                                            <small class="js-lists-values-budget"><strong>Step-2</strong></small>
-                                            <small class="text-50">Review Required</small>
+                                    <td class="pr-0">
+                                       
+                                        <div class="custom-control custom-radio">
+                                            <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <label for="radioStacked3" class="custom-control-label"></label>
                                         </div>
+                                        
                                     </td>
 
                                     <td>
 
                                         <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                           
+                                            <div class="avatar avatar-32pt mr-8pt">
+
+                                                <img src="assets/images/people/110/guy-2.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                            </div>
                                             <div class="media-body">
 
-                                                <div class="d-flex align-items-center">
-                                                    <div class="flex d-flex flex-column">
-                                                        <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
-                                                    </div>
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">Muhammad Azlal Ahmed Khan</strong></p>
+                                                    <small class="js-lists-values-employee-email text-50"></small>
                                                 </div>
 
                                             </div>
@@ -1747,180 +1324,136 @@ label.form-label {
 
                                     </td>
 
-                                        <td>
+                                </td>
 
-                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                <div class="avatar avatar-32pt mr-8pt">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                       
+                                        <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
+                                    </div>
+                                </td>
 
-                                                    <span class="avatar-title rounded-circle">BN</span>
+                                <td class="text-center js-lists-values-projects small">Male</td>
 
+                                <td>
+
+                                    <a href="#" class="">Permanant</a>
+
+                                </td>
+
+                                <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
+                                <td class="js-lists-values-earnings small">12 May 1984</td>
+                                    <td class="text-right pl-0">
+                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+
+                                    <td class="pr-0">
+                                    
+                                        <div class="custom-control custom-radio">
+                                            <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input" checked="">
+                                            <label for="radioStacked2" class="custom-control-label"></label>
+                                        </div>
+                                 
+                                    
+                                    </td>
+
+                                    <td>
+
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                            <div class="avatar avatar-32pt mr-8pt">
+
+                                                <span class="avatar-title rounded-circle">US</span>
+
+                                            </div>
+                                            <div class="media-body">
+
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">Ubaid Saleem</strong></p>
+                                                    <small class="js-lists-values-employee-email text-50"></small>
                                                 </div>
-                                                <div class="media-body">
 
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex d-flex flex-column">
-                                                            <p class="mb-0"><strong class="js-lists-values-lead">Rahim Khowaja</strong></p>
-                                                            <small class="js-lists-values-email text-50">IT Manager</small>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
                                             </div>
+                                        </div>
 
-                                        </td>
+                                    </td>
 
-                                        <td>
-                                            <div class="d-flex flex-column">
-                                                <small class="js-lists-values-status text-50 mb-4pt">Completed</small>
-                                                <span class="indicator-line rounded bg-warning"></span>
-                                            </div>
-                                        </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                           
+                                            <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
+                                        </div>
+                                    </td>
 
-                                      
+                                    <td class="text-center js-lists-values-projects small">Male</td>
 
-                                        <td>
-                                            <div class="d-flex flex-column">
-                                                <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                            
-                                            </div>
-                                        </td>
+                                    <td>
+
+                                        <a href="#" class="">Permanant</a>
+
+                                    </td>
+
+                                    <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
+                                    <td class="js-lists-values-earnings small">12 May 1984</td>
+                                    <td class="text-right pl-0">
+                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                    </td>
+                                </tr>
+                                <tr class="">
+
+                                    <td class="pr-0">
+                                       
+                                        <div class="custom-control custom-radio">
+                                            <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input">
+                                            <label for="radioStacked1" class="custom-control-label"></label>
+                                        </div>
                                         
-                                    </tr>
+                                    </td>
 
-                                    <tr style="
-                                    background-color: aliceblue;
-                                ">
+                                    <td>
 
-                                  
-                                        <td>
-                                            <div class="d-flex flex-column">
-                                                <small class="js-lists-values-budget"><strong>Step-2</strong></small>
-                                                <small class="text-50">Review Required</small>
+                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                            <div class="avatar avatar-32pt mr-8pt">
+
+                                                <img src="assets/images/people/110/guy-2.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
                                             </div>
-                                        </td>
+                                            <div class="media-body">
 
-                                        <td>
-    
-                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                               
-                                                <div class="media-body">
-
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex d-flex flex-column">
-                                                            <p class="mb-0"><strong class="js-lists-values-lead">Group Approval</strong></p>                                                                                        
-                                                        </div>
-                                                    </div>
-
+                                                <div class="d-flex flex-column">
+                                                    <p class="mb-0"><strong class="js-lists-values-employee-name">Muhammad Azlal Ahmed Khan</strong></p>
+                                                    <small class="js-lists-values-employee-email text-50"></small>
                                                 </div>
+
                                             </div>
+                                        </div>
 
-                                        </td>
-    
-                                        <td>
+                                    </td>
 
-                                            <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                <div class="avatar avatar-sm mr-8pt">
-                                                    <span class="avatar-title rounded bg-accent text-white">PM</span>
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="d-flex flex-column">
-                                                        <small class="js-lists-values-project"><strong>Noshad Latif</strong></small>
-                                                        <small class="js-lists-values-location text-50">Project Manager</small>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                </td>
 
-                                        </td>
-    
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-status text-50 mb-4pt">Pending</small>
-                                                    <span class="indicator-line rounded bg-warning"></span>
-                                                </div>
-                                            </td>
-    
-                                          
-    
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                                    <small class="text-danger">Overdue</small>
-                                                
-                                                </div>
-                                            </td>
-                                            
-                                        </tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                       
+                                        <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
+                                    </div>
+                                </td>
 
-                                        <tr style="
-                                        background-color: gainsboro;
-                                    ">
+                                <td class="text-center js-lists-values-projects small">Male</td>
 
-                                  
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <small class="js-lists-values-budget"><strong>Step-3 (Finish)</strong></small>
-                                                    <small class="text-50">Head Approval Required</small>
-                                                </div>
-                                            </td>
+                                <td>
 
-                                            <td>
-        
-                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                   
-                                                    <div class="media-body">
-    
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="flex d-flex flex-column">
-                                                                <p class="mb-0"><strong class="js-lists-values-lead">Single Approval</strong></p>                                                                                        
-                                                            </div>
-                                                        </div>
-    
-                                                    </div>
-                                                </div>
-    
-                                            </td>
-        
-                                            <td>
+                                    <a href="#" class="">Permanant</a>
 
-                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                    <div class="avatar avatar-32pt mr-8pt">
-    
-                                                        <img src="assets/images/people/110/guy-1.jpg" alt="Avatar" class="avatar-img rounded-circle">
-    
-                                                    </div>
-                                                    <div class="media-body">
-    
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="flex d-flex flex-column">
-                                                                <p class="mb-0"><strong class="js-lists-values-lead">Najeeb</strong></p>
-                                                                <small class="js-lists-values-email text-50">Project Lead</small>
-                                                            </div>
-                                                        </div>
-    
-                                                    </div>
-                                                </div>
-    
-                                            </td>
-        
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <small class="js-lists-values-status text-50 mb-4pt">Not Started</small>
-                                                        <span class="indicator-line rounded bg-warning"></span>
-                                                    </div>
-                                                </td>
-        
-                                              
-        
-                                                <td>
-                                                    <div class="d-flex flex-column">
-                                                        <small class="js-lists-values-date"><strong>19/02/2019</strong></small>
-                                                        <small class="text-danger"></small>
-                                                    
-                                                    </div>
-                                                </td>
-                                                
-                                            </tr>
+                                </td>
 
+                                <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
+                                <td class="js-lists-values-earnings small">12 May 1984</td>
+                                    <td class="text-right pl-0">
+                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1955,102 +1488,94 @@ label.form-label {
                         </ul>
 
                     </div>
-                    <!-- <div class="card-body bordet-top text-right">
-15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
-</div> -->
+                   
 
                 </div>
+             
+          </div>
+      
+          </div>
+        <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+            <div class="page-separator">
+                <div class="page-separator__text">Child Information</div>
             </div>
+            <div class="row" >
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-row">
+                            <label class="form-label">Children Full Name</label>
+                            <input type="text" class="form-control" placeholder="First Name">
+                    </div>        
+                </div><div class="col-sm-12 col-md-4">
+                    <div class="form-row">
+                            <label class="form-label" style="visibility: hidden;">Title</label>
+                            <input type="text" class="form-control" placeholder="Middle Name">
+                    </div>        
+                </div><div class="col-sm-12 col-md-4">
+                    <div class="form-row">
+                            <label class="form-label" style="visibility: hidden;">Title</label>
+                            <input type="text" class="form-control" placeholder="Last Name">
+                    </div>        
+                </div>
+          </div>
+      
+          </div>
+        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+            <div class="page-separator">
+                <div class="page-separator__text">Committee Approval</div>
+            </div>
+          <div class="row" >
+         
+                <div class="col-md-4">
+                    <div class="form-row">
+                            <label class="form-label">Committee Status</label>
+                            
+                    
+                    <select id="custom-Tasks-Prio"
+                    class="form-control custom-select">
+                <option selected>Select </option>
+                <option value="1">High</option>
+                <option value="2">Medium</option>
+                <option value="3">Low</option>
+                   </select>   
+                </div>   
+                </div>
+          
+            <div class="col-md-6 col-md-12">
+                <div class="form-row">
+                    <label class="form-label">Committee Comments</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea12" rows="3"></textarea>
+            </div>    
+            </div>
+        </div>
+       
+   
 
         </div>
         <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-          
-            <h3>Approval</h3>
+            <div class="page-separator">
+                <div class="page-separator__text">Complete </div>
+            </div>
             <div class="row" >
-              <div class="col-sm-12 col-md-3">
-                  <div class="page-separator">
-                      <div class="page-separator__text">Comments/ Notes</div>
-                  </div>
-                  <p class="card-subtitle text-70 mb-16pt mb-lg-0"></p>
-              </div>
-              <div class="col-sm-12 col-md-9 d-flex align-items-center">
-                  <div class="flex"
-                       style="max-width: 100%">
-                      <div style="height: 150px;"
-                           data-toggle="quill"
-                           data-quill-placeholder="Quill WYSIWYG editor"
-                           data-quill-modules-toolbar='[["bold", "italic"], ["link", "blockquote", "code", "image"], [{"list": "ordered"}, {"list": "bullet"}]]'>
-                          <p>Hello World!</p>
-                          <p>Some initial <strong>bold</strong> text</p>
-                          <p><br></p>
-                      </div>
-  
-                  </div>
-              </div>
+                <div class="flex" style="max-width: 100%">
+
+
+                    <div class="alert bg-warning text-white border-0 mb-0" role="alert">
+                        <div class="d-flex flex-wrap align-items-start">
+                            <div class="mr-8pt">
+                                <i class="material-icons">access_time</i>
+                            </div>
+                            <div class="flex" style="min-width: 180px">
+                                <small>
+                                    <strong>Complete !</strong> Your request has been complete. 
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
           </div>
            
-          <div class="row" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: end;">
-                  <button type="button" class="btn btn-accent-dodger-blue" style="    background-color: #d9534f;
-                  border-color: #d9534f;">
-                      <i class="material-icons icon--left">arrow_back</i>Send Back
-                  </button>
-                  <button type="button" class="btn btn-accent-dodger-blue" style="background-color: #5cb85c;
-                  border-color: #5cb85c;">
-                     Approve
-                     <i class="material-icons icon--left pl-2">arrow_forward</i> 
-                  </button>
-                  
-              </div>
-          </div>
-          <div class="row" style="display: none;" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: start;">
-               <input type="checkbox" id="myCheck" onclick="myFunction()"> Next Approve Requierd
-  
-              <div id="text" style="display:none">
-              
-              <div class="row">
-                  <div class=" col-md-6 col-sm-12">
-                      <label class="form-label">Send for Approval</label>
-                      <select id="custom-select2"
-                      class="form-control custom-select">
-                  <option selected>Select </option>
-                  <option value="1">Azlal</option>
-                  <option value="2">Rahim</option>
-                  <option value="3">Noshad</option>
-                  <option value="3">Amrat</option>
-              </select>
-                  </div>
-              </div>
-              
-          </div>
-                  
-              </div>
-          </div>
-          <div class="row" style="display: none;" >
-              <div class="col-sm-12 col-md-12 pt-3" style="    text-align: start;">
-               <input type="checkbox" id="myCheck12" onclick="myFunction1()"> Approval History
-  
-              <div id="text12" style="display:none">
-              
-              <div class="row">
-                  <div class=" col-md-12 col-sm-12">
-                      <ul class="list-group">
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                          <li class="list-group-item"><b>Approved by:</b>Cras justo odio - ON 2021-10-07</li>
-                        </ul>
-                     
-                  </div>
-              </div>
-              
-          </div>
-                  
-              </div>
-          </div>
-  
+         
           
           </div>
        
@@ -2168,58 +1693,117 @@ label.form-label {
                             </li>
                             <li>
                                 
-                                <div class="sidebar-heading mt-3">Correspondence</div>
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item ">
-                                <a class="sidebar-menu-button "
-                        
-                                   href="Correspondence.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span>
-                                    Dashboard
-                                
-                                </a>
-                            </li>
-                            <li class="sidebar-menu-item open">
-                              <a class="sidebar-menu-button activemenu"  href="Inbound.html">
-                                  <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">link</span>
-                                Inbound
-                                  <span class="ml-auto Rounddopen">1</span>
-                              </a>
-                             
-                          </li>
-                          <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                           
-                               href="Outbound.html">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">view_compact</span>
-                             OutBound
-                              <span class="ml-auto Roundd">2</span>
-                               
-                            </a>
-                            
-                        </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button"
-                               
-                               href="Achivedcorrespondence.html">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
-                                Archived Correspondence
-                            
-                            </a>
-                        </li>
-                        
-                   
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button"
-                          
-                               href="#">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span>
-                              Administration
-                               
-                            </a>
-                            
-                        </li>
-                        </ul>
+                                <div class="sidebar-heading mt-3">Child Care Management</div>
+                                <ul class="sidebar-menu">
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button "
+                                           href="Childcare.html">
+                                            <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span>
+                                            Dashboard
+    
+                                        </a>
+                                    </li>
+    
+                                   
+                                    
+    
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button" href="Childprofile.html">
+                                            <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
+                                            Children's Profile
+    
+                                        </a>
+    
+                                    </li>
+    
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button " href="MyTasks.html">
+                                            <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">message</span> My Tasks
+            
+                                        </a>
+            
+                                    </li>
+                                    <!-- <li class="sidebar-menu-item activemenu">
+                                        <a class="sidebar-menu-button activemenu"
+    
+                                           href="Registrachild.html">
+                                            <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">donut_large</span>
+                                           Registering a Case
+    
+                                        </a>
+    
+                                    </li> -->
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button "
+                                           data-toggle="collapse"
+                                           href="#dashboards_menu2">
+                                            <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
+                                            Register a child
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu sm-indent collapse "
+                                            id="dashboards_menu2">
+                                            <li class="sidebar-menu-item ">
+                                                <a class="sidebar-menu-button"
+                                                   href="Registrachild.html">
+                                                    <span class="sidebar-menu-text">Register </span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="Reviewachild.html">
+                                                    <span class="sidebar-menu-text">Review</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item ">
+                                                <a class="sidebar-menu-button "
+                                                   href="ApproveAChild.html">
+                                                    <span class="sidebar-menu-text ">Approve</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="ReceiveAChild.html">
+                                                    <span class="sidebar-menu-text">Receive & Allocate</span>
+                                                </a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar-menu-item ">
+                                        <a class="sidebar-menu-button "
+                                           data-toggle="collapse"
+                                           href="#dashboards_menu2">
+                                            <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
+                                            Child Care Request 
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class=""
+                                            id="dashboards_menu2">
+                                            <li class="sidebar-menu-item ">
+                                                <a class="sidebar-menu-button activemenu"
+                                                   href="Achildident.html">
+                                                    <span class="sidebar-menu-text activemenu">Child identity</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="AReviewachild.html">
+                                                    <span class="sidebar-menu-text">Committee Review</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item ">
+                                                <a class="sidebar-menu-button"
+                                                   href="AchildUpdate.html">
+                                                    <span class="sidebar-menu-text ">Update Request </span>
+                                                </a>
+                                            </li>
+                                                                             
+                                           
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                         <div class="sidebar-heading">Bussiness Support services</div>

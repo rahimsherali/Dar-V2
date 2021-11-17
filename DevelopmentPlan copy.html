@@ -1,0 +1,2595 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+    <link type="text/css" href="src/css/smart_wizard_all.css" rel="stylesheet">
+    <!-- Flatpickr -->
+    <link type="text/css" href="assets/css/flatpickr.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/flatpickr-airbnb.css" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
+
+    <!-- Quill Theme -->
+    <link type="text/css" href="assets/css/quill.css" rel="stylesheet">
+
+    <!-- Touchspin -->
+    <link type="text/css" href="assets/css/bootstrap-touchspin.css" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+    <Style>
+        .sw-theme-arrows>.tab-content>.tab-pane {
+            padding: 10px 30px;
+        }
+        
+        .logo-container {
+            left: 50px;
+            position: absolute;
+            top: 20px;
+            z-index: 3;
+        }
+        
+        .logo-container .logo {
+            overflow: hidden;
+            border-radius: 50%;
+            border: 1px solid #333333;
+            width: 60px;
+            float: left;
+        }
+        
+        .logo-container .brand {
+            font-size: 18px;
+            color: #FFF;
+            line-height: 20px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px
+        }
+        
+        body {
+            background-color: #CCCCCC;
+        }
+        
+        .section .wizard-card {
+            min-height: inherit;
+        }
+        
+        .tim-row {
+            margin-bottom: 20px;
+        }
+        
+        .tim-white-buttons {
+            background-color: #777777;
+        }
+        
+        .title {
+            margin-top: 30px;
+            margin-bottom: 25px;
+            min-height: 32px;
+            font-weight: 500;
+        }
+        
+        .title.text-center {
+            margin-bottom: 50px;
+        }
+        
+        .tim-typo {
+            padding-left: 25%;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .tim-typo .tim-note {
+            bottom: 10px;
+            color: #c0c1c2;
+            display: block;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 13px;
+            left: 0;
+            margin-left: 20px;
+            position: absolute;
+            width: 260px;
+        }
+        
+        .tim-row {
+            padding-top: 50px;
+        }
+        
+        .tim-row h3 {
+            margin-top: 0;
+        }
+        
+        .switch {
+            margin-right: 20px;
+        }
+        
+        #navbar-full .navbar {
+            border-radius: 0 !important;
+            margin-bottom: 15px;
+            z-index: 2;
+        }
+        
+        .space {
+            height: 130px;
+            display: block;
+        }
+        
+        .space-110 {
+            height: 110px;
+            display: block;
+        }
+        
+        .space-50 {
+            height: 50px;
+            display: block;
+        }
+        
+        .space-70 {
+            height: 70px;
+            display: block;
+        }
+        
+        .navigation-example .img-src {
+            background-attachment: scroll;
+        }
+        
+        .navigation-example {
+            background-image: url('../img/bg.jpg');
+            background-position: center center;
+            background-size: cover;
+            margin-top: 0;
+            min-height: 740px;
+        }
+        
+        #notifications {
+            background-color: #FFFFFF;
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+        
+        #notifications .alert-danger {
+            margin-bottom: 0px;
+        }
+        
+        .tim-note {
+            text-transform: capitalize;
+        }
+        
+        #buttons .btn {
+            margin: 0 0px 15px;
+        }
+        
+        .space-100 {
+            height: 100px;
+            display: block;
+            width: 100%;
+        }
+        
+        .be-social {
+            padding-bottom: 20px;
+            /*     border-bottom: 1px solid #aaa; */
+            margin: 0 auto 40px;
+        }
+        
+        .txt-white {
+            color: #FFFFFF;
+        }
+        
+        .txt-gray {
+            color: #ddd !important;
+        }
+        
+        .parallax {
+            width: 100%;
+            height: 570px;
+            display: block;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .logo-container.logo-documentation {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .logo-container .logo {
+            overflow: hidden;
+            border-radius: 50%;
+            border: 1px solid #333333;
+            width: 50px;
+            float: left;
+        }
+        
+        .logo-container .brand {
+            font-size: 16px;
+            line-height: 18px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 7px;
+            width: 70px;
+            height: 40px;
+            text-align: left;
+        }
+        
+        .navbar-default .logo-container .brand {
+            color: #999999;
+        }
+        
+        .navbar-transparent .logo-container .brand {
+            color: #FFFFFF;
+        }
+        
+        .logo-container .brand-material {
+            font-size: 18px;
+            margin-top: 15px;
+            height: 25px;
+            width: auto;
+        }
+        
+        .logo-container .logo img {
+            width: 100%;
+        }
+        
+        .navbar-small .logo-container .brand {
+            color: #333333;
+        }
+        
+        .fixed-section {
+            top: 90px;
+            max-height: 80vh;
+            overflow: scroll;
+        }
+        
+        .fixed-section ul li {
+            list-style: none;
+        }
+        
+        .fixed-section li a {
+            font-size: 14px;
+            padding: 2px;
+            display: block;
+            color: #666666;
+        }
+        
+        .fixed-section li a.active {
+            color: #00bbff;
+        }
+        
+        .fixed-section.float {
+            position: fixed;
+            top: 100px;
+            width: 200px;
+            margin-top: 0;
+        }
+        
+        .parallax .parallax-image {
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+        }
+        
+        .parallax .parallax-image img {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .parallax .parallax-image {
+                width: 100%;
+                height: 640px;
+                overflow: hidden;
+            }
+            .parallax .parallax-image img {
+                height: 100%;
+                width: auto;
+            }
+        }
+        
+        .separator {
+            content: "Separator";
+            color: #FFFFFF;
+            display: block;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .separator-line {
+            background-color: #EEE;
+            height: 1px;
+            width: 100%;
+            display: block;
+        }
+        
+        .separator.separator-gray {
+            background-color: #EEEEEE;
+        }
+        
+        .social-buttons-demo .btn {
+            margin-right: 5px;
+            margin-bottom: 7px;
+        }
+        
+        .img-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .img-container img {
+            width: 100%;
+        }
+        
+        .lightbox img {
+            width: 100%;
+        }
+        
+        .lightbox .modal-content {
+            overflow: hidden;
+        }
+        
+        .lightbox .modal-body {
+            padding: 0;
+        }
+        
+        @media screen and (min-width: 991px) {
+            .lightbox .modal-dialog {
+                width: 960px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .btn,
+            .btn-morphing {
+                margin-bottom: 10px;
+            }
+            .parallax .motto {
+                top: 170px;
+                margin-top: 0;
+                font-size: 60px;
+                width: 270px;
+            }
+        }
+        /*       Loading dots  */
+        /*      transitions */
+        
+        .presentation .front,
+        .presentation .front:after,
+        .presentation .front .btn,
+        .logo-container .logo,
+        .logo-container .brand {
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+        
+        #images h4 {
+            margin-bottom: 30px;
+        }
+        
+        #javascriptComponents {
+            padding-bottom: 0;
+        }
+        
+        #javascriptComponents .btn-raised {
+            margin: 10px 5px;
+        }
+        /*      layer animation          */
+        
+        .layers-container {
+            display: block;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        .layers-container img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+        
+        .section-black {
+            background-color: #333;
+        }
+        
+        .animate {
+            transition: 1.5s ease-in-out;
+            -moz-transition: 1.5s ease-in-out;
+            -webkit-transition: 1.5s ease-in-out;
+        }
+        
+        .navbar-default.navbar-small .logo-container .brand {
+            color: #333333;
+        }
+        
+        .navbar-transparent.navbar-small .logo-container .brand {
+            color: #FFFFFF;
+        }
+        
+        .navbar-default.navbar-small .logo-container .brand {
+            color: #333333;
+        }
+        
+        .sharing-area {
+            margin-top: 80px;
+        }
+        
+        .sharing-area .btn {
+            margin: 15px 4px 0;
+            color: #FFFFFF;
+        }
+        
+        .sharing-area .btn i {
+            font-size: 18px;
+            position: relative;
+            top: 2px;
+            margin-right: 5px;
+        }
+        
+        .sharing-area .btn-twitter {
+            background-color: #55acee;
+        }
+        
+        .sharing-area .btn-facebook {
+            background-color: #3b5998;
+        }
+        
+        .sharing-area .btn-google-plus {
+            background-color: #dd4b39;
+        }
+        
+        .sharing-area .btn-github {
+            background-color: #333333;
+        }
+        
+        .section-thin,
+        .section-notifications {
+            padding: 0;
+        }
+        
+        .section-navbars {
+            padding-top: 0;
+        }
+        
+        #navbar .navbar {
+            border-radius: 0;
+        }
+        
+        .section-tabs {
+            background: #EEEEEE;
+        }
+        
+        .section-pagination {
+            padding-bottom: 0;
+        }
+        
+        .section-download h4 {
+            margin-bottom: 50px;
+        }
+        
+        .section-examples a {
+            text-decoration: none;
+        }
+        
+        .section-examples h5 {
+            margin-top: 30px;
+        }
+        
+        .components-page .wrapper>.header,
+        .tutorial-page .wrapper>.header {
+            height: 400px;
+            padding-top: 100px;
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .components-page .title,
+        .tutorial-page .title {
+            color: #FFFFFF;
+        }
+        
+        .main {
+            background: #FFFFFF;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .main-raised {
+            margin: -60px 30px 0px;
+            border-radius: 6px;
+            box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-filter {
+            position: relative;
+        }
+        
+        .header-filter:before,
+        .header-filter:after {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            left: 0;
+            top: 0;
+            content: "";
+        }
+        
+        .header-filter::before {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .header-filter .container {
+            z-index: 2;
+            position: relative;
+        }
+        
+        .section {
+            padding: 70px 0;
+            background-position: center center;
+            background-size: cover;
+        }
+        
+        .navbar {
+            border: 0;
+            border-radius: 3px;
+            box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            -webkit-transition: all 150ms ease 0s;
+            -moz-transition: all 150ms ease 0s;
+            -o-transition: all 150ms ease 0s;
+            -ms-transition: all 150ms ease 0s;
+            transition: all 150ms ease 0s;
+        }
+        
+        .navbar .navbar-brand {
+            position: relative;
+            height: 50px;
+            line-height: 30px;
+            color: inherit;
+            padding: 10px 15px;
+        }
+        
+        .navbar .navbar-brand:hover,
+        .navbar .navbar-brand:focus {
+            color: inherit;
+            background-color: transparent;
+        }
+        
+        .navbar.navbar-transparent {
+            background-color: transparent;
+            box-shadow: none;
+            color: #fff;
+            padding-top: 25px;
+        }
+        
+        .navbar-fixed-top {
+            border-radius: 0;
+        }
+        
+        .navbar .navbar-nav>li>a .material-icons,
+        .navbar .navbar-nav>li>a .fa {
+            font-size: 20px;
+            max-width: 20px;
+        }
+        
+        .navbar .navbar-nav>li>a:hover,
+        .navbar .navbar-nav>li>a:focus {
+            color: inherit;
+            background-color: transparent;
+        }
+        
+        .navbar .navbar-nav>li>a:not(.btn) .material-icons {
+            margin-top: -3px;
+            top: 0px;
+            position: relative;
+            margin-right: 3px;
+        }
+        
+        .navbar,
+        .navbar.navbar-default {
+            background-color: #9c27b0;
+            color: #FFFFFF;
+        }
+        
+        .navbar .navbar-nav>li>a {
+            color: inherit;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-weight: 400;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 1199px) {
+            .navbar .navbar-brand {
+                height: 50px;
+                padding: 10px 15px;
+            }
+            .navbar .navbar-nav>li>a {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        
+        footer {
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            font-weight: bold;
+        }
+        
+        footer.footer-documentation {
+            margin-top: 0;
+            bottom: 0;
+            text-shadow: none;
+            color: inherit;
+        }
+        
+        footer.footer-documentation li a {
+            color: inherit;
+        }
+        
+        footer.footer-documentation li a:hover,
+        footer.footer-documentation li a:focus {
+            color: #89229b;
+        }
+        
+        footer ul {
+            margin-bottom: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        footer ul li {
+            display: inline-block;
+        }
+        
+        footer ul li a {
+            color: inherit;
+            padding: 15px;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            text-decoration: none;
+            position: relative;
+            display: block;
+        }
+        
+        footer ul li a:hover {
+            text-decoration: none;
+        }
+        
+        footer ul li .btn {
+            margin: 0;
+        }
+        
+        footer ul.links-horizontal:first-child a {
+            padding-left: 0;
+        }
+        
+        footer ul.links-horizontal:last-child a {
+            padding-right: 0;
+        }
+        
+        footer ul.links-vertical li {
+            display: block;
+        }
+        
+        footer ul.links-vertical li a {
+            padding: 5px 0;
+        }
+        
+        footer .social-buttons a,
+        footer .social-buttons .btn {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        footer .footer-brand {
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+            margin-left: -15px;
+        }
+        
+        footer .footer-brand:hover,
+        footer .footer-brand:focus {
+            color: #3C4858;
+        }
+        
+        footer .copyright {
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        footer .copyright .material-icons {
+            font-size: 18px;
+            position: relative;
+            top: 3px;
+        }
+        
+        footer .pull-center {
+            display: inline-block;
+            float: none;
+        }
+        
+        @media (max-width: 768px) {
+            .footer .copyright {
+                display: inline-block;
+                text-align: center;
+                padding: 10px 0;
+                float: none !important;
+                width: 100%;
+            }
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.5rem + 2px);
+        }
+        
+        .navbar-nav .nav-link {
+            font-size: 0.9rem;
+        }
+        
+        .vl {
+            border-left: 1px solid #e8e8e8;
+            height: 30px;
+        }
+        
+        .sidebar-brand-icon {
+            display: flex;
+            width: 70%;
+            height: auto;
+        }
+        
+        [dir] .sidebar-light .open>.sidebar-menu-button {
+            background: #00a650;
+        }
+        
+        .sidebar-light .open>.sidebar-menu-button,
+        .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+            color: #ffffff;
+        }
+        
+        .sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+            color: #ffffff;
+        }
+        
+        .leftMenu {
+            margin: 5px 10px;
+            border-radius: 6px !important;
+            background: #a39161 !important;
+            color: white;
+            border-color: #a39161 !important;
+            padding: 5px 0px !important;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .sidebar-heading {
+            line-height: 1.5rem;
+            font-size: .775rem;
+        }
+        
+        .sidebar-heading {
+            font-weight: 600;
+            font-family: Arial, sans-serif !important;
+            text-transform: uppercase;
+            letter-spacing: 0px !important;
+        }
+        
+        [dir] .card-header {
+            padding: 0.3rem 1rem;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
+        
+        .activemenu {
+            background: #00a650 !important;
+            color: white !important;
+        }
+        
+        .form-label {
+            color: #272c33;
+            text-transform: capitalize;
+            font-size: .8125rem;
+            font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0px;
+        }
+        
+        label.form-label {
+            margin-bottom: 0rem;
+            margin-top: 4px;
+        }
+        
+        .custom-control.custom-checkbox {
+            width: auto;
+            display: inline-table;
+        }
+        
+        [dir] .custom-file-label:after {
+            padding: .5rem .75rem;
+            background-color: #00a650;
+        }
+        
+        div#app-settings {
+            display: none;
+        }
+        
+        .table thead th {
+            color: #272c33;
+            text-transform: capitalize;
+            font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0px;
+        }
+        
+        [dir=ltr] .button-list>.btn,
+        [dir=ltr] .button-list>.btn-group {
+            margin-left: 0rem;
+        }
+        
+        [dir] .button-list>.btn,
+        [dir] .button-list>.btn-group {
+            margin-bottom: 0rem;
+        }
+        
+        .Tablebtn {
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .2rem .5rem !important;
+            border-radius: .25rem;
+        }
+        
+        .modal-backdrop.show {
+            opacity: 1;
+            display: none;
+        }
+        
+        .reviewForm {
+            margin-left: 20px;
+            font-size: initial;
+        }
+        
+        .retable {
+            border: 1px solid #c3c4c5;
+            padding: 4px 0px;
+        }
+        
+        li.sidebar-menu-item.open {
+            background: #f5f7fa;
+        }
+        
+        .tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before,
+        .tooltip.bs-tooltip-top .arrow::before {
+            margin-left: -3px;
+            content: "";
+            border-width: 5px 5px 0;
+            border-top-color: #fb6b5b;
+        }
+        
+        .tooltip-inner {
+            max-width: 200px;
+            color: #FFF;
+            padding: 10px;
+            text-align: center;
+            background-color: #fb6b5b !important;
+            border-radius: .25rem;
+            font-size: 10px;
+        }
+        
+        .form-label {
+            color: #949799 !important;
+        }
+        
+        .sw-theme-arrows>.nav .nav-link.active {
+            color: #ffffff;
+            border-color: #d9534f;
+            background: #d9534f;
+            cursor: pointer;
+        }
+        
+        .sw-theme-arrows>.nav .nav-link.active::after {
+            border-left-color: #d9534f;
+        }
+        
+        label.form-label {
+            margin-bottom: 0.3rem;
+            margin-top: 4px;
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 1rem + 2px);
+        }
+        
+        .sw-theme-dots>.nav .nav-link.active {
+            color: #d9534f !important;
+            cursor: pointer;
+        }
+        
+        .sw-theme-dots>.nav .nav-link.active::after {
+            background-color: #d9534f !important;
+        }
+        
+        .sw-theme-arrows .toolbar>.btn {
+            color: #ffffff;
+            background-color: #d9534f;
+            border: 1px solid #d9534f;
+            padding: .375rem .75rem;
+            border-radius: .25rem;
+            font-weight: 400;
+        }
+    </Style>
+
+    <script type="text/javascript">
+        var stepid = 1;
+
+
+        function nextstep() {
+
+            stepid = stepid + 1;
+            $("#innerstep" + stepid.toString()).show();
+
+
+            if (stepid == 2) {
+
+                $("#tabcontentdiv").height(610)
+            }
+
+            if (stepid == 3) {
+
+                $("#tabcontentdiv").height(810)
+            }
+
+        }
+
+        //$(document).ready( function() {
+
+
+
+        // });
+    </script>
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="index.html" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="assets/images/Logo.svg" width="32" alt="Huma">
+
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+
+                <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;" action="https://huma.demo.frontendmatter.com/index.html">
+
+                    <input type="text" class="form-control" placeholder="Search Everything ...">
+                    <button class="btn" type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+                </form>
+
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="#">English</a>
+                            <a class="dropdown-item" href="#">عربي</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="vl mr-16pt"></div>
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    <div class="nav-item mr-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                        </span>
+                                        <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                        </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                        </span>
+                                        <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                        </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                        </span>
+                                        <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                        </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vl mr-16pt" style="margin-top: 16px;"></div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+                            <img width="32" height="32" class="rounded-circle mr-8pt" src="assets/images/people/50/guy-3.jpg" alt="account" />
+                            <span class="flex d-flex flex-column mr-8pt">
+                                <span class="navbar-text-100">Laza Bogdan</span>
+                            <small class="navbar-text-50">Administrator</small>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="edit-account.html">Edit Account</a>
+
+                            <a class="dropdown-item" href="login.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <!-- Notifications dropdown -->
+                    <!-- // END Notifications dropdown -->
+                    <!-- Notifications dropdown -->
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+
+
+            </div>
+
+
+            <div class="container-fluid page__container">
+                <div class="page-section">
+                    <div class="card mb-lg-32pt">
+
+                        <div class="row" style="    display: contents;">
+                            <br />
+                            <p style="
+
+  margin: 0px auto;
+  text-align: left;
+  align-content: lef;
+  margin-left: 13px;
+
+">
+
+                                <select class="btn" id="theme_selector" style="border: 1px solid green;">
+                                    <option value="default">Style - Default</option>
+                                    <option value="arrows" selected>Style - Arrows</option>
+                                    <option value="dots">Style - Dots</option>
+                                    <option value="progress">Style - Progress</option>
+                                </select>
+
+
+
+                                <div style="display: none;">
+                                    <label>Animation:</label>
+                                    <select id="animation" style="border: 1px solid green;">
+                                        <option value="none">None</option>
+                                        <option value="fade">Fade</option>
+                                        <option value="slide-horizontal" selected>Slide Horizontal</option>
+                                        <option value="slide-vertical">Slide Vertical</option>
+                                        <option value="slide-swing">Slide Swing</option>
+                                    </select>
+
+                                    <label>External Buttons:</label>
+                                    <button class="btn btn-secondary" id="prev-btn" type="button">Go Previous</button>
+                                    <button class="btn btn-secondary" id="next-btn" type="button">Go Next</button>
+                                    <button class="btn btn-danger" id="reset-btn" type="button">Reset Wizard</button>
+                                </div>
+                            </p>
+                            <br />
+
+                            <div id="smartwizard">
+
+                                <ul class="nav">
+                               
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#step-1">
+                                            <strong>Step 1</strong> <br>Select a Child
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#step-2">
+                                            <strong>Step 2</strong> <br>Select Plan Template
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#step-3">
+                                            <strong>Step 3</strong> <br>Edit Checklist
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#step-4">
+                                            <strong>Step 4</strong> <br>Edit Plan and Reviewers
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="#step-5">
+                                            <strong>Step 5</strong> <br>Complete Initiation
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content" id="tabcontentdiv">
+                                    <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+
+
+                                        <div class="row">
+                                            <div class="col-lg-12 pr-lg-0">
+                                                <div class="container-fluid page__container page-section">
+
+                                                    <div class="row mb-32pt">
+                                                        <div class="col-lg-4">
+                                                            <div class="page-separator">
+                                                                <div class="page-separator__text">Select Basic Info</div>
+                                                            </div>
+                                                            <p class="card-subtitle text-70 mb-16pt mb-lg-0">
+                                                               Please select a basic info for creating a development plan  
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-lg-8 d-flex align-items-center">
+                                                            <div class="flex" style="max-width: 100%">
+                        
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6"><label class="form-label" for="exampleInputEmail1">Select Child Development Plan:</label>
+                                                                        
+                                                                            
+                                                                            <select id="custom-select2" class="form-control custom-select">
+                                                                                    <option selected="">Select Development Plan </option>
+                                                                                    <option value="1">Primary Health Care</option>
+                                                                                    <option value="2">Health Care</option>
+                                                                                    <option value="3">Educational Care Plan</option>
+                                                                                    
+                                                                                </select>
+
+                                                                        </div>
+                                                                        <div class="col-6"><label class="form-label" for="exampleInputEmail1">Age Group:</label>
+                                                                            <select id="custom-select2" class="form-control custom-select">
+                                                                                <option selected="">Select Age Group </option>
+                                                                                <option value="1">0-8</option>
+                                                                                <option value="2">8-16</option>
+                                                                                <option value="3">16-24</option>
+                                                                                <option value="3">24 and Above</option>
+                                                                                
+                                                                            </select>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    
+                                                                    <div class="flex" style="max-width: 100%">
+                    
+                                                                        <label class="form-label" for="subscribe">Active</label><br>
+                                                                        <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                                                                            <input checked="" type="checkbox" id="subscribe" class="custom-control-input">
+                                                                            <label class="custom-control-label" for="subscribe">Yes</label>
+                                                                        </div>
+                                                                        <label class="form-label mb-0" for="subscribe">Yes</label>
+                                
+                                                                    </div>
+                                                                </div>
+                                                               
+                        
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                        
+                        
+                        
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+                                        
+
+                                        <div class="row">
+                                            <div class="col-lg-12 pr-lg-0">
+                                                <div class="container-fluid page__container page-section">
+
+                                                    <div class="row mb-32pt">
+                                                        <div class="col-lg-4">
+                                                            <div class="page-separator">
+                                                                <div class="page-separator__text">Select Plan Template</div>
+                                                            </div>
+                                                            <p class="card-subtitle text-70 mb-16pt mb-lg-0">
+                                                               Please select a basic info for creating a development plan  
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-lg-8 d-flex align-items-center">
+                                                            <div class="flex" style="max-width: 100%">
+                        
+                                                                <div class="form-group">
+                                                                    <div class="row">
+                                                                        <div class="col-6"><label class="form-label" for="exampleInputEmail1">Select Age Group:</label>
+                                                                            <select id="custom-select2" class="form-control custom-select">
+                                                                                <option selected="">Select Age Group </option>
+                                                                                <option value="1">0-8</option>
+                                                                                <option value="2">8-16</option>
+                                                                                <option value="3">16-24</option>
+                                                                                <option value="3">24 and Above</option>
+                                                                                
+                                                                            </select>
+
+                                                                        </div>
+
+                                                                        <div class="col-6"><label class="form-label" for="exampleInputEmail1">Select Plan Tempalate :</label>
+                                                                        
+                                                                            
+                                                                            <select id="custom-select2" class="form-control custom-select">
+                                                                                    <option selected="">Select Development Plan </option>
+                                                                                    <option value="1">Primary Health Care</option>
+                                                                                    <option value="2">Health Care</option>
+                                                                                    <option value="3">Educational Care Plan</option>
+                                                                                    
+                                                                                </select>
+
+                                                                        </div>
+
+                                                                        <div class="col-6"><label class="form-label" for="exampleInputEmail1">Select DarZyed / Foster Family :</label>
+                                                                        
+                                                                            
+                                                                            <select id="custom-select2" class="form-control custom-select">
+                                                                                    <option selected="">Select  </option>
+                                                                                    <option value="1">Dar Zayed</option>
+                                                                                    <option value="2">Foster Family</option>                                                                                 
+                                                                                    
+                                                                                </select>
+
+                                                                        </div>
+
+                                                                       
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    
+                                                                    <div class="flex" style="max-width: 100%">
+                    
+                                                                        <label class="form-label" for="subscribe">Active</label><br>
+                                                                        <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                                                                            <input checked="" type="checkbox" id="subscribe" class="custom-control-input">
+                                                                            <label class="custom-control-label" for="subscribe">Yes</label>
+                                                                        </div>
+                                                                        <label class="form-label mb-0" for="subscribe">Yes</label>
+                                
+                                                                    </div>
+                                                                </div>
+                                                               
+                        
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                        
+                        
+                        
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                        </div>
+                                        
+                                       
+
+                                    </div>
+                                    <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+                                    
+                                        <div class="row" style="display: contents;">
+
+                                            <div class="row mb-32pt">
+                                                <div class="col-lg-4">
+                                                    <div class="page-separator">
+                                                        <div class="page-separator__text">Create Checklist</div>
+                                                    </div>
+                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">
+                                                       Check list is a part of Child development plan  
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-8 d-flex align-items-center">
+                                                    <div class="flex" style="max-width: 100%">
+                
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-12"><label class="form-label" for="exampleInputEmail1">Title:</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Title"></div>
+                                                               
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="form-group">
+                                                            
+                                                            <div class="flex" style="max-width: 100%">
+            
+                                                                <label class="form-label" for="subscribe">Active</label><br>
+                                                                <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                                                                    <input checked="" type="checkbox" id="subscribe" class="custom-control-input">
+                                                                    <label class="custom-control-label" for="subscribe">Yes</label>
+                                                                </div>
+                                                                <label class="form-label mb-0" for="subscribe">Yes</label>
+                        
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" style="float: right;" class="btn btn-primary">Add More</button>
+                
+                                                    </div>
+                                                </div>
+                                            </div>                                          
+
+                                            <div class=" col-md-12 col-sm-12">
+
+                                                <div class="card mb-lg-32pt">
+        
+                                                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
+        
+                                                        <table class="table mb-0 thead-border-top-0 table-nowrap">
+                                                            <thead>
+                                                                <tr>
+        
+        
+        
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Title</a>
+                                                                    </th>
+                                                                    
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
+                                                                    </th>
+        
+                                                                   
+        
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-from">Created</a>
+                                                                    </th>
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">By</a>
+                                                                    </th>
+                                                                    <th style="width: 150px;">
+        
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="list" id="leaves">
+                                                                <tr>
+        
+        
+                                                                    <td>
+                                                                        <small class="js-lists-values-policy text-50">Length is right</small>
+                                                                    </td>
+                                                                   
+                                                                    <td>
+                                                                        <div class="d-flex flex-column">
+                                                                            <small class="js-lists-values-status text-50 mb-4pt">Active</small>
+                                                                            <span class="indicator-line rounded bg-primary"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                  
+                                                                    <td>
+                                                                        <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                    </td>
+        
+        
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">
+                                                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+        
+        
+                                                                    <td>
+                                                                        <small class="js-lists-values-policy text-50">Weight is right</small>
+                                                                    </td>
+                                                                   
+                                                                    <td>
+                                                                        <div class="d-flex flex-column">
+                                                                            <small class="js-lists-values-status text-50 mb-4pt">Active</small>
+                                                                            <span class="indicator-line rounded bg-primary"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                  
+                                                                    <td>
+                                                                        <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                    </td>
+        
+        
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">
+                                                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+        
+        
+                                                                    <td>
+                                                                        <small class="js-lists-values-policy text-50">Appetite is good</small>
+                                                                    </td>
+                                                                   
+                                                                    <td>
+                                                                        <div class="d-flex flex-column">
+                                                                            <small class="js-lists-values-status text-50 mb-4pt">Active</small>
+                                                                            <span class="indicator-line rounded bg-primary"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                  
+                                                                    <td>
+                                                                        <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                    </td>
+        
+        
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">
+                                                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                               </tbody>
+                                                        </table>
+                                                    </div>
+        
+                                                    <div class="card-footer p-8pt">
+        
+                                                        <ul class="pagination justify-content-start pagination-xsm m-0">
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" href="#" aria-label="Previous">
+                                                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                                    <span>Prev</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="page-item dropdown">
+                                                                <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
+                                                                    <span>1</span>
+                                                                </a>
+                                                                <div class="dropdown-menu">
+                                                                    <a href="#" class="dropdown-item active">1</a>
+                                                                    <a href="#" class="dropdown-item">2</a>
+                                                                    <a href="#" class="dropdown-item">3</a>
+                                                                    <a href="#" class="dropdown-item">4</a>
+                                                                    <a href="#" class="dropdown-item">5</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Next">
+                                                                    <span>Next</span>
+                                                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+        
+                                                    </div>
+                                                    <!-- <div class="card-body bordet-top text-right">
+                      15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+                    </div> -->
+        
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                    
+                                       
+                                    </div>
+                                 
+                                    <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+                                        <div class="row" style="display: contents;">
+
+                                            <div class="row mb-32pt">
+                                                <div class="col-lg-4">
+                                                    <div class="page-separator">
+                                                        <div class="page-separator__text">Create Action Plan</div>
+                                                    </div>
+                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">
+                                                       Action Plan is a part of Child development plan  
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-8 d-flex align-items-center">
+                                                    <div class="flex" style="max-width: 100%">
+                
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">Select :</label>
+                                                                    <select id="custom-select2" class="form-control custom-select">
+                                                                        <option selected="">Select Category </option>
+                                                                        <option value="1">Category 1</option>
+                                                                        <option value="2">Category 2</option>
+                                                                        <option value="3">Category 3</option>
+                                                                        <option value="3">Other</option>
+                                                                        
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">New Category</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter New Category">
+                                                                </div>
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">Action Plan Title</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Title">
+                                                                </div>
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">Action Plan Description</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Description">
+                                                                </div>
+                                                              
+                                                            </div>
+                                                            
+                                                        </div>
+                                                       
+                                                       
+                
+                                                    </div>
+                                                </div>
+                                            </div>                                          
+
+                                            <div class="row mb-32pt">
+                                                <div class="col-lg-4">
+                                                    <div class="page-separator">
+                                                        <div class="page-separator__text">Create Review For Action</div>
+                                                    </div>
+                                                    <p class="card-subtitle text-70 mb-16pt mb-lg-0">
+                                                       
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-8 d-flex align-items-center">
+                                                    <div class="flex" style="max-width: 100%">
+                
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">Reviewer Name</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter New Category">
+                                                                </div>
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">SLA-(Days)</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter New Category">
+                                                                </div>
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">Select Responsible Department :</label>
+                                                                    <select id="custom-select2" class="form-control custom-select">
+                                                                        <option selected="">Select Department </option>
+                                                                        <option value="1">IT</option>
+                                                                        <option value="2">HR</option>
+                                                                        <option value="3">Communication</option>
+                                                                        
+                                                                        
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-6"><label class="form-label" for="exampleInputEmail1">Review Description</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Description">
+                                                                </div>
+                                                              
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="form-group">
+                                                            
+                                                            <div class="flex" style="max-width: 100%">
+            
+                                                                <label class="form-label" for="subscribe">Active</label><br>
+                                                                <div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+                                                                    <input checked="" type="checkbox" id="subscribe" class="custom-control-input">
+                                                                    <label class="custom-control-label" for="subscribe">Yes</label>
+                                                                </div>
+                                                                <label class="form-label mb-0" for="subscribe">Yes</label>
+                        
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" style="float: right;" class="btn btn-primary">Add More</button>
+                
+                                                    </div>
+                                                </div>
+                                            </div> 
+
+                                            <div class=" col-md-12 col-sm-12">
+
+                                                <div class="card mb-lg-32pt">
+        
+                                                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
+        
+                                                        <table class="table mb-0 thead-border-top-0 table-nowrap">
+                                                            <thead>
+                                                                <tr>
+        
+        
+        
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Title</a>
+                                                                    </th>
+                                                                    
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
+                                                                    </th>
+        
+                                                                   
+        
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-from">Created</a>
+                                                                    </th>
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">Reviewer</a>
+                                                                    </th>
+                                                                    <th style="width: 48px;">
+                                                                        <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">By</a>
+                                                                    </th>
+                                                                    <th style="width: 150px;">
+        
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="list" id="leaves">
+                                                                <tr>
+        
+        
+                                                                    <td>
+                                                                        <small class="js-lists-values-policy text-50">Length is right</small>
+                                                                    </td>
+                                                                   
+                                                                    <td>
+                                                                        <div class="d-flex flex-column">
+                                                                            <small class="js-lists-values-status text-50 mb-4pt">Active</small>
+                                                                            <span class="indicator-line rounded bg-primary"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                  
+                                                                    <td>
+                                                                        <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                    </td>
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Rahim Khowaja</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">rk@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">
+                                                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+        
+        
+                                                                    <td>
+                                                                        <small class="js-lists-values-policy text-50">Weight is right</small>
+                                                                    </td>
+                                                                   
+                                                                    <td>
+                                                                        <div class="d-flex flex-column">
+                                                                            <small class="js-lists-values-status text-50 mb-4pt">Active</small>
+                                                                            <span class="indicator-line rounded bg-primary"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                  
+                                                                    <td>
+                                                                        <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                    </td>
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Rahim Khowaja</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">rk@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">
+                                                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+        
+        
+                                                                    <td>
+                                                                        <small class="js-lists-values-policy text-50">Appetite is good</small>
+                                                                    </td>
+                                                                   
+                                                                    <td>
+                                                                        <div class="d-flex flex-column">
+                                                                            <small class="js-lists-values-status text-50 mb-4pt">Active</small>
+                                                                            <span class="indicator-line rounded bg-primary"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                  
+                                                                    <td>
+                                                                        <small class="js-lists-values-to text-50">19/02/2021</small>
+                                                                    </td>
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Rahim Khowaja</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">rk@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+        
+                                                                    <td class="pr-0">
+                                                                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                                                                            <div class="avatar avatar-32pt mr-8pt">
+        
+                                                                                <span class="avatar-title rounded-circle">TP</span>
+        
+                                                                            </div>
+                                                                            <div class="media-body">
+        
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <div class="flex d-flex flex-column">
+                                                                                        <p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p>
+                                                                                        <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
+                                                                                    </div>
+        
+                                                                                </div>
+        
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">
+                                                                        <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                               </tbody>
+                                                        </table>
+                                                    </div>
+        
+                                                    <div class="card-footer p-8pt">
+        
+                                                        <ul class="pagination justify-content-start pagination-xsm m-0">
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" href="#" aria-label="Previous">
+                                                                    <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                                    <span>Prev</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="page-item dropdown">
+                                                                <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
+                                                                    <span>1</span>
+                                                                </a>
+                                                                <div class="dropdown-menu">
+                                                                    <a href="#" class="dropdown-item active">1</a>
+                                                                    <a href="#" class="dropdown-item">2</a>
+                                                                    <a href="#" class="dropdown-item">3</a>
+                                                                    <a href="#" class="dropdown-item">4</a>
+                                                                    <a href="#" class="dropdown-item">5</a>
+                                                                </div>
+                                                            </li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Next">
+                                                                    <span>Next</span>
+                                                                    <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+        
+                                                    </div>
+                                                    <!-- <div class="card-body bordet-top text-right">
+                      15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+                    </div> -->
+        
+                                                </div>
+        
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="js-fix-footer footer border-top-2">
+                <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
+                    <p class="measure-lead-max text-muted mb-0 small">
+                        Copyht &copy; Abu Dhabi Government. All rights reserved
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- // END drawer-layout__content -->
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer" data-align="start" data-position="left" data-domfactory-upgraded="mdk-drawer" data-persistent="" data-opened="">
+            <div class="mdk-drawer__scrim"></div>
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-left ps ps--active-y" data-perfect-scrollbar="">
+
+                    <!-- Navbar toggler -->
+                    <a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right"
+                        data-boundary="window" data-original-title="" title="">
+                        <span class="material-icons">sync_alt</span>
+                    </a>
+
+                    <a href="index.html" class="sidebar-brand ">
+                        <img class="sidebar-brand-icon" src="assets/images/logo/accent-teal-100@2x.png" alt="Huma">
+
+                    </a>
+                    <div class="sidebar-heading">Overview</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button " href="index.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
+                                <span class="sidebar-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Application Catalog
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu">
+                                <li class="sidebar-menu-item active">
+                                    <a class="sidebar-menu-button" href="Childcare.html">
+                                        <span class="sidebar-menu-text">Child Care</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Correspondence</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Budget and Planning</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Facility Maintenance</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Mainpower</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Customer Support</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Performance Management</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+
+                            <div class="sidebar-heading mt-3">Child Care Management</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Childcare.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span> Dashboard
+
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Childprofile.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">people</span> Children's Profile
+
+                                    </a>
+
+                                </li>
+
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="MyTasks.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">message</span> My Tasks
+        
+                                    </a>
+        
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button open" data-toggle="collapse" href="#dashboards_menu2" aria-expanded="false">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  ">link</span> Register a child
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="" id="dashboards_menu2" style="">
+                                <li class="sidebar-menu-item activemenu">
+                                    <a class="sidebar-menu-button activemenu" href="Registrachild.html">
+                                        <span class="sidebar-menu-text activemenu">Register </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="Reviewachild.html">
+                                        <span class="sidebar-menu-text">Review</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="ApproveAChild.html">
+                                        <span class="sidebar-menu-text">Approve</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="ReceiveAChild.html">
+                                        <span class="sidebar-menu-text">Receive &amp; Allocate</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item" style="display: none;">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu3">
+                                <h6 style="font-size: 16px;" class=" mt-3 material-icons sidebar-menu-icon sidebar-menu-icon--left">Child care services</h6>
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu3">
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Registrachild.html">
+                                         Registering a Case
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Identity ManagementNew.html">
+                                        Identity Management
+                                    </a>
+
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                         Development Plan
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button collapsed" data-toggle="collapse" href="#dashboards_menu2" aria-expanded="false">
+                                     House Registration
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu sm-indent collapse" id="dashboards_menu2" style="">
+                                        <li class="sidebar-menu-item ">
+                                            <a class="sidebar-menu-button" href="House.html">
+                                                <span class="sidebar-menu-text">Register House</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="HouseAppliance.html">
+                                                <span class="sidebar-menu-text">Appliance Master</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="HouseService.html">
+                                                <span class="sidebar-menu-text">Service Providers</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                          Educational Management
+
+                                        </a>
+
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="components_menu">
+                                            Psychological Management
+
+                                        </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                           Talent Management
+
+                                        </a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="sidebar-heading">Bussiness Support services</div>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps__rail-y" style="top: 0px; height: 568px; right: 0px;">
+                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 520px;"></div>
+                    </div>
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps__rail-y" style="top: 0px; height: 625px; right: 0px;">
+                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 577px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer -->
+    </div>
+    <!-- // END drawer-layout -->
+    <!-- App Settings FAB -->
+    <div id="app-settings">
+        <app-settings layout-active="app" :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+    </div>
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Highlight.js -->
+    <script src="assets/js/hljs.js"></script>
+
+    <!-- Global Settings -->
+    <script src="assets/js/settings.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+
+
+    <!-- DateRangePicker -->
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/daterangepicker.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
+
+    <!-- Moment.js -->
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/moment-range.js"></script>
+
+    <!-- Chart.js -->
+    <script src="assets/vendor/Chart.min.js"></script>
+    <script src="assets/js/chartjs.js"></script>
+
+    <!-- Chart.js Samples -->
+    <script src="assets/js/page.analytics-dashboard.js"></script>
+
+    <!-- Vector Maps -->
+    <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+    <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="assets/js/vector-maps.js"></script>
+
+    <!-- List.js -->
+    <script src="assets/vendor/list.min.js"></script>
+    <script src="assets/js/list.js"></script>
+
+    <!-- Tables -->
+    <script src="assets/js/toggle-check-all.js"></script>
+    <script src="assets/js/check-selected-row.js"></script>
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+
+    <!-- App JS -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Highlight.js -->
+    <script src="assets/js/hljs.js"></script>
+
+    <!-- Touchspin -->
+    <script src="assets/vendor/jquery.bootstrap-touchspin.js"></script>
+    <script src="assets/js/touchspin.js"></script>
+
+    <!-- Flatpickr -->
+    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+
+    <!-- DateRangePicker -->
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/daterangepicker.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
+
+    <!-- jQuery Mask Plugin -->
+    <script src="assets/vendor/jquery.mask.min.js"></script>
+
+    <!-- Quill -->
+    <script src="assets/vendor/quill.min.js"></script>
+    <script src="assets/js/quill.js"></script>
+
+    <!-- Select2 -->
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <script src="assets/js/select2.js"></script>
+
+    <!-- App Settings (safe to remove) -->
+    <script src="assets/js/app-settings.js"></script>
+
+
+
+    <!-- Include SmartWizard JavaScript source -->
+    <script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            if ($('#subscribe5').attr('checked')) {
+                alert('ssss')
+            }
+            $('input[type="checkbox"]#subscribe5').click(function() {
+                if ($(this).prop("checked") == true) {
+                    $('#fatherPortion').css({
+                        "visibility": "visible"
+                    });
+                    $("#tabcontentdiv").addClass('myclasstwo');
+                } else if ($(this).prop("checked") == false) {
+                    $('#fatherPortion').css({
+                        "visibility": "hidden"
+                    });
+                    $("#tabcontentdiv").removeClass('myclasstwo');
+                }
+            });
+            if ($('#subscribe6').attr('checked')) {
+                alert('ssss')
+            }
+            $('input[type="checkbox"]#subscribe6').click(function() {
+                if ($(this).prop("checked") == true) {
+                    $('#relativePortion').css({
+                        "visibility": "visible"
+                    });
+                    $("#tabcontentdiv").addClass('myclasstwo');
+
+                } else if ($(this).prop("checked") == false) {
+                    $('#relativePortion').css({
+                        "visibility": "hidden"
+                    });
+                    $("#tabcontentdiv").removeClass('myclasstwo');
+                }
+            });
+
+
+
+            $("#custom-select6").on('change', function() {
+
+
+
+                if ($(this).val() == "3") {
+                    $("#othertext").css({
+                        "display": "block"
+                    });
+
+                    $("#tabcontentdiv").addClass('myclass');
+                    // $("#tabcontentdiv").removeClass('myclasstwo');
+                } else {
+                    $("#othertext").css({
+                        "display": "none"
+                    });
+                    $("#tabcontentdiv").removeClass('myclass');
+                    // $("#tabcontentdiv").addClass('myclasstwo');
+                }
+
+
+            });
+
+
+
+
+
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Finish')
+                .addClass('btn btn-info')
+                .on('click', function() {
+                    alert('Finish Clicked');
+                });
+            var btnCancel = $('<button></button>').text('Cancel')
+                .addClass('btn btn-danger')
+                .on('click', function() {
+                    $('#smartwizard').smartWizard("reset");
+                });
+
+            // Step show event
+            $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+                $("#prev-btn").removeClass('disabled');
+                $("#next-btn").removeClass('disabled');
+                if (stepPosition === 'first') {
+                    $("#prev-btn").addClass('disabled');
+                } else if (stepPosition === 'last') {
+                    $("#next-btn").addClass('disabled');
+                } else {
+                    $("#prev-btn").removeClass('disabled');
+                    $("#next-btn").removeClass('disabled');
+                }
+            });
+
+            // Smart Wizard
+            $('#smartwizard').smartWizard({
+                selected: 0,
+                theme: 'arrows', // default, arrows, dots, progress
+                // darkMode: true,
+                transition: {
+                    animation: 'slide-horizontal', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
+                },
+                toolbarSettings: {
+                    toolbarPosition: 'both', // both bottom
+                    //toolbarExtraButtons: [btnFinish, btnCancel]
+                }
+            });
+
+            // External Button Events
+            $("#reset-btn").on("click", function() {
+                // Reset wizard
+                $('#smartwizard').smartWizard("reset");
+                return true;
+            });
+
+            $("#prev-btn").on("click", function() {
+                // Navigate previous
+                $('#smartwizard').smartWizard("prev");
+                return true;
+            });
+
+            $("#next-btn").on("click", function() {
+                // Navigate next
+                $('#smartwizard').smartWizard("next");
+                return true;
+            });
+
+
+            // Demo Button Events
+            $("#got_to_step").on("change", function() {
+                // Go to step
+                var step_index = $(this).val() - 1;
+                $('#smartwizard').smartWizard("goToStep", step_index);
+                return true;
+            });
+
+
+            $("#dark_mode").on("click", function() {
+                // Change dark mode
+                var options = {
+                    darkMode: $(this).prop("checked")
+                };
+
+                $('#smartwizard').smartWizard("setOptions", options);
+                return true;
+            });
+
+            $("#is_justified").on("click", function() {
+                // Change Justify
+                var options = {
+                    justified: $(this).prop("checked")
+                };
+
+                $('#smartwizard').smartWizard("setOptions", options);
+                return true;
+            });
+
+            $("#animation").on("change", function() {
+                // Change theme
+                var options = {
+                    transition: {
+                        animation: $(this).val()
+                    },
+                };
+                $('#smartwizard').smartWizard("setOptions", options);
+                return true;
+            });
+
+            $("#theme_selector").on("change", function() {
+                // Change theme
+                var options = {
+                    theme: $(this).val()
+                };
+                $('#smartwizard').smartWizard("setOptions", options);
+                return true;
+            });
+
+        });
+    </script>
+</body>
+
+
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:44:15 GMT -->
+
+</html>
