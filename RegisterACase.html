@@ -1238,7 +1238,7 @@
                           <ul class="nav">
                               <li class="nav-item">
                                 <a class="nav-link" href="#step-1">
-                                  <strong>Step 1</strong> <br>Select a Child 
+                                  <strong>Step 1</strong> <br>Select a Child/Caregiver/Social Worker
                                 </a>
                               </li>
                               <li class="nav-item">
@@ -1268,14 +1268,19 @@
                                               <div class="card-header">
                                                   <form class="form-inline">
                                                       <label class="mr-sm-2 form-label" for="inlineFormFilterBy">Filter by:</label>
-                                                      <input type="text" class="form-control search mb-2 mr-sm-2 mb-sm-0" id="inlineFormFilterBy" placeholder="Search ...">
+                                                      
                       
-                                                      <label class="sr-only" for="inlineFormRole">Role</label>
+                                                      <label class="sr-only" for="inlineFormRole">Type</label>
                                                       <select id="inlineFormRole" class="custom-select mb-2 mr-sm-2 mb-sm-0">
-                                                          <option value="All Roles">All Roles</option>
+                                                          <option value="All Roles">Child</option>
+                                                          <option value="All Roles">Caregiver</option>
+                                                          <option value="All Roles">Social Worker</option>
                                                       </select>
+
+                                                      <input type="text" class="form-control search mb-2 mr-sm-2 mb-sm-0" id="inlineFormFilterBy" placeholder="Search ...">
+
                       
-                                                      <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                                                      <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0" style="display: none;">
                                                           <label class="form-label mb-0" for="active">Active</label>
                                                           <div class="custom-control custom-checkbox-toggle ml-8pt">
                                                               <input checked="" type="checkbox" id="active" class="custom-control-input">
@@ -1576,6 +1581,10 @@
                                       </div>
                                    
                                 </div>
+
+
+                               
+
                             
                                 </div>
                               <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
