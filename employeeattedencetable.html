@@ -145,27 +145,22 @@
                         <div class="form-group" style="margin-left: 20px;">
                             <label for="exampleInputEmail1">Select Employee</label>
                             <div class="btn-group" style="margin-right: 20px;">
-                              <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Select Employee
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                  <a class="dropdown-item" href="#">Employee 1</a>
-                                  <a class="dropdown-item" href="#">Employee 2</a>
-                                  <a class="dropdown-item" href="#">Employee 3</a>
-                                </div>
+                                <select class="btn" id="theme_selector" style="border: 1px solid green;">
+                                    <option value="">Employee 1</option>
+                                    <option value="">Employee 2</option>
+                                    <option value="" selected>Employee 3</option>
+                                    <option value="">Employee 4</option>
+                                  </select>
                             </div>  
                           </div>
                     <div class="form-group">
                         <label>Select Status</label>
                         <div class="btn-group" style="margin-right: 300px;">
-                          <button class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Select Status
-                          </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#">Present </a>
-                              <a class="dropdown-item" href="#">Absent </a>
-                              <a class="dropdown-item" href="#">Leave  </a>
-                            </div>
+                            <select class="btn" id="theme_selector" style="border: 1px solid green;">
+                                <option value="" selected>Present</option>
+                                <option value="">Absent</option>
+                                <option value="" >Leave</option>
+                              </select>
                         </div>  
                       </div>
                     
@@ -179,203 +174,215 @@
                 <label for="">Time Out</label>
                 <input type="time" class="btn">
                 </div>
-                    <button type="submit" class="btn btn-primary" style="margin-bottom: 30px; margin-top: 20px;">Save</button>
+                    <button type="submit" class="btn btn-success" style="margin-bottom: 30px; margin-top: 20px;">Save</button>
                   </form>
 	<div class="container">
 	<div class="row">
 	<div class="col-md-12">
-	<table id="t1" class="table table-bordered table-hover table-striped">
-	
-	<thead>
-	<tr>
-	<th>Sr#</th>
-	<th>Employee Name</th>
-	<th>Status</th>
-	<th>Date</th>
-	<th>Time In</th>
-	<th>Time Out</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-	<td>1</td>
-	<td>Akber</td>
-	<td>Present</td>
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>	
-	<tr>
-	<td>2</td>
-	<td>Amir</td>
-	<td>Leave</td>
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>3</td>
-	<td>Anabia</td>
-	<td>Absent</td>
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>4</td>
-	<td>Ayaz</td>
-	<td>Present</td>
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>Leave</td>
-	<td>Bazal</td>
-	<td>Absent</td>
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>6</td>
-	<td>Bakhtawar</td>
-	<td>Present</td>
+        <table class="table mb-0 thead-border-top-0 table-nowrap" id="t1">
+            <thead>
+                <tr>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>	
-	</tr>
-		<tr>
-	<td>7</td>
-	<td>Babar</td>
-	<td>Present</td>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>8</td>
-	<td>Burhan</td>
-	<td>Leave</td>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>	
-	</tr>
-		<tr>
-	<td>9</td>
-	<td>Batool</td>
-	<td>Absent</td>
+                    <th style="width: 48px;">
+                        <a href="javascript:void(0)" class="sort" style="color: green;" data-sort="js-lists-values-name">#</a>
+                    </th>
+                    
+                    <th style="width: 100px;">
+                        <a href="javascript:void(0)" class="sort" style="color: green;" data-sort="js-lists-values-status">Employee Name</a>
+                    </th>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>	
-	</tr>
-		<tr>
-	<td>10</td>
-	<td>Champak</td>
-	<td>Leave</td>
+                   
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>	
-	</tr>
-		<tr>
-	<td>11</td>
-	<td>Danish</td>
-	<td>Absent</td>
+                    <th style="width: 48px;">
+                        <a href="javascript:void(0)" class="sort" style="color: green;" data-sort="js-lists-values-from">Date</a>
+                    </th>
+                    <th style="width: 48px;">
+                        <a href="javascript:void(0)" class="sort" style="color: green;" data-sort="js-lists-values-to">Time In</a>
+                    </th>
+                    <th style="width: 48px;">
+                        <a href="javascript:void(0)" class="sort" style="color: green;" data-sort="js-lists-values-to">Time Out</a>
+                    </th>
+                    <th style="width: 48px;">
+                        <a href="javascript:void(0)" class="sort" style="color: green;" data-sort="js-lists-values-to">Status</a>
+                    </th>
+                    
+                </tr>
+            </thead>
+            <tbody class="list" id="leaves">
+                <tr>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>	
-	</tr>	
-	<tr>
-	<td>12</td>
-	<td>Dilshad</td>
-	<td>Leave</td>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>	
-	</tr>
-		<tr>
-	<td>13</td>
-	<td>Dania</td>
-	<td>Present</td>
+                    <td>
+                        <strong class="js-lists-values-policy text-50">1</strong>
+                    </td>
+                   
+                    <td>
+                        <div class="d-flex flex-column">
+                            <strong class="js-lists-values-status text-50 mb-4pt">Abdur Rafay</strong>
+                            <span class="indicator-line rounded bg-primary"></span>
+                        </div>
+                    </td>
+                  
+                    <td>
+                      <strong>19/02/2021</strong>
+                    </td>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>14</td>
-	<td>Daim</td>
-	<td>Present</td>
+                    <td class="pr-0">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>15</td>
-	<td>Dain</td>
-	<td>Absent</td>
+                            </div>
+                            <div class="media-body">
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>16</td>
-	<td>Duryab</td>
-	<td>Absent</td>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex d-flex flex-column">
+                                        <strong style="margin-left: 20px;">13:17</strong>
+                                    </div>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>17</td>
-	<td>Emad</td>
-	<td>Leave</td>
+                                </div>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>18</td>
-	<td>Eman</td>
-	<td>Present</td>
+                            </div>
+                        </div>
+                    </td>
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>	
-	</tr>
-		<tr>
-	<td>19</td>
-	<td>Eshal</td>
-	<td>Absent</td>
+                    <td class="pr-0">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		<tr>
-	<td>20</td>
-	<td>Fahim</td>
-	<td>Present</td>
+                            </div>
+                            <div class="media-body">
 
-    <td>29/11/2021</td>
-    <td>20:19</td>
-    <td>20:19</td>
-	</tr>
-		
-		
-	</tbody>
-	</table>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex d-flex flex-column">
+                                    <strong style="margin-left: 20px;">13:20</strong>    
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <strong>Present</strong>
+                    </td>
+                </tr>
+                <tr>
+
+
+                    <td>
+                        <strong class="js-lists-values-policy text-50">2</strong>
+                    </td>
+                   
+                    <td>
+                        <div class="d-flex flex-column">
+                            <strong class="js-lists-values-status text-50 mb-4pt">Abdullah</strong>
+                            <span class="indicator-line rounded bg-primary"></span>
+                        </div>
+                    </td>
+                  
+                    <td>
+                      <strong>19/02/2021</strong>
+                    </td>
+
+                    <td class="pr-0">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+
+                            </div>
+                            <div class="media-body">
+
+                                <div class="d-flex align-items-center">
+                                    <div class="flex d-flex flex-column">
+                                        <strong style="margin-left: 20px;">13:17</strong>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+
+                    <td class="pr-0">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+
+                            </div>
+                            <div class="media-body">
+
+                                <div class="d-flex align-items-center">
+                                    <div class="flex d-flex flex-column">
+                                    <strong style="margin-left: 20px;">13:20</strong>    
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <strong>Present</strong>
+                    </td>
+                </tr>
+                <tr>
+
+
+                    <td>
+                        <strong class="js-lists-values-policy text-50">3</strong>
+                    </td>
+                   
+                    <td>
+                        <div class="d-flex flex-column">
+                            <strong class="js-lists-values-status text-50 mb-4pt">Ghani</strong>
+                            <span class="indicator-line rounded bg-primary"></span>
+                        </div>
+                    </td>
+                  
+                    <td>
+                      <strong>19/02/2021</strong>
+                    </td>
+
+                    <td class="pr-0">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+
+                            </div>
+                            <div class="media-body">
+
+                                <div class="d-flex align-items-center">
+                                    <div class="flex d-flex flex-column">
+                                        <strong style="margin-left: 20px;">13:17</strong>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+
+                    <td class="pr-0">
+                        <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
+                            <div class="avatar avatar-32pt mr-8pt">
+
+                            </div>
+                            <div class="media-body">
+
+                                <div class="d-flex align-items-center">
+                                    <div class="flex d-flex flex-column">
+                                    <strong style="margin-left: 20px;">13:20</strong>    
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <strong>Present</strong>
+                    </td>
+                </tr></tbody>
+        </table>
 	</div>
 	</div>
 	</div>
