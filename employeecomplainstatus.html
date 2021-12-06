@@ -1158,388 +1158,9 @@
                     <div class="card mb-lg-32pt">
 
                         <div class="row" style="    display: contents;">
-                          <br />
-                          <p style="
-                          
-                          margin: 0px auto;
-                          text-align: left;
-                          align-content: lef;
-                          margin-left: 13px;
-                        
-                        ">
-                           
-                            <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                              <option value="default">Style - Default</option>
-                              <option value="arrows" selected>Style - Arrows</option>
-                              <option value="dots">Style - Dots</option>
-                              <option value="progress">Style - Progress</option>
-                            </select>
-                        
-                            
-                        
-                            <div style="display: none;">
-                            <label>Animation:</label>
-                            <select id="animation" style="border: 1px solid green;">
-                                  <option value="none">None</option>
-                                  <option value="fade">Fade</option>
-                                  <option value="slide-horizontal" selected>Slide Horizontal</option>
-                                  <option value="slide-vertical">Slide Vertical</option>
-                                  <option value="slide-swing">Slide Swing</option>
-                            </select>
-                        
-                            <label>External Buttons:</label>
-                            <button class="btn btn-secondary" id="prev-btn" type="button">Go Previous</button>
-                            <button class="btn btn-secondary" id="next-btn" type="button">Go Next</button>
-                            <button class="btn btn-danger" id="reset-btn" type="button">Reset Wizard</button>
-                        </div>
-                          </p>
-                          <br />
-                        
                           <div id="smartwizard">
-                        
-                            <ul class="nav">
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#step-1">
-                                    <strong>Step 1</strong> <br>Select Employee
-                                  </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#step-2">
-                                      <strong>Step 2</strong> <br>Evaluate
-                                    </a>
-                                  </li>
-
-
-                            </ul>
-                        
-                            <div class="tab-content">
-                                <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
-                                    <div class="page-separator">
-                                        <div class="page-separator__text">Select an Employee</div>
-                                    </div>
-                              
-                                    <div class="row" style="display: contents;">
-                                        <div class="card mb-lg-32pt">
-                        
-                                            <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-                        
-                                                <div class="card-header">
-                                                    <form class="form-inline">
-                                                        <label class="mr-sm-2 form-label" for="inlineFormFilterBy">Filter by:</label>
-                                                        
-                        
-                                                       
-  
-                                                        <input type="text" class="form-control search mb-2 mr-sm-2 mb-sm-0" id="inlineFormFilterBy" placeholder="Search ...">
-  
-                        
-                                                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0" style="display: none;">
-                                                            <label class="form-label mb-0" for="active">Active</label>
-                                                            <div class="custom-control custom-checkbox-toggle ml-8pt">
-                                                                <input checked="" type="checkbox" id="active" class="custom-control-input">
-                                                                <label class="custom-control-label" for="active">Active</label>
-                                                            </div>
-                                                        </div>
-                        
-                                 
-                                                    </form>
-                                                </div>
-                        
-                                                <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                                    <thead>
-                                                        <tr>
-                        
-                                                            <th style="width: 18px;" class="pr-0">
-                                                                <div class="custom-control custom-checkbox">
-                                                                
-                                                                    <label class="custom-control-label" for="customCheckAllstaff"><span class="text-hide">Toggle all</span></label>
-                                                                </div>
-                                                            </th>
-                        
-                                                            <th>
-                                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employee-name">Employee</a>
-                                                            </th>
-                        
-                                                            <th style="width: 150px;">
-                                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-employer-name">Grade Level</a>
-                                                            </th>
-                        
-                                                            <th class="text-center" style="width: 48px;">
-                                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-projects">Gender</a>
-                                                            </th>
-                        
-                                                            <th style="width: 37px;">Status</th>
-                        
-                                                            <th style="width: 120px;">
-                                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-activity">Source</a>
-                                                            </th>
-                                                            <th style="width: 51px;">
-                                                                <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-earnings">Date Of Birth</a>
-                                                            </th>
-                                                            <th style="width: 24px;" class="pl-0"></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody class="list" id="staff">
-                                                     
-                                                        <tr class="">
-                        
-                                                            <td class="pr-0">
-                                                            
-                                                                <div class="custom-control custom-radio">
-                                                                    <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input" checked="">
-                                                                    <label for="radioStacked4" class="custom-control-label"></label>
-                                                                </div>
-                                                         
-                                                            
-                                                            </td>
-                        
-                                                            <td>
-                        
-                                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                    <div class="avatar avatar-32pt mr-8pt">
-                        
-                                                                        <span class="avatar-title rounded-circle">US</span>
-                        
-                                                                    </div>
-                                                                    <div class="media-body">
-                        
-                                                                        <div class="d-flex flex-column">
-                                                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Ubaid Saleem</strong></p>
-                                                                            <small class="js-lists-values-employee-email text-50"></small>
-                                                                        </div>
-                        
-                                                                    </div>
-                                                                </div>
-                        
-                                                            </td>
-                        
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                   
-                                                                    <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
-                                                                </div>
-                                                            </td>
-                        
-                                                            <td class="text-center js-lists-values-projects small">Male</td>
-                        
-                                                            <td>
-                        
-                                                                <a href="#" class="">Permanant</a>
-                        
-                                                            </td>
-                        
-                                                            <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
-                                                            <td class="js-lists-values-earnings small">12 May 1984</td>
-                                                            <td class="text-right pl-0">
-                                                                <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="">
-                        
-                                                            <td class="pr-0">
-                                                               
-                                                                <div class="custom-control custom-radio">
-                                                                    <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
-                                                                    <label for="radioStacked3" class="custom-control-label"></label>
-                                                                </div>
-                                                                
-                                                            </td>
-                        
-                                                            <td>
-                        
-                                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                    <div class="avatar avatar-32pt mr-8pt">
-                        
-                                                                        <img src="assets/images/people/110/guy-2.jpg" alt="Avatar" class="avatar-img rounded-circle">
-                        
-                                                                    </div>
-                                                                    <div class="media-body">
-                        
-                                                                        <div class="d-flex flex-column">
-                                                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Muhammad Azlal Ahmed Khan</strong></p>
-                                                                            <small class="js-lists-values-employee-email text-50"></small>
-                                                                        </div>
-                        
-                                                                    </div>
-                                                                </div>
-                        
-                                                            </td>
-                        
-                                                        </td>
-                        
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                               
-                                                                <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
-                                                            </div>
-                                                        </td>
-                        
-                                                        <td class="text-center js-lists-values-projects small">Male</td>
-                        
-                                                        <td>
-                        
-                                                            <a href="#" class="">Permanant</a>
-                        
-                                                        </td>
-                        
-                                                        <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
-                                                        <td class="js-lists-values-earnings small">12 May 1984</td>
-                                                            <td class="text-right pl-0">
-                                                                <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="">
-                        
-                                                            <td class="pr-0">
-                                                            
-                                                                <div class="custom-control custom-radio">
-                                                                    <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input" checked="">
-                                                                    <label for="radioStacked2" class="custom-control-label"></label>
-                                                                </div>
-                                                         
-                                                            
-                                                            </td>
-                        
-                                                            <td>
-                        
-                                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                    <div class="avatar avatar-32pt mr-8pt">
-                        
-                                                                        <span class="avatar-title rounded-circle">US</span>
-                        
-                                                                    </div>
-                                                                    <div class="media-body">
-                        
-                                                                        <div class="d-flex flex-column">
-                                                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Ubaid Saleem</strong></p>
-                                                                            <small class="js-lists-values-employee-email text-50"></small>
-                                                                        </div>
-                        
-                                                                    </div>
-                                                                </div>
-                        
-                                                            </td>
-                        
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                   
-                                                                    <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
-                                                                </div>
-                                                            </td>
-                        
-                                                            <td class="text-center js-lists-values-projects small">Male</td>
-                        
-                                                            <td>
-                        
-                                                                <a href="#" class="">Permanant</a>
-                        
-                                                            </td>
-                        
-                                                            <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
-                                                            <td class="js-lists-values-earnings small">12 May 1984</td>
-                                                            <td class="text-right pl-0">
-                                                                <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="">
-                        
-                                                            <td class="pr-0">
-                                                               
-                                                                <div class="custom-control custom-radio">
-                                                                    <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input">
-                                                                    <label for="radioStacked1" class="custom-control-label"></label>
-                                                                </div>
-                                                                
-                                                            </td>
-                        
-                                                            <td>
-                        
-                                                                <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                    <div class="avatar avatar-32pt mr-8pt">
-                        
-                                                                        <img src="assets/images/people/110/guy-2.jpg" alt="Avatar" class="avatar-img rounded-circle">
-                        
-                                                                    </div>
-                                                                    <div class="media-body">
-                        
-                                                                        <div class="d-flex flex-column">
-                                                                            <p class="mb-0"><strong class="js-lists-values-employee-name">Muhammad Azlal Ahmed Khan</strong></p>
-                                                                            <small class="js-lists-values-employee-email text-50"></small>
-                                                                        </div>
-                        
-                                                                    </div>
-                                                                </div>
-                        
-                                                            </td>
-                        
-                                                        </td>
-                        
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                               
-                                                                <a href="#" class="text-70"><span class="js-lists-values-employer-name">Intermediate</span></a>
-                                                            </div>
-                                                        </td>
-                        
-                                                        <td class="text-center js-lists-values-projects small">Male</td>
-                        
-                                                        <td>
-                        
-                                                            <a href="#" class="">Permanant</a>
-                        
-                                                        </td>
-                        
-                                                        <td class="text-50 js-lists-values-activity small">Abu Dhabi Police</td>
-                                                        <td class="js-lists-values-earnings small">12 May 1984</td>
-                                                            <td class="text-right pl-0">
-                                                                <a href="#" class="text-50"><i class="material-icons">more_vert</i></a>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                        
-                                            <div class="card-footer p-8pt">
-                        
-                                                <ul class="pagination justify-content-start pagination-xsm m-0">
-                                                    <li class="page-item disabled">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true" class="material-icons">chevron_left</span>
-                                                            <span>Prev</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item dropdown">
-                                                        <a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page">
-                                                            <span>1</span>
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <a href="#" class="dropdown-item active">1</a>
-                                                            <a href="#" class="dropdown-item">2</a>
-                                                            <a href="#" class="dropdown-item">3</a>
-                                                            <a href="#" class="dropdown-item">4</a>
-                                                            <a href="#" class="dropdown-item">5</a>
-                                                        </div>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span>Next</span>
-                                                            <span aria-hidden="true" class="material-icons">chevron_right</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                        
-                                            </div>
-                                           
-                        
-                                        </div>
-                                     
-                                  </div>
-  
-                              
-                                  </div>
-                                  <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-                                    <h3>Complain</h3>
+                                  <div class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+                                    <h3 style="margin-top: 10px; margin-left: 10px;">Complain Status</h3>
 
                                     <div class="form-group row align-items-center mb-0" id="innerstep2">
 
@@ -1550,62 +1171,55 @@
                                                 <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
 
                                                     <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                                    
-                                                        <tbody class="list" id="leaves">
+                                                        <thead>
                                                             <tr>
-
-
-                                                                <td><strong> Date : </strong><input type="date" class="btn">
-                                                                </td>
-
-                                                                
+                                                              <th scope="col">Complain Type</th>
+                                                              <th scope="col">Offence Type</th>
+                                                              <th scope="col">Days</th>
+                                                              <th scope="col">Status</th>
+                                                              <th scope="col">Current Phase</th>
+                                                              <th scope="col">Month</th>
+                                                              <th scope="col">Year</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody class="list" id="leaves">
+                                                              <tr></tr>
+                                                            <tr>
+                                                              <td>Official</td>
+                                                              <td>Violation of Company Policy</td>
+                                                              <td>2</td>
+                                                              <td>On Time</td>
+                                                              <td>Review</td>
+                                                              <td>12</td>
+                                                              <td>2021</td>
                                                             </tr>
                                                             <tr>
-
-
-                                                                <td><strong style="margin-right: 10px;">Types Of Complain</strong>
-                                                                    <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                        <option value="">Personal</option>
-                                                                        <option value="">Official</option>
-                                                                        <option value="">Other</option>
-                                                                      </select>
-                                                                </td>
-
-                                                                
-                                                            </tr>
-                                                            <tr>
-
-
-                                                                <td>
-                                                                    <strong style="margin-right: 12px;">Types Of Offences</strong>
-                                                                    <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                        <option value="">Violation of Company Policy</option>
-                                                                        <option value="">Sexual Harassment</option>
-                                                                        <option value="">Misuse of Company's Property</option>
-                                                                        <option value="">Race and Gender Discrimination</option>
-                                                                        <option value="">Drug Use in Work Place</option>
-                                                                        <option value="">Others</option>
-                                                                      </select></td>
-
-                                                                
-                                                            </tr>
-                                                            <tr>
-                                                                <td><strong style="margin-right: 76px;">Details:</strong>
-                                                                    <textarea name="" cols="30" rows="10"class="btn" id="theme_selector" style="border: 1px solid green;"></textarea>
-                                                               </td>
-                                                            </tr>
-                                                        </tbody>
+                                                                <td>Personal</td>
+                                                                <td>Violation of Company Policy</td>
+                                                                <td>5</td>
+                                                                <td>In Process</td>
+                                                                <td>Review</td>
+                                                                <td>12</td>
+                                                                <td>2021</td>
+                                                             </tr>
+                                                             <tr>
+                                                                <td>Other</td>
+                                                                <td>Violation of Company Policy</td>
+                                                                <td>18</td>
+                                                                <td>Not Started Yet</td>
+                                                                <td>Review</td>
+                                                                <td>12</td>
+                                                                <td>2021</td>
+                                                              </tr>
+                                                          </tbody>
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
 
-                                      
-                                      
-                                    </div>
                                     </div>
                                
-                            </div>
+                                </div>
                         </div>
                         
                               </div>
