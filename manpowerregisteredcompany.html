@@ -11,7 +11,10 @@
         <meta name="viewport"
               content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Dashboard</title>
-
+        <!-- Table Css start -->
+        <link rel="stylesheet" href="assets/DataTables/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="assets/DataTables/css/dataTables.bootstrap4.min.css ">
+        <!-- Table Css Ends -->
         <!-- Prevent the demo from appearing in search engines -->
         <meta name="robots"
               content="noindex">
@@ -56,6 +59,11 @@
         <link type="text/css"
               href="assets/vendor/jqvmap/jqvmap.min.css"
               rel="stylesheet">
+              <style>
+                  .hortable{
+                      overflow-x: auto;
+                }  
+              </style>
 <Style>
 .form-control {
     display: block;
@@ -306,210 +314,340 @@ div#app-settings {
 
                         <div class="row card-group-row mb-lg-8pt ">
                             <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #9ecbe8;">
+                                <div class="card card-group-row__card " style="background: green;">
                                     <div class="card-body flex-column">
                                         <div class="" style="    float: left;
                                         display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Active</h3></div>
+    margin: 0px; color: white;">Company 1</h3></div>
                                        
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">4,763</h3></div>
                                         
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #e8abaa;">
+                                <div class="card card-group-row__card" style="    background: green;">
                                     <div class="card-body flex-column">
                                         <div class="" style="    float: left;
                                         display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">InActive</h3></div>
+    margin: 0px; color: white;">Company 2</h3></div>
                                        
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">3,957</h3></div>
                                         
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #97e4ac;">
+                                <div class="card card-group-row__card" style="    background: green;">
                                     <div class="card-body flex-column">
                                         <div class="" style="    float: left;
                                         display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">New</h3></div>
+    margin: 0px; color: white;">Company 3</h3></div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 4</h3></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background:green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 5</h3></div>
                                        
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">70</h3></div>
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 6</h3></div>
+                                    
                                         
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #e3cca3;">
+                                <div class="card card-group-row__card" style="    background: green;">
                                     <div class="card-body flex-column">
                                         <div class="" style="    float: left;
                                         display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Report To Me</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">122</h3></div>
+    margin: 0px; color: white;">Company 7</h3></div>
+                                    
                                         
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 8</h3></div>
+                                    
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 9</h3></div>
+                                    
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 10</h3></div>
+                                    
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 11</h3></div>
+                                    
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card" style="    background: green;">
+                                    <div class="card-body flex-column">
+                                        <div class="" style="    float: left;
+                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
+    margin: 0px; color: white;">Company 12</h3></div>
+                                    
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
                           
-                        </div>
+                        </div>  
+
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 hortable">
+                                
+                            <table id="t1" class="table table-bordered table-hover table-striped scroll-bar">
+                            
+                            <thead>
+                            <tr>
+                            <th>Sr</th>
+                            <th>Tender Document</th>
+                            <th>RFP & Approval </th>
+                            <th>Company Name</th>
+                            <th>Company Address</th>
+                            <th>Company Phone</th>
+                            <th>Incharge Name</th>
+                            <th>Incharge Phone </th>
+                            <th>Contract Start</th>
+                            <th>Contract End</th>
+                            <th>Trade License</th>
+                            <th>Other Documents</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>1</td>
+                            <td>Company 1</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            </tr>	
+                            <tr>
+                            <td>2</td>
+                            <td>Company 2</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            </tr>
+                                <tr>
+                            <td>3</td>
+                            <td>Company 3</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            </tr>
+                                <tr>
+                            <td>4</td>
+                            <td>Company 4</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>	
+                            </tr>
+                                <tr>
+                            <td>5</td>
+                            <td>Company 5</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            </tr>
+                                <tr>
+                            <td>6</td>
+                            <td>Company 6</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>	
+                            </tr>
+                                <tr>
+                            <td>7</td>
+                            <td>Company 7</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            </tr>
+                                <tr>
+                            <td>8</td>
+                            <td>Company 8</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>
+                            <td>##</td>	
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Company 9</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                </tr>
+                                    <tr>
+                                <td>10</td>
+                                <td>Company 10</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>
+                                <td>##</td>	
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Company 11</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>
+                                    <td>##</td>	
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Company 12</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>
+                                        <td>##</td>	
+                                        </tr>
+                                    
+                            </tbody>
+                            </table>
+                            </div>
+                            </div>
+
+        
                     
 
 
 
-                        <div class="card mb-lg-32pt">
-
-                            <div class="table-responsive"
-                                 data-toggle="lists"
-                                 data-lists-sort-by="js-lists-values-employee-name"
-                                 data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
-                
-                                <div class="card-header">
-                                    <form class="form-inline">
-                                        <h3 style="margin-bottom: 0rem; display: inline;
-                                        width: auto;">Resourse</h3>
-                
-                                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-                                          
-                                            <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>View All</u></p>
-                                        </div>
-                
-                                    </form>
-                                </div>
-                
-                                <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                   <thead>
-                                    <th>Name</th>
-                                    <th>Joined</th>
-                                    <th>Job</th>
-                                    <th>Location</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                   </thead>
-                                    <tbody class="list"
-                                           id="staff">
-                
-                                           <tr>
-                                            <td>Rahim </td>
-                                            <td>   23-02-2021
-                                            </td>
-                                          
-                                        <td>Maid</td>
-                                        <td>Dubai villa 1</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                               
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rahim </td>
-                                            <td>   23-02-2021
-                                            </td>
-                                           
-                                        <td>Maid</td>
-                                        <td>Dubai villa 1</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #91dea8;">Aporoved</span> </td>
-                                
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rahim </td>
-                                            <td>   23-02-2021
-                                            </td>
-                                          
-                                        <td>Helper</td>
-                                        <td>Dubai villa 1</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
-                                   
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rahim </td>
-                                            <td>   23-02-2021
-                                            </td>
-                                           
-                                        <td>Helper</td>
-                                        <td>Dubai villa 1</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                               
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                
-                
-                                    </tbody>
-                                </table>
-                            </div>
-                
-                            <div class="card-footer p-8pt">
-                
-                                <ul class="pagination justify-content-start pagination-xsm m-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link"
-                                           href="#"
-                                           aria-label="Previous">
-                                            <span aria-hidden="true"
-                                                  class="material-icons">chevron_left</span>
-                                            <span>Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item dropdown">
-                                        <a class="page-link dropdown-toggle"
-                                           data-toggle="dropdown"
-                                           href="#"
-                                           aria-label="Page">
-                                            <span>1</span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a href="#"
-                                               class="dropdown-item active">1</a>
-                                            <a href="#"
-                                               class="dropdown-item">2</a>
-                                            <a href="#"
-                                               class="dropdown-item">3</a>
-                                            <a href="#"
-                                               class="dropdown-item">4</a>
-                                            <a href="#"
-                                               class="dropdown-item">5</a>
-                                        </div>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link"
-                                           href="#"
-                                           aria-label="Next">
-                                            <span>Next</span>
-                                            <span aria-hidden="true"
-                                                  class="material-icons">chevron_right</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                
-                            </div>
-                            <!-- <div class="card-body bordet-top text-right">
-                15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
-                </div> -->
-                
-                        </div>
                    
                 
 
@@ -922,6 +1060,13 @@ Highcharts.chart('Correspondence', {
 });
 
         </script>
+            <script src="assets/DataTables/js/jquery.dataTables.min.js"></script>
+            <script src="assets/DataTables/js/dataTables.bootstrap4.min.js"></script>
+            <script>            
+            $(document).ready(function(){
+                $("#t1").dataTable();
+            });
+            </script>
     </body>
 
 
