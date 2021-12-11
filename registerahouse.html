@@ -51,7 +51,13 @@
         <link type="text/css"
               href="assets/css/dark-mode.css"
               rel="stylesheet">
-
+            <!-- select -->
+            <link type="text/css"
+  href="assets/vendor/select2/select2.min.css"
+  rel="stylesheet">
+<link type="text/css"
+  href="assets/css/select2.css"
+  rel="stylesheet">
         <!-- Vector Maps -->
         <link type="text/css"
               href="assets/vendor/jqvmap/jqvmap.min.css"
@@ -300,162 +306,382 @@ div#app-settings {
 
                 <!-- // END Header -->
 
+
+
                 <div class="container-fluid page__container">
                     <div class="page-section">
                        
 
-                        <div class="row card-group-row mb-lg-8pt ">
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #9ecbe8;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Cases</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">230</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #e8abaa;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Houses</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">43</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #97e4ac;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Children</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">1,529</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #e3cca3;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Appliances</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">12,352</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                          
-                        </div>
 
                         <div class="card mb-lg-32pt">
-
+                            <div class="card-header">
+                                <form class="form-inline">
+                                    <h3 style="margin-bottom: 0rem; display: inline;
+                                    width: auto;">Register A House</h3>
+            
+                                    <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                                      
+                                        <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><a href="addhouse.html" class="btn btn-primary">Add House</a></p>
+                                    </div>
+            
+                                </form>
+                            </div>
+                            <div class="row" style="padding: 10px;">
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta1">Search By House Type</label>
+                                        <select id="selecta1"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta7">Search By Property Type</label>
+                                        <select id="selecta7"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta2">Search By House No:</label>
+                                        <select id="selecta2"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta3">Search By State name</label>
+                                        <select id="selecta3"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta4">Search By City name</label>
+                                        <select id="selecta4"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta5">Search By No: of Rooms</label>
+                                        <select id="selecta5"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta6">Search By Status</label>
+                                        <select id="selecta6"
+                                                data-toggle="select"
+                                                multiple
+                                                class="form-control">
+                                            <option>Test 1</option>
+                                            <option>Test 2</option>
+                                            <option>Test 3</option>
+                                            <option>Test 4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-3">
+            
+                                    <div class="form-group">
+                                        <label class="form-label"
+                                               for="selecta6" style="visibility: hidden; display: block;">Search By Date</label>
+                                               <button type="button" class="btn btn-accent" style="     background: #00a650;
+                                               border-color: #00a650;   width: 100%;">Search</button>
+                                       
+                                    </div>
+                                </div>
+                                </div>
                             <div class="table-responsive"
                                  data-toggle="lists"
                                  data-lists-sort-by="js-lists-values-employee-name"
                                  data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
                 
-                                <div class="card-header">
-                                    <form class="form-inline">
-                                        <h3 style="margin-bottom: 0rem; display: inline;
-                                        width: auto;">Special Requset For Finanical Support</h3>
-                
-                                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-                                          
-                                            <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>View All</u></p>
-                                        </div>
-                
-                                    </form>
-                                </div>
-                
+                               
+                             
+                                    
                                 <table class="table mb-0 thead-border-top-0 table-nowrap">
                                    <thead>
-                                       <th>Date</th>
-                                       <th>Title</th>
-                                       <th>ID</th>
-                                       <th>Type</th>
-                                       <th>Status</th>
-                                       <th>Created BY</th>
-                                       <th>Action</th>
+                                    <th>House Type</th>
+                                    <th>Property Type</th>
+                                    <th>House No:</th>
+                                    <th>Country</th>
+                                    <th>State</th>
+                                    <th>City</th>
+                                    <th>No: of Rooms</th>
+                                    <th>House Owner Name</th>
+                                    <th>House Owner No:</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                    </thead>
                                     <tbody class="list"
                                            id="staff">
                 
                                            <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
+                                            <td>####</td>
+                                            <td>####</td>
+                                          
                                         <td>34321</td>
-                                        <td>INbound</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
                                     <td>  <span class="badge badge-dark" style="padding: .25em 1em;
                                         text-align: center;
                                         border-radius: .25rem;
                                         font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Azlal </td>
-                                    <td><a href="#"><u>View</u></a> </td>
+                               
+                               <td><button class="btn btn-primary">Edit</button></td>
                                         </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
                                         <td>34321</td>
-                                        <td>INbound</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
                                     <td>  <span class="badge badge-dark" style="padding: .25em 1em;
                                         text-align: center;
                                         border-radius: .25rem;
-                                        font-size: 13px; background: #91dea8;">Aooroved</span> </td>
-                                    <td>Atif </td>
-                                    <td><a href="#"><u>View</u></a> </td>
+                                        font-size: 13px; background: #91dea8;">Aporoved</span> </td>
+                                
+                                    <td><button class="btn btn-primary">Edit</button></td>
                                         </tr>
                                         <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
+                                            <td>####</td>
+                                            <td>####</td>
+                                          
                                         <td>34321</td>
-                                        <td>INbound</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
                                     <td>  <span class="badge badge-dark" style="padding: .25em 1em;
                                         text-align: center;
                                         border-radius: .25rem;
                                         font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
-                                    <td>Noshad </td>
-                                    <td><a href="#"><u>View</u></a> </td>
+                                   
+                                   <td><button class="btn btn-primary">Edit</button></td>
                                         </tr>
                                         <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
+                                            <td>####</td>
+                                            <td>####</td>
+                                          
                                         <td>34321</td>
-                                        <td>INbound</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
                                     <td>  <span class="badge badge-dark" style="padding: .25em 1em;
                                         text-align: center;
                                         border-radius: .25rem;
                                         font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Rahim </td>
-                                    <td><a href="#"><u>View</u></a> </td>
+                               
+                               <td><button class="btn btn-primary">Edit</button></td>
+                                     </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #decb98;">Pending</span> </td>
+                                                            
+                                        <td><button class="btn btn-primary">Edit</button></td>
+                                        </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #91dea8;">Aporoved</span> </td>
+                                
+                                <td><button class="btn btn-primary">Edit</button></td>
+                                        </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
+                                   
+                                   <td><button class="btn btn-primary">Edit</button></td>
+                                        </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #decb98;">Pending</span> </td>
+                               
+                               <td><button class="btn btn-primary">Edit</button></td>
+                                        </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #decb98;">Pending</span> </td>
+                               
+                               <td><button class="btn btn-primary">Edit</button></td>
+                                        </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #91dea8;">Aporoved</span> </td>
+                                
+                                <td><button class="btn btn-primary">Edit</button></td>
+                                        </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
+                                   
+                                   <td><button class="btn btn-primary">Edit</button></td>
+                                        </tr>
+                                        <tr><td>####</td>
+                                            <td>####</td>
+                                          
+                                        <td>34321</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>UAE</td>
+                                        <td>6</td>
+                                        <td>Rafay</td>
+                                        <td>12898390</td>
+                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
+                                        text-align: center;
+                                        border-radius: .25rem;
+                                        font-size: 13px; background: #decb98;">Pending</span> </td>
+                               
+                               <td><button class="btn btn-primary">Edit</button></td>
                                         </tr>
                 
                 
@@ -512,154 +738,7 @@ div#app-settings {
                 </div> -->
                 
                         </div>
-                        <div class="card mb-lg-32pt">
-
-                            <div class="table-responsive"
-                                 data-toggle="lists"
-                                 data-lists-sort-by="js-lists-values-employee-name"
-                                 data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
-                
-                                <div class="card-header">
-                                    <form class="form-inline">
-                                        <h3 style="margin-bottom: 0rem; display: inline;
-                                        width: auto;">Special Requset For House Registration</h3>
-                
-                                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-                                          
-                                            <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>View All</u></p>
-                                        </div>
-                
-                                    </form>
-                                </div>
-                
-                                <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                   <thead>
-                                       <th>Date</th>
-                                       <th>Title</th>
-                                       <th>ID</th>
-                                       <th>Type</th>
-                                       <th>Status</th>
-                                       <th>Created BY</th>
-                                       <th>Action</th>
-                                   </thead>
-                                    <tbody class="list"
-                                           id="staff">
-                
-                                           <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Azlal </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #91dea8;">Aooroved</span> </td>
-                                    <td>Atif </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
-                                    <td>Noshad </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Rahim </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                
-                
-                                    </tbody>
-                                </table>
-                            </div>
-                
-                            <div class="card-footer p-8pt">
-                
-                                <ul class="pagination justify-content-start pagination-xsm m-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link"
-                                           href="#"
-                                           aria-label="Previous">
-                                            <span aria-hidden="true"
-                                                  class="material-icons">chevron_left</span>
-                                            <span>Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item dropdown">
-                                        <a class="page-link dropdown-toggle"
-                                           data-toggle="dropdown"
-                                           href="#"
-                                           aria-label="Page">
-                                            <span>1</span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a href="#"
-                                               class="dropdown-item active">1</a>
-                                            <a href="#"
-                                               class="dropdown-item">2</a>
-                                            <a href="#"
-                                               class="dropdown-item">3</a>
-                                            <a href="#"
-                                               class="dropdown-item">4</a>
-                                            <a href="#"
-                                               class="dropdown-item">5</a>
-                                        </div>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link"
-                                           href="#"
-                                           aria-label="Next">
-                                            <span>Next</span>
-                                            <span aria-hidden="true"
-                                                  class="material-icons">chevron_right</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                
-                            </div>
-                            <!-- <div class="card-body bordet-top text-right">
-                15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
-                </div> -->
-                
-                        </div>
+                       
                 
 
                        
@@ -1107,13 +1186,13 @@ div#app-settings {
                             <li class="sidebar-menu-item ">
                                 <a class="sidebar-menu-button "
                                    data-toggle="collapse"
-                                   href="#dashboards_menu9">
+                                   href="#dashboards_menu8">
                                     <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
                                     Register A House
                                     <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                 </a>
                                 <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menu9">
+                                    id="dashboards_menu8">
                                     <li class="sidebar-menu-item ">
                                         <a class="sidebar-menu-button"
                                            href=".html">
@@ -1134,7 +1213,7 @@ div#app-settings {
                                     </li>
                                     <li class="sidebar-menu-item ">
                                         <a class="sidebar-menu-button"
-                                           href="registerahouse.html">
+                                           href=".html">
                                             <span class="sidebar-menu-text">Register a House</span>
                                         </a>
                                     </li>
@@ -1259,10 +1338,16 @@ div#app-settings {
         <!-- List.js -->
         <script src="assets/vendor/list.min.js"></script>
         <script src="assets/js/list.js"></script>
-
+        <!-- select -->
+        <script src="assets/vendor/select2/select2.min.js"></script>
+        <script src="assets/js/select2.js"></script>
         <!-- Tables -->
         <script src="assets/js/toggle-check-all.js"></script>
         <script src="assets/js/check-selected-row.js"></script>
+        
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
