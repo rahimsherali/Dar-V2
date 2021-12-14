@@ -1205,14 +1205,10 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#step-2">
-                                            <strong>Step 2</strong> <br>Basic Info
+                                            <strong>Step 2</strong> <br>Review
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#step-3">
-                                            <strong>Step 3</strong> <br>Documents
-                                        </a>
-                                    </li>
+                                    
                                 </ul>
 
                                 <div class="tab-content" id="tabcontentdiv">
@@ -1237,12 +1233,8 @@
                 
                 
                                                                                 <td>
-                                                                                    <div>
-                                                                                    <strong style="margin-right:30px;"> Select Type : </strong>
-                                                                                    <input type="radio" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;"> DZ House </label>
-                                                                                    <input type="radio" class="btn" name="r1" ><label style="margin-left: 10px; margin-right: 5px;"> Independent House </label>
-                                                                                    <input type="radio" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;"> External House</label>
-                                                                                </div>
+                                                                                    <strong style="margin-right:58px;">Requested By :</strong>
+                                                                                    <strong style="border: 1px solid green;">Logged in User Name</strong>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
@@ -1250,50 +1242,32 @@
                 
                                                                                 <td>
                                                                                     <div>
-                                                                                    <strong style="margin-right:17px;"> Property Type : </strong>
-                                                                                    <input type="radio" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;"> Own </label>
-                                                                                    <input type="radio" class="btn" name="r1" ><label style="margin-left: 10px; margin-right: 5px;"> Rented </label>
+                                                                                    <strong style="margin-right:25px;"> ADHA Reference No:</strong>
+                                                                                    <input type="text" class="btn" style="border: 1px solid green;">
                                                                                 </div>
                                                                                 </td>
                                                                                </tr>
                                                                             <tr>   
                                                                             </tr>
                                                                             <tr>
-                                                                                <td><strong style="margin-right:40px;"> House No : </strong><input type="text" class="btn" placeholder="Cost" style="border: 1px solid green;">
+                                                                                <td><strong style="margin-right:10px;"> Request Submitted On: </strong>
+                                                                                    <input type="date" class="btn" style="border: 1px solid green;">
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td><strong style="margin-right: 57px;">Location</strong><input type="file" placeholder="Warranty Period(In Months)" class="btn"  style="border: 1px solid green;">
-                                                                                 </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td><strong style="margin-right: 12px;">Select Country :</strong>
-                                                                                    <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                                        <option value="" selected> Select Country</option>
-                                                                                        <option value="">Country 1</option>
-                                                                                        <option value="">Country 2</option>
-                                                                                        <option value="">Country 3</option>
-                                                                                      </select>
+                                                                                <td><strong style="margin-right: 77px;">Description</strong>
+                                                                                <textarea name="" id="" cols="20" rows="2" class="btn" style="border: 1px solid green;"></textarea>    
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td><strong style="margin-right: 28px;">Select State :</strong>
-                                                                                    <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                                        <option value="" selected> Select State</option>
-                                                                                        <option value="">State 1</option>
-                                                                                        <option value="">State 2</option>
-                                                                                        <option value="">State 3</option>
-                                                                                      </select>
+                                                                                <td><strong style="margin-right: 35px;">Upload Document:</strong>
+                                                                                    <input type="file" name="" id="" class="btn" style="border: 1px solid green;">
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
-                                                                                <td><strong style="margin-right: 36px;">Select City :</strong>
-                                                                                    <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                                        <option value="" selected> Select City</option>
-                                                                                        <option value="">City 1</option>
-                                                                                        <option value="">City 2</option>
-                                                                                        <option value="">City 3</option>
-                                                                                      </select>
+                                                                                <td>
+                                                                                    <button class="btn btn-primary">Save</button>
+                                                                                    <button class="btn btn-primary">Cancel</button>
                                                                                 </td>
                                                                             </tr>
                                                                         </tbody>
@@ -1316,125 +1290,10 @@
 
                                     </div>
                                     <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-                                        <div class="row" style="display: contents;">
-
-                                            <div class=" col-md-12 col-sm-12">
-    
-                                                <div class="card mb-lg-32pt">
-    
-                                                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
-    
-                                                        <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                                        
-                                                            <tbody class="list" id="leaves">
-                                                                <tr>
-    
-                                                                    <td><strong style="margin-right: 82px;">No Of Rooms :</strong>
-                                                                        <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                            <option value="" selected> Select No Of Rooms</option>
-                                                                            <option value=""> 1</option>
-                                                                            <option value=""> 2</option>
-                                                                            <option value=""> 3</option>
-                                                                          </select>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-    
-    
-                                                                    <td><strong style="margin-right: 100px;">No Of Bed :</strong>
-                                                                        <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                            <option value="" selected> Select No Of Bed</option>
-                                                                            <option value=""> 1</option>
-                                                                            <option value=""> 2</option>
-                                                                            <option value=""> 3</option>
-                                                                          </select>
-                                                                    </td>
-                                                                   </tr>
-                                                                <tr>   
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><strong style="margin-right:144px;"> Size</strong><input type="text" class="btn" placeholder="Size(Square Feet)" style="border: 1px solid green;">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><strong style="margin-right: 59px;">House Head Name</strong><input type="text" placeholder="House Head Name" class="btn"  style="border: 1px solid green;">
-                                                                     </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><strong style="margin-right: 25px;">House Head Contact No:</strong><input type="number" placeholder="Warranty Period(In Months)" class="btn"  style="border: 1px solid green;">
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><strong style="margin-right: 10px;">Upload House Documents :</strong><input type="file" placeholder="Warranty Period(In Months)" class="btn"  style="border: 1px solid green;">
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                   
-                                        </div>
+                                        
 
                                     </div>
-                                    <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-                                        <div class="row" style="    display: contents;">
-                                            <div class=" col-md-12 col-sm-12">
-    
-                                                <div class="card mb-lg-32pt">
-    
-                                                    <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
-    
-                                                        <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                                        
-                                                            <tbody class="list" id="leaves">
-                                                                <tr>
-                                                                    <td><strong style="margin-right: 65px;">Select Appliances :</strong>
-                                                                        <select class="btn" id="theme_selector" style="border: 1px solid green; margin-right: 10px;">
-                                                                            <option value="" selected> Select Appliance</option>
-                                                                            <option value="">Appliance 1</option>
-                                                                            <option value="">Appliance 2</option>
-                                                                            <option value="">Appliance 3</option>
-                                                                          </select>
-                                                                                 <input type="checkbox" class="btn"><label style="margin-left: 10px; margin-right: 5px;"> TV </label>
-                                                                                 <input type="checkbox" class="btn"><label style="margin-left: 10px; margin-right: 5px;"> Washing Machine </label>
-                                                                                 <input type="checkbox" class="btn"><label style="margin-left: 10px; margin-right: 5px;"> Dish Washer</label>
-                                                                                </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><strong style="margin-right: 34px;">Select Service Provider :</strong>
-                                                                        <select class="btn" id="theme_selector" style="border: 1px solid green; margin-right: 10px;">
-                                                                            <option value="" selected> Select  Service Provider</option>
-                                                                            <option value=""> Service Provider 1</option>
-                                                                            <option value=""> Service Provider 2</option>
-                                                                            <option value=""> Service Provider 3</option>
-                                                                          </select>
-                                                                                 <input type="checkbox" class="btn"><label style="margin-left: 10px; margin-right: 5px;"> Driver </label>
-                                                                                 <input type="checkbox" class="btn"><label style="margin-left: 10px; margin-right: 5px;"> Maid Machine </label>
-                                                                                </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><strong style="margin-right: 30px;">Select Support Services :</strong>
-                                                                        <select class="btn" id="theme_selector" style="border: 1px solid green; margin-right: 10px;">
-                                                                            <option value="" selected> Select Support Services</option>
-                                                                            <option value="">Support Services 1</option>
-                                                                            <option value="">Support Services 2</option>
-                                                                            <option value="">Support Services 3</option>
-                                                                          </select>
-                                                                                 <input type="checkbox" class="btn"><label style="margin-left: 10px; margin-right: 5px;"> Electricity</label>
-                                                                                 <input type="checkbox" class="btn"><label style="margin-left: 10px; margin-right: 5px;"> Internet </label>
-                                                                                </td>
-                                                                </tr>
-                                                                
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
+                                    
                                 </div>
                             </div>
 
@@ -1938,286 +1797,6 @@
                                     </a>
                                 
                                 </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                               data-toggle="collapse"
-                               href="#dashboards_menu4">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                Dev.Plan - Admin
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent"
-                                id="dashboards_menu4">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="CreateDevSection.html">
-                                        <span class="sidebar-menu-text">Add Development Section  </span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="CreateAgeGroup.html">
-                                        <span class="sidebar-menu-text">Add Age Group</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="CreateDevelopmentPlan.html">
-                                        <span class="sidebar-menu-text">Create Plan Template</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                               data-toggle="collapse"
-                               href="#dashboards_menu3">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                Dev.Plan - User
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent"
-                                id="dashboards_menu3">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="InitiateDevelopmentPlan.html">
-                                        <span class="sidebar-menu-text">Initiate Development Plan  </span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="ExecuteDevelopmentPlan.html">
-                                        <span class="sidebar-menu-text">Execute Action Plan</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="ReviewActionPlanResults.html">
-                                        <span class="sidebar-menu-text">Review Action Plan</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                               data-toggle="collapse"
-                               href="#dashboards_menu6">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                Child Identity
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent"
-                                id="dashboards_menu6">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="InitiateIdentity.html">
-                                        <span class="sidebar-menu-text">Initiate Identity Process  </span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="AReviewachild.html">
-                                        <span class="sidebar-menu-text">Committee Review</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="AchildUpdate.html">
-                                        <span class="sidebar-menu-text">Update/Manage Identity</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                               data-toggle="collapse"
-                               href="#dashboards_menu7">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                Foster Registration
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent"
-                                id="dashboards_menu7">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="RegisterFoster.html">
-                                        <span class="sidebar-menu-text">Register</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="ReviewFoster.html">
-                                        <span class="sidebar-menu-text">Review (Head)</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="ReviewFosterAssesment.html">
-                                        <span class="sidebar-menu-text">Review (Assesment Team)</span>
-                                    </a>
-                                </li>
-                                
-                               
-                               
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                               data-toggle="collapse"
-                               href="#dashboards_menu8">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                Register A Case
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent"
-                                id="dashboards_menu8">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="CreateCaseType.html">
-                                        <span class="sidebar-menu-text">Admin - Add a Case</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="CreateCaseRisk.html">
-                                        <span class="sidebar-menu-text">Admin - Add a Risk</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="RegisterACase.html">
-                                        <span class="sidebar-menu-text">Register A Case</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="UpdateACase.html">
-                                        <span class="sidebar-menu-text">Update A Case</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="ExecuteCaseAction.html">
-                                        <span class="sidebar-menu-text">Execute Action Plan</span>
-                                    </a>
-                                </li>
-                                
-                               
-                               
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu-item ">
-                            <a class="sidebar-menu-button "
-                               data-toggle="collapse"
-                               href="#dashboards_menu9">
-                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
-                                Register A House
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent"
-                                id="dashboards_menu9">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="adminappliances.html">
-                                        <span class="sidebar-menu-text">Admin - Appliances</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="adminservviceprovider.html">
-                                        <span class="sidebar-menu-text">Admin - Service Provider</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button"
-                                       href="adminsupportservice.html">
-                                        <span class="sidebar-menu-text">Admin - Support Services</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button"
-                                       href="registerahouse.html">
-                                        <span class="sidebar-menu-text">Register a House</span>
-                                    </a>
-                                </li>
-                                
-                               
-                               
-                            </ul>
-                        </li>
-                        <li class="sidebar-menu-item" style="display: none;">
-                            <a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu3">
-                                <h6 style="font-size: 16px;" class=" mt-3 material-icons sidebar-menu-icon sidebar-menu-icon--left">Child care services</h6>
-                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                            </a>
-                            <ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu3">
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button " href="Registrachild.html">
-                                         Registering a Case
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item ">
-                                    <a class="sidebar-menu-button " href="Identity ManagementNew.html">
-                                        Identity Management
-                                    </a>
-
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#">
-                                         Development Plan
-                                    </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button collapsed" data-toggle="collapse" href="#dashboards_menu2" aria-expanded="false">
-                                     House Registration
-                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                    </a>
-                                    <ul class="sidebar-submenu sm-indent collapse" id="dashboards_menu2">
-                                        <li class="sidebar-menu-item ">
-                                            <a class="sidebar-menu-button" href="House.html">
-                                                <span class="sidebar-menu-text">Register House</span>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-menu-item">
-                                            <a class="sidebar-menu-button" href="HouseAppliance.html">
-                                                <span class="sidebar-menu-text">Appliance Master</span>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-menu-item">
-                                            <a class="sidebar-menu-button" href="HouseService.html">
-                                                <span class="sidebar-menu-text">Service Providers</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#">
-                                          Educational Management
-
-                                        </a>
-
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="components_menu">
-                                            Psychological Management
-
-                                        </a>
-                                </li>
-                                <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="#">
-                                           Talent Management
-
-                                        </a>
-
-                                </li>
-
-
                             </ul>
                         </li>
                     </ul>
