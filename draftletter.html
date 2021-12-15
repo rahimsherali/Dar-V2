@@ -51,7 +51,13 @@
         <link type="text/css"
               href="assets/css/dark-mode.css"
               rel="stylesheet">
-
+            <!-- select -->
+            <link type="text/css"
+  href="assets/vendor/select2/select2.min.css"
+  rel="stylesheet">
+<link type="text/css"
+  href="assets/css/select2.css"
+  rel="stylesheet">
         <!-- Vector Maps -->
         <link type="text/css"
               href="assets/vendor/jqvmap/jqvmap.min.css"
@@ -300,165 +306,65 @@ div#app-settings {
 
                 <!-- // END Header -->
 
+
+
                 <div class="container-fluid page__container">
                     <div class="page-section">
                        
 
-                        <div class="row card-group-row mb-lg-8pt ">
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #9ecbe8;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Cases</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">230</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #e8abaa;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Houses</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">43</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #97e4ac;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Children</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">1,529</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: #e3cca3;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Appliances</h3></div>
-                                       
-                                            <div class="" style="    float: right;
-                                            display: contents;"><h3 style="text-align: end; font-size: 38px;
-    margin: 0px; color: white; text-shadow: -26px 10px 3px rgb(255 255 255 / 18%);">12,352</h3></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                          
-                        </div>
 
                         <div class="card mb-lg-32pt">
-
-                            <div class="table-responsive"
-                                 data-toggle="lists"
-                                 data-lists-sort-by="js-lists-values-employee-name"
-                                 data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
-                
-                                <div class="card-header">
-                                    <form class="form-inline">
-                                        <h3 style="margin-bottom: 0rem; display: inline;
-                                        width: auto;">Special Requset For Finanical Support</h3>
-                
-                                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-                                          
-                                            <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>View All</u></p>
-                                        </div>
-                
-                                    </form>
-                                </div>
-                
+                            <div class="card-header">
+                                <form class="form-inline">
+                                    <h3 style="margin-bottom: 0rem; display: inline;
+                                    width: auto;">Send Draft letter to ADHA</h3>
+            
+                                    <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+                                      
+                                        <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><a href="addhouseFHFG.html" class="btn btn-primary">Add House</a></p>
+                                    </div>
+            
+                                </form>
+                            </div>
+                            <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
+    
                                 <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                   <thead>
-                                       <th>Date</th>
-                                       <th>Title</th>
-                                       <th>ID</th>
-                                       <th>Type</th>
-                                       <th>Status</th>
-                                       <th>Created BY</th>
-                                       <th>Action</th>
-                                   </thead>
-                                    <tbody class="list"
-                                           id="staff">
-                
-                                           <tr>
-                                            <td>   23-02-2021
+                                
+                                    <tbody class="list" id="leaves">
+                                        <tr>
+                                             <td><strong style="margin-right:20px;"> To Address : </strong><input type="text" class="btn" placeholder="" style="border: 1px solid green;">
                                             </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Azlal </td>
-                                    <td><a href="#"><u>View</u></a> </td>
                                         </tr>
                                         <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #91dea8;">Aooroved</span> </td>
-                                    <td>Atif </td>
-                                    <td><a href="#"><u>View</u></a> </td>
+                                            <td><strong style="margin-right:73px;"> CC: </strong><input type="text" class="btn" placeholder="" style="border: 1px solid green;">
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                        <td><strong style="margin-right:65px;"> BCC: </strong><input type="text" class="btn" placeholder="" style="border: 1px solid green;">
+                                       </td>
+                                       </tr>
+                                          <tr>
+                                    <td><strong style="margin-right:73px;"> CC: </strong><input type="text" class="btn" placeholder="" style="border: 1px solid green;">
+                                           </td>
+                                      </tr>
+                                      <tr>
+                                        <td><strong style="margin-right:45px;"> Subject : </strong><input type="text" class="btn" placeholder="" style="border: 1px solid green;">
+                                               </td>
+                                          </tr>
+                                          <tr>
+                                            <td><strong style="margin-right:23px;"> Description : </strong><textarea name="" id="" cols="15" rows="2" class="btn" placeholder="" style="border: 1px solid green;"></textarea>
+                                                   </td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong style="margin-right:30px;"> Upload Document : </strong><input type="file" class="btn" placeholder="" style="border: 1px solid green;">
+                                                       </td>
+                                                  </tr>
+
+                                        <tr><td>
+                                            <button class="btn btn-primary">Save</button>
+                                            <button class="btn btn-primary">Clear</button>
+                                        </td>
                                         </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
-                                    <td>Noshad </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Rahim </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                
-                
                                     </tbody>
                                 </table>
                             </div>
@@ -512,154 +418,7 @@ div#app-settings {
                 </div> -->
                 
                         </div>
-                        <div class="card mb-lg-32pt">
-
-                            <div class="table-responsive"
-                                 data-toggle="lists"
-                                 data-lists-sort-by="js-lists-values-employee-name"
-                                 data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
-                
-                                <div class="card-header">
-                                    <form class="form-inline">
-                                        <h3 style="margin-bottom: 0rem; display: inline;
-                                        width: auto;">Special Requset For House Registration</h3>
-                
-                                        <div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-                                          
-                                            <p style="margin-bottom: 0rem; display: inline; width: auto; float: right; margin-top: 0.5rem;margin-left: 15px;color: #8a9199; "><u>View All</u></p>
-                                        </div>
-                
-                                    </form>
-                                </div>
-                
-                                <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                   <thead>
-                                       <th>Date</th>
-                                       <th>Title</th>
-                                       <th>ID</th>
-                                       <th>Type</th>
-                                       <th>Status</th>
-                                       <th>Created BY</th>
-                                       <th>Action</th>
-                                   </thead>
-                                    <tbody class="list"
-                                           id="staff">
-                
-                                           <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Azlal </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #91dea8;">Aooroved</span> </td>
-                                    <td>Atif </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #f16a4e;">Cancelled</span> </td>
-                                    <td>Noshad </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                                        <tr>
-                                            <td>   23-02-2021
-                                            </td>
-                                            <td>   
-                                                Lorem ipsum dolor sit amet, consectetur
-                                            </td>
-                                        <td>34321</td>
-                                        <td>INbound</td>
-                                    <td>  <span class="badge badge-dark" style="padding: .25em 1em;
-                                        text-align: center;
-                                        border-radius: .25rem;
-                                        font-size: 13px; background: #decb98;">Pending</span> </td>
-                                    <td>Rahim </td>
-                                    <td><a href="#"><u>View</u></a> </td>
-                                        </tr>
-                
-                
-                                    </tbody>
-                                </table>
-                            </div>
-                
-                            <div class="card-footer p-8pt">
-                
-                                <ul class="pagination justify-content-start pagination-xsm m-0">
-                                    <li class="page-item disabled">
-                                        <a class="page-link"
-                                           href="#"
-                                           aria-label="Previous">
-                                            <span aria-hidden="true"
-                                                  class="material-icons">chevron_left</span>
-                                            <span>Prev</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item dropdown">
-                                        <a class="page-link dropdown-toggle"
-                                           data-toggle="dropdown"
-                                           href="#"
-                                           aria-label="Page">
-                                            <span>1</span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a href="#"
-                                               class="dropdown-item active">1</a>
-                                            <a href="#"
-                                               class="dropdown-item">2</a>
-                                            <a href="#"
-                                               class="dropdown-item">3</a>
-                                            <a href="#"
-                                               class="dropdown-item">4</a>
-                                            <a href="#"
-                                               class="dropdown-item">5</a>
-                                        </div>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link"
-                                           href="#"
-                                           aria-label="Next">
-                                            <span>Next</span>
-                                            <span aria-hidden="true"
-                                                  class="material-icons">chevron_right</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                
-                            </div>
-                            <!-- <div class="card-body bordet-top text-right">
-                15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
-                </div> -->
-                
-                        </div>
+                       
                 
 
                        
@@ -701,7 +460,7 @@ div#app-settings {
                            class="sidebar-brand ">
                             <img class="sidebar-brand-icon"
                                  src="assets/images/logo/Logo.png"
-                                 alt="Dar Zayed">
+                                 alt="Huma">
                         
                         </a>
                         <div class="sidebar-heading">Overview</div>
@@ -1148,12 +907,6 @@ div#app-settings {
                                             <span class="sidebar-menu-text">Facilitating House</span>
                                         </a>
                                     </li>
-                                    <li class="sidebar-menu-item ">
-                                        <a class="sidebar-menu-button"
-                                           href="draftletter.html">
-                                            <span class="sidebar-menu-text">Send Draft letter to ADHA</span>
-                                        </a>
-                                    </li>
                                 </ul>
                             </li>
                             <li class="sidebar-menu-item ">
@@ -1323,10 +1076,16 @@ div#app-settings {
         <!-- List.js -->
         <script src="assets/vendor/list.min.js"></script>
         <script src="assets/js/list.js"></script>
-
+        <!-- select -->
+        <script src="assets/vendor/select2/select2.min.js"></script>
+        <script src="assets/js/select2.js"></script>
         <!-- Tables -->
         <script src="assets/js/toggle-check-all.js"></script>
         <script src="assets/js/check-selected-row.js"></script>
+        
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
