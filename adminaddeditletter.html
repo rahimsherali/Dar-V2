@@ -1190,451 +1190,134 @@
                 <!-- // END Header -->
 
                 <div class="container-fluid page__container">
-                    <div class="card mb-lg-32pt">
-
-                        <div class="page-section">
-                            <div class="card mb-lg-32pt">
-                      
-                      <div class="row" style="    display: contents;">
-                        <br />
-                        <p style="
-                        
-                        margin: 0px auto;
-                        text-align: left;
-                        align-content: lef;
-                        margin-left: 13px;
-                      
-                      ">
-                         
-                          <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                            <option value="default">Style - Default</option>
-                            <option value="arrows" selected>Style - Arrows</option>
-                            <option value="dots">Style - Dots</option>
-                            <option value="progress">Style - Progress</option>
-                          </select>
-                      
-                          
-                      
-                          <div style="display: none;">
-                          <label>Animation:</label>
-                          <select id="animation" style="border: 1px solid green;">
-                                <option value="none">None</option>
-                                <option value="fade">Fade</option>
-                                <option value="slide-horizontal" selected>Slide Horizontal</option>
-                                <option value="slide-vertical">Slide Vertical</option>
-                                <option value="slide-swing">Slide Swing</option>
-                          </select>
-                      
-                          <label>External Buttons:</label>
-                          <button class="btn btn-secondary" id="prev-btn" type="button">Go Previous</button>
-                          <button class="btn btn-secondary" id="next-btn" type="button">Go Next</button>
-                          <button class="btn btn-danger" id="reset-btn" type="button">Reset Wizard</button>
-                      </div>
-                        </p>
-                        <br />
-                      
-                        <div id="smartwizard">
-                      
-                          <ul class="nav">
-                              <li class="nav-item">
-                                <a class="nav-link" href="#step-1">
-                                  <strong>Step 1</strong> <br>Select Basic Info 
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#step-2">
-                                  <strong>Step 2</strong> <br> Husband/Wife Info
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#step-3">
-                                  <strong>Step 3</strong> <br>House Details
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#step-4">
-                                    <strong>Step 3</strong> <br>Review 
-                                  </a>
-                                </li>
-                            
-                          </ul>
-                      
-                          <div class="tab-content">
-                              <div style="padding: 30px;" id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
-                                <div class="page-separator">
-                                    <div class="page-separator__text">Basic Information</div>
-                                </div>
-
-                                <div class="row form-row" >
-                                    <div class="form-row">
-                                        <label class="form-label">Type</label>
-                                        
-                                </div>    
-                                </div>
-                                <div class="row form-row" >
-                                <div class="col-4 form-check ">
-                                    <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Foster</label>
-                                  </div>
-                                  <div class="col-4 form-check ">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Biological</label>
-                                  </div>
-                                  <div class="col-4 form-check ">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Extended</label>
-                                  </div>
-                                </div>
-
-                                <br/>
-                                <div class="row form-row" >
-                                    <div class="form-row">
-                                        <label class="form-label">Select Foster</label>
-                                        
-                                </div>    
-                                </div>
-                                <div class="row form-row" >
-                                <div class="col-4 form-check ">
-                                    <input class="form-check-input" type="radio" checked name="inlineRadioOptions2" id="inlineRadio4" value="option4">
-                                    <label class="form-check-label" for="inlineRadio4">Single Mother</label>
-                                  </div>
-                                  <div class="col-4 form-check ">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="option5">
-                                    <label class="form-check-label" for="inlineRadio5">Husband and Wife</label>
-                                  </div>
-                                 
-                                </div>
-
-                           
-                            </div>
-                              <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-                                  <div class="page-separator">
-                                      <div class="page-separator__text">Mother Information</div>
-                                  </div>
-                                  <div class="row" >
-                                      <div class="col-sm-12 col-md-4">
-                                          <div class="form-row">
-                                                  <label class="form-label">Name</label>
-                                                  <input type="text" class="form-control" placeholder="Name">
-                                          </div>        
-                                      </div><div class="col-sm-12 col-md-4">
-                                          <div class="form-row">
-                                                 
-                                                  <label class="form-label" for="exampleInputEmail1">
-                                                    Date of Birth
-                                                      <i class="far fa-question-circle text-secondary ml-1" 
-                                                        data-toggle="tooltip" data-placement="right" 
-                                                        data-original-title="Enter End Date"></i>
-                                                </label>
-                                                  <input style="height: 36px;" type="date" class="form-control " id="">
-
-                                          </div>        
-                                      </div><div class="col-sm-12 col-md-4">
-                                          <div class="form-row">
-                                                  <label class="form-label" >Age</label>
-                                                  <input type="text" class="form-control" placeholder="Age">
-                                          </div>        
-                                      </div>
-                                </div>
-                                <div class="row" >
-                                    <div class="col-sm-12 col-md-4">
-                                        <div class="form-row">
-                                                <label class="form-label">Passport Number</label>
-                                                <input type="text" class="form-control" placeholder="Passport Number">
-                                        </div>        
-                                    </div><div class="col-sm-12 col-md-4">
-                                        <div class="form-row">
-                                                <label class="form-label" >Emirates ID</label>
-                                                <input type="text" class="form-control" placeholder="Emirates ID">
-                                        </div>        
-                                    </div><div class="col-sm-12 col-md-4">
-                                        <div class="form-row">
-                                            <label class="form-label" >Upload Emirates ID</label>
-                                            <div class="custom-file">
-                                                <input type="file" id="file" class="custom-file-input">
-                                                <label for="file" class="custom-file-label">Upload Identity</label>
-                                            </div>
-                                        </div>        
-                                    </div>
-                              </div>
-                              <div class="row" >
-                                <div class="col-sm-12 col-md-4">
-                                    <div class="form-row">
-                                            <label class="form-label">Record Summary</label>
-                                            <input type="text" class="form-control" placeholder="Record Summary">
-                                    </div>        
-                                </div><div class="col-sm-12 col-md-4">
-                                    <div class="form-row">
-                                            <label class="form-label" >Job</label>
-                                            <input type="text" class="form-control" placeholder="Job">
-                                    </div>        
-                                </div><div class="col-sm-12 col-md-4">
-                                    <div class="form-row">
-                                            <label class="form-label" >Education Level</label>
-                                            <input type="text" class="form-control" placeholder="Education Level">
-                                    </div>        
-                                </div>
-                          </div>
-                            
-                          <div class="row" >
-                            <div class="col-sm-12 col-md-4">
-                                <div class="form-row">
-                                        <label class="form-label">Phone Number</label>
-                                        <input type="text" class="form-control" placeholder="Phone Number">
-                                </div>        
-                            </div><div class="col-sm-12 col-md-4">
-                                <div class="form-row">
-                                        <label class="form-label" >Email</label>
-                                        <input type="text" class="form-control" placeholder="Email">
-                                </div>        
-                            </div><div class="col-sm-12 col-md-4">
-                                
-                            </div>
-                      </div>
-
-<br/>
-                      <div class="page-separator">
-                        <div class="page-separator__text">Father Information</div>
-                    </div>
-                    <div class="row" >
-                        <div class="col-sm-12 col-md-4">
-                            <div class="form-row">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" placeholder="Name">
-                            </div>        
-                        </div><div class="col-sm-12 col-md-4">
-                            <div class="form-row">
-                                   
-                                    <label class="form-label" for="exampleInputEmail1">
-                                      Date of Birth
-                                        <i class="far fa-question-circle text-secondary ml-1" 
-                                          data-toggle="tooltip" data-placement="right" 
-                                          data-original-title="Enter End Date"></i>
-                                  </label>
-                                    <input style="height: 36px;" type="date" class="form-control " id="">
-
-                            </div>        
-                        </div><div class="col-sm-12 col-md-4">
-                            <div class="form-row">
-                                    <label class="form-label" >Age</label>
-                                    <input type="text" class="form-control" placeholder="Age">
-                            </div>        
-                        </div>
-                  </div>
-                  <div class="row" >
-                      <div class="col-sm-12 col-md-4">
-                          <div class="form-row">
-                                  <label class="form-label">Passport Number</label>
-                                  <input type="text" class="form-control" placeholder="Passport Number">
-                          </div>        
-                      </div><div class="col-sm-12 col-md-4">
-                          <div class="form-row">
-                                  <label class="form-label" >Emirates ID</label>
-                                  <input type="text" class="form-control" placeholder="Emirates ID">
-                          </div>        
-                      </div><div class="col-sm-12 col-md-4">
-                          <div class="form-row">
-                              <label class="form-label" >Upload Emirates ID</label>
-                              <div class="custom-file">
-                                  <input type="file" id="file" class="custom-file-input">
-                                  <label for="file" class="custom-file-label">Upload Identity</label>
-                              </div>
-                          </div>        
-                      </div>
-                </div>
-                <div class="row" >
-                  <div class="col-sm-12 col-md-4">
-                      <div class="form-row">
-                              <label class="form-label">Record Summary</label>
-                              <input type="text" class="form-control" placeholder="Record Summary">
-                      </div>        
-                  </div><div class="col-sm-12 col-md-4">
-                      <div class="form-row">
-                              <label class="form-label" >Job</label>
-                              <input type="text" class="form-control" placeholder="Job">
-                      </div>        
-                  </div><div class="col-sm-12 col-md-4">
-                      <div class="form-row">
-                              <label class="form-label" >Education Level</label>
-                              <input type="text" class="form-control" placeholder="Education Level">
-                      </div>        
-                  </div>
-            </div>
-              
-            <div class="row" >
-              <div class="col-sm-12 col-md-4">
-                  <div class="form-row">
-                          <label class="form-label">Phone Number</label>
-                          <input type="text" class="form-control" placeholder="Phone Number">
-                  </div>        
-              </div><div class="col-sm-12 col-md-4">
-                  <div class="form-row">
-                          <label class="form-label" >Email</label>
-                          <input type="text" class="form-control" placeholder="Email">
-                  </div>        
-              </div><div class="col-sm-12 col-md-4">
-                  
-              </div>
-        </div>
-
-
-                                </div>
-                              <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-                                  
-
-                                <div class="page-separator">
-                                    <div class="page-separator__text">House Information</div>
-                                </div>
-                                <div class="row" >
-                                    <div class="col-sm-12 col-md-3">
-                                        <div class="form-row">
-                                                <label class="form-label">House No/House Name</label>
-                                                <input type="text" class="form-control" placeholder="House Name">
-                                        </div>        
-                                    </div>
-                                    <div class="col-sm-12 col-md-3">
-                                        <div class="form-row">
-                                                <label class="form-label" >Country</label>
-                                                <input type="text" class="form-control" placeholder="Country">
-                                        </div>        
-                                    </div>
-                                    <div class="col-sm-12 col-md-3">
-                                    <div class="form-row">
-                                            <label class="form-label" >State</label>
-                                            <input type="text" class="form-control" placeholder="State">
-                                    </div>        
-                                </div>
-                                <div class="col-sm-12 col-md-3">
-                                    <div class="form-row">
-                                            <label class="form-label" >City</label>
-                                            <input type="text" class="form-control" placeholder="City">
-                                    </div>        
-                                </div>
-
-                                </div>
+                    <div class="page-section">
+                        <div class="card mb-lg-32pt">
+    
+                            <div class="row" style="    display: contents;">
                                
-                                <br/>
-                                <div class="row">
-
-                                    <div class="col-12">
+                               
+                                <div class="container-fluid page__container page-section">
     
-                                        <div class="col-sm-12 col-md-12">
-                                            <div class="form-row">
-                                                <label class="form-label">Location</label>
-                                                <iframe
-                                                width="100%"
-                                                height="450"
-                                                style="border:0"
-                                                loading="lazy"
-                                                allowfullscreen
-                                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBllSorYGxPFFuN2crUkWzCWcxeW_-RmDw&q=Space+Needle,Seattle+WA">
-                                              </iframe>
-                                        </div>     
-                                       
-    
+                                    <div class="row mb-32pt">
+                                        <div class="col-lg-12">
+                                            <div class="page-separator">
+                                                <div class="page-separator__text">Admin Add/Edit Letter</div>
+                                            </div>
+                                            <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
+                
+                                                <table class="table mb-0 thead-border-top-0 table-nowrap">
+                                                
+                                                    <tbody class="list" id="leaves">
+                                                       
+                                                        <tr>
+                                                            <td><strong style="margin-right: 88px;">Category of Organisation:</strong>
+                                                                <select class="btn" id="theme_selector" style="border: 1px solid green;">
+                                                                    <option value="" selected> Category of Organisation </option>
+                                                                    <option value=""> 1</option>
+                                                                    <option value=""> 2</option>
+                                                                    <option value=""> 3</option>
+                                                                  </select>
+                                                            </td>
+                                                           </tr>
+                                                           <tr>
+                                                            <td>
+                                                                <div>
+                                                                <strong style="margin-right:130px;"> Requested By: </strong>
+                                                                <input type="checkbox" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;"> Caregiver </label>
+                                                                <input type="checkbox" class="btn" name="r1" ><label style="margin-left: 10px; margin-right: 5px;">  Foster Family </label>
+                                                                <input type="checkbox" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;">  Social Worker</label>
+                                                                <input type="checkbox" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;">  Independent Youth</label>
+                                                            </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div>
+                                                                <strong style="margin-right:130px;"> Type of Letter : </strong>
+                                                                <input type="radio" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;"> Standard </label>
+                                                                <input type="radio" class="btn" name="r1" ><label style="margin-left: 10px; margin-right: 5px;">  Customrized </label>
+                                                            </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong style="margin-right: 88px;">Issuing Authority:</strong>
+                                                                <select class="btn" id="theme_selector" style="border: 1px solid green;">
+                                                                    <option value="" selected> CA - SH/ERY/AC - SH </option>
+                                                                    <option value=""> CA - FC - D</option>
+                                                                    <option value=""> DG</option>
+                                                                  </select>
+                                                            </td>
+                                                           </tr>
+                                                        <tr>
+                                                            <td><strong style="margin-right: 90px;">Purpose:</strong>
+                                                                <input type="text" name="" id="" class="btn" placeholder="For School Admission" style="border: 1px solid green;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong style="margin-right: 111px;">Auto Generated :</strong>
+                                                                <input type="checkbox" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;">
+                                                                <label for="">Yes</label>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td><strong style="margin-right: 111px;">Upload Document :</strong>
+                                                                <input type="file" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;">
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>
+                                                                <button class="btn btn-primary">Save</button>
+                                                                <button class="btn btn-primary">Cancel</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            
+                                        </div>
                                     </div>
-                                  </div>
-                                 
-                                  </div>
-
-                                   
-                              </div>
-                             
-                              <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+        
+        
+        
+                                </div>
+    
                                 <div class="list-group-item">
                                     <div class="form-group row align-items-center mb-0" id="innerstep2">
-
                                         <div class=" col-md-12 col-sm-12">
-
+    
                                             <div class="card mb-lg-32pt">
-
-                                                <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
-
+    
+                                                <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name"data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
                                                     <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                                        <thead>
-                                                            <tr>
+                               <thead>
+                                <th>Category of Organisation</th>
+                                <th>Requested By:</th>
+                                <th>Type of Letter</th>
+                                <th>Issuing Authority</th>
+                                <th>Purpose</th>
+                                <th>Uploaded Document</th>
+                                </thead>
+                                <tbody class="list"
+                                       id="staff">
+            
+                                       <tr>
+                                        <td>School</td>
+                                        <td>Social Worker</td>
+                                        <td>Standard</td>
+                                        <td>DG</td>
+                                        <td>For School Admission </td>
+                                        <td>DOC</td>
 
-
-
-                                                                <th style="width: 48px;">
-                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Department</a>
-                                                                </th>
-                                                                <th style="width: 48px;">
-                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a>
-                                                                </th>
-
-                                                                <th style="width: 150px;">
-                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Comments</a>
-                                                                </th>
-
-                                                                <th style="width: 48px;">
-                                                                    <a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-from">Date</a>
-                                                                </th>
-                                                                <th style="width: 48px;">
-                                                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">By</a>
-                                                                </th>
-
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody class="list" id="leaves">
-                                                            <tr>
-
-
-                                                                <td>
-                                                                    <small class="js-lists-values-policy text-50">Fostering Unit Head</small>
-                                                                </td>
-
-                                                                <td>
-                                                                    <div class="d-flex flex-column">
-                                                                        <small class="js-lists-values-status text-50 mb-4pt">Approved</small>
-                                                                        <span class="indicator-line rounded bg-primary"></span>
-                                                                    </div>
-                                                                </td>
-                                                                <td>
-                                                                    <small class="js-lists-values-policy text-50">
-
-                                                                        Approved from Fostering Unit Head
-                                                                    </small>
-                                                                </td>
-
-
-
-
-                                                                <td>
-                                                                    <small class="js-lists-values-to text-50">19/02/2021</small>
-                                                                </td>
-
-
-
-                                                                <td class="pr-0">
-                                                                    <div class="media flex-nowrap align-items-center" style="white-space: nowrap;">
-                                                                        <div class="avatar avatar-32pt mr-8pt">
-
-                                                                            <span class="avatar-title rounded-circle">TP</span>
-
-                                                                        </div>
-                                                                        <div class="media-body">
-
-                                                                            <div class="d-flex align-items-center">
-                                                                                <div class="flex d-flex flex-column">
-                                                                                    <p class="mb-0"><strong class="js-lists-values-name">Rahim Khowaja</strong></p>
-                                                                                    <small class="js-lists-values-email text-50">vida_glover@gmail.com</small>
-                                                                                </div>
-
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                          
-
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
+                                    </tr>
+            
+                                </tbody>
+                                                         </table>
+                                                  </div>
+    
                                                 <div class="card-footer p-8pt">
-
+    
                                                     <ul class="pagination justify-content-start pagination-xsm m-0">
                                                         <li class="page-item disabled">
                                                             <a class="page-link" href="#" aria-label="Previous">
@@ -1661,81 +1344,21 @@
                                                             </a>
                                                         </li>
                                                     </ul>
-
+    
                                                 </div>
                                                 <!-- <div class="card-body bordet-top text-right">
                   15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
                 </div> -->
-
-                                            </div>
-
-                                        </div>
-
-                                      
-                                        <div class="flex" style="max-width: 100%">
-                                            <div class="form-row">
-                                                <div class=" col-md-12 col-sm-12 " style="  display: initial;  ">
-                                                    <label class="form-label p-0">Application Status:</label>
-                                                    <select id="custom-select3" class="form-control custom-select">
-                                                        <option selected="">Select Application Status</option>
-                                                        <option value="1">Approve</option>
-                                                        <option value="2">Reject</option>
-                                                        <option value="3">On Hold</option>
-                                                    </select>
     
-                                                </div>
-                                              
                                             </div>
-<br/>
-                                            <div class="flex" style="max-width: 100%">
-
-                                                <label class="form-label">Default</label>
-
-
-
-                                                <div style="height: 150px;" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor" data-quill-modules-toolbar="[[&quot;bold&quot;, &quot;italic&quot;], [&quot;link&quot;, &quot;blockquote&quot;, &quot;code&quot;, &quot;image&quot;], [{&quot;list&quot;: &quot;ordered&quot;}, {&quot;list&quot;: &quot;bullet&quot;}]]" class="ql-container ql-snow"><div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Quill WYSIWYG editor"><p>Hello World!</p><p>Some initial <strong>bold</strong> text</p><p><br></p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
-                                            </div>
-
-                                        </div>
-                                        <br />
-                                        <br /><br />
-                                        <div class=" col-md-12 col-sm-12" style="margin-top:20px">
-
-                                            <button type="button" class="btn btn-primary" style="background-color: #00a650;
-          border-color: #00a650; margin-left: 20px;">
-                                                Send back with comments
-                                            </button>
-
-
-
-
-                                            <button type="button" class="btn btn-primary" style="background-color: #00a650;
-          border-color: #00a650; margin-left: 20px;">
-                                                Approve
-                                            </button>
-
-                                            <button type="button" class="btn btn-primary" style="background-color: #00a650;
-          border-color: #00a650; margin-left: 20px;">
-                                                Reject
-                                            </button>
-
+    
                                         </div>
                                     </div>
                                 </div>
-                               
-                                
-                                </div>
-                             
-                              
-                          </div>
-                      </div>
-                      
+    
+                            
                             </div>
-                              </div> 
-                             
-                             
-                          
-                          </div>
+                        </div>
                     </div>
                 </div>
 
@@ -2394,187 +2017,6 @@
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
-            <!-- Include SmartWizard JavaScript source -->
-    <script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-
-            if ($('#subscribe5').attr('checked')) {
-                alert('ssss')
-            }
-            $('input[type="checkbox"]#subscribe5').click(function() {
-                if ($(this).prop("checked") == true) {
-                    $('#fatherPortion').css({
-                        "visibility": "visible"
-                    });
-                    $("#tabcontentdiv").addClass('myclasstwo');
-                } else if ($(this).prop("checked") == false) {
-                    $('#fatherPortion').css({
-                        "visibility": "hidden"
-                    });
-                    $("#tabcontentdiv").removeClass('myclasstwo');
-                }
-            });
-            if ($('#subscribe6').attr('checked')) {
-                alert('ssss')
-            }
-            $('input[type="checkbox"]#subscribe6').click(function() {
-                if ($(this).prop("checked") == true) {
-                    $('#relativePortion').css({
-                        "visibility": "visible"
-                    });
-                    $("#tabcontentdiv").addClass('myclasstwo');
-
-                } else if ($(this).prop("checked") == false) {
-                    $('#relativePortion').css({
-                        "visibility": "hidden"
-                    });
-                    $("#tabcontentdiv").removeClass('myclasstwo');
-                }
-            });
-
-
-
-            $("#custom-select6").on('change', function() {
-
-
-
-                if ($(this).val() == "3") {
-                    $("#othertext").css({
-                        "display": "block"
-                    });
-
-                    $("#tabcontentdiv").addClass('myclass');
-                    // $("#tabcontentdiv").removeClass('myclasstwo');
-                } else {
-                    $("#othertext").css({
-                        "display": "none"
-                    });
-                    $("#tabcontentdiv").removeClass('myclass');
-                    // $("#tabcontentdiv").addClass('myclasstwo');
-                }
-
-
-            });
-
-
-
-
-
-            // Toolbar extra buttons
-            var btnFinish = $('<button></button>').text('Finish')
-                .addClass('btn btn-info')
-                .on('click', function() {
-                    alert('Finish Clicked');
-                });
-            var btnCancel = $('<button></button>').text('Cancel')
-                .addClass('btn btn-danger')
-                .on('click', function() {
-                    $('#smartwizard').smartWizard("reset");
-                });
-
-            // Step show event
-            $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
-                $("#prev-btn").removeClass('disabled');
-                $("#next-btn").removeClass('disabled');
-                if (stepPosition === 'first') {
-                    $("#prev-btn").addClass('disabled');
-                } else if (stepPosition === 'last') {
-                    $("#next-btn").addClass('disabled');
-                } else {
-                    $("#prev-btn").removeClass('disabled');
-                    $("#next-btn").removeClass('disabled');
-                }
-            });
-
-            // Smart Wizard
-            $('#smartwizard').smartWizard({
-                selected: 0,
-                theme: 'arrows', // default, arrows, dots, progress
-                // darkMode: true,
-                transition: {
-                    animation: 'slide-horizontal', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
-                },
-                toolbarSettings: {
-                    toolbarPosition: 'both', // both bottom
-                    //toolbarExtraButtons: [btnFinish, btnCancel]
-                }
-            });
-
-            // External Button Events
-            $("#reset-btn").on("click", function() {
-                // Reset wizard
-                $('#smartwizard').smartWizard("reset");
-                return true;
-            });
-
-            $("#prev-btn").on("click", function() {
-                // Navigate previous
-                $('#smartwizard').smartWizard("prev");
-                return true;
-            });
-
-            $("#next-btn").on("click", function() {
-                // Navigate next
-                $('#smartwizard').smartWizard("next");
-                return true;
-            });
-
-
-            // Demo Button Events
-            $("#got_to_step").on("change", function() {
-                // Go to step
-                var step_index = $(this).val() - 1;
-                $('#smartwizard').smartWizard("goToStep", step_index);
-                return true;
-            });
-
-
-            $("#dark_mode").on("click", function() {
-                // Change dark mode
-                var options = {
-                    darkMode: $(this).prop("checked")
-                };
-
-                $('#smartwizard').smartWizard("setOptions", options);
-                return true;
-            });
-
-            $("#is_justified").on("click", function() {
-                // Change Justify
-                var options = {
-                    justified: $(this).prop("checked")
-                };
-
-                $('#smartwizard').smartWizard("setOptions", options);
-                return true;
-            });
-
-            $("#animation").on("change", function() {
-                // Change theme
-                var options = {
-                    transition: {
-                        animation: $(this).val()
-                    },
-                };
-                $('#smartwizard').smartWizard("setOptions", options);
-                return true;
-            });
-
-            $("#theme_selector").on("change", function() {
-                // Change theme
-                var options = {
-                    theme: $(this).val()
-                };
-                $('#smartwizard').smartWizard("setOptions", options);
-                return true;
-            });
-
-        });
-    </script>
-
     </body>
 
 
