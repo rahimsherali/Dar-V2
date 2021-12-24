@@ -1,1137 +1,775 @@
 <!DOCTYPE html>
-<html lang="en"
-      dir="ltr">
+<html lang="en" dir="ltr">
 
-    
-<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible"
-              content="IE=edge">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Dashboard</title>
-        <!-- Table Css start -->
-        <link rel="stylesheet" href="assets/DataTables/css/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="assets/DataTables/css/dataTables.bootstrap4.min.css ">
-        <!-- Table Css Ends -->
-        <!-- Prevent the demo from appearing in search engines -->
-        <meta name="robots"
-              content="noindex">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="assets/DataTables/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="assets/DataTables/css/dataTables.bootstrap4.min.css">
+	<meta name="robots" content="noindex">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+	<style>
+	.hortable {
+		overflow-x: auto
+	}
+	</style>
+	<style>
+	.form-control {
+		display: block;
+		width: 100%;
+		height: calc(1.5em + .5rem + 2px)
+	}
+	
+	.navbar-nav .nav-link {
+		font-size: .9rem
+	}
+	
+	.vl {
+		border-left: 1px solid #e8e8e8;
+		height: 30px
+	}
+	
+	.sidebar-brand-icon {
+		display: flex;
+		width: 70%;
+		height: auto
+	}
+	
+	[dir] .sidebar-light .open>.sidebar-menu-button {
+		background: #00a650
+	}
+	
+	.sidebar-light .open>.sidebar-menu-button,
+	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+		color: #fff
+	}
+	
+	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+		color: #fff
+	}
+	
+	.leftMenu {
+		margin: 5px 10px;
+		border-radius: 6px!important;
+		background: #a39161!important;
+		color: #fff;
+		border-color: #a39161!important;
+		padding: 5px 0!important;
+		font-size: 15px;
+		font-weight: 500
+	}
+	
+	.sidebar-heading {
+		line-height: 1.5rem;
+		font-size: .775rem
+	}
+	
+	.sidebar-heading {
+		font-weight: 600;
+		font-family: Arial, sans-serif!important;
+		text-transform: uppercase;
+		letter-spacing: 0!important
+	}
+	
+	[dir] .card-header {
+		padding: .3rem 1rem;
+		margin-bottom: 0;
+		background-color: #fff
+	}
+	
+	.activemenu {
+		background: #00a650 !important;
+		color: #fff!important
+	}
+	
+	div#app-settings {
+		display: none
+	}
+	
+	.active>.sidebar-menu-button .sidebar-menu-text:after {
+		display: none
+	}
+	</style>
+</head>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
-              rel="stylesheet">
-
-        <!-- Perfect Scrollbar -->
-        <link type="text/css"
-              href="assets/vendor/perfect-scrollbar.css"
-              rel="stylesheet">
-
-        <!-- Material Design Icons -->
-        <link type="text/css"
-              href="assets/css/material-icons.css"
-              rel="stylesheet">
-
-        <!-- Font Awesome Icons -->
-        <link type="text/css"
-              href="assets/css/fontawesome.css"
-              rel="stylesheet">
-
-        <!-- Preloader -->
-        <link type="text/css"
-              href="assets/vendor/spinkit.css"
-              rel="stylesheet">
-        <link type="text/css"
-              href="assets/css/preloader.css"
-              rel="stylesheet">
-
-        <!-- App CSS -->
-        <link type="text/css"
-              href="assets/css/app.css"
-              rel="stylesheet">
-
-        <!-- Dark Mode CSS (optional) -->
-        <link type="text/css"
-              href="assets/css/dark-mode.css"
-              rel="stylesheet">
-
-        <!-- Vector Maps -->
-        <link type="text/css"
-              href="assets/vendor/jqvmap/jqvmap.min.css"
-              rel="stylesheet">
-              <style>
-                  .hortable{
-                      overflow-x: auto;
-                }  
-              </style>
-<Style>
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.5rem + 2px);}
-    
-    .navbar-nav .nav-link {
-    font-size: 0.9rem;}
-    .vl {
-  border-left: 1px solid #e8e8e8;
-  height: 30px;
-}
-.sidebar-brand-icon {
-    display: flex;
-    width: 70%;
-    height: auto;
-}
-[dir] .sidebar-light .open>.sidebar-menu-button {
-    background: #00a650;
-}
-.sidebar-light .open>.sidebar-menu-button, .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
-    color: #ffffff;
-}
-.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
-    color: #ffffff;
-}
-.leftMenu{
-   
-    margin: 5px 10px;
-    border-radius: 6px !important;
-    background: #a39161 !important;
-    color: white;
-    border-color: #a39161 !important;
-    padding: 5px 0px !important;
-    font-size: 15px;
-    font-weight: 500;
-}
-.sidebar-heading {
-    line-height: 1.5rem;
-    font-size: .775rem;
-}
-.sidebar-heading {
-    font-weight: 600;
-    font-family: Arial, sans-serif !important;
-    text-transform: uppercase;
-    letter-spacing: 0px !important;
-}
-[dir] .card-header {
-    padding: 0.3rem 1rem;
-    margin-bottom: 0;
-    background-color: #fff;
-}
-.activemenu {
-    background: #00a650;
-    color: white !important;
-}
-div#app-settings {
-    display: none;
-}
-.active>.sidebar-menu-button .sidebar-menu-text:after {display:none;}
-    </Style>
-    </head>
-
-    <body class="layout-app layout-sticky-subnav ">
-
-   
-
-        <div class="mdk-drawer-layout js-mdk-drawer-layout"
-             data-push
-             data-responsive-width="992px">
-            <div class="mdk-drawer-layout__content page-content">
-
-                <!-- Header -->
-
-                <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body"
-                     id="default-navbar"
-                     data-primary>
-
-                    <!-- Navbar toggler -->
-                    <button class="navbar-toggler d-block d-lg-none rounded-0"
-                            type="button"
-                            data-toggle="sidebar">
-                        <span class="material-icons">menu</span>
-                    </button>
-
-                    <!-- Navbar Brand -->
-                    <a href="index.html"
-                       class="navbar-brand mr-16pt d-lg-none">
-                        <img class="navbar-brand-icon mr-0 mr-lg-8pt"
-                             src="assets/images/Logo.svg"
-                             width="32"
-                             alt="Huma">
-                       
-                    </a>
-
-                    <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
-
-                    <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;"
-                          action="https://huma.demo.frontendmatter.com/index.html">
-                        
-                        <input type="text"
-                               class="form-control"
-                               placeholder="Search Everything ...">
-                               <button class="btn"
-                                type="submit"><i class="material-icons">search</i></button>
-                    </form>
-
-                    <div class="flex"></div>
-
-                    <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt"
-                         style="white-space: nowrap;">
-                        <div class="nav-item dropdown d-none d-sm-flex">
-                            <a href="#"
-                               class="nav-link dropdown-toggle"
-                               data-toggle="dropdown">EN</a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div class="dropdown-header"><strong>Select language</strong></div>
-                                <a class="dropdown-item active"
-                                   href="#">English</a>
-                                <a class="dropdown-item"
-                                   href="#">عربي</a>
-                             
-                            </div>
-                        </div>
-                    </div>
-                    <div class="vl mr-16pt"></div>
-                    <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
-                        <div class="nav-item mr-16pt dropdown dropdown-notifications">
-                            <button class="nav-link btn-flush dropdown-toggle"
-                                    type="button"
-                                    data-toggle="dropdown"
-                                    data-dropdown-disable-document-scroll
-                                    data-caret="false">
-                                <i class="material-icons">notifications</i>
-                                <span class="badge badge-notifications badge-accent">2</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div data-perfect-scrollbar
-                                     class="position-relative">
-                                    <div class="dropdown-header"><strong>System notifications</strong></div>
-                                    <div class="list-group list-group-flush mb-0">
-
-                                        <a href="javascript:void(0);"
-                                           class="list-group-item list-group-item-action unread">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">3 minutes ago</small>
-
-                                                <span class="ml-auto unread-indicator bg-accent"></span>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-accent">account_circle</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-
-                                                    <span class="text-black-70">Your profile information has not been synced correctly.</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                        <a href="javascript:void(0);"
-                                           class="list-group-item list-group-item-action">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">5 hours ago</small>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-primary">group_add</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-                                                    <strong class="text-black-100">Adrian. D</strong>
-                                                    <span class="text-black-70">Wants to join your private group.</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                        <a href="javascript:void(0);"
-                                           class="list-group-item list-group-item-action">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">1 day ago</small>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <span class="avatar-title rounded-circle bg-light">
-                                                        <i class="material-icons font-size-16pt text-warning">storage</i>
-                                                    </span>
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-
-                                                    <span class="text-black-70">Your deploy was successful.</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="vl mr-16pt" style="margin-top: 16px;"></div>
-                        <div class="nav-item dropdown d-none d-sm-flex">
-                            <a href="#"
-                               class="nav-link d-flex align-items-center dropdown-toggle"
-                               data-toggle="dropdown">
-                                <img width="32"
-                                     height="32"
-                                     class="rounded-circle mr-8pt"
-                                     src="assets/images/people/50/guy-3.jpg"
-                                     alt="account" />
-                                <span class="flex d-flex flex-column mr-8pt">
-                                    <span class="navbar-text-100">Laza Bogdan</span>
-                                    <small class="navbar-text-50">Administrator</small>
-                                </span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <div class="dropdown-header"><strong>Account</strong></div>
-                                <a class="dropdown-item"
-                                   href="edit-account.html">Edit Account</a>
-                                <a class="dropdown-item"
-                                   href="login.html">Logout</a>
-                            </div>
-                        </div>
-
-                        <!-- Notifications dropdown -->
-                       
-                        <!-- // END Notifications dropdown -->
-
-                        <!-- Notifications dropdown -->
-                       
-                        <!-- // END Notifications dropdown -->
-                    </div>
-
-                   
-
-                </div>
-
-                <!-- // END Header -->
-
-                <div class="container-fluid page__container">
-                    <div class="page-section">
-                       
-
-                        <div class="row card-group-row mb-lg-8pt ">
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card " style="background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 1</h3></div>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span style="margin-left: 100px;">Company Details</span>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 2</h3></div>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span style="margin-left: 100px;">Company Details</span>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 3</h3></div>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span style="margin-left: 100px;">Company Details</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 4</h3></div>
-                                 <span>Company Details</span><br>
-                                 <span>Company Details</span><br>
-                                 <span>Company Details</span><br>
-                                 <span>Company Details</span><br>
-                                 <span>Company Details</span><br>
-                                 <span style="margin-left: 100px;">Company Details</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background:green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 5</h3></div>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span>Company Details</span><br>
-                                        <span style="margin-left: 100px;">Company Details</span>
-                                            
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 6</h3></div>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span style="margin-left: 100px;">Company Details</span>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 7</h3></div>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span style="margin-left: 100px;">Company Details</span>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 8</h3></div>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span style="margin-left: 100px;">Company Details</span>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 9</h3></div>
-                            <span>Company Details</span><br>
-                            <span>Company Details</span><br>
-                            <span>Company Details</span><br>
-                            <span>Company Details</span><br>
-                            <span>Company Details</span><br>
-                            <span style="margin-left: 100px;">Company Details</span>
-                                    
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 10</h3></div>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span style="margin-left: 100px;">Company Details</span>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 11</h3></div>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span>Company Details</span><br>
-                                     <span style="margin-left: 100px;">Company Details</span>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6 card-group-row__col">
-                                <div class="card card-group-row__card" style="    background: green;">
-                                    <div class="card-body flex-column">
-                                        <div class="" style="    float: left;
-                                        display: contents;"><h3 style="text-align: start; font-size: 25px;
-    margin: 0px; color: white;">Company 12</h3></div>
-     <span>Company Details</span><br>
-     <span>Company Details</span><br>
-     <span>Company Details</span><br>
-     <span>Company Details</span><br>
-     <span>Company Details</span><br>
-     <span style="margin-left: 100px;">Company Details</span>
-                                    
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                          
-                        </div>  
-
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12 hortable">
-                                
-                            <table id="t1" class="table table-bordered table-hover table-striped scroll-bar">
-                            
-                            <thead>
-                            <tr>
-                            <th>Sr</th>
-                            <th>Tender Document</th>
-                            <th>RFP & Approval </th>
-                            <th>Company Name</th>
-                            <th>Company Address</th>
-                            <th>Company Phone</th>
-                            <th>Incharge Name</th>
-                            <th>Incharge Phone </th>
-                            <th>Contract Start</th>
-                            <th>Contract End</th>
-                            <th>Trade License</th>
-                            <th>Other Documents</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>1</td>
-                            <td>Company 1</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            </tr>	
-                            <tr>
-                            <td>2</td>
-                            <td>Company 2</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            </tr>
-                                <tr>
-                            <td>3</td>
-                            <td>Company 3</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            </tr>
-                                <tr>
-                            <td>4</td>
-                            <td>Company 4</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>	
-                            </tr>
-                                <tr>
-                            <td>5</td>
-                            <td>Company 5</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            </tr>
-                                <tr>
-                            <td>6</td>
-                            <td>Company 6</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>	
-                            </tr>
-                                <tr>
-                            <td>7</td>
-                            <td>Company 7</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            </tr>
-                                <tr>
-                            <td>8</td>
-                            <td>Company 8</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>
-                            <td>##</td>	
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>Company 9</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                </tr>
-                                    <tr>
-                                <td>10</td>
-                                <td>Company 10</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>
-                                <td>##</td>	
-                                </tr>
-                                <tr>
-                                    <td>11</td>
-                                    <td>Company 11</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>
-                                    <td>##</td>	
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>Company 12</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>
-                                        <td>##</td>	
-                                        </tr>
-                                    
-                            </tbody>
-                            </table>
-                            </div>
-                            </div>
-
-        
-                    
-
-
-
-                   
-                
-
-                       
-
-                       
-
-                    </div>
-                </div>
-
-                <div class="js-fix-footer footer border-top-2">
-                    <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
-                        <p class="measure-lead-max text-muted mb-0 small">
-                            Copyht &copy; Abu Dhabi Government. All rights reserved</p>
-                    </div>
-                    
-                </div>
-
-            </div>
-            <!-- // END drawer-layout__content -->
-
-            <!-- drawer -->
-            <div class="mdk-drawer js-mdk-drawer"
-                 id="default-drawer">
-                <div class="mdk-drawer__content">
-                    <div class="sidebar sidebar-light sidebar-left"
-                         data-perfect-scrollbar>
-
-                        <!-- Navbar toggler -->
-                        <a href="index - Copy.html"
-                           class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0"
-                           data-toggle="tooltip"
-                           data-title="Switch to Compact Vertical Layout"
-                           data-placement="right"
-                           data-boundary="window">
-                            <span class="material-icons">sync_alt</span>
-                        </a>
-
-                        <a href="index - Copy.html"
-                           class="sidebar-brand ">
-                            <img class="sidebar-brand-icon"
-                                 src="assets/images/logo/Logo.png"
-                                 alt="Huma">
-                        
-                        </a>
-                        <div class="sidebar-heading">Overview</div>
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item ">
-                                <a class="sidebar-menu-button "
-                                   href="index - Copy.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
-                                    <span class="sidebar-menu-text">Dashboard</span>
-                                </a>
-                            </li>
-                       
-
-                       
-
-                        
-                      
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                   data-toggle="collapse"
-                                   href="#dashboards_menu">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
-                                    Application Catalog
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menu">
-                                    <li class="sidebar-menu-item active">
-                                        <a class="sidebar-menu-button"
-                                           href="Childcare.html">
-                                            <span class="sidebar-menu-text">Child Care</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="Correspondence.html">
-                                            <span class="sidebar-menu-text">Correspondence</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Budget and Planning</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Facility Maintenance</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="manpower.html">
-                                            <span class="sidebar-menu-text">Mainpower</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Customer Support</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="#">
-                                            <span class="sidebar-menu-text">Performance Management</span>
-                                        </a>
-                                    </li>
-                                   
-                                </ul>
-                            </li>
-                            <li>
-                                
-                        <div class="sidebar-heading mt-3">Manpower</div>
-                        <ul class="sidebar-menu">
-                            <li class="sidebar-menu-item activemenu">
-                                <a class="sidebar-menu-button activemenu"
-                                 
-                                   href="manpower.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">tune</span>
-                                    Dashboard
-                                
-                                </a>
-                            </li>
-                         
-                            <!-- <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button"
-                                  
-                                   href="Registrachild.html">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
-                                   Registering a Case
-                                   
-                                </a>
-                            
-                            </li> -->
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button  "
-                                   data-toggle="collapse"
-                                   href="#dashboards_menuadmin">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                    Administration
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menuadmin">
-                                    <li class="sidebar-menu-item ">
-                                        <a class="sidebar-menu-button"
-                                           href="manpowerRegistercompany.html">
-                                            <span class="sidebar-menu-text">Register a Company</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="manpowercomplainsetup.html">
-                                            <span class="sidebar-menu-text">Complain Setup</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="manpowerevaluationsetup.html">
-                                            <span class="sidebar-menu-text">Evaluation Setup</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item ">
-                                        <a class="sidebar-menu-button"
-                                           href="manpowerregisteredcompany.html">
-                                            <span class="sidebar-menu-text">Registered Company</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button  "
-                                   data-toggle="collapse"
-                                   href="#dashboards_menu7">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                    Employee On-Boarding
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menu7">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="manpowerregisterandemployee.htmls">
-                                            <span class="sidebar-menu-text">Register an Employee</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="manpoweremployeeapproval.html">
-                                            <span class="sidebar-menu-text">Pre-Evaluate Employee</span>
-                                        </a>
-                                    </li>
-                                    
-                                   
-                                </ul>
-                            </li>
-
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button  "
-                                   data-toggle="collapse"
-                                   href="#dashboards_menu9">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                    Attandance 
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menu9">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="manpoweremployeeattandance.html">
-                                            <span class="sidebar-menu-text">Mark Attandance</span>
-                                        </a>
-                                    </li>    
-
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="InboundformCompany.html">
-                                            <span class="sidebar-menu-text">Attandance View</span>
-                                        </a>
-                                    </li>                                                                       
-                                </ul>
-                            </li>
-
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button  "
-                                   data-toggle="collapse"
-                                   href="#dashboards_menuevl">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                    Evaluation 
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menuevl">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="manpoweremployeevaluation.html">
-                                            <span class="sidebar-menu-text">Manual Evaluation</span>
-                                        </a>
-                                    </li>                                                                       
-                                </ul>
-                            </li>
-
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button  "
-                                   data-toggle="collapse"
-                                   href="#dashboards_menuCC">
-                                    <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
-                                    Complain / Case 
-                                    <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                                </a>
-                                <ul class="sidebar-submenu collapse sm-indent"
-                                    id="dashboards_menuCC">
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="employeecomplains.html">
-                                            <span class="sidebar-menu-text">Register a Complaints</span>
-                                        </a>
-                                    </li>   
-                                    <li class="sidebar-menu-item">
-                                        <a class="sidebar-menu-button"
-                                           href="employeecomplainstatus.html">
-                                            <span class="sidebar-menu-text">Complaints Status</span>
-                                        </a>
-                                    </li>                                                                      
-                                </ul>
-                            </li>
-                          
-                        </ul>
-                            </li>
-                        </ul>
-                        <div class="sidebar-heading">Bussiness Support services</div>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
-                        <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
-                     
-                    </div>
-                </div>
-            </div>
-            <!-- // END drawer -->
-        </div>
-        <!-- // END drawer-layout -->
-
-        <!-- App Settings FAB -->
-        <div id="app-settings">
-            <app-settings layout-active="app"
-                          :layout-location="{
+<body class="layout-app layout-sticky-subnav">
+	<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+		<div class="mdk-drawer-layout__content page-content">
+			<div class="navbar navbar-expand navbar-shadow px-0 pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+				<button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar"><span class="material-icons">menu</span></button>
+				<a href="index.html" class="navbar-brand mr-16pt d-lg-none"><img class="navbar-brand-icon mr-0 mr-lg-8pt" src="assets/images/Logo.svg" width="32" alt="Huma"></a>
+				<form class="search-form navbar-search d-none d-md-flex" style="width:20%;border-radius:10px" action="https://huma.demo.frontendmatter.com/index.html">
+					<input class="form-control" placeholder="Search Everything ...">
+					<button class="btn" type="submit"><i class="material-icons">search</i></button>
+				</form>
+				<div class="flex"></div>
+				<div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space:nowrap">
+					<div class="nav-item dropdown d-none d-sm-flex"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Select language</strong></div><a class="dropdown-item active" href="#">English</a> <a class="dropdown-item" href="#">عربي</a></div>
+					</div>
+				</div>
+				<div class="vl mr-16pt"></div>
+				<div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+					<div class="nav-item mr-16pt dropdown dropdown-notifications">
+						<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false"><i class="material-icons">notifications</i> <span class="badge badge-notifications badge-accent">2</span></button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div data-perfect-scrollbar class="position-relative">
+								<div class="dropdown-header"><strong>System notifications</strong></div>
+								<div class="list-group list-group-flush mb-0"><a href="javascript:void(0);" class="list-group-item list-group-item-action unread"><span class="d-flex align-items-center mb-1"><small class="text-black-50">3 minutes ago</small> <span class="ml-auto unread-indicator bg-accent"></span></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-accent">account_circle</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your profile information has not been synced correctly.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">5 hours ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-primary">group_add</i></span></span> <span class="flex d-flex flex-column"><strong class="text-black-100">Adrian. D</strong> <span class="text-black-70">Wants to join your private group.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">1 day ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-warning">storage</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your deploy was successful.</span></span></span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="vl mr-16pt" style="margin-top:16px"></div>
+					<div class="nav-item dropdown d-none d-sm-flex">
+						<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"><img width="32" height="32" class="rounded-circle mr-8pt" src="assets/images/people/50/guy-3.jpg" alt="account"> <span class="flex d-flex flex-column mr-8pt"><span class="navbar-text-100">Laza Bogdan</span> <small class="navbar-text-50">Administrator</small></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Account</strong></div><a class="dropdown-item" href="edit-account.html">Edit Account</a> <a class="dropdown-item" href="login.html">Logout</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid page__container">
+				<div class="page-section">
+					<div class="row card-group-row mb-lg-8pt">
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 1</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 2</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 3</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 4</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 5</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 6</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 7</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 8</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 9</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 10</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 11</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-md-6 card-group-row__col">
+							<div class="card card-group-row__card" style="background:green">
+								<div class="card-body flex-column">
+									<div style="float:left;display:contents">
+										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Company 12</h3></div><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span>Company Details</span>
+										<br><span style="margin-left:100px">Company Details</span>
+									</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-12 col-md-12 hortable">
+							<table id="t1" class="table table-bordered table-hover table-striped scroll-bar">
+								<thead>
+									<tr>
+										<th>Sr</th>
+										<th>Tender Document</th>
+										<th>RFP & Approval</th>
+										<th>Company Name</th>
+										<th>Company Address</th>
+										<th>Company Phone</th>
+										<th>Incharge Name</th>
+										<th>Incharge Phone</th>
+										<th>Contract Start</th>
+										<th>Contract End</th>
+										<th>Trade License</th>
+										<th>Other Documents</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Company 1</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Company 2</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Company 3</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Company 4</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>Company 5</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>Company 6</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>Company 7</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>Company 8</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>Company 9</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>Company 10</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>Company 11</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>Company 12</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+										<td>##</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="js-fix-footer footer border-top-2">
+				<div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px!important;padding-bottom:15px!important">
+					<p class="measure-lead-max text-muted mb-0 small">Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+				</div>
+			</div>
+		</div>
+		<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+			<div class="mdk-drawer__content">
+				<div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar><a href="index - Copy.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right" data-boundary="window"><span class="material-icons">sync_alt</span></a>
+					<a href="index - Copy.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/Logo.png" alt="Huma"></a>
+					<div class="sidebar-heading">Overview</div>
+					<ul class="sidebar-menu">
+						<li class="sidebar-menu-item">
+							<a class="sidebar-menu-button" href="index.html">
+								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span>
+								<span class="sidebar-menu-text">Dashboard</span>
+							</a>
+						</li>
+						<li class="sidebar-menu-item">
+							<a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu">
+								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+								Application Catalog
+								<span class="ml-auto sidebar-menu-toggle-icon"></span>
+							</a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu">
+								<li class="sidebar-menu-item active">
+									<a class="sidebar-menu-button" href="Childcare.html">
+										<span class="sidebar-menu-text">Child Care</span>
+									</a>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" href="Correspondence.html">
+										<span class="sidebar-menu-text">Correspondence</span>
+									</a>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" href="#">
+										<span class="sidebar-menu-text">Budget and Planning</span>
+									</a>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" href="#">
+										<span class="sidebar-menu-text">Facility Maintenance</span>
+									</a>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" href="manpower.html">
+										<span class="sidebar-menu-text">Mainpower</span>
+									</a>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" href="#">
+										<span class="sidebar-menu-text">Customer Support</span>
+									</a>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" href="#">
+										<span class="sidebar-menu-text">Performance Management</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="sidebar-heading mt-3">Manpower</div>
+							<ul class="sidebar-menu">
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" href="manpower.html">
+										<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
+										Dashboard
+									</a>
+								</li>
+								<li class="sidebar-menu-item open">
+									<a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menuadmin">
+										<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+										Administration
+										<span class="ml-auto sidebar-menu-toggle-icon"></span>
+									</a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menuadmin">
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="manpowerRegistercompany.html">
+												<span class="sidebar-menu-text">Register a Company</span>
+											</a>
+										</li>
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="manpowercomplainsetup.html">
+												<span class="sidebar-menu-text">Complain Setup</span>
+											</a>
+										</li>
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="manpowerevaluationsetup.html">
+												<span class="sidebar-menu-text">Evaluation Setup</span>
+											</a>
+										</li>
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button activemenu" href="manpowerregisteredcompany.html">
+												<span class="sidebar-menu-text">Registered Company</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu7">
+										<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+										Employee On-Boarding
+										<span class="ml-auto sidebar-menu-toggle-icon"></span>
+									</a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu7">
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="manpowerregisterandemployee.html">
+												<span class="sidebar-menu-text">Register an Employee</span>
+											</a>
+										</li>
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="manpoweremployeeapproval.html">
+												<span class="sidebar-menu-text">Pre-Evaluate Employee</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu9">
+										<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+										Attandance
+										<span class="ml-auto sidebar-menu-toggle-icon"></span>
+									</a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu9">
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="manpoweremployeeattandance.html">
+												<span class="sidebar-menu-text">Mark Attandance</span>
+											</a>
+										</li>
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="InboundformCompany.html">
+												<span class="sidebar-menu-text">Attandance View</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menuevl">
+										<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+										Evaluation
+										<span class="ml-auto sidebar-menu-toggle-icon"></span>
+									</a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menuevl">
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="manpoweremployeevaluation.html">
+												<span class="sidebar-menu-text">Manual Evaluation</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item">
+									<a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menuCC">
+										<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>
+										Complain / Case
+										<span class="ml-auto sidebar-menu-toggle-icon"></span>
+									</a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menuCC">
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="employeecomplains.html">
+												<span class="sidebar-menu-text">Register a Complaints</span>
+											</a>
+										</li>
+										<li class="sidebar-menu-item">
+											<a class="sidebar-menu-button" href="employeecomplainstatus.html">
+												<span class="sidebar-menu-text">Complaints Status</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="sidebar-heading">Bussiness Support services</div>
+					<a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+					<a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+					<a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+					<a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+			</div>
+		</div>
+	</div>
+	<div id="app-settings">
+		<app-settings layout-active="app" :layout-location="{
       'compact': 'compact-index.html',
       'mini': 'mini-index.html',
       'app': 'index.html',
       'boxed': 'boxed-index.html',
       'sticky': 'sticky-index.html',
       'default': 'fixed-index.html'
-    }"
-                          sidebar-type="light"
-                          sidebar-variant="bg-body"></app-settings>
-        </div>
-        <!-- jQuery -->
-        <script src="assets/vendor/jquery.min.js"></script>
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+	</div>
+	<script src="assets/vendor/jquery.min.js"></script>
+	<script src="assets/vendor/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap.min.js"></script>
+	<script src="assets/vendor/perfect-scrollbar.min.js"></script>
+	<script src="assets/vendor/dom-factory.js"></script>
+	<script src="assets/vendor/material-design-kit.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/hljs.js"></script>
+	<script src="assets/js/settings.js"></script>
+	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<script src="assets/js/flatpickr.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/moment-range.js"></script>
+	<script src="assets/vendor/Chart.min.js"></script>
+	<script src="assets/js/chartjs.js"></script>
+	<script src="assets/js/page.analytics-dashboard.js"></script>
+	<script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+	<script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script src="assets/js/vector-maps.js"></script>
+	<script src="assets/vendor/list.min.js"></script>
+	<script src="assets/js/list.js"></script>
+	<script src="assets/js/toggle-check-all.js"></script>
+	<script src="assets/js/check-selected-row.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="assets/js/app-settings.js"></script>
+	<script>
+	Highcharts.chart("Correspondence", {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: !1,
+			type: "pie"
+		},
+		title: {
+			text: "Tasks By Status"
+		},
+		tooltip: {
+			pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>"
+		},
+		accessibility: {
+			point: {
+				valueSuffix: "%"
+			}
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: !0,
+				cursor: "pointer",
+				dataLabels: {
+					enabled: !1
+				},
+				showInLegend: !0
+			}
+		},
+		series: [{
+			name: "Brands",
+			colorByPoint: !0,
+			data: [{
+				name: "Not Start",
+				y: 40,
+				sliced: !0,
+				selected: !0
+			}, {
+				name: "Inprogress",
+				y: 20
+			}, {
+				name: "On Hold",
+				y: 20
+			}, {
+				name: "Completed",
+				y: 20
+			}]
+		}]
+	});
+	</script>
+	<script src="assets/DataTables/js/jquery.dataTables.min.js"></script>
+	<script src="assets/DataTables/js/dataTables.bootstrap4.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#t1").dataTable()
+	});
+	</script>
+</body>
 
-        <!-- Bootstrap -->
-        <script src="assets/vendor/popper.min.js"></script>
-        <script src="assets/vendor/bootstrap.min.js"></script>
-
-        <!-- Perfect Scrollbar -->
-        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
-
-        <!-- DOM Factory -->
-        <script src="assets/vendor/dom-factory.js"></script>
-
-        <!-- MDK -->
-        <script src="assets/vendor/material-design-kit.js"></script>
-
-        <!-- App JS -->
-        <script src="assets/js/app.js"></script>
-
-        <!-- Highlight.js -->
-        <script src="assets/js/hljs.js"></script>
-
-        <!-- Global Settings -->
-        <script src="assets/js/settings.js"></script>
-
-        <!-- Flatpickr -->
-        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
-        <script src="assets/js/flatpickr.js"></script>
-
-        <!-- Moment.js -->
-        <script src="assets/vendor/moment.min.js"></script>
-        <script src="assets/vendor/moment-range.js"></script>
-
-        <!-- Chart.js -->
-        <script src="assets/vendor/Chart.min.js"></script>
-        <script src="assets/js/chartjs.js"></script>
-
-        <!-- Chart.js Samples -->
-        <script src="assets/js/page.analytics-dashboard.js"></script>
-
-        <!-- Vector Maps -->
-        <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
-        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
-        <script src="assets/js/vector-maps.js"></script>
-
-        <!-- List.js -->
-        <script src="assets/vendor/list.min.js"></script>
-        <script src="assets/js/list.js"></script>
-
-        <!-- Tables -->
-        <script src="assets/js/toggle-check-all.js"></script>
-        <script src="assets/js/check-selected-row.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-        <!-- App Settings (safe to remove) -->
-        <script src="assets/js/app-settings.js"></script>
-        <script>
-Highcharts.chart('Correspondence', {
-    chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie'
-    },
-    title: {
-        text: 'Tasks By Status'
-    },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    accessibility: {
-        point: {
-            valueSuffix: '%'
-        }
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: false
-            },
-            showInLegend: true
-        }
-    },
-    series: [{
-        name: 'Brands',
-        colorByPoint: true,
-        data: [{
-            name: 'Not Start',
-            y: 40,
-            sliced: true,
-            selected: true
-        }, {
-            name: 'Inprogress',
-            y: 20
-        }, {
-            name: 'On Hold',
-            y: 20
-        }, {
-            name: 'Completed',
-            y: 20
-        }]
-    }]
-});
-
-        </script>
-            <script src="assets/DataTables/js/jquery.dataTables.min.js"></script>
-            <script src="assets/DataTables/js/dataTables.bootstrap4.min.js"></script>
-            <script>            
-            $(document).ready(function(){
-                $("#t1").dataTable();
-            });
-            </script>
-    </body>
-
-
-<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:44:15 GMT -->
 </html>

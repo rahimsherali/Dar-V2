@@ -94,6 +94,7 @@
 	.active>.sidebar-menu-button .sidebar-menu-text:after {
 		display: none
 	}
+
 	</style>
 </head>
 
@@ -406,18 +407,18 @@
                 <div class="modal-body">
                     <form action="">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label>Requested By:</label>
                             </div>
-                             <div class="col-9">
-                                <input type="text" class="form-control" id="caregivername" placeholder="Caregiver Name" name="name" readonly>
+                             <div class="col-8">
+								<label>Caregiver Name</label>	
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label>Child/Youth:</label>
                             </div>
-                             <div class="col-9">
+                             <div class="col-8">
                                 <select name="childyouth" class="custom-select" required="">
                                     <option selected="">Select</option>
                                     <option value="child">Child</option>
@@ -426,10 +427,10 @@
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label>Item Category/Child Segment:</label>
                             </div>
-                             <div class="col-9">
+                             <div class="col-8">
                                 <select name="itemchild" class="custom-select" required="">
                                     <option selected="">Select Item Category/Child Segment</option>
                                     <option value="itemcategory">Item Category</option>
@@ -438,34 +439,34 @@
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label>Purpose:</label>
                             </div>
-                             <div class="col-9">
+                            <div class="col-8">
                                 <input type="text" class="form-control" id="purpose" placeholder="Enter Purpose" name="purpose" required="">
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label>Description:</label>
                             </div>
-                             <div class="col-9">
+                             <div class="col-8">
                                 <textarea class="form-control" id="description" rows="3" required=""></textarea>
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label>Approx Amount:</label>
                             </div>
-                             <div class="col-9">
+                             <div class="col-8">
                                 <input type="text" class="form-control" id="approxamount" placeholder="Enter Approx Amount" name="approxamount">
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label>Upload Document:</label>
                             </div>
-                             <div class="col-9">
+                             <div class="col-8">
                                 <div class="custom-file mb-3">
                                     <input type="file" class="custom-file-input" id="validatedCustomFile" required>
                                     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
@@ -473,14 +474,55 @@
                             </div>
                         </div>
 						<div class="row mt-3">
-							<div class="col-3">
+							<div class="col-6">
 								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="customCheck1">
+									<input type="checkbox" class="custom-control-input private" id="customCheck1">
 									<label class="custom-control-label" for="customCheck1">Admission to private institution</label>
 								</div>
 							</div>
 						</div>
-						<section></section>
+						<section class="answer">
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Private University Name:</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="universityname" placeholder="Private University Name" name="universityname" required="">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Location on Map:</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="location" placeholder="Location on Map" name="location">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Country:</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="country" placeholder="Country" name="country" required="">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>State:</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="state" placeholder="State" name="state" required="">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>City:</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="city" placeholder="City" name="city" required="">
+								</div>
+							</div>
+						</section>
 
                     </form>
                 </div>
@@ -493,6 +535,17 @@
             </div>
         </div>
     </div>
+
+	<script>
+		$(".answer").hide();
+		$(".private").click(function() {
+			if($(this).is(":checked")) {
+				$(".answer").show();
+			} else {
+				$(".answer").hide();
+			}
+		});
+	</script>
 
 </body>
 
