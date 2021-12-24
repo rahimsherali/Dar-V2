@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>Dashboard</title>
+	<meta name="robots" content="noindex">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+	<link type="text/css" href="src/css/smart_wizard_all.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/flatpickr.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/flatpickr-airbnb.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/quill.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/bootstrap-touchspin.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+	<style>
+        
+	.sw-theme-arrows>.tab-content>.tab-pane {
+		padding: 10px 30px
+	}
+	
+	.logo-container {
+		left: 50px;
+		position: absolute;
+		top: 20px;
+		z-index: 3
+	}
+	
+	.logo-container .logo {
+		overflow: hidden;
+		border-radius: 50%;
+		border: 1px solid #333;
+		width: 60px;
+		float: left
+	}
+	
+	.logo-container .brand {
+		font-size: 18px;
+		color: #FFF;
+		line-height: 20px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 10px;
+		width: 60px
+	}
+	
+	body {
+		background-color: #CCC
+	}
+	
+	.section .wizard-card {
+		min-height: inherit
+	}
+	
+	.tim-row {
+		margin-bottom: 20px
+	}
+	
+	.tim-white-buttons {
+		background-color: #777
+	}
+	
+	.title {
+		margin-top: 30px;
+		margin-bottom: 25px;
+		min-height: 32px;
+		font-weight: 500
+	}
+	
+	.title.text-center {
+		margin-bottom: 50px
+	}
+	
+	.tim-typo {
+		padding-left: 25%;
+		margin-bottom: 40px;
+		position: relative
+	}
+	
+	.tim-typo .tim-note {
+		bottom: 10px;
+		color: #c0c1c2;
+		display: block;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 13px;
+		left: 0;
+		margin-left: 20px;
+		position: absolute;
+		width: 260px
+	}
+	
+	.tim-row {
+		padding-top: 50px
+	}
+	
+	.tim-row h3 {
+		margin-top: 0
+	}
+	
+	.switch {
+		margin-right: 20px
+	}
+	
+	#navbar-full .navbar {
+		border-radius: 0!important;
+		margin-bottom: 15px;
+		z-index: 2
+	}
+	
+	.space {
+		height: 130px;
+		display: block
+	}
+	
+	.space-110 {
+		height: 110px;
+		display: block
+	}
+	
+	.space-50 {
+		height: 50px;
+		display: block
+	}
+	
+	.space-70 {
+		height: 70px;
+		display: block
+	}
+	
+	.navigation-example .img-src {
+		background-attachment: scroll
+	}
+	
+	.navigation-example {
+		background-image: url(../img/bg.jpg);
+		background-position: center center;
+		background-size: cover;
+		margin-top: 0;
+		min-height: 740px
+	}
+	
+	#notifications {
+		background-color: #FFF;
+		display: block;
+		width: 100%;
+		position: relative
+	}
+	
+	#notifications .alert-danger {
+		margin-bottom: 0
+	}
+	
+	.tim-note {
+		text-transform: capitalize
+	}
+	
+	#buttons .btn {
+		margin: 0 0 15px
+	}
+	
+	.space-100 {
+		height: 100px;
+		display: block;
+		width: 100%
+	}
+	
+	.be-social {
+		padding-bottom: 20px;
+		margin: 0 auto 40px
+	}
+	
+	.txt-white {
+		color: #FFF
+	}
+	
+	.txt-gray {
+		color: #ddd!important
+	}
+	
+	.parallax {
+		width: 100%;
+		height: 570px;
+		display: block;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center
+	}
+	
+	.logo-container.logo-documentation {
+		position: relative;
+		top: 0;
+		left: 0
+	}
+	
+	.logo-container .logo {
+		overflow: hidden;
+		border-radius: 50%;
+		border: 1px solid #333;
+		width: 50px;
+		float: left
+	}
+	
+	.logo-container .brand {
+		font-size: 16px;
+		line-height: 18px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 7px;
+		width: 70px;
+		height: 40px;
+		text-align: left
+	}
+	
+	.navbar-default .logo-container .brand {
+		color: #999
+	}
+	
+	.navbar-transparent .logo-container .brand {
+		color: #FFF
+	}
+	
+	.logo-container .brand-material {
+		font-size: 18px;
+		margin-top: 15px;
+		height: 25px;
+		width: auto
+	}
+	
+	.logo-container .logo img {
+		width: 100%
+	}
+	
+	.navbar-small .logo-container .brand {
+		color: #333
+	}
+	
+	.fixed-section {
+		top: 90px;
+		max-height: 80vh;
+		overflow: scroll
+	}
+	
+	.fixed-section ul li {
+		list-style: none
+	}
+	
+	.fixed-section li a {
+		font-size: 14px;
+		padding: 2px;
+		display: block;
+		color: #666
+	}
+	
+	.fixed-section li a.active {
+		color: #0bf
+	}
+	
+	.fixed-section.float {
+		position: fixed;
+		top: 100px;
+		width: 200px;
+		margin-top: 0
+	}
+	
+	.parallax .parallax-image {
+		width: 100%;
+		overflow: hidden;
+		position: absolute
+	}
+	
+	.parallax .parallax-image img {
+		width: 100%
+	}
+	
+	@media (max-width:768px) {
+		.parallax .parallax-image {
+			width: 100%;
+			height: 640px;
+			overflow: hidden
+		}
+		.parallax .parallax-image img {
+			height: 100%;
+			width: auto
+		}
+	}
+	
+	.separator {
+		content: "Separator";
+		color: #FFF;
+		display: block;
+		width: 100%;
+		padding: 20px
+	}
+	
+	.separator-line {
+		background-color: #EEE;
+		height: 1px;
+		width: 100%;
+		display: block
+	}
+	
+	.separator.separator-gray {
+		background-color: #EEE
+	}
+	
+	.social-buttons-demo .btn {
+		margin-right: 5px;
+		margin-bottom: 7px
+	}
+	
+	.img-container {
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.img-container img {
+		width: 100%
+	}
+	
+	.lightbox img {
+		width: 100%
+	}
+	
+	.lightbox .modal-content {
+		overflow: hidden
+	}
+	
+	.lightbox .modal-body {
+		padding: 0
+	}
+	
+	@media screen and (min-width:991px) {
+		.lightbox .modal-dialog {
+			width: 960px
+		}
+	}
+	
+	@media (max-width:768px) {
+		.btn,
+		.btn-morphing {
+			margin-bottom: 10px
+		}
+		.parallax .motto {
+			top: 170px;
+			margin-top: 0;
+			font-size: 60px;
+			width: 270px
+		}
+	}
+	
+	.logo-container .brand,
+	.logo-container .logo,
+	.presentation .front,
+	.presentation .front .btn,
+	.presentation .front:after {
+		-webkit-transition: all .2s;
+		-moz-transition: all .2s;
+		-o-transition: all .2s;
+		transition: all .2s
+	}
+	
+	#images h4 {
+		margin-bottom: 30px
+	}
+	
+	#javascriptComponents {
+		padding-bottom: 0
+	}
+	
+	#javascriptComponents .btn-raised {
+		margin: 10px 5px
+	}
+	
+	.layers-container {
+		display: block;
+		margin-top: 50px;
+		position: relative
+	}
+	
+	.layers-container img {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+		text-align: center
+	}
+	
+	.section-black {
+		background-color: #333
+	}
+	
+	.animate {
+		transition: 1.5s ease-in-out;
+		-moz-transition: 1.5s ease-in-out;
+		-webkit-transition: 1.5s ease-in-out
+	}
+	
+	.navbar-default.navbar-small .logo-container .brand {
+		color: #333
+	}
+	
+	.navbar-transparent.navbar-small .logo-container .brand {
+		color: #FFF
+	}
+	
+	.navbar-default.navbar-small .logo-container .brand {
+		color: #333
+	}
+	
+	.sharing-area {
+		margin-top: 80px
+	}
+	
+	.sharing-area .btn {
+		margin: 15px 4px 0;
+		color: #FFF
+	}
+	
+	.sharing-area .btn i {
+		font-size: 18px;
+		position: relative;
+		top: 2px;
+		margin-right: 5px
+	}
+	
+	.sharing-area .btn-twitter {
+		background-color: #55acee
+	}
+	
+	.sharing-area .btn-facebook {
+		background-color: #3b5998
+	}
+	
+	.sharing-area .btn-google-plus {
+		background-color: #dd4b39
+	}
+	
+	.sharing-area .btn-github {
+		background-color: #333
+	}
+	
+	.section-notifications,
+	.section-thin {
+		padding: 0
+	}
+	
+	.section-navbars {
+		padding-top: 0
+	}
+	
+	#navbar .navbar {
+		border-radius: 0
+	}
+	
+	.section-tabs {
+		background: #EEE
+	}
+	
+	.section-pagination {
+		padding-bottom: 0
+	}
+	
+	.section-download h4 {
+		margin-bottom: 50px
+	}
+	
+	.section-examples a {
+		text-decoration: none
+	}
+	
+	.section-examples h5 {
+		margin-top: 30px
+	}
+	
+	.components-page .wrapper>.header,
+	.tutorial-page .wrapper>.header {
+		height: 400px;
+		padding-top: 100px;
+		background-size: cover;
+		background-position: center center
+	}
+	
+	.components-page .title,
+	.tutorial-page .title {
+		color: #FFF
+	}
+	
+	.main {
+		background: #FFF;
+		position: relative;
+		z-index: 3
+	}
+	
+	.main-raised {
+		margin: -60px 30px 0;
+		border-radius: 6px;
+		box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+	}
+	
+	.header-filter {
+		position: relative
+	}
+	
+	.header-filter:after,
+	.header-filter:before {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		display: block;
+		left: 0;
+		top: 0;
+		content: ""
+	}
+	
+	.header-filter::before {
+		background-color: rgba(0, 0, 0, .4)
+	}
+	
+	.header-filter .container {
+		z-index: 2;
+		position: relative
+	}
+	
+	.section {
+		padding: 70px 0;
+		background-position: center center;
+		background-size: cover
+	}
+	
+	.navbar {
+		border: 0;
+		border-radius: 3px;
+		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, .42), 0 3px 20px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+		padding: 10px 0;
+		-webkit-transition: all 150ms ease 0s;
+		-moz-transition: all 150ms ease 0s;
+		-o-transition: all 150ms ease 0s;
+		-ms-transition: all 150ms ease 0s;
+		transition: all 150ms ease 0s
+	}
+	
+	.navbar .navbar-brand {
+		position: relative;
+		height: 50px;
+		line-height: 30px;
+		color: inherit;
+		padding: 10px 15px
+	}
+	
+	.navbar .navbar-brand:focus,
+	.navbar .navbar-brand:hover {
+		color: inherit;
+		background-color: transparent
+	}
+	
+	.navbar.navbar-transparent {
+		background-color: transparent;
+		box-shadow: none;
+		color: #fff;
+		padding-top: 25px
+	}
+	
+	.navbar-fixed-top {
+		border-radius: 0
+	}
+	
+	.navbar .navbar-nav>li>a .fa,
+	.navbar .navbar-nav>li>a .material-icons {
+		font-size: 20px;
+		max-width: 20px
+	}
+	
+	.navbar .navbar-nav>li>a:focus,
+	.navbar .navbar-nav>li>a:hover {
+		color: inherit;
+		background-color: transparent
+	}
+	
+	.navbar .navbar-nav>li>a:not(.btn) .material-icons {
+		margin-top: -3px;
+		top: 0;
+		position: relative;
+		margin-right: 3px
+	}
+	
+	.navbar,
+	.navbar.navbar-default {
+		background-color: #9c27b0;
+		color: #FFF
+	}
+	
+	.navbar .navbar-nav>li>a {
+		color: inherit;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-weight: 400;
+		font-size: 12px;
+		text-transform: uppercase;
+		border-radius: 3px
+	}
+	
+	@media (max-width:1199px) {
+		.navbar .navbar-brand {
+			height: 50px;
+			padding: 10px 15px
+		}
+		.navbar .navbar-nav>li>a {
+			padding-top: 15px;
+			padding-bottom: 15px
+		}
+	}
+	
+	footer {
+		padding: 15px 0;
+		text-align: center
+	}
+	
+	.footer a {
+		font-weight: 700
+	}
+	
+	footer.footer-documentation {
+		margin-top: 0;
+		bottom: 0;
+		text-shadow: none;
+		color: inherit
+	}
+	
+	footer.footer-documentation li a {
+		color: inherit
+	}
+	
+	footer.footer-documentation li a:focus,
+	footer.footer-documentation li a:hover {
+		color: #89229b
+	}
+	
+	footer ul {
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none
+	}
+	
+	footer ul li {
+		display: inline-block
+	}
+	
+	footer ul li a {
+		color: inherit;
+		padding: 15px;
+		font-weight: 500;
+		font-size: 12px;
+		text-transform: uppercase;
+		border-radius: 3px;
+		text-decoration: none;
+		position: relative;
+		display: block
+	}
+	
+	footer ul li a:hover {
+		text-decoration: none
+	}
+	
+	footer ul li .btn {
+		margin: 0
+	}
+	
+	footer ul.links-horizontal:first-child a {
+		padding-left: 0
+	}
+	
+	footer ul.links-horizontal:last-child a {
+		padding-right: 0
+	}
+	
+	footer ul.links-vertical li {
+		display: block
+	}
+	
+	footer ul.links-vertical li a {
+		padding: 5px 0
+	}
+	
+	footer .social-buttons .btn,
+	footer .social-buttons a {
+		margin-top: 5px;
+		margin-bottom: 5px
+	}
+	
+	footer .footer-brand {
+		float: left;
+		height: 50px;
+		padding: 15px 15px;
+		font-size: 18px;
+		line-height: 20px;
+		margin-left: -15px
+	}
+	
+	footer .footer-brand:focus,
+	footer .footer-brand:hover {
+		color: #3C4858
+	}
+	
+	footer .copyright {
+		padding: 15px 0;
+		text-align: center
+	}
+	
+	footer .copyright .material-icons {
+		font-size: 18px;
+		position: relative;
+		top: 3px
+	}
+	
+	footer .pull-center {
+		display: inline-block;
+		float: none
+	}
+	
+	@media (max-width:768px) {
+		.footer .copyright {
+			display: inline-block;
+			text-align: center;
+			padding: 10px 0;
+			float: none!important;
+			width: 100%
+		}
+	}
+	
+	.form-control {
+		display: block;
+		width: 100%;
+		height: calc(1.5em + .5rem + 2px)
+	}
+	
+	.navbar-nav .nav-link {
+		font-size: .9rem
+	}
+	
+	.vl {
+		border-left: 1px solid #e8e8e8;
+		height: 30px
+	}
+	
+	.sidebar-brand-icon {
+		display: flex;
+		width: 70%;
+		height: auto
+	}
+	
+	[dir] .sidebar-light .open>.sidebar-menu-button {
+		background: #00a650
+	}
+	
+	.sidebar-light .open>.sidebar-menu-button,
+	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+		color: #fff
+	}
+	
+	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+		color: #fff
+	}
+	
+	.leftMenu {
+		margin: 5px 10px;
+		border-radius: 6px!important;
+		background: #a39161!important;
+		color: #fff;
+		border-color: #a39161!important;
+		padding: 5px 0!important;
+		font-size: 15px;
+		font-weight: 500
+	}
+	
+	.sidebar-heading {
+		line-height: 1.5rem;
+		font-size: .775rem
+	}
+	
+	.sidebar-heading {
+		font-weight: 600;
+		font-family: Arial, sans-serif!important;
+		text-transform: uppercase;
+		letter-spacing: 0!important
+	}
+	
+	[dir] .card-header {
+		padding: .3rem 1rem;
+		margin-bottom: 0;
+		background-color: #fff
+	}
+	
+	.activemenu {
+		background: #00a650!important;
+		color: #fff!important
+	}
+	
+	.form-label {
+		color: #272c33;
+		text-transform: capitalize;
+		font-size: .8125rem;
+		font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+		font-weight: 600;
+		letter-spacing: 0
+	}
+	
+	label.form-label {
+		margin-bottom: 0;
+		margin-top: 4px
+	}
+	
+	.custom-control.custom-checkbox {
+		width: auto;
+		display: inline-table
+	}
+	
+	[dir] .custom-file-label:after {
+		padding: .5rem .75rem;
+		background-color: #00a650
+	}
+	
+	div#app-settings {
+		display: none
+	}
+	
+	.table thead th {
+		color: #272c33;
+		text-transform: capitalize;
+		font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+		font-weight: 600;
+		letter-spacing: 0
+	}
+	
+	[dir=ltr] .button-list>.btn,
+	[dir=ltr] .button-list>.btn-group {
+		margin-left: 0
+	}
+	
+	[dir] .button-list>.btn,
+	[dir] .button-list>.btn-group {
+		margin-bottom: 0
+	}
+	
+	.Tablebtn {
+		text-align: center;
+		background-color: transparent;
+		border: 1px solid transparent;
+		padding: .2rem .5rem!important;
+		border-radius: .25rem
+	}
+	
+	.modal-backdrop.show {
+		opacity: 1;
+		display: none
+	}
+	
+	.reviewForm {
+		margin-left: 20px;
+		font-size: initial
+	}
+	
+	.retable {
+		border: 1px solid #c3c4c5;
+		padding: 4px 0
+	}
+	
+	li.sidebar-menu-item.open {
+		background: #f5f7fa
+	}
+	
+	.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before,
+	.tooltip.bs-tooltip-top .arrow::before {
+		margin-left: -3px;
+		content: "";
+		border-width: 5px 5px 0;
+		border-top-color: #fb6b5b
+	}
+	
+	.tooltip-inner {
+		max-width: 200px;
+		color: #FFF;
+		padding: 10px;
+		text-align: center;
+		background-color: #fb6b5b!important;
+		border-radius: .25rem;
+		font-size: 10px
+	}
+	
+	.form-label {
+		color: #949799!important
+	}
+	
+	.sw-theme-arrows>.nav .nav-link.active {
+		color: #fff;
+		border-color: #d9534f;
+		background: #d9534f;
+		cursor: pointer
+	}
+	
+	.sw-theme-arrows>.nav .nav-link.active::after {
+		border-left-color: #d9534f
+	}
+	
+	label.form-label {
+		margin-bottom: .3rem;
+		margin-top: 4px
+	}
+	
+	.form-control {
+		display: block;
+		width: 100%;
+		height: calc(1.5em + 1rem + 2px)
+	}
+	
+	.sw-theme-dots>.nav .nav-link.active {
+		color: #d9534f!important;
+		cursor: pointer
+	}
+	
+	.sw-theme-dots>.nav .nav-link.active::after {
+		background-color: #d9534f!important
+	}
+	
+	.sw-theme-arrows .toolbar>.btn {
+		color: #fff;
+		background-color: #d9534f;
+		border: 1px solid #d9534f;
+		padding: .375rem .75rem;
+		border-radius: .25rem;
+		font-weight: 400
+	}
+	</style>
+	<script type="text/javascript">
+	function nextstep() {
+		stepid += 1, $("#innerstep" + stepid.toString()).show()
+	}
+	var stepid = 1;
+	</script>
+</head>
+
+<body class="layout-app layout-sticky-subnav">
+	<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+		<div class="mdk-drawer-layout__content page-content">
+			<div class="navbar navbar-expand navbar-shadow px-0 pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+				<button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar"><span class="material-icons">menu</span></button>
+				<a href="index.html" class="navbar-brand mr-16pt d-lg-none"><img class="navbar-brand-icon mr-0 mr-lg-8pt" src="assets/images/Logo.svg" width="32" alt="Huma"></a>
+				<form class="search-form navbar-search d-none d-md-flex" style="width:20%;border-radius:10px" action="https://huma.demo.frontendmatter.com/index.html">
+					<input class="form-control" placeholder="Search Everything ...">
+					<button class="btn" type="submit"><i class="material-icons">search</i></button>
+				</form>
+				<div class="flex"></div>
+				<div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space:nowrap">
+					<div class="nav-item dropdown d-none d-sm-flex"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Select language</strong></div><a class="dropdown-item active" href="#">English</a> <a class="dropdown-item" href="#">عربي</a></div>
+					</div>
+				</div>
+				<div class="vl mr-16pt"></div>
+				<div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+					<div class="nav-item mr-16pt dropdown dropdown-notifications">
+						<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false"><i class="material-icons">notifications</i> <span class="badge badge-notifications badge-accent">2</span></button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div data-perfect-scrollbar class="position-relative">
+								<div class="dropdown-header"><strong>System notifications</strong></div>
+								<div class="list-group list-group-flush mb-0"><a href="javascript:void(0);" class="list-group-item list-group-item-action unread"><span class="d-flex align-items-center mb-1"><small class="text-black-50">3 minutes ago</small> <span class="ml-auto unread-indicator bg-accent"></span></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-accent">account_circle</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your profile information has not been synced correctly.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">5 hours ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-primary">group_add</i></span></span> <span class="flex d-flex flex-column"><strong class="text-black-100">Adrian. D</strong> <span class="text-black-70">Wants to join your private group.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">1 day ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-warning">storage</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your deploy was successful.</span></span></span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="vl mr-16pt" style="margin-top:16px"></div>
+					<div class="nav-item dropdown d-none d-sm-flex">
+						<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"><img width="32" height="32" class="rounded-circle mr-8pt" src="assets/images/people/50/guy-3.jpg" alt="account"> <span class="flex d-flex flex-column mr-8pt"><span class="navbar-text-100">Laza Bogdan</span> <small class="navbar-text-50">Administrator</small></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Account</strong></div><a class="dropdown-item" href="edit-account.html">Edit Account</a> <a class="dropdown-item" href="login.html">Logout</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid page__container">
+				<div class="page-section">
+					<div class="card mb-lg-32pt">
+						<div class="row" style="display:contents">
+							<br>
+							<p style="margin:0 auto;text-align:left;align-content:lef;margin-left:13px">
+								<select class="btn" id="theme_selector" style="border:1px solid green">
+									<option value="default">Style - Default</option>
+									<option value="arrows" selected>Style - Arrows</option>
+									<option value="dots">Style - Dots</option>
+									<option value="progress">Style - Progress</option>
+								</select>
+								<div style="display:none">
+									<label>Animation:</label>
+									<select id="animation" style="border:1px solid green">
+										<option value="none">None</option>
+										<option value="fade">Fade</option>
+										<option value="slide-horizontal" selected>Slide Horizontal</option>
+										<option value="slide-vertical">Slide Vertical</option>
+										<option value="slide-swing">Slide Swing</option>
+									</select>
+									<label>External Buttons:</label>
+									<button class="btn btn-secondary" id="prev-btn" type="button">Go Previous</button>
+									<button class="btn btn-secondary" id="next-btn" type="button">Go Next</button>
+									<button class="btn btn-danger" id="reset-btn" type="button">Reset Wizard</button>
+								</div>
+							</p>
+							<br>
+							<div id="smartwizard">
+								<ul class="nav">
+									<li class="nav-item"><a class="nav-link" href="#step-1"><strong>Step 1</strong><br>Risk Register Info</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-2"><strong>Step 2</strong><br>Risk Register</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-3"><strong>Step 3</strong><br>Review</a></li>
+								</ul>
+								<div class="tab-content d-flex" id="tabcontentdiv">
+									<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+										<div class="row" style="display:flex">
+											<div class="col-sm-12 col-md-8">
+												<div class="card">
+													<div class="card-body">
+														<div class="row">
+															<div class="col-6"><img class="img-fluid" src="assets/images/icon/1.png" alt=""></div>
+															<div class="col-6">
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Requested By:</label>
+																	<h5 class="text-capitalize ml-2">Caregiver Name</h5>
+                                                                </div>
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Child/Youth:</label>
+																	<h5 class="text-capitalize ml-2">Child/Youth Name</h5>
+                                                                </div>
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Item Category/ Child Segment:</label>
+																	<h5 class="text-capitalize ml-2">Electronic items like iPad, Cell phones</h5>
+                                                                </div>
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Purpose:</label>
+																	<h5 class="text-capitalize ml-2">Child/Youth want new cellphone</h5>
+                                                                </div>
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Description:</label>
+																	<h5 class="text-capitalize ml-2">Child/Youth want new cellphone named as iPhone 8</h5>
+                                                                </div>
+                                                                <div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Approx Amount:</label>
+																	<h5 class="text-capitalize ml-2">2202 AED</h5>
+                                                                </div>
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Document:</label>
+																	<button class="btn btn-primary ml-2">View Document</button>
+                                                                </div>
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">CA - SH/FC/ERY/AC Status:</label>
+																	<h5 class="text-capitalize ml-2">Approved</h5>
+                                                                </div>
+																<div class="reviewLabel">
+																	<label class="form-label text-capitalize text-secondary" for="">Comments:</label>
+																	<h5 class="text-capitalize ml-2">Comments</h5>
+                                                                </div>
+															</div>
+														</div>
+													</div>
+													<div class="card-footer text-muted" style="border:0!important">
+														<table class="table">
+															<tr>
+																<th>File Number :</th>
+																<td>CH-210908-0005</td>
+																<th>Source :</th>
+																<td>Abu Dhabi Police</td>
+															</tr>
+															<tr>
+																<th>Status :</th>
+																<td>Permanant</td>
+																<th>Grade Level :</th>
+																<td>Intermediate</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12 col-md-4">
+												<div class="card">
+													<div class="card-body">
+														<div class="row mt-2 mb-4">
+															<div class="col-1 align-self-center"><i class="fas fa-check-circle text-success align-self-center"></i></div>
+															<div class="col-7 align-self-center">
+																<label class="form-label text-capitalize text-secondary" for="">Source Document</label>
+															</div>
+															<div class="col-4 align-self-center"><img src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card"> <a href=""><small style="font-size:12px;font-family:inherit;font-size:12px;color:#84c984">view</small></a></div>
+														</div>
+														<div class="row mt-2 mb-4">
+															<div class="col-1 align-self-center"><i class="fas fa-check-circle text-success align-self-center"></i></div>
+															<div class="col-7 align-self-center">
+																<label class="form-label text-capitalize text-secondary" for="">Identi Document</label>
+															</div>
+															<div class="col-4 align-self-center"><img src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card"> <a href=""><small style="font-size:12px;font-family:inherit;font-size:12px;color:#84c984">view</small></a></div>
+														</div>
+														<div class="row mt-4 mb-2">
+															<div class="col-1 align-self-center"><i class="fas fa-check-circle text-success align-self-center"></i></div>
+															<div class="col-7 align-self-center">
+																<label class="form-label text-capitalize text-secondary" for="">Vaccination Certificate</label>
+															</div>
+															<div class="col-4 align-self-center"><img src="assets/images/vaccine.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Vaccination Certificate"> <a href=""><small style="font-size:12px;font-family:inherit;font-size:12px;color:#84c984">view</small></a></div>
+														</div>
+														<div class="row mt-4 mb-2">
+															<div class="col-1 align-self-center"><i class="fas fa-times-circle text-danger align-self-center"></i></div>
+															<div class="col-7 align-self-center">
+																<label class="form-label text-capitalize text-secondary" for="">Case Report</label>
+															</div>
+															<div class="col-4 align-self-center"><img class="greyimage" src="assets/images/case-study.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Case Report"> <a class="disableLinks greyimage" href=""><small style="font-size:12px;font-family:inherit;font-size:12px;color:#84c984">view</small></a></div>
+														</div>
+														<div class="row mt-4 mb-2">
+															<div class="col-1 align-self-center"><i class="fas fa-check-circle text-success align-self-center"></i></div>
+															<div class="col-7 align-self-center">
+																<label class="form-label text-capitalize text-secondary" for="">Court Report</label>
+															</div>
+															<div class="col-4 align-self-center"><img class="greyimage" src="assets/images/policeman.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Police Report"> <a class="disableLinks greyimage" href=""><small style="font-size:12px;font-family:inherit;font-size:12px;color:#84c984">view</small></a></div>
+														</div>
+														<div class="row mt-4 mb-2">
+															<div class="col-1 align-self-center"><i class="fas fa-times-circle text-danger align-self-center"></i></div>
+															<div class="col-7 align-self-center">
+																<label class="form-label text-capitalize text-secondary" for="">Police Report</label>
+															</div>
+															<div class="col-4 align-self-center"><img class="greyimage" src="assets/images/policeman.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Police Report"> <a class="disableLinks greyimage" href=""><small style="font-size:12px;font-family:inherit;font-size:12px;color:#84c984">view</small></a></div>
+														</div>
+														<div class="row mt-4 mb-2">
+															<div class="col-1 align-self-center"><i class="fas fa-check-circle text-success align-self-center"></i></div>
+															<div class="col-7 align-self-center">
+																<label class="form-label text-capitalize text-secondary" for="">Other Reports</label>
+															</div>
+															<div class="col-4 align-self-center"><img src="assets/images/google-docs.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Police Report"> <a href=""><small style="font-size:12px;font-family:inherit;font-size:12px;color:#84c984">view</small></a></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+										<div class="row" style="display:contents">
+                                            <div class="page-separator">
+                                                <div class="page-separator__text">Review Request</div>
+                                            </div>
+											<div class="row">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Requested By</label>
+                                                        <label>Caregiver Name</label>
+                                                    </div>        
+                                                </div>
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Child/Youth</label>
+                                                        <label>Child/Youth</label>
+                                                    </div>        
+                                                </div>
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Item Category/Child Segment</label>
+														<label>Electronic Items Like IPad, Cell Phones</label>
+                                                    </div>        
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Purpose</label>
+														<label>Child/Youth Want New Cellphone</label>
+                                                    </div>        
+                                                </div>
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Description</label>
+														<label>Child/Youth Want New Cellphone Named As IPhone 8</label>
+                                                    </div>        
+                                                </div>
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Approx Amount</label>
+														<label>2202 AED</label>
+                                                    </div>        
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Document</label>
+														<button class="btn btn-primary">View Document</button>
+                                                    </div>        
+                                                </div>
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">CA - SH/FC/ERY/AC Status</label>
+                                                        <label>Approved</label>
+                                                    </div>        
+                                                </div>
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label w-100">Comments:</label>
+                                                        <label>Comments</label>
+                                                    </div>        
+                                                </div>
+                                            </div>
+											<div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label">FC - D Status</label>
+                                                        <select name="cars" class="custom-select">
+                                                            <option selected="">Select</option>
+                                                            <option value="approved">Approved</option>
+                                                            <option value="rejected">Rejected</option>
+                                                            <option value="notify">“Notify Caregiver/P – SH to buy item/service</option>
+                                                        </select>
+                                                    </div>        
+                                                </div>
+                                                <div class="col-sm-12 col-md-4">
+                                                    <div class="form-row">
+                                                        <label class="form-label">FC - D  Comments:</label>
+                                                        <textarea class="form-control" id="Comments" rows="1" required=""></textarea>
+                                                    </div>        
+                                                </div>
+                                            </div>
+										</div>
+									</div>
+									<div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3" style="overflow-y:scroll">
+										<div class="row" style="display:contents">
+											<div class="row" style="display:contents">
+												<div class="list-group-item" style="display:none">
+													<div class="form-group row align-items-center mb-0" id="innerstep2">
+														<div class="col-md-12 col-sm-12">
+															<div class="form-row">
+																<div class="col-md-6 col-sm-12" style="margin-bottom:10px">
+																	<label class="form-label col-md-4 p-0">Identity of child:</label>
+																	<button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color:#00a650;border-color:#00a650;margin-left:20px">Perview Doc</button>
+																	<div class="custom-control custom-radio mt-3" style="width:auto;display:inline;margin-left:20px">
+																		<input id="radioStacked112" name="radio-stacked" type="radio" class="custom-control-input" checked>
+																		<label for="radioStacked112" class="custom-control-label">Confidential</label>
+																	</div>
+																</div>
+																<div class="col-md-6 col-sm-12" style="margin-bottom:10px">
+																	<label class="form-label col-md-4 p-0">Case Report:</label>
+																	<button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color:#00a650;border-color:#00a650;margin-left:20px">Perview Doc</button>
+																	<div class="custom-control custom-radio mt-3" style="width:auto;display:inline;margin-left:20px">
+																		<input id="radioStacked212" name="radio-stacked" type="radio" class="custom-control-input" checked>
+																		<label for="radioStacked212" class="custom-control-label">Confidential</label>
+																	</div>
+																</div>
+																<div class="col-md-6 col-sm-12" style="margin-bottom:10px">
+																	<label class="form-label col-md-4 p-0">Police request:</label>
+																	<button type="button" class="btn btn-sm btn-accent btn-rounded" style="background-color:#00a650;border-color:#00a650;margin-left:20px">Perview Doc</button>
+																	<div class="custom-control custom-radio mt-3" style="width:auto;display:inline;margin-left:20px">
+																		<input id="radioStacked312" name="radio-stacked" type="radio" class="custom-control-input" checked>
+																		<label for="radioStacked312" class="custom-control-label">Confidential</label>
+																	</div>
+																</div>
+															</div>
+															<div class="form-row">
+																<div class="col-md-6 col-sm-12" style="display:initial">
+																	<label class="form-label p-0">Chlidren After Head Status:</label>
+																	<select id="custom-select3" class="form-control custom-select">
+																		<option selected>Select Chlidren After Head Status</option>
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">Other</option>
+																	</select>
+																</div>
+																<div class="col-md-6 col-sm-12" style="display:initial">
+																	<label class="form-label p-0">Chlidren After Head Comments:</label>
+																	<input class="form-control" placeholder="Comments">
+																</div>
+															</div>
+															<div class="form-row">
+																<div class="col-md-6 col-sm-6" style="display:initial">
+																	<label class="form-label p-0">Family Care Dep Status:</label>
+																	<select id="custom-select4" class="form-control custom-select">
+																		<option selected>Select Family Care Dep Status</option>
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">Other</option>
+																	</select>
+																</div>
+																<div class="col-md-6 col-sm-12" style="display:initial">
+																	<label class="form-label p-0">Family care Dep Comments:</label>
+																	<input class="form-control" placeholder="Comments">
+																</div>
+															</div>
+															<div class="form-row">
+																<div class="col-md-6 col-sm-12" style="display:initial">
+																	<label class="form-label p-0">Committee Status:</label>
+																	<select id="custom-select5" class="form-control custom-select">
+																		<option selected>Select Committee Status</option>
+																		<option value="1">1</option>
+																		<option value="2">2</option>
+																		<option value="3">Other</option>
+																	</select>
+																</div>
+																<div class="col-md-6 col-sm-12" style="display:initial">
+																	<label class="form-label p-0">Committee Comments:</label>
+																	<input class="form-control" placeholder="Comments">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="list-group-item">
+													<div class="form-group row align-items-center mb-0" id="innerstep2">
+														<div class="col-md-12 col-sm-12">
+															<div class="card mb-lg-32pt">
+																<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
+																	<table class="table mb-0 thead-border-top-0 table-nowrap">
+																		<thead>
+																			<tr>
+																				<th style="width:48px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Department</a></th>
+																				<th style="width:48px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a></th>
+																				<th style="width:150px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Comments</a></th>
+																				<th style="width:48px"><a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-from">Date</a></th>
+																				<th style="width:48px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">By</a></th>
+																			</tr>
+																		</thead>
+																		<tbody class="list" id="leaves">
+																			<tr>
+																				<td><small class="js-lists-values-policy text-50">Children Affairs Head</small></td>
+																				<td>
+																					<div class="d-flex flex-column"><small class="js-lists-values-status text-50 mb-4pt">Approved</small> <span class="indicator-line rounded bg-primary"></span></div>
+																				</td>
+																				<td><small class="js-lists-values-policy text-50">Approved from childeren affairs</small></td>
+																				<td><small class="js-lists-values-to text-50">19/02/2021</small></td>
+																				<td class="pr-0">
+																					<div class="media flex-nowrap align-items-center" style="white-space:nowrap">
+																						<div class="avatar avatar-32pt mr-8pt"><span class="avatar-title rounded-circle">TP</span></div>
+																						<div class="media-body">
+																							<div class="d-flex align-items-center">
+																								<div class="flex d-flex flex-column">
+																									<p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p><small class="js-lists-values-email text-50">vida_glover@gmail.com</small></div>
+																							</div>
+																						</div>
+																					</div>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td><small class="js-lists-values-policy text-50">Family care Department</small></td>
+																				<td>
+																					<div class="d-flex flex-column"><small class="js-lists-values-status text-50 mb-4pt">Approved</small> <span class="indicator-line rounded bg-primary"></span></div>
+																				</td>
+																				<td><small class="js-lists-values-policy text-50">I Approve as documents are available</small></td>
+																				<td><small class="js-lists-values-to text-50">19/02/2021</small></td>
+																				<td class="pr-0">
+																					<div class="media flex-nowrap align-items-center" style="white-space:nowrap">
+																						<div class="avatar avatar-32pt mr-8pt"><span class="avatar-title rounded-circle">TP</span></div>
+																						<div class="media-body">
+																							<div class="d-flex align-items-center">
+																								<div class="flex d-flex flex-column">
+																									<p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p><small class="js-lists-values-email text-50">vida_glover@gmail.com</small></div>
+																							</div>
+																						</div>
+																					</div>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td><small class="js-lists-values-policy text-50">Committee Affairs Head</small></td>
+																				<td>
+																					<div class="d-flex flex-column"><small class="js-lists-values-status text-50 mb-4pt">Approved</small> <span class="indicator-line rounded bg-primary"></span></div>
+																				</td>
+																				<td><small class="js-lists-values-policy text-50">I approve as committee affairs head</small></td>
+																				<td><small class="js-lists-values-to text-50">19/02/2021</small></td>
+																				<td class="pr-0">
+																					<div class="media flex-nowrap align-items-center" style="white-space:nowrap">
+																						<div class="avatar avatar-32pt mr-8pt"><span class="avatar-title rounded-circle">TP</span></div>
+																						<div class="media-body">
+																							<div class="d-flex align-items-center">
+																								<div class="flex d-flex flex-column">
+																									<p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p><small class="js-lists-values-email text-50">vida_glover@gmail.com</small></div>
+																							</div>
+																						</div>
+																					</div>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="card-footer p-8pt">
+																	<ul class="pagination justify-content-start pagination-xsm m-0">
+																		<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
+																		<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
+																			<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
+																		</li>
+																		<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-row">
+													<div class="col-md-4 col-sm-12" style="display:initial">
+														<label class="form-label p-0">Request Status :</label>
+														<select id="custom-select" class="form-control custom-select">
+															<option selected>Select Status</option>
+															<option value="1">Fulfilled</option>
+															<option value="2">Not Satisfied</option>
+															<option value="3">Other</option>
+														</select>
+													</div>
+												</div>
+												<div class="list-group-item">
+													<div class="form-group row align-items-center mb-0" id="innerstep2">
+														<div class="flex" style="max-width:100%">
+															<div class="flex" style="max-width:100%">
+																<label class="form-label">Comments :</label>
+																<div style="height:150px" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor" data-quill-modules-toolbar="[[&quot;bold&quot;, &quot;italic&quot;], [&quot;link&quot;, &quot;blockquote&quot;, &quot;code&quot;, &quot;image&quot;], [{&quot;list&quot;: &quot;ordered&quot;}, {&quot;list&quot;: &quot;bullet&quot;}]]" class="ql-container ql-snow">
+																	<div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Quill WYSIWYG editor">
+																		<p>Hello World!</p>
+																		<p>Some initial <strong>bold</strong> text</p>
+																		<p>
+																			<br>
+																		</p>
+																	</div>
+																	<div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+																	<div class="ql-tooltip ql-hidden">
+																		<a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a>
+																		<input data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL">
+																		<a class="ql-action"></a>
+																		<a class="ql-remove"></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<br>
+														<br>
+														<br>
+														<div class="col-md-12 col-sm-12" style="margin-top:20px">
+															<button type="button" class="btn btn-primary" style="background-color:#00a650;border-color:#00a650;margin-left:20px">Save</button>
+															<button type="button" class="btn btn-primary" style="background-color:#00a650;border-color:#00a650;margin-left:20px">Delegate Request</button>
+															<button type="button" class="btn btn-primary" style="background-color:#00a650;border-color:#00a650;margin-left:20px">Cancel</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="js-fix-footer footer border-top-2">
+				<div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px!important;padding-bottom:15px!important">
+					<p class="measure-lead-max text-muted mb-0 small">Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+				</div>
+			</div>
+		</div>
+		<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+			<div class="mdk-drawer__content">
+				<div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar><a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right" data-boundary="window"><span class="material-icons">sync_alt</span></a>
+					<a href="index.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/Logo.png" alt="Huma"></a>
+					<div class="sidebar-heading">Overview</div>
+					<ul class="sidebar-menu">
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Childcare.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Dashboard</a></li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Childprofile.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people</span> Children's Profile</a></li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="MyTasks.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">message</span> My Tasks</a></li>
+						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Registrachild.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Registering a Case <span class="ml-auto Roundd">1</span></a></li>
+						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Identity ManagementNew.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Identity Management <span class="ml-auto Roundd">2</span></a></li>
+						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span> Development Plan</a></li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu2"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Register a child <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu2">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Registrachild.html"><span class="sidebar-menu-text">Register</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Reviewachild.html"><span class="sidebar-menu-text">Review</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ApproveAChild.html"><span class="sidebar-menu-text">Approve</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReceiveAChild.html"><span class="sidebar-menu-text">Receive & Allocate</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu14"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Child Protection Risk <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu14">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddRegister.html"><span class="sidebar-menu-text">Add Register</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddMitigation.html"><span class="sidebar-menu-text">Add Mitigation</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRisk.html"><span class="sidebar-menu-text">Review Risk</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ApproveAChild.html"><span class="sidebar-menu-text">Approve</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReceiveAChild.html"><span class="sidebar-menu-text">Receive & Allocate</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu4"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Dev.Plan - Admin <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu4">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateDevSection.html"><span class="sidebar-menu-text">Add Development Section</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateAgeGroup.html"><span class="sidebar-menu-text">Add Age Group</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateDevelopmentPlan.html"><span class="sidebar-menu-text">Create Plan Template</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu3"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Dev.Plan - User <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu3">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateDevelopmentPlan.html"><span class="sidebar-menu-text">Initiate Development Plan</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ExecuteDevelopmentPlan.html"><span class="sidebar-menu-text">Execute Action Plan</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewActionPlanResults.html"><span class="sidebar-menu-text">Review Action Plan</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu6"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Child Identity <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu6">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateIdentity.html"><span class="sidebar-menu-text">Initiate Identity Process</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AReviewachild.html"><span class="sidebar-menu-text">Committee Review</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AchildUpdate.html"><span class="sidebar-menu-text">Update/Manage Identity</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu7"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Foster Registration <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu7">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="RegisterFoster.html"><span class="sidebar-menu-text">Register</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewFoster.html"><span class="sidebar-menu-text">Review (Head)</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewFosterAssesment.html"><span class="sidebar-menu-text">Review (Assesment Team)</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu8"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Register A Case <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu8">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateCaseType.html"><span class="sidebar-menu-text">Admin - Add a Case</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateCaseRisk.html"><span class="sidebar-menu-text">Admin - Add a Risk</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="RegisterACase.html"><span class="sidebar-menu-text">Register A Case</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdateACase.html"><span class="sidebar-menu-text">Update A Case</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ExecuteCaseAction.html"><span class="sidebar-menu-text">Execute Action Plan</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu9"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Register A House <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu9">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminappliances.html"><span class="sidebar-menu-text">Admin - Appliances</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminservviceprovider.html"><span class="sidebar-menu-text">Admin - Service Provider</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminsupportservice.html"><span class="sidebar-menu-text">Admin - Support Services</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="registerahouse.html"><span class="sidebar-menu-text">Register a House</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu10"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Housing From Govt <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu10">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="facilitatinghouse.html"><span class="sidebar-menu-text">Facilitating House</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="draftletter.html"><span class="sidebar-menu-text">Send Draft letter to ADHA</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu11"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Field Visit <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu11">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="fieldvisit.html"><span class="sidebar-menu-text">Field Visit</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu13"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Child/Youth Letter <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu13">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="addminaddedit.html"><span class="sidebar-menu-text">Admin Add/Edit Organisation</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminaddeditletter.html"><span class="sidebar-menu-text">Admin Add/Edit Letter Issues To Settings</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="initiaterequest.html"><span class="sidebar-menu-text">Initiate Request</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="reviewCA.html"><span class="sidebar-menu-text">Review</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu14"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Child Protection Risk <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu14">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddRegister.html"><span class="sidebar-menu-text">Add Register</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddMitigation.html"><span class="sidebar-menu-text">Add Mitigation</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRisk.html"><span class="sidebar-menu-text">Review Risk</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ApproveAChild.html"><span class="sidebar-menu-text">Approve</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReceiveAChild.html"><span class="sidebar-menu-text">Receive & Allocate</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item open"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu15"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Financial Support <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu15">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddItemChildSegment.html"><span class="sidebar-menu-text">Add Item/Child Segment</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestCaregiver.html"><span class="sidebar-menu-text">Initiate Request Caregiver</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestSocialWorker.html"><span class="sidebar-menu-text">Initiate Request Social Worker</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestYouthIndependent.html"><span class="sidebar-menu-text">Initiate Request Youth Independent</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRequest-CA-SH-FC-ERY-AC.html"><span class="sidebar-menu-text">Review Request - CA - SH/FC/ERY/AC</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button activemenu" href="ReviewRequest-FC-D.html"><span class="sidebar-menu-text">Review Request – FC – D</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRequest-DG-EC.html"><span class="sidebar-menu-text">Review Request – DG/EC</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRequest–F-SH.html"><span class="sidebar-menu-text">Review Request – F - SH</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UploadReceipt–P–SH-Caregiver.html"><span class="sidebar-menu-text">Upload Receipt – P – SH/Caregiver</span></a></li>
+							</ul>
+						</li>
+						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Educational Management</a></li>
+						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="components_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Psychological Management</a></li>
+						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span> Talent Management</a></li>
+					</ul>
+					<div class="sidebar-heading">Bussiness Support services</div><a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a> <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a> <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a> <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="app-settings">
+		<app-settings layout-active="app" :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+	</div>
+	<script src="assets/vendor/jquery.min.js"></script>
+	<script src="assets/vendor/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap.min.js"></script>
+	<script src="assets/vendor/perfect-scrollbar.min.js"></script>
+	<script src="assets/vendor/dom-factory.js"></script>
+	<script src="assets/vendor/material-design-kit.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/hljs.js"></script>
+	<script src="assets/js/settings.js"></script>
+	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<script src="assets/js/flatpickr.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker.js"></script>
+	<script src="assets/js/daterangepicker.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/moment-range.js"></script>
+	<script src="assets/vendor/Chart.min.js"></script>
+	<script src="assets/js/chartjs.js"></script>
+	<script src="assets/js/page.analytics-dashboard.js"></script>
+	<script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+	<script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script src="assets/js/vector-maps.js"></script>
+	<script src="assets/vendor/list.min.js"></script>
+	<script src="assets/js/list.js"></script>
+	<script src="assets/js/toggle-check-all.js"></script>
+	<script src="assets/js/check-selected-row.js"></script>
+	<script src="assets/vendor/jquery.min.js"></script>
+	<script src="assets/vendor/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap.min.js"></script>
+	<script src="assets/vendor/perfect-scrollbar.min.js"></script>
+	<script src="assets/vendor/dom-factory.js"></script>
+	<script src="assets/vendor/material-design-kit.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/hljs.js"></script>
+	<script src="assets/vendor/jquery.bootstrap-touchspin.js"></script>
+	<script src="assets/js/touchspin.js"></script>
+	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<script src="assets/js/flatpickr.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker.js"></script>
+	<script src="assets/js/daterangepicker.js"></script>
+	<script src="assets/vendor/jquery.mask.min.js"></script>
+	<script src="assets/vendor/quill.min.js"></script>
+	<script src="assets/js/quill.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
+	<script src="assets/js/select2.js"></script>
+	<script src="assets/js/app-settings.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("<button></button>").text("Finish").addClass("btn btn-info").on("click", function() {
+			alert("Finish Clicked")
+		}),
+        
+        $("<button></button>").text("Cancel").addClass("btn btn-danger").on("click", function() {
+			$("#smartwizard").smartWizard("reset")
+		});
+
+		$("#smartwizard").on("showStep", function(t, n, r, a, i) {
+			$("#prev-btn").removeClass("disabled"), $("#next-btn").removeClass("disabled"), "first" === i ? $("#prev-btn").addClass("disabled") : "last" === i ? $("#next-btn").addClass("disabled") : ($("#prev-btn").removeClass("disabled"), $("#next-btn").removeClass("disabled"))
+		}),
+        
+        $("#smartwizard").smartWizard({
+			selected: 0,
+			theme: "arrows",
+			transition: {
+				animation: "slide-horizontal"
+			},
+			toolbarSettings: {
+				toolbarPosition: "both"
+			}
+		}),
+        
+        $("#reset-btn").on("click", function() {
+			return $("#smartwizard").smartWizard("reset"), !0
+		}),
+        
+        $("#prev-btn").on("click", function() {
+			return $("#smartwizard").smartWizard("prev"), !0
+		}),
+        
+        $("#next-btn").on("click", function() {
+			return $("#smartwizard").smartWizard("next"), !0
+		}),
+        
+        $("#got_to_step").on("change", function() {
+			var t = $(this).val() - 1;
+			return $("#smartwizard").smartWizard("goToStep", t), !0
+		})
+
+        $("#dark_mode").on("click", function() {
+			var t = {
+				darkMode: $(this).prop("checked")
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		})
+
+        $("#is_justified").on("click", function() {
+			var t = {
+				justified: $(this).prop("checked")
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		}),
+        
+        $("#animation").on("change", function() {
+			var t = {
+				transition: {
+					animation: $(this).val()
+				}
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		}),
+        
+        $("#theme_selector").on("change", function() {
+			var t = {
+				theme: $(this).val()
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		})
+	});
+	</script>
+</body>
+
+</html>

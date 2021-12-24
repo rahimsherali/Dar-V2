@@ -140,7 +140,7 @@
 					<div class="card mb-lg-32pt">
 						<div class="card-header">
 							<form class="form-inline">
-								<h3 style="margin-bottom:0;display:inline;width:auto">Initiate Request - Caregiver</h3>
+								<h3 style="margin-bottom:0;display:inline;width:auto">Initiate Request - Social Worker</h3>
 								<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
 									<p style="margin-bottom:0; display:inline; width:auto; float:right; margin-top:.5rem; margin-left:15px;color:#8a9199"><a data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add Initiate Request</a></p>
 								</div>
@@ -351,8 +351,8 @@
 						<li class="sidebar-menu-item open"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu15"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Financial Support <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
 							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu15">
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddItemChildSegment.html"><span class="sidebar-menu-text">Add Item/Child Segment</span></a></li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button activemenu" href="InitiateRequestCaregiver.html"><span class="sidebar-menu-text">Initiate Request Caregiver</span></a></li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestSocialWorker.html"><span class="sidebar-menu-text">Initiate Request Social Worker</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestCaregiver.html"><span class="sidebar-menu-text">Initiate Request Caregiver</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button activemenu" href="InitiateRequestSocialWorker.html"><span class="sidebar-menu-text">Initiate Request Social Worker</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestYouthIndependent.html"><span class="sidebar-menu-text">Initiate Request Youth Independent</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRequest-CA-SH-FC-ERY-AC.html"><span class="sidebar-menu-text">Review Request - CA - SH/FC/ERY/AC</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRequest-FC-D.html"><span class="sidebar-menu-text">Review Request – FC – D</span></a></li>
@@ -421,7 +421,7 @@
             
                 <!-- Modal Header -->
                 <div class="modal-header">
-                <h4 class="modal-title">Add/Edit Initiate Request - Caregiver</h4>
+                <h4 class="modal-title">Add/Edit Initiate Request - Social Worker</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 
@@ -433,18 +433,30 @@
                                 <label>Requested By:</label>
                             </div>
                              <div class="col-8">
-								<label>Caregiver Name</label>	
+								<label>Social Worker Name</label>
                             </div>
                         </div>
-                        <div class="row mt-3">
+						<div class="row mt-3">
                             <div class="col-4">
-                                <label>Child/Youth:</label>
+                                <label>Select Foster Family:</label>
                             </div>
                              <div class="col-8">
-                                <select name="childyouth" class="custom-select" required="">
-                                    <option selected="">Select</option>
-                                    <option value="child">Child</option>
-                                    <option value="youth">Youth</option>
+                                <select name="itemchild" class="custom-select" required="">
+                                    <option selected="">Select Foster Family</option>
+                                    <option value="itemcategory">Item Category</option>
+                                    <option value="childsegment">Child Segment</option>
+                                </select>
+                            </div>
+                        </div>
+						<div class="row mt-3">
+                            <div class="col-4">
+                                <label>Select Foster Child/Youth:</label>
+                            </div>
+                             <div class="col-8">
+                                <select name="itemchild" class="custom-select" required="">
+                                    <option selected="">Select Foster Child/Youth</option>
+                                    <option value="itemcategory">Foster Child</option>
+                                    <option value="childsegment">Foster Youth</option>
                                 </select>
                             </div>
                         </div>
@@ -505,57 +517,6 @@
                                   </div>
                             </div>
                         </div>
-						<div class="row mt-3">
-							<div class="col-6">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input private" id="customCheck1">
-									<label class="custom-control-label" for="customCheck1">Admission to private institution</label>
-								</div>
-							</div>
-						</div>
-						<section class="answer">
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>Private University Name:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="universityname" placeholder="Private University Name" name="universityname" required="">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>Location on Map:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="location" placeholder="Location on Map" name="location">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>Country:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="country" placeholder="Country" name="country" required="">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>State:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="state" placeholder="State" name="state" required="">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>City:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="city" placeholder="City" name="city" required="">
-								</div>
-							</div>
-						</section>
-
                     </form>
                 </div>
                 
@@ -567,17 +528,6 @@
             </div>
         </div>
     </div>
-
-	<script>
-		$(".answer").hide();
-		$(".private").click(function() {
-			if($(this).is(":checked")) {
-				$(".answer").show();
-			} else {
-				$(".answer").hide();
-			}
-		});
-	</script>
 
 </body>
 
