@@ -8575,7 +8575,7 @@ input[type=submit].btn-block {
 }
 
 [dir] .card-body {
-    padding: 1rem
+    padding: 1.5rem
 }
 
 [dir] .card-title {
@@ -33363,6 +33363,17 @@ body {
     right: 0
 }
 
+.page-separator-text {
+    display: inline-flex;
+    max-width: 90%;
+    text-transform: uppercase;
+    font-size: .9375rem;
+    color: #272c33;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif
+}
+
 .page-separator__text {
     display: inline-flex;
     max-width: 90%;
@@ -37089,7 +37100,11 @@ code.django .hljs-template-tag {
 }
 
 [dir] .footer {
-    background-color: #fff
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 label {
