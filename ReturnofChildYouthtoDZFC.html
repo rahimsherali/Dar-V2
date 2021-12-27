@@ -142,200 +142,202 @@
 								<h3 style="margin-bottom:0;display:inline;width:auto">Return of Child/Youth to DZFC</h3>
 							</form>
 						</div>
-						<div class="row" style="padding:10px">
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label w-100" for="selecta1">Foster House</label>
-									<select name="fosterhouse" class="custom-select">
-										<option selected>Select</option>
-										<option value="foster-house-1">Foster House 1</option>
-										<option value="foster-house-2">Foster House 2</option>
-										<option value="foster-house-3">Foster House 3</option>
-										<option value="foster-house-4">Foster House 4</option>
-									</select>
+						<div class="card-body">
+							<div class="row" style="padding:10px">
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label w-100" for="selecta1">Foster House</label>
+										<select name="fosterhouse" class="custom-select">
+											<option selected>Select</option>
+											<option value="foster-house-1">Foster House 1</option>
+											<option value="foster-house-2">Foster House 2</option>
+											<option value="foster-house-3">Foster House 3</option>
+											<option value="foster-house-4">Foster House 4</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label w-100" for="selecta7">Visited Date</label>
+										<input type="date" id="date" class="form-control w-100">
+									</div>
+								</div>
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label w-100">Purpose of Visit</label>
+										<input type="text" id="visit" class="form-control w-100">
+									</div>
+								</div>
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label" class="w-100">Request For</label>
+										<input type="text" id="requestfor" class="form-control w-100">
+									</div>
+								</div>
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label" class="w-100">Case Title</label>
+										<input type="text" id="casetitle" class="form-control w-100">
+									</div>
+								</div>
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label" class="w-100">Case Category</label>
+										<select name="casecategory" class="custom-select">
+											<option selected>Select</option>
+											<option value="foster-house-1">1</option>
+											<option value="foster-house-2">2</option>
+											<option value="foster-house-3">3</option>
+											<option value="foster-house-4">4</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label" class="w-100">Any Risk</label>
+										<input type="text" id="anyrisk" class="form-control w-100">
+									</div>
+								</div>
+								<div class="col-sm-8 col-md-4">
+									<div class="form-group">
+										<label class="form-label" for="selecta6" style="visibility:hidden;display:block">Search By Date</label>
+										<button type="button" class="btn btn-accent" style="background:#00a650;border-color:#00a650;width:100%">Search</button>
+									</div>
 								</div>
 							</div>
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label w-100" for="selecta7">Visited Date</label>
-									<input type="date" id="date" class="form-control w-100">
-								</div>
+							<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
+								<table class="table mb-0 thead-border-top-0 table-nowrap">
+									<thead>
+										<th>FOSTER HOUSE</th>
+										<th>VISITED DATE</th>
+										<th>PURPOSE OF VISIT</th>
+										<th>REQUEST FOR</th>
+										<th>CASE TITLE</th>
+										<th>CASE CATEGORY</th>
+										<th>ANY RISK</th>
+										<th>Action</th>
+									</thead>
+									<tbody class="list" id="staff">
+										<tr>
+											<td>DZFC Home</td>
+											<td>17/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>18/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>19/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>20/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>21/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>22/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>23/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>24/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+										<tr>
+											<td>DZFC Home</td>
+											<td>25/09/2021</td>
+											<td>Monthly Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>Visit</td>
+											<td>No</td>
+											<td>
+												<button class="btn btn-primary">Edit</button>
+												<button class="btn btn-danger">Delete</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label w-100">Purpose of Visit</label>
-									<input type="text" id="visit" class="form-control w-100">
-								</div>
-							</div>
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label" class="w-100">Request For</label>
-									<input type="text" id="requestfor" class="form-control w-100">
-								</div>
-							</div>
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label" class="w-100">Case Title</label>
-									<input type="text" id="casetitle" class="form-control w-100">
-								</div>
-							</div>
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label" class="w-100">Case Category</label>
-									<select name="casecategory" class="custom-select">
-										<option selected>Select</option>
-										<option value="foster-house-1">1</option>
-										<option value="foster-house-2">2</option>
-										<option value="foster-house-3">3</option>
-										<option value="foster-house-4">4</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label" class="w-100">Any Risk</label>
-									<input type="text" id="anyrisk" class="form-control w-100">
-								</div>
-							</div>
-							<div class="col-sm-8 col-md-4">
-								<div class="form-group">
-									<label class="form-label" for="selecta6" style="visibility:hidden;display:block">Search By Date</label>
-									<button type="button" class="btn btn-accent" style="background:#00a650;border-color:#00a650;width:100%">Search</button>
-								</div>
-							</div>
-						</div>
-						<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-							<table class="table mb-0 thead-border-top-0 table-nowrap">
-								<thead>
-									<th>FOSTER HOUSE</th>
-									<th>VISITED DATE</th>
-									<th>PURPOSE OF VISIT</th>
-									<th>REQUEST FOR</th>
-									<th>CASE TITLE</th>
-									<th>CASE CATEGORY</th>
-									<th>ANY RISK</th>
-									<th>Action</th>
-								</thead>
-								<tbody class="list" id="staff">
-									<tr>
-										<td>DZFC Home</td>
-										<td>17/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>18/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>19/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>20/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>21/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>22/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>23/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>24/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>DZFC Home</td>
-										<td>25/09/2021</td>
-										<td>Monthly Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>Visit</td>
-										<td>No</td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-								</tbody>
-							</table>
 						</div>
 						<div class="card-footer p-8pt">
 							<ul class="pagination justify-content-start pagination-xsm m-0">
