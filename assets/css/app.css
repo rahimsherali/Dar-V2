@@ -36969,3 +36969,24 @@ a.navbar-toggler.navbar-toggler-right.navbar-toggler-custom.d-flex.align-items-c
 /* .two-lines-menu {
     line-height: 25px;
 } */
+
+.input-group.date .input-group-addon {
+    cursor: pointer;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-calendar:before {
+    content: "\f784";
+}
+
