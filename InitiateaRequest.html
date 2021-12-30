@@ -15,6 +15,8 @@
 	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
 	<style>
 	.form-control {
@@ -81,8 +83,8 @@
 	}
 	
 	.activemenu {
-		background: #00a650;
-		color: #fff!important
+		background: #00a650 !important;
+		color: #fff !important
 	}
 	
 	div#app-settings {
@@ -134,186 +136,70 @@
 			</div>
 			<div class="container-fluid page__container">
 				<div class="page-section">
-					<div class="row card-group-row mb-lg-8pt">
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#9ecbe8">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Cases</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">230</h3></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#e8abaa">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Houses</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">43</h3></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#97e4ac">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Children</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">1,529</h3></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#e3cca3">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Appliances</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">12,352</h3></div>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="card mb-lg-32pt">
-						<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-							<div class="card-header">
-								<form class="form-inline">
-									<h3 style="margin-bottom:0;display:inline;width:auto">Special Requset For Finanical Support</h3>
-									<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-										<p style="margin-bottom:0;display:inline;width:auto;float:right;margin-top:.5rem;margin-left:15px;color:#8a9199"><u>View All</u></p>
-									</div>
-								</form>
+						<div class="card-header">
+							<div class="row">
+								<div class="col-sm-12 col-md-6 my-auto">
+									<h3 class="my-auto">Initiate Request</h3>
+								</div>
 							</div>
-							<table class="table mb-0 thead-border-top-0 table-nowrap">
-								<thead>
-									<th>Date</th>
-									<th>Title</th>
-									<th>ID</th>
-									<th>Type</th>
-									<th>Status</th>
-									<th>Created BY</th>
-									<th>Action</th>
-								</thead>
-								<tbody class="list" id="staff">
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Azlal</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#91dea8">Aooroved</span></td>
-										<td>Atif</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#f16a4e">Cancelled</span></td>
-										<td>Noshad</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Rahim</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-								</tbody>
-							</table>
 						</div>
-						<div class="card-footer p-8pt">
-							<ul class="pagination justify-content-start pagination-xsm m-0">
-								<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
-								<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
-									<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
-								</li>
-								<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="card mb-lg-32pt">
-						<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-							<div class="card-header">
-								<form class="form-inline">
-									<h3 style="margin-bottom:0;display:inline;width:auto">Special Requset For House Registration</h3>
-									<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-										<p style="margin-bottom:0;display:inline;width:auto;float:right;margin-top:.5rem;margin-left:15px;color:#8a9199"><u>View All</u></p>
-									</div>
-								</form>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4">
+									<label>Requested By:</label>
+								</div>
+								 <div class="col-8">
+									<label>Caregiver Name</label>	
+								</div>
 							</div>
-							<table class="table mb-0 thead-border-top-0 table-nowrap">
-								<thead>
-									<th>Date</th>
-									<th>Title</th>
-									<th>ID</th>
-									<th>Type</th>
-									<th>Status</th>
-									<th>Created BY</th>
-									<th>Action</th>
-								</thead>
-								<tbody class="list" id="staff">
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Azlal</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#91dea8">Aooroved</span></td>
-										<td>Atif</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#f16a4e">Cancelled</span></td>
-										<td>Noshad</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Rahim</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-								</tbody>
-							</table>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>House No:</label>
+								</div>
+								 <div class="col-8">
+									<label>House 1</label>	
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Child:</label>
+								</div>
+								 <div class="col-8">
+									<select name="child" class="custom-select" required="">
+										<option selected="">Select Child</option>
+										<option value="child">Child</option>
+										<option value="youth">Youth</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Admission To:</label>
+								</div>
+								 <div class="col-8">
+									<select name="itemchild" class="custom-select" required="">
+										<option selected="">Select</option>
+										<option value="prekindergarted">Pre-Kindergarten</option>
+										<option value="preschool">Pre School</option>
+										<option value="secondaryschool">Secondary School</option>
+										<option value="college">College</option>
+										<option value="universities">Universities</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Notes:</label>
+								</div>
+								 <div class="col-8">
+									<textarea class="form-control" id="notes" rows="3" required=""></textarea>
+								</div>
+							</div>
 						</div>
-						<div class="card-footer p-8pt">
-							<ul class="pagination justify-content-start pagination-xsm m-0">
-								<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
-								<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
-									<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
-								</li>
-								<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
-							</ul>
+						<div class="card-footer d-flex justify-content-end">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							<button type="button" class="btn btn-danger ml-2" data-dismiss="modal">Cancel</button>
 						</div>
 					</div>
 				</div>
@@ -327,7 +213,7 @@
 		<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
 			<div class="mdk-drawer__content">
 				<div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar><a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right" data-boundary="window"><span class="material-icons">sync_alt</span></a>
-					<a href="index.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/Logo.png" alt="Dar Zayed"></a>
+					<a href="index.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/Logo.png" alt="Huma"></a>
 					<div class="sidebar-heading">Overview</div>
 					<ul class="sidebar-menu">
 						<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="index.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span> <span class="sidebar-menu-text">Dashboard</span></a></li>
@@ -345,7 +231,7 @@
 						<li>
 							<div class="sidebar-heading mt-3">Child Care Management</div>
 							<ul class="sidebar-menu">
-								<li class="sidebar-menu-item activemenu"><a class="sidebar-menu-button activemenu" href="Childcare.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">tune</span> Dashboard</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Childcare.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Dashboard</a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Childprofile.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people</span> Children's Profile</a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="MyTasks.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">message</span> My Tasks</a></li>
 								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Registrachild.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Registering a Case <span class="ml-auto Roundd">1</span></a></li>
@@ -445,17 +331,16 @@
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UploadReceipt–P–SH-Caregiver.html"><span class="sidebar-menu-text">Upload Receipt – P – SH/Caregiver</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdateRewardingHighPerformersRequestbyCaregiverYouth.html"><span class="sidebar-menu-text">Update Rewarding High Performers Request by Caregiver Youth</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdateAdmissiontoHigherEducationRequest.html"><span class="sidebar-menu-text">Update Admission to Higher Education Request</span></a></li>
-										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="FinancialSupport.html"><span class="sidebar-menu-text">Financial Support</span></a></li>
 									</ul>
 								</li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu16"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Foster Child/Youth <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
 									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu16">
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddFieldVisit.html"><span class="sidebar-menu-text">Add Field Visit</span></a></li>
-                                        <li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewbyFC–SH.html"><span class="sidebar-menu-text">Review by FC – SH</span></a></li>
-										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewbyFosterCommittee.html"><span class="sidebar-menu-text">Review by Foster Committee</span></a></li>
-										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewbyDG.html"><span class="sidebar-menu-text">Review by DG</span></a></li>
-										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdatebyFC–SH.html"><span class="sidebar-menu-text">Update by FC – SH</span></a></li>
-										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ShareCaseDetailswithOtherDepartments.html"><span class="sidebar-menu-text">Share Case Details with Other Departments</span></a></li>
+                                        <li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewbyFC–SH.html"><span class="sidebar-menu-text">REVIEW BY FC – SH</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewbyFosterCommittee.html"><span class="sidebar-menu-text">REVIEW BY FOSTER COMMITTEE</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewbyDG.html"><span class="sidebar-menu-text">REVIEW BY DG</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdatebyFC–SH.html"><span class="sidebar-menu-text">UPDATE BY FC – SH</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ShareCaseDetailswithOtherDepartments.html"><span class="sidebar-menu-text">SHARE CASE DETAILS WITH OTHER DEPARTMENTS</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReturnofChildYouthtoDZFC.html"><span class="sidebar-menu-text">Return of Child/Youth to DZFC</span></a></li>
 									</ul>
 								</li>
@@ -481,10 +366,10 @@
                                         <li class="sidebar-menu-item"><a class="sidebar-menu-button" href="MonthlyInvoice.html"><span class="sidebar-menu-text">Monthly Invoice</span></a></li>
 									</ul>
 								</li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu19"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Managing School <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+								<li class="sidebar-menu-item open"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu19"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Managing School <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
 									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu19">
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="SchoolAdmissionRequest.html"><span class="sidebar-menu-text">School Admission Request</span></a></li>
-                                        <li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateaRequest.html"><span class="sidebar-menu-text">Initiate Request</span></a></li>
+                                        <li class="sidebar-menu-item"><a class="sidebar-menu-button activemenu" href="InitiateaRequest.html"><span class="sidebar-menu-text">Initiate Request</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewUpdateRequestbySW.html"><span class="sidebar-menu-text">Review/Update Request by SW</span></a></li>
                                         <li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdateRequestbySW.html"><span class="sidebar-menu-text">Update Request by SW</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRequest–FC–SH.html"><span class="sidebar-menu-text">Review Request – FC – SH</span></a></li>
@@ -511,13 +396,13 @@
 	</div>
 	<div id="app-settings">
 		<app-settings layout-active="app" :layout-location="{
-    'compact': 'compact-index.html',
-    'mini': 'mini-index.html',
-    'app': 'index.html',
-    'boxed': 'boxed-index.html',
-    'sticky': 'sticky-index.html',
-    'default': 'fixed-index.html'
-}" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
 	</div>
 	<script src="assets/vendor/jquery.min.js"></script>
 	<script src="assets/vendor/popper.min.js"></script>
@@ -540,9 +425,15 @@
 	<script src="assets/js/vector-maps.js"></script>
 	<script src="assets/vendor/list.min.js"></script>
 	<script src="assets/js/list.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
+	<script src="assets/js/select2.js"></script>
 	<script src="assets/js/toggle-check-all.js"></script>
 	<script src="assets/js/check-selected-row.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script src="assets/js/app-settings.js"></script>
+
 </body>
 
 </html>

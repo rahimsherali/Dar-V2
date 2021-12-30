@@ -29015,7 +29015,8 @@ body, html {
 .page-separator:before {
 	content: "";
 	height: 1px;
-	width: 100%;
+	/* width: 100%; */
+	width: 72%;
 	top: 50%;
 	position: absolute;
 	z-index: -1;
@@ -29026,11 +29027,13 @@ body, html {
 }
 
 [dir=ltr] .page-separator:before {
-	left: 0;
+	/* left: 0; */
+	right: 0;
 }
 
 [dir=rtl] .page-separator:before {
-	right: 0;
+	/* right: 0; */
+	left: 0;
 }
 
 .page-separator-text {
@@ -29057,7 +29060,8 @@ body, html {
 
 [dir] .page-separator__text {
 	border-radius: .25rem;
-	background-color: #f5f7fa;
+	/* background-color: #f5f7fa; */
+	background-color: transparent;
 }
 
 [dir=ltr] .page-separator__text {
