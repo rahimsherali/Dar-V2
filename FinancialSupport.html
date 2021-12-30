@@ -15,10 +15,733 @@
 	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+	<link type="text/css" href="src/css/smart_wizard_all.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/flatpickr.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/flatpickr-airbnb.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/quill.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/bootstrap-touchspin.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
-	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
 	<style>
+        
+	.sw-theme-arrows>.tab-content>.tab-pane {
+		padding: 10px 30px
+	}
+	
+	.logo-container {
+		left: 50px;
+		position: absolute;
+		top: 20px;
+		z-index: 3
+	}
+	
+	.logo-container .logo {
+		overflow: hidden;
+		border-radius: 50%;
+		border: 1px solid #333;
+		width: 60px;
+		float: left
+	}
+	
+	.logo-container .brand {
+		font-size: 18px;
+		color: #FFF;
+		line-height: 20px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 10px;
+		width: 60px
+	}
+	
+	body {
+		background-color: #CCC
+	}
+	
+	.section .wizard-card {
+		min-height: inherit
+	}
+	
+	.tim-row {
+		margin-bottom: 20px
+	}
+	
+	.tim-white-buttons {
+		background-color: #777
+	}
+	
+	.title {
+		margin-top: 30px;
+		margin-bottom: 25px;
+		min-height: 32px;
+		font-weight: 500
+	}
+	
+	.title.text-center {
+		margin-bottom: 50px
+	}
+	
+	.tim-typo {
+		padding-left: 25%;
+		margin-bottom: 40px;
+		position: relative
+	}
+	
+	.tim-typo .tim-note {
+		bottom: 10px;
+		color: #c0c1c2;
+		display: block;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 13px;
+		left: 0;
+		margin-left: 20px;
+		position: absolute;
+		width: 260px
+	}
+	
+	.tim-row {
+		padding-top: 50px
+	}
+	
+	.tim-row h3 {
+		margin-top: 0
+	}
+	
+	.switch {
+		margin-right: 20px
+	}
+	
+	#navbar-full .navbar {
+		border-radius: 0!important;
+		margin-bottom: 15px;
+		z-index: 2
+	}
+	
+	.space {
+		height: 130px;
+		display: block
+	}
+	
+	.space-110 {
+		height: 110px;
+		display: block
+	}
+	
+	.space-50 {
+		height: 50px;
+		display: block
+	}
+	
+	.space-70 {
+		height: 70px;
+		display: block
+	}
+	
+	.navigation-example .img-src {
+		background-attachment: scroll
+	}
+	
+	.navigation-example {
+		background-image: url(../img/bg.jpg);
+		background-position: center center;
+		background-size: cover;
+		margin-top: 0;
+		min-height: 740px
+	}
+	
+	#notifications {
+		background-color: #FFF;
+		display: block;
+		width: 100%;
+		position: relative
+	}
+	
+	#notifications .alert-danger {
+		margin-bottom: 0
+	}
+	
+	.tim-note {
+		text-transform: capitalize
+	}
+	
+	#buttons .btn {
+		margin: 0 0 15px
+	}
+	
+	.space-100 {
+		height: 100px;
+		display: block;
+		width: 100%
+	}
+	
+	.be-social {
+		padding-bottom: 20px;
+		margin: 0 auto 40px
+	}
+	
+	.txt-white {
+		color: #FFF
+	}
+	
+	.txt-gray {
+		color: #ddd!important
+	}
+	
+	.parallax {
+		width: 100%;
+		height: 570px;
+		display: block;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center
+	}
+	
+	.logo-container.logo-documentation {
+		position: relative;
+		top: 0;
+		left: 0
+	}
+	
+	.logo-container .logo {
+		overflow: hidden;
+		border-radius: 50%;
+		border: 1px solid #333;
+		width: 50px;
+		float: left
+	}
+	
+	.logo-container .brand {
+		font-size: 16px;
+		line-height: 18px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 7px;
+		width: 70px;
+		height: 40px;
+		text-align: left
+	}
+	
+	.navbar-default .logo-container .brand {
+		color: #999
+	}
+	
+	.navbar-transparent .logo-container .brand {
+		color: #FFF
+	}
+	
+	.logo-container .brand-material {
+		font-size: 18px;
+		margin-top: 15px;
+		height: 25px;
+		width: auto
+	}
+	
+	.logo-container .logo img {
+		width: 100%
+	}
+	
+	.navbar-small .logo-container .brand {
+		color: #333
+	}
+	
+	.fixed-section {
+		top: 90px;
+		max-height: 80vh;
+		overflow: scroll
+	}
+	
+	.fixed-section ul li {
+		list-style: none
+	}
+	
+	.fixed-section li a {
+		font-size: 14px;
+		padding: 2px;
+		display: block;
+		color: #666
+	}
+	
+	.fixed-section li a.active {
+		color: #0bf
+	}
+	
+	.fixed-section.float {
+		position: fixed;
+		top: 100px;
+		width: 200px;
+		margin-top: 0
+	}
+	
+	.parallax .parallax-image {
+		width: 100%;
+		overflow: hidden;
+		position: absolute
+	}
+	
+	.parallax .parallax-image img {
+		width: 100%
+	}
+	
+	@media (max-width:768px) {
+		.parallax .parallax-image {
+			width: 100%;
+			height: 640px;
+			overflow: hidden
+		}
+		.parallax .parallax-image img {
+			height: 100%;
+			width: auto
+		}
+	}
+	
+	.separator {
+		content: "Separator";
+		color: #FFF;
+		display: block;
+		width: 100%;
+		padding: 20px
+	}
+	
+	.separator-line {
+		background-color: #EEE;
+		height: 1px;
+		width: 100%;
+		display: block
+	}
+	
+	.separator.separator-gray {
+		background-color: #EEE
+	}
+	
+	.social-buttons-demo .btn {
+		margin-right: 5px;
+		margin-bottom: 7px
+	}
+	
+	.img-container {
+		width: 100%;
+		overflow: hidden
+	}
+	
+	.img-container img {
+		width: 100%
+	}
+	
+	.lightbox img {
+		width: 100%
+	}
+	
+	.lightbox .modal-content {
+		overflow: hidden
+	}
+	
+	.lightbox .modal-body {
+		padding: 0
+	}
+	
+	@media screen and (min-width:991px) {
+		.lightbox .modal-dialog {
+			width: 960px
+		}
+	}
+	
+	@media (max-width:768px) {
+		.btn,
+		.btn-morphing {
+			margin-bottom: 10px
+		}
+		.parallax .motto {
+			top: 170px;
+			margin-top: 0;
+			font-size: 60px;
+			width: 270px
+		}
+	}
+	
+	.logo-container .brand,
+	.logo-container .logo,
+	.presentation .front,
+	.presentation .front .btn,
+	.presentation .front:after {
+		-webkit-transition: all .2s;
+		-moz-transition: all .2s;
+		-o-transition: all .2s;
+		transition: all .2s
+	}
+	
+	#images h4 {
+		margin-bottom: 30px
+	}
+	
+	#javascriptComponents {
+		padding-bottom: 0
+	}
+	
+	#javascriptComponents .btn-raised {
+		margin: 10px 5px
+	}
+	
+	.layers-container {
+		display: block;
+		margin-top: 50px;
+		position: relative
+	}
+	
+	.layers-container img {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+		text-align: center
+	}
+	
+	.section-black {
+		background-color: #333
+	}
+	
+	.animate {
+		transition: 1.5s ease-in-out;
+		-moz-transition: 1.5s ease-in-out;
+		-webkit-transition: 1.5s ease-in-out
+	}
+	
+	.navbar-default.navbar-small .logo-container .brand {
+		color: #333
+	}
+	
+	.navbar-transparent.navbar-small .logo-container .brand {
+		color: #FFF
+	}
+	
+	.navbar-default.navbar-small .logo-container .brand {
+		color: #333
+	}
+	
+	.sharing-area {
+		margin-top: 80px
+	}
+	
+	.sharing-area .btn {
+		margin: 15px 4px 0;
+		color: #FFF
+	}
+	
+	.sharing-area .btn i {
+		font-size: 18px;
+		position: relative;
+		top: 2px;
+		margin-right: 5px
+	}
+	
+	.sharing-area .btn-twitter {
+		background-color: #55acee
+	}
+	
+	.sharing-area .btn-facebook {
+		background-color: #3b5998
+	}
+	
+	.sharing-area .btn-google-plus {
+		background-color: #dd4b39
+	}
+	
+	.sharing-area .btn-github {
+		background-color: #333
+	}
+	
+	.section-notifications,
+	.section-thin {
+		padding: 0
+	}
+	
+	.section-navbars {
+		padding-top: 0
+	}
+	
+	#navbar .navbar {
+		border-radius: 0
+	}
+	
+	.section-tabs {
+		background: #EEE
+	}
+	
+	.section-pagination {
+		padding-bottom: 0
+	}
+	
+	.section-download h4 {
+		margin-bottom: 50px
+	}
+	
+	.section-examples a {
+		text-decoration: none
+	}
+	
+	.section-examples h5 {
+		margin-top: 30px
+	}
+	
+	.components-page .wrapper>.header,
+	.tutorial-page .wrapper>.header {
+		height: 400px;
+		padding-top: 100px;
+		background-size: cover;
+		background-position: center center
+	}
+	
+	.components-page .title,
+	.tutorial-page .title {
+		color: #FFF
+	}
+	
+	.main {
+		background: #FFF;
+		position: relative;
+		z-index: 3
+	}
+	
+	.main-raised {
+		margin: -60px 30px 0;
+		border-radius: 6px;
+		box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+	}
+	
+	.header-filter {
+		position: relative
+	}
+	
+	.header-filter:after,
+	.header-filter:before {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		display: block;
+		left: 0;
+		top: 0;
+		content: ""
+	}
+	
+	.header-filter::before {
+		background-color: rgba(0, 0, 0, .4)
+	}
+	
+	.header-filter .container {
+		z-index: 2;
+		position: relative
+	}
+	
+	.section {
+		padding: 70px 0;
+		background-position: center center;
+		background-size: cover
+	}
+	
+	.navbar {
+		border: 0;
+		border-radius: 3px;
+		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, .42), 0 3px 20px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+		padding: 10px 0;
+		-webkit-transition: all 150ms ease 0s;
+		-moz-transition: all 150ms ease 0s;
+		-o-transition: all 150ms ease 0s;
+		-ms-transition: all 150ms ease 0s;
+		transition: all 150ms ease 0s
+	}
+	
+	.navbar .navbar-brand {
+		position: relative;
+		height: 50px;
+		line-height: 30px;
+		color: inherit;
+		padding: 10px 15px
+	}
+	
+	.navbar .navbar-brand:focus,
+	.navbar .navbar-brand:hover {
+		color: inherit;
+		background-color: transparent
+	}
+	
+	.navbar.navbar-transparent {
+		background-color: transparent;
+		box-shadow: none;
+		color: #fff;
+		padding-top: 25px
+	}
+	
+	.navbar-fixed-top {
+		border-radius: 0
+	}
+	
+	.navbar .navbar-nav>li>a .fa,
+	.navbar .navbar-nav>li>a .material-icons {
+		font-size: 20px;
+		max-width: 20px
+	}
+	
+	.navbar .navbar-nav>li>a:focus,
+	.navbar .navbar-nav>li>a:hover {
+		color: inherit;
+		background-color: transparent
+	}
+	
+	.navbar .navbar-nav>li>a:not(.btn) .material-icons {
+		margin-top: -3px;
+		top: 0;
+		position: relative;
+		margin-right: 3px
+	}
+	
+	.navbar,
+	.navbar.navbar-default {
+		background-color: #9c27b0;
+		color: #FFF
+	}
+	
+	.navbar .navbar-nav>li>a {
+		color: inherit;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-weight: 400;
+		font-size: 12px;
+		text-transform: uppercase;
+		border-radius: 3px
+	}
+	
+	@media (max-width:1199px) {
+		.navbar .navbar-brand {
+			height: 50px;
+			padding: 10px 15px
+		}
+		.navbar .navbar-nav>li>a {
+			padding-top: 15px;
+			padding-bottom: 15px
+		}
+	}
+	
+	footer {
+		padding: 15px 0;
+		text-align: center
+	}
+	
+	.footer a {
+		font-weight: 700
+	}
+	
+	footer.footer-documentation {
+		margin-top: 0;
+		bottom: 0;
+		text-shadow: none;
+		color: inherit
+	}
+	
+	footer.footer-documentation li a {
+		color: inherit
+	}
+	
+	footer.footer-documentation li a:focus,
+	footer.footer-documentation li a:hover {
+		color: #89229b
+	}
+	
+	footer ul {
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none
+	}
+	
+	footer ul li {
+		display: inline-block
+	}
+	
+	footer ul li a {
+		color: inherit;
+		padding: 15px;
+		font-weight: 500;
+		font-size: 12px;
+		text-transform: uppercase;
+		border-radius: 3px;
+		text-decoration: none;
+		position: relative;
+		display: block
+	}
+	
+	footer ul li a:hover {
+		text-decoration: none
+	}
+	
+	footer ul li .btn {
+		margin: 0
+	}
+	
+	footer ul.links-horizontal:first-child a {
+		padding-left: 0
+	}
+	
+	footer ul.links-horizontal:last-child a {
+		padding-right: 0
+	}
+	
+	footer ul.links-vertical li {
+		display: block
+	}
+	
+	footer ul.links-vertical li a {
+		padding: 5px 0
+	}
+	
+	footer .social-buttons .btn,
+	footer .social-buttons a {
+		margin-top: 5px;
+		margin-bottom: 5px
+	}
+	
+	footer .footer-brand {
+		float: left;
+		height: 50px;
+		padding: 15px 15px;
+		font-size: 18px;
+		line-height: 20px;
+		margin-left: -15px
+	}
+	
+	footer .footer-brand:focus,
+	footer .footer-brand:hover {
+		color: #3C4858
+	}
+	
+	footer .copyright {
+		padding: 15px 0;
+		text-align: center
+	}
+	
+	footer .copyright .material-icons {
+		font-size: 18px;
+		position: relative;
+		top: 3px
+	}
+	
+	footer .pull-center {
+		display: inline-block;
+		float: none
+	}
+	
+	@media (max-width:768px) {
+		.footer .copyright {
+			display: inline-block;
+			text-align: center;
+			padding: 10px 0;
+			float: none!important;
+			width: 100%
+		}
+	}
+	
 	.form-control {
 		display: block;
 		width: 100%;
@@ -83,19 +806,151 @@
 	}
 	
 	.activemenu {
-		background: #00a650 !important;
+		background: #00a650!important;
 		color: #fff!important
+	}
+	
+	.form-label {
+		color: #272c33;
+		text-transform: capitalize;
+		font-size: .8125rem;
+		font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+		font-weight: 600;
+		letter-spacing: 0
+	}
+	
+	label.form-label {
+		margin-bottom: 0;
+		margin-top: 4px
+	}
+	
+	.custom-control.custom-checkbox {
+		width: auto;
+		display: inline-table
+	}
+	
+	[dir] .custom-file-label:after {
+		padding: .5rem .75rem;
+		background-color: #00a650
 	}
 	
 	div#app-settings {
 		display: none
 	}
 	
-	.active>.sidebar-menu-button .sidebar-menu-text:after {
+	.table thead th {
+		color: #272c33;
+		text-transform: capitalize;
+		font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif;
+		font-weight: 600;
+		letter-spacing: 0
+	}
+	
+	[dir=ltr] .button-list>.btn,
+	[dir=ltr] .button-list>.btn-group {
+		margin-left: 0
+	}
+	
+	[dir] .button-list>.btn,
+	[dir] .button-list>.btn-group {
+		margin-bottom: 0
+	}
+	
+	.Tablebtn {
+		text-align: center;
+		background-color: transparent;
+		border: 1px solid transparent;
+		padding: .2rem .5rem!important;
+		border-radius: .25rem
+	}
+	
+	.modal-backdrop.show {
+		opacity: 1;
 		display: none
 	}
-
+	
+	.reviewForm {
+		margin-left: 20px;
+		font-size: initial
+	}
+	
+	.retable {
+		border: 1px solid #c3c4c5;
+		padding: 4px 0
+	}
+	
+	li.sidebar-menu-item.open {
+		background: #f5f7fa
+	}
+	
+	.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before,
+	.tooltip.bs-tooltip-top .arrow::before {
+		margin-left: -3px;
+		content: "";
+		border-width: 5px 5px 0;
+		border-top-color: #fb6b5b
+	}
+	
+	.tooltip-inner {
+		max-width: 200px;
+		color: #FFF;
+		padding: 10px;
+		text-align: center;
+		background-color: #fb6b5b!important;
+		border-radius: .25rem;
+		font-size: 10px
+	}
+	
+	.form-label {
+		color: #949799!important
+	}
+	
+	.sw-theme-arrows>.nav .nav-link.active {
+		color: #fff;
+		border-color: #d9534f;
+		background: #d9534f;
+		cursor: pointer
+	}
+	
+	.sw-theme-arrows>.nav .nav-link.active::after {
+		border-left-color: #d9534f
+	}
+	
+	label.form-label {
+		margin-bottom: .3rem;
+		margin-top: 4px
+	}
+	
+	.form-control {
+		display: block;
+		width: 100%;
+		height: calc(1.5em + 1rem + 2px)
+	}
+	
+	.sw-theme-dots>.nav .nav-link.active {
+		color: #d9534f!important;
+		cursor: pointer
+	}
+	
+	.sw-theme-dots>.nav .nav-link.active::after {
+		background-color: #d9534f!important
+	}
+	
+	.sw-theme-arrows .toolbar>.btn {
+		color: #fff;
+		background-color: #d9534f;
+		border: 1px solid #d9534f;
+		padding: .375rem .75rem;
+		border-radius: .25rem;
+		font-weight: 400
+	}
 	</style>
+	<script type="text/javascript">
+	function nextstep() {
+		stepid += 1, $("#innerstep" + stepid.toString()).show()
+	}
+	var stepid = 1;
+	</script>
 </head>
 
 <body class="layout-app layout-sticky-subnav">
@@ -137,105 +992,121 @@
 			</div>
 			<div class="container-fluid page__container">
 				<div class="page-section">
-					<div class="card mb-lg-32pt">
+					<div class="card">
 						<div class="card-header">
-							<form class="form-inline">
-								<h3 style="margin-bottom:0;display:inline;width:auto">Initiate Request - Caregiver</h3>
-								<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-									<p style="margin-bottom:0; display:inline; width:auto; float:right; margin-top:.5rem; margin-left:15px;color:#8a9199"><a data-toggle="modal" data-target="#myModal" class="btn btn-primary">Add Initiate Request</a></p>
-								</div>
-							</form>
-						</div>
-						<div class="row" style="padding:10px">
-							<div class="col-sm-12 col-md-6">
-								<div class="form-group">
-									<label class="form-label" for="selecta1">Name</label>
-									<input type="text" class="form-control" id="itemname" placeholder="Enter Name" name="name">
-								</div>
-							</div>
-							<div class="col-sm-12 col-md-6">
-								<div class="form-group">
-									<label class="form-label" for="selecta6" style="visibility:hidden;display:block">Search By Date</label>
-									<button type="button" class="btn btn-accent" style="background:#00a650;border-color:#00a650;width:100%">Search</button>
+							<div class="row my-2">
+								<div class="col-12">
+									<div class="page-separator-text">Financial Support</div>
 								</div>
 							</div>
 						</div>
-						<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-							<table class="table mb-0 thead-border-top-0 table-nowrap">
-								<thead>
-									<th>Name</th>
-									<th>Who Can Request</th>
-									<th>Active</th>
-									<th>Action</th>
-								</thead>
-								<tbody class="list" id="staff">
-									<tr>
-										<td>Ubaid</td>
-										<td>Child</td>
-										<td>
-                                            <div class="custom-control custom-checkbox">
-                                                <input id="customCheck01" type="checkbox" class="custom-control-input">
-                                                <label for="customCheck01" class="custom-control-label"></label>
-                                            </div>
-                                        </td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>Ubaid</td>
-										<td>Youth</td>
-										<td>
-                                            <div class="custom-control custom-checkbox">
-                                                <input id="customCheck02" type="checkbox" class="custom-control-input">
-                                                <label for="customCheck02" class="custom-control-label"></label>
-                                            </div>
-                                        </td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>Ubaid</td>
-										<td>Independent</td>
-										<td>
-                                            <div class="custom-control custom-checkbox">
-                                                <input id="customCheck03" type="checkbox" class="custom-control-input">
-                                                <label for="customCheck03" class="custom-control-label"></label>
-                                            </div>
-                                        </td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-									<tr>
-										<td>Ubaid</td>
-										<td>Foster Family</td>
-										<td>
-                                            <div class="custom-control custom-checkbox">
-                                                <input id="customCheck04" type="checkbox" class="custom-control-input">
-                                                <label for="customCheck04" class="custom-control-label"></label>
-                                            </div>
-                                        </td>
-										<td>
-											<button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<div class="form-row">
+										<label class="form-label w-100">Requested By</label>
+										<input type="text" class="form-control" id="requestedby">
+									</div>        
+								</div>
+								<div class="col-sm-12 col-md-4">
+									<div class="form-row">
+										<label class="form-label w-100">Request For</label>
+										<input type="text" class="form-control" id="requestedfor">
+									</div>        
+								</div>
+								<div class="col-sm-12 col-md-4">
+									<div class="form-row">
+										<label class="form-label w-100">Item Category/Child Segment</label>
+										<select name="itemchild" class="custom-select">
+											<option selected="">Select Item Category/Child Segment</option>
+											<option value="furniture">Furniture items like chair/closet</option>
+											<option value="electronic">Electronic items like iPad, Cell phones</option>
+											<option value="entertainment">Programs – Entertainment like visiting Zoo, Museum, and Movies</option>
+											<option value="training">Program – Training for professional development like learning new language</option>
+											<option value="hobbies">Program – for pursuing Hobbies such as Sports, Dance, Music, Fitness/Gym</option>
+											<option value="membership">Membership – for technical professional bodies/institutes</option>
+											<option value="books">Books and magazines</option>
+											<option value="fees">School / college / Extra Tuition Fees</option>
+											<option value="admissionwithinuae">Admission to private institution within UAE</option>
+											<option value="admissionoutsideuae">Admission to private institution outside UAE</option>
+											<option value="rewards">Rewarding High Performers</option>
+											<option value="tutor">Hire tutor or enroll in specialized center </option>
+										</select>
+									</div>        
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-sm-12 col-md-4">
+									<div class="form-row">
+										<label class="form-label w-100">Purpose</label>
+										<input type="text" class="form-control" id="purpose">
+									</div>        
+								</div>
+								<div class="col-sm-12 col-md-4 mt-4">
+									<div class="form-group">
+										<button type="button" class="btn btn-primary w-100">Search</button>
+									</div>
+								</div>
+							</div>
+							<div class="table-responsive table-bordered mt-2" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
+								<table class="table mb-0 thead-border-top-0 table-nowrap">
+									<thead>
+										<th>Request By</th>
+										<th>Request For</th>
+										<th>Item Category/Child Segment</th>
+										<th>Purpose</th>
+										<th>Action</th>
+										<th>Action</th>
+									</thead>
+									<tbody class="list" id="staff">
+										<tr>
+											<td>Caregiver Name</td>
+											<td>Child</td>
+											<td>Admission to Higher Education</td>
+											<td>Admission to Higher Education</td>
+											<td><button class="btn btn-primary">Edit</button></td>
+											<td><a class="text-primary" href="#">View</a></td>
+										</tr>
+										<tr>
+											<td>Caregiver Name</td>
+											<td>Child</td>
+											<td>Admission to Higher Education</td>
+											<td>Admission to Higher Education</td>
+											<td><button class="btn btn-primary">Edit</button></td>
+											<td><a class="text-primary" href="#">View</a></td>
+										</tr>
+										<tr>
+											<td>Caregiver Name</td>
+											<td>Youth</td>
+											<td>Admission to Higher Education</td>
+											<td>Admission to Higher Education</td>
+											<td><button class="btn btn-primary">Edit</button></td>
+											<td><a class="text-primary" href="#">View</a></td>
+										</tr>
+										<tr>
+											<td>Caregiver Name</td>
+											<td>Youth</td>
+											<td>Admission to Higher Education</td>
+											<td>Admission to Higher Education</td>
+											<td><button class="btn btn-primary">Edit</button></td>
+											<td><a class="text-primary" href="#">View</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
-						<div class="card-footer p-8pt">
-							<ul class="pagination justify-content-start pagination-xsm m-0">
-								<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
-								<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
-									<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
-								</li>
-								<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
-							</ul>
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-sm-12">
+									<ul class="pagination justify-content-start pagination-xsm m-0">
+										<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
+										<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
+											<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
+										</li>
+										<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -351,7 +1222,7 @@
 						<li class="sidebar-menu-item open"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu15"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Financial Support <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
 							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu15">
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AddItemChildSegment.html"><span class="sidebar-menu-text">Add Item/Child Segment</span></a></li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button activemenu" href="InitiateRequestCaregiver.html"><span class="sidebar-menu-text">Initiate Request Caregiver</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestCaregiver.html"><span class="sidebar-menu-text">Initiate Request Caregiver</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestSocialWorker.html"><span class="sidebar-menu-text">Initiate Request Social Worker</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateRequestYouthIndependent.html"><span class="sidebar-menu-text">Initiate Request Youth Independent</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewRequest-CA-SH-FC-ERY-AC.html"><span class="sidebar-menu-text">Review Request - CA - SH/FC/ERY/AC</span></a></li>
@@ -361,19 +1232,14 @@
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UploadReceipt–P–SH-Caregiver.html"><span class="sidebar-menu-text">Upload Receipt – P – SH/Caregiver</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdateRewardingHighPerformersRequestbyCaregiverYouth.html"><span class="sidebar-menu-text">Update Rewarding High Performers Request by Caregiver Youth</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdateAdmissiontoHigherEducationRequest.html"><span class="sidebar-menu-text">Update Admission to Higher Education Request</span></a></li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="FinancialSupport.html"><span class="sidebar-menu-text">Financial Support</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button activemenu" href="FinancialSupport.html"><span class="sidebar-menu-text">Financial Support</span></a></li>
 							</ul>
 						</li>
 						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Educational Management</a></li>
 						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="components_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Psychological Management</a></li>
 						<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span> Talent Management</a></li>
 					</ul>
-					<div class="sidebar-heading">Bussiness Support services</div>
-                    <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
-                    <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
-                    <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
-                    <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
-                </div>
+					<div class="sidebar-heading">Bussiness Support services</div><a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a> <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a> <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a> <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a></div>
 			</div>
 		</div>
 	</div>
@@ -399,6 +1265,9 @@
 	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
 	<script src="assets/js/flatpickr.js"></script>
 	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker.js"></script>
+	<script src="assets/js/daterangepicker.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
 	<script src="assets/vendor/moment-range.js"></script>
 	<script src="assets/vendor/Chart.min.js"></script>
 	<script src="assets/js/chartjs.js"></script>
@@ -408,180 +1277,104 @@
 	<script src="assets/js/vector-maps.js"></script>
 	<script src="assets/vendor/list.min.js"></script>
 	<script src="assets/js/list.js"></script>
-	<script src="assets/vendor/select2/select2.min.js"></script>
-	<script src="assets/js/select2.js"></script>
 	<script src="assets/js/toggle-check-all.js"></script>
 	<script src="assets/js/check-selected-row.js"></script>
-	<script src="https://code.highcharts.com/modules/exporting.js"></script>
-	<script src="https://code.highcharts.com/modules/export-data.js"></script>
-	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="assets/vendor/jquery.min.js"></script>
+	<script src="assets/vendor/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap.min.js"></script>
+	<script src="assets/vendor/perfect-scrollbar.min.js"></script>
+	<script src="assets/vendor/dom-factory.js"></script>
+	<script src="assets/vendor/material-design-kit.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/hljs.js"></script>
+	<script src="assets/vendor/jquery.bootstrap-touchspin.js"></script>
+	<script src="assets/js/touchspin.js"></script>
+	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<script src="assets/js/flatpickr.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker.js"></script>
+	<script src="assets/js/daterangepicker.js"></script>
+	<script src="assets/vendor/jquery.mask.min.js"></script>
+	<script src="assets/vendor/quill.min.js"></script>
+	<script src="assets/js/quill.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
+	<script src="assets/js/select2.js"></script>
 	<script src="assets/js/app-settings.js"></script>
-
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            
-                <!-- Modal Header -->
-                <div class="modal-header">
-                <h4 class="modal-title">Add/Edit Initiate Request - Caregiver</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <form action="">
-                        <div class="row">
-                            <div class="col-4">
-                                <label>Requested By:</label>
-                            </div>
-                             <div class="col-8">
-								<label>Caregiver Name</label>	
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <label>Child/Youth:</label>
-                            </div>
-                             <div class="col-8">
-                                <select name="childyouth" class="custom-select" required="">
-                                    <option selected="">Select</option>
-                                    <option value="child">Child</option>
-                                    <option value="youth">Youth</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <label>Item Category/Child Segment:</label>
-                            </div>
-                             <div class="col-8">
-                                <select name="itemchild" class="custom-select" required="">
-                                    <option selected="">Select Item Category/Child Segment</option>
-                                    <option value="furniture">Furniture items like chair/closet</option>
-                                    <option value="electronic">Electronic items like iPad, Cell phones</option>
-									<option value="entertainment">Programs – Entertainment like visiting Zoo, Museum, and Movies</option>
-									<option value="training">Program – Training for professional development like learning new language</option>
-									<option value="hobbies">Program – for pursuing Hobbies such as Sports, Dance, Music, Fitness/Gym</option>
-									<option value="membership">Membership – for technical professional bodies/institutes</option>
-									<option value="books">Books and magazines</option>
-									<option value="fees">School / college / Extra Tuition Fees</option>
-									<option value="admissionwithinuae">Admission to private institution within UAE</option>
-									<option value="admissionoutsideuae">Admission to private institution outside UAE</option>
-									<option value="rewards">Rewarding High Performers</option>
-									<option value="tutor">Hire tutor or enroll in specialized center </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <label>Purpose:</label>
-                            </div>
-                            <div class="col-8">
-                                <input type="text" class="form-control" id="purpose" placeholder="Enter Purpose" name="purpose" required="">
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <label>Description:</label>
-                            </div>
-                             <div class="col-8">
-                                <textarea class="form-control" id="description" rows="3" required=""></textarea>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <label>Approx Amount:</label>
-                            </div>
-                             <div class="col-8">
-                                <input type="text" class="form-control" id="approxamount" placeholder="Enter Approx Amount" name="approxamount">
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-4">
-                                <label>Upload Document:</label>
-                            </div>
-                             <div class="col-8">
-                                <div class="custom-file mb-3">
-                                    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                                  </div>
-                            </div>
-                        </div>
-						<div class="row mt-3">
-							<div class="col-6">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input private" id="customCheck1">
-									<label class="custom-control-label" for="customCheck1">Admission to private institution</label>
-								</div>
-							</div>
-						</div>
-						<section class="answer">
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>Private University Name:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="universityname" placeholder="Private University Name" name="universityname" required="">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>Location on Map:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="location" placeholder="Location on Map" name="location">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>Country:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="country" placeholder="Country" name="country" required="">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>State:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="state" placeholder="State" name="state" required="">
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="col-4">
-									<label>City:</label>
-								</div>
-								<div class="col-8">
-									<input type="text" class="form-control" id="city" placeholder="City" name="city" required="">
-								</div>
-							</div>
-						</section>
-
-                    </form>
-                </div>
-                
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-	<script>
-		$(".answer").hide();
-		$(".private").click(function() {
-			if($(this).is(":checked")) {
-				$(".answer").show();
-			} else {
-				$(".answer").hide();
-			}
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("<button></button>").text("Finish").addClass("btn btn-info").on("click", function() {
+			alert("Finish Clicked")
+		}),
+        
+        $("<button></button>").text("Cancel").addClass("btn btn-danger").on("click", function() {
+			$("#smartwizard").smartWizard("reset")
 		});
-	</script>
 
+		$("#smartwizard").on("showStep", function(t, n, r, a, i) {
+			$("#prev-btn").removeClass("disabled"), $("#next-btn").removeClass("disabled"), "first" === i ? $("#prev-btn").addClass("disabled") : "last" === i ? $("#next-btn").addClass("disabled") : ($("#prev-btn").removeClass("disabled"), $("#next-btn").removeClass("disabled"))
+		}),
+        
+        $("#smartwizard").smartWizard({
+			selected: 0,
+			theme: "arrows",
+			transition: {
+				animation: "slide-horizontal"
+			},
+			toolbarSettings: {
+				toolbarPosition: "both"
+			}
+		}),
+        
+        $("#reset-btn").on("click", function() {
+			return $("#smartwizard").smartWizard("reset"), !0
+		}),
+        
+        $("#prev-btn").on("click", function() {
+			return $("#smartwizard").smartWizard("prev"), !0
+		}),
+        
+        $("#next-btn").on("click", function() {
+			return $("#smartwizard").smartWizard("next"), !0
+		}),
+        
+        $("#got_to_step").on("change", function() {
+			var t = $(this).val() - 1;
+			return $("#smartwizard").smartWizard("goToStep", t), !0
+		})
+
+        $("#dark_mode").on("click", function() {
+			var t = {
+				darkMode: $(this).prop("checked")
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		})
+
+        $("#is_justified").on("click", function() {
+			var t = {
+				justified: $(this).prop("checked")
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		}),
+        
+        $("#animation").on("change", function() {
+			var t = {
+				transition: {
+					animation: $(this).val()
+				}
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		}),
+        
+        $("#theme_selector").on("change", function() {
+			var t = {
+				theme: $(this).val()
+			};
+			return $("#smartwizard").smartWizard("setOptions", t), !0
+		})
+	});
+	</script>
 </body>
 
 </html>
