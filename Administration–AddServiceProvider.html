@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>Dashboard</title>
+	<meta name="robots" content="noindex">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+	<style>
+	.form-control {
+		display: block;
+		width: 100%;
+		height: calc(1.5em + .5rem + 2px)
+	}
+	
+	.navbar-nav .nav-link {
+		font-size: .9rem
+	}
+	
+	.vl {
+		border-left: 1px solid #e8e8e8;
+		height: 30px
+	}
+	
+	.sidebar-brand-icon {
+		display: flex;
+		width: 70%;
+		height: auto
+	}
+	
+	[dir] .sidebar-light .open>.sidebar-menu-button {
+		background: #00a650
+	}
+	
+	.sidebar-light .open>.sidebar-menu-button,
+	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+		color: #fff
+	}
+	
+	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+		color: #fff
+	}
+	
+	.leftMenu {
+		margin: 5px 10px;
+		border-radius: 6px!important;
+		background: #a39161!important;
+		color: #fff;
+		border-color: #a39161!important;
+		padding: 5px 0!important;
+		font-size: 15px;
+		font-weight: 500
+	}
+	
+	.sidebar-heading {
+		line-height: 1.5rem;
+		font-size: .775rem
+	}
+	
+	.sidebar-heading {
+		font-weight: 600;
+		font-family: Arial, sans-serif!important;
+		text-transform: uppercase;
+		letter-spacing: 0!important
+	}
+	
+	[dir] .card-header {
+		padding: .3rem 1rem;
+		margin-bottom: 0;
+		background-color: #fff
+	}
+	
+	.activemenu {
+		background: #00a650 !important;
+		color: #fff !important
+	}
+	
+	div#app-settings {
+		display: none
+	}
+	
+	.active>.sidebar-menu-button .sidebar-menu-text:after {
+		display: none
+	}
+	</style>
+</head>
+
+<body class="layout-app layout-sticky-subnav">
+	<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+		<div class="mdk-drawer-layout__content page-content">
+			<div class="navbar navbar-expand navbar-shadow px-0 pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+				<button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar"><span class="material-icons">menu</span></button>
+				<a href="index.html" class="navbar-brand mr-16pt d-lg-none"><img class="navbar-brand-icon mr-0 mr-lg-8pt" src="assets/images/Logo.svg" width="32" alt="Huma"></a>
+				<form class="search-form navbar-search d-none d-md-flex" style="width:20%;border-radius:10px" action="https://huma.demo.frontendmatter.com/index.html">
+					<input class="form-control" placeholder="Search Everything ...">
+					<button class="btn" type="submit"><i class="material-icons">search</i></button>
+				</form>
+				<div class="flex"></div>
+				<div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space:nowrap">
+					<div class="nav-item dropdown d-none d-sm-flex"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Select language</strong></div><a class="dropdown-item active" href="#">English</a> <a class="dropdown-item" href="#">عربي</a></div>
+					</div>
+				</div>
+				<div class="vl mr-16pt"></div>
+				<div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+					<div class="nav-item mr-16pt dropdown dropdown-notifications">
+						<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false"><i class="material-icons">notifications</i> <span class="badge badge-notifications badge-accent">2</span></button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div data-perfect-scrollbar class="position-relative">
+								<div class="dropdown-header"><strong>System notifications</strong></div>
+								<div class="list-group list-group-flush mb-0"><a href="javascript:void(0);" class="list-group-item list-group-item-action unread"><span class="d-flex align-items-center mb-1"><small class="text-black-50">3 minutes ago</small> <span class="ml-auto unread-indicator bg-accent"></span></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-accent">account_circle</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your profile information has not been synced correctly.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">5 hours ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-primary">group_add</i></span></span> <span class="flex d-flex flex-column"><strong class="text-black-100">Adrian. D</strong> <span class="text-black-70">Wants to join your private group.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">1 day ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-warning">storage</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your deploy was successful.</span></span></span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="vl mr-16pt" style="margin-top:16px"></div>
+					<div class="nav-item dropdown d-none d-sm-flex">
+						<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"><img width="32" height="32" class="rounded-circle mr-8pt" src="assets/images/people/50/guy-3.jpg" alt="account"> <span class="flex d-flex flex-column mr-8pt"><span class="navbar-text-100">Laza Bogdan</span> <small class="navbar-text-50">Administrator</small></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Account</strong></div><a class="dropdown-item" href="edit-account.html">Edit Account</a> <a class="dropdown-item" href="login.html">Logout</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid page__container">
+				<div class="page-section">
+					<div class="card mb-lg-32pt">
+						<div class="card-header">
+							<div class="row">
+								<div class="col-sm-12 col-md-6 my-auto">
+									<h3 class="my-auto">Add Service Provider</h3>
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-4">
+									<label>Name</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="name" placeholder="Name">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Description</label>
+								</div>
+								<div class="col-8">
+									<textarea class="form-control" id="description" rows="1" placeholder="Description"></textarea>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Email</label>
+								</div>
+								<div class="col-8">
+									<input type="email" class="form-control" id="email" placeholder="Email">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Address</label>
+								</div>
+								<div class="col-8">
+									<textarea class="form-control" id="address" rows="1" placeholder="Address"></textarea>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Contact Number</label>
+								</div>
+								<div class="col-8">
+									<input type="tel" class="form-control" id="number" placeholder="Contact Number">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>License</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="license" placeholder="License">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Expiry Date</label>
+								</div>
+								<div class="col-8">
+									<input type="date" class="form-control" id="license">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Notes</label>
+								</div>
+								<div class="col-8">
+									<textarea class="form-control" id="notes" rows="1" placeholder="Notes"></textarea>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Documents</label>
+								</div>
+								<div class="col-8">
+									<div class="custom-file">
+										<input type="file" class="custom-file-input" id="validatedCustomFile" required="">
+										<label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Services</label>
+								</div>
+								<div class="col-8">
+									<div class="custom-control custom-checkbox custom-control-inline">
+										<input type="checkbox" class="custom-control-input" id="electrician" value="customEx">
+										<label class="custom-control-label" for="electrician">Electrician</label>
+									</div>
+									<div class="custom-control custom-checkbox custom-control-inline">
+										<input type="checkbox" class="custom-control-input" id="plumbing" value="customEx">
+										<label class="custom-control-label" for="plumbing">Plumbing</label>
+									</div>
+									<div class="custom-control custom-checkbox custom-control-inline">
+										<input type="checkbox" class="custom-control-input" id="water" value="customEx">
+										<label class="custom-control-label" for="water">Water</label>
+									</div>
+									<div class="custom-control custom-checkbox custom-control-inline">
+										<input type="checkbox" class="custom-control-input" id="wastemanagement" value="customEx">
+										<label class="custom-control-label" for="wastemanagement">Waste Management</label>
+									</div>
+									<div class="custom-control custom-checkbox custom-control-inline">
+										<input type="checkbox" class="custom-control-input" id="cleaning" value="customEx">
+										<label class="custom-control-label" for="cleaning">Cleaning</label>
+									</div>
+									<div class="custom-control custom-checkbox custom-control-inline">
+										<input type="checkbox" class="custom-control-input" id="mechanical" value="customEx">
+										<label class="custom-control-label" for="mechanical">Mechanical</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer d-flex justify-content-end">
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Clear</button>
+							<button type="button" class="btn btn-primary ml-2" data-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="js-fix-footer footer border-top-2">
+				<div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px!important;padding-bottom:15px!important">
+					<p class="measure-lead-max text-muted mb-0 small">Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+				</div>
+			</div>
+		</div>
+		<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+			<div class="mdk-drawer__content">
+				<div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar><a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right" data-boundary="window"><span class="material-icons">sync_alt</span></a>
+					<a href="index.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/Logo.png" alt="Huma"></a>
+					<div class="sidebar-heading">Overview</div>
+					<ul class="sidebar-menu">
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="index.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span> <span class="sidebar-menu-text">Dashboard</span></a></li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Application Catalog <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu">
+								<li class="sidebar-menu-item active"><a class="sidebar-menu-button" href="Childcare.html"><span class="sidebar-menu-text">Child Care</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Correspondence</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Budget and Planning</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Facility Maintenance</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Manpower</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Customer Support</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Performance Management</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<div class="sidebar-heading mt-3">Facility Management</div>
+							<ul class="sidebar-menu">
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="FacilityManagement.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Dashboard</a></li>
+								<li class="sidebar-menu-item open"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu1"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Business Requirement <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu1">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Administration-ServiceProvider.html"><span class="sidebar-menu-text">Service Providers</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button activemenu" href="Administration–AddServiceProvider.html"><span class="sidebar-menu-text">Add Service Provider</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Caregiver-BusinessSupportTeam-Administrators.html"><span class="sidebar-menu-text">Caregiver/Business Support Team/Administrators</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Requests.html"><span class="sidebar-menu-text">Request</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateNewRequest.html"><span class="sidebar-menu-text">Create New Request</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Educational Management</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="components_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Psychological Management</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span> Talent Management</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="sidebar-heading">Bussiness Support services</div>
+					<a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+					<a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+					<a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+					<a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+                </div>
+			</div>
+		</div>
+	</div>
+	<div id="app-settings">
+		<app-settings layout-active="app" :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+	</div>
+	<script src="assets/vendor/jquery.min.js"></script>
+	<script src="assets/vendor/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap.min.js"></script>
+	<script src="assets/vendor/perfect-scrollbar.min.js"></script>
+	<script src="assets/vendor/dom-factory.js"></script>
+	<script src="assets/vendor/material-design-kit.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/hljs.js"></script>
+	<script src="assets/js/settings.js"></script>
+	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<script src="assets/js/flatpickr.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/moment-range.js"></script>
+	<script src="assets/vendor/Chart.min.js"></script>
+	<script src="assets/js/chartjs.js"></script>
+	<script src="assets/js/page.analytics-dashboard.js"></script>
+	<script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+	<script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script src="assets/js/vector-maps.js"></script>
+	<script src="assets/vendor/list.min.js"></script>
+	<script src="assets/js/list.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
+	<script src="assets/js/select2.js"></script>
+	<script src="assets/js/toggle-check-all.js"></script>
+	<script src="assets/js/check-selected-row.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="assets/js/app-settings.js"></script>
+
+</body>
+
+</html>
