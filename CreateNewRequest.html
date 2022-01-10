@@ -11,12 +11,14 @@
 	<link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+	
 	<link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
 	<link type="text/css" href="src/css/smart_wizard_all.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/file-picker-helper/dist/css/jquery-formhelper.min.css">
 	<link type="text/css" href="assets/css/flatpickr.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/flatpickr-airbnb.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
@@ -24,6 +26,8 @@
 	<link type="text/css" href="assets/css/bootstrap-touchspin.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+	
+	
 	<style>
 	.sw-theme-arrows>.tab-content>.tab-pane {
 		padding: 10px 30px
@@ -944,17 +948,45 @@
 		font-weight: 400
 	}
 
+	.sw-theme-arrows .toolbar>.btn:focus {
+		box-shadow: 0 0 0 1px #d9534f;
+	}
+
 	.round {
 		width: 40px;
 		height: 40px;
 	}
 
-	</style>
-	<script type="text/javascript">
-	function nextstep() {
-		stepid += 1, $("#innerstep" + stepid.toString()).show(), 2 == stepid && $("#tabcontentdiv").height(610), 3 == stepid && $("#tabcontentdiv").height(810)
+	.ctrl-demo {
+        background-color: #F3F4F6;
+      }
+    
+	.fh-file-picker,.fh-file-box, .fh-file-block 
+	{ 
+		 margin: 2rem auto; 
 	}
-	var stepid = 1;
+
+	.fh-file-info {
+		display: inline-block;
+	}
+
+	.fh-file-toolbar{
+		display: inline-block;
+    	float: right;
+	}
+
+	span.fh-file-limit {
+    	padding-left: 10px;
+	}
+
+
+	</style>
+
+	<script type="text/javascript">
+		function nextstep() {
+			stepid += 1, $("#innerstep" + stepid.toString()).show(), 2 == stepid && $("#tabcontentdiv").height(610), 3 == stepid && $("#tabcontentdiv").height(810)
+		}
+		var stepid = 1;
 	</script>
 </head>
 
@@ -1025,142 +1057,15 @@
 							<br>
 							<div id="smartwizard">
 								<ul class="nav">
-									<li class="nav-item"><a class="nav-link" href="#step-1"><strong>Step 2</strong><br>Basic</a></li>
-									<li class="nav-item"><a class="nav-link" href="#step-2"><strong>Step 3</strong><br>Attachements</a></li>
-									<li class="nav-item"><a class="nav-link" href="#step-3"><strong>Step 4</strong><br>Tasks</a></li>
-									<li class="nav-item"><a class="nav-link" href="#step-4"><strong>Step 5</strong><br>Approval</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-1"><strong>Step 1</strong><br>Basic</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-2"><strong>Step 2</strong><br>Attachements</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-3"><strong>Step 3</strong><br>Tasks</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-4"><strong>Step 4</strong><br>Approval</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-5"><strong>Step 5</strong><br>Evidence</a></li>
+									<li class="nav-item"><a class="nav-link" href="#step-6"><strong>Step 6</strong><br>Verification</a></li>
 								</ul>
 								<div class="tab-content" id="tabcontentdiv">
-									<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-										<div class="row" style="display:contents">
-											<div class="list-group-item">
-												<div class="form-group row align-items-center mb-0" id="innerstep2">
-													<div class="col-md-12 col-sm-12">
-														<!-- <h3>Please update basic info about the child ?</h3>
-														<div class="form-row">
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Does Child has an Identity:</label>
-																<br>
-																<div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
-																	<input checked type="checkbox" id="subscribe" class="custom-control-input">
-																	<label class="custom-control-label" for="subscribe">Yes</label>
-																</div>
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Receiving Date :</label>
-																<input class="form-control" placeholder="Receiving Date">
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Child Picture:</label>
-																<div class="custom-file">
-																	<input type="file" id="file" class="custom-file-input">
-																	<label for="file" class="custom-file-label">Choose file</label>
-																</div>
-															</div>
-														</div>
-														<br>
-														<div class="form-row">
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Full Name:</label>
-																<input class="form-control" placeholder="Comments">
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Middle Name:</label>
-																<input class="form-control" placeholder="Comments">
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Last Name:</label>
-																<input class="form-control" placeholder="Comments">
-															</div>
-														</div>
-														<br>
-														<div class="form-row">
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Gender:</label>
-																<select id="custom-select" class="form-control custom-select">
-																	<option selected>Select Gender</option>
-																	<option value="1">Male</option>
-																	<option value="2">Female</option>
-																	<option value="3">Other</option>
-																</select>
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Date Of Birth:</label>
-																<input class="form-control flatpickr-input active" placeholder="" tabindex="0" readonly>
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Child AgeGroup:</label>
-																<select id="custom-select2" class="form-control custom-select">
-																	<option selected>Select Child age group</option>
-																	<option value="1">0 - 8</option>
-																	<option value="2">8 - 16</option>
-																	<option value="3">16 - 24</option>
-																	<option value="3">24+</option>
-																</select>
-															</div>
-														</div>
-														<br>
-														<div class="form-row">
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Nationality :</label>
-																<select id="custom-select" class="form-control custom-select">
-																	<option selected>Select Nationality</option>
-																	<option value="1">UAE</option>
-																	<option value="2">Oman</option>
-																	<option value="3">ABC</option>
-																</select>
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Mental State:</label>
-																<select id="custom-select" class="form-control custom-select">
-																	<option selected>Select State</option>
-																	<option value="1">Perception</option>
-																	<option value="2">Pain</option>
-																	<option value="3">Belief</option>
-																	<option value="3">Desire</option>
-																</select>
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Health State:</label>
-																<select id="custom-select2" class="form-control custom-select">
-																	<option selected>Select state</option>
-																	<option value="1">Stress</option>
-																	<option value="1">Chronic pain</option>
-																	<option value="2">Depression</option>
-																	<option value="3">Injury</option>
-																	<option value="3">Other</option>
-																</select>
-															</div>
-														</div>
-														<br>
-														<div class="form-row">
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Educational Grade :</label>
-																<select id="custom-select" class="form-control custom-select">
-																	<option selected>Select Grade</option>
-																	<option value="1">Nursery</option>
-																	<option value="2">Primary</option>
-																	<option value="2">Intermediate</option>
-																	<option value="3">Graduation</option>
-																</select>
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial">
-																<label class="form-label p-0">Status:</label>
-																<select id="custom-select" class="form-control custom-select">
-																	<option selected>Select Status</option>
-																	<option value="1">Temporary</option>
-																	<option value="2">Permanant</option>
-																	<option value="3">Other</option>
-																</select>
-															</div>
-															<div class="col-md-4 col-sm-12" style="display:initial"></div>
-														</div> -->
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+									<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
 										<div class="row">
 											<div class="col-sm-12 col-md-7">
 												<div class="list-group-item">
@@ -1219,21 +1124,19 @@
 												</div>
 											</div>
 										</div>
-
+									</div>
+									<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
 										<div class="row mt-3">
 											<div class="col-sm-12">
 												<div class="list-group-item">
 													<h3>Documents</h3>
-													<h4>Attachements</h4>
-													<div class="custom-file">
-														<input type="file" id="file" class="custom-file-input">
-														<label for="file" class="custom-file-label">Choose file</label>
-													</div>
+													<h5>Attachements</h5>
+													<form class="fileuploader"></form>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+									<div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
 										<div class="row" style="display:contents">
 											<div class="list-group-item">
 												<div class="form-group row align-items-center mb-0" id="innerstep2">
@@ -1377,7 +1280,7 @@
 											</div>
 										</div>
 									</div>
-									<div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-5">
+									<div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
 										<div class="list-group-item">
 											<div class="form-group row align-items-center mb-0" id="innerstep2">
 												<div class="flex" style="max-width:100%">
@@ -1412,6 +1315,71 @@
 												<div class="custom-control custom-checkbox mb-3 w-100">
 													<input type="checkbox" class="custom-control-input" id="approval" value="customEx">
 													<label class="custom-control-label" for="approval">Approval Request</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5">
+										<div class="row mt-3">
+											<div class="col-sm-12">
+												<div class="list-group-item">
+													<h3>Documents</h3>
+													<h5>Attachements</h5>
+													<form class="uploader"></form>
+												</div>
+											</div>
+										</div>
+										<div class="row mt-3">
+											<div class="col-sm-12">
+												<div class="list-group-item">
+													<h5>Comments/Notes</h5>
+													<div style="height:150px" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor" data-quill-modules-toolbar="[[&quot;bold&quot;, &quot;italic&quot;], [&quot;link&quot;, &quot;blockquote&quot;, &quot;code&quot;, &quot;image&quot;], [{&quot;list&quot;: &quot;ordered&quot;}, {&quot;list&quot;: &quot;bullet&quot;}]]" class="ql-container ql-snow">
+														<div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Quill WYSIWYG editor">
+															
+														</div>
+														<div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+														<div class="ql-tooltip ql-hidden">
+															<a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a>
+															<input data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL">
+															<a class="ql-action"></a>
+															<a class="ql-remove"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="step-6" class="tab-pane" role="tabpanel" aria-labelledby="step-6">
+										<div class="row mt-3">
+											<div class="col-sm-12">
+												<div class="list-group-item">
+													<div class="custom-control custom-radio custom-control-inline">
+														<input type="radio" class="custom-control-input" id="fixed" name="example" value="customEx">
+														<label class="custom-control-label" for="fixed">Fixed</label>
+													  </div>
+													  <div class="custom-control custom-radio custom-control-inline">
+														<input type="radio" class="custom-control-input" id="notfixed" name="example" value="customEx">
+														<label class="custom-control-label" for="notfixed">Not Fixed</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row mt-3">
+											<div class="col-sm-12">
+												<div class="list-group-item">
+													<h5>Comments/Notes</h5>
+													<div style="height:150px" data-toggle="quill" data-quill-placeholder="Quill WYSIWYG editor" data-quill-modules-toolbar="[[&quot;bold&quot;, &quot;italic&quot;], [&quot;link&quot;, &quot;blockquote&quot;, &quot;code&quot;, &quot;image&quot;], [{&quot;list&quot;: &quot;ordered&quot;}, {&quot;list&quot;: &quot;bullet&quot;}]]" class="ql-container ql-snow">
+														<div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Quill WYSIWYG editor">
+															
+														</div>
+														<div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+														<div class="ql-tooltip ql-hidden">
+															<a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a>
+															<input data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL">
+															<a class="ql-action"></a>
+															<a class="ql-remove"></a>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1489,6 +1457,7 @@
       'default': 'fixed-index.html'
     }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
 	</div>
+	
 	<script src="assets/vendor/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 	<script src="assets/vendor/popper.min.js"></script>
@@ -1538,6 +1507,53 @@
 	<script src="assets/js/select2.js"></script>
 	<script src="assets/js/app-settings.js"></script>
 	<script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
+	<script type="text/javascript" src="assets/vendor/file-picker-helper/dist/js/jquery-formhelper.min.js"></script>
+	
+	<script>
+		$(function () {
+			var formhelper = $('.uploader').formhelper();
+	
+			var fileDemo1 = formhelper.addFilePicker({
+				canRemove: true,
+				canModify: false,
+				fileInput: {
+					name: 'fileDemo1[]',
+					accept: ['image/*,', ' .pdf, ' , ' .doc, ' , ' .docx, ' , ' .xml, ' , 'application/msword'],
+					multiple: true,
+				},
+				onChange: function () {
+					var total = formhelper.getFilePickerInfo();
+					var totalText = ['Total', 'count: ' + total.count, 'size: ' + total.sizeHum];
+					var selfText = ['Demo1', 'count: ' + fileDemo1.getCount(), 'size: ' + fileDemo1.getSize(true)];
+		
+					$('.ctrl-filepicker-total').text(totalText.join(' | '));
+					$('.ctrl-filepicker-demo1').text(selfText.join(' | '));
+				},
+			});
+
+			var formhelper = $('.fileuploader').formhelper();
+	
+			var fileDemo2 = formhelper.addFilePicker({
+				canRemove: true,
+				canModify: false,
+				fileInput: {
+					name: 'fileDemo2[]',
+					accept: ['image/*,', ' .pdf, ' , ' .doc, ' , ' .docx, ' , ' .xml, ' , 'application/msword'],
+					multiple: true,
+				},
+				onChange: function () {
+					var total1 = formhelper.getFilePickerInfo();
+					var totalText = ['Total', 'count: ' + total1.count, 'size: ' + total1.sizeHum];
+					var selfText = ['Demo1', 'count: ' + fileDemo2.getCount(), 'size: ' + fileDemo2.getSize(true)];
+		
+					$('.ctrl-filepicker-total1').text(totalText.join(' | '));
+					$('.ctrl-filepicker-demo2').text(selfText.join(' | '));
+				},
+			});
+	
+		});
+	</script>
+
 	<script type="text/javascript">
 	$(document).ready(function() {
 		$("#subscribe5").attr("checked") && alert("ssss"), $('input[type="checkbox"]#subscribe5').click(function() {
@@ -1609,6 +1625,8 @@
 		})
 	});
 	</script>
+
+
 </body>
 
 </html>
