@@ -1078,7 +1078,7 @@
 														</div>
 														<div class="col-sm-12 col-md-6">
 															<label class="form-label p-0">Affected User:</label>
-															<select class="affecteduser" name="affecteduser" class="custom-select" style="width:100%;">
+															<select class="affecteduser" name="affecteduser" class="custom-select" style="width:100%;" multiple="multiple">
 																<option value="">Select</option>
 																<option value="admin">Admin</option>
 																<option value="user">User</option> 
@@ -1151,7 +1151,7 @@
 														</div>
 														<div class="col-sm-12 col-md-6">
 															<label class="form-label p-0">Assigned To:</label>
-															<select class="assignedto" name="assignedto" class="custom-select" style="width:100%;">
+															<select class="assignedto" name="assignedto" class="custom-select" style="width:100%;" multiple="multiple">
 																<option value="">Select</option>
 																<option value="admin">Admin</option>
 																<option value="user">User</option> 
@@ -1471,25 +1471,6 @@
 	
 	<script>
 		$(function () {
-			var formhelper = $('.uploader').formhelper();
-	
-			var fileDemo1 = formhelper.addFilePicker({
-				canRemove: true,
-				canModify: false,
-				fileInput: {
-					name: 'fileDemo1[]',
-					accept: ['image/*,', ' .pdf, ' , ' .doc, ' , ' .docx, ' , ' .xml, ' , 'application/msword'],
-					multiple: true,
-				},
-				onChange: function () {
-					var total = formhelper.getFilePickerInfo();
-					var totalText = ['Total', 'count: ' + total.count, 'size: ' + total.sizeHum];
-					var selfText = ['Demo1', 'count: ' + fileDemo1.getCount(), 'size: ' + fileDemo1.getSize(true)];
-		
-					$('.ctrl-filepicker-total').text(totalText.join(' | '));
-					$('.ctrl-filepicker-demo1').text(selfText.join(' | '));
-				},
-			});
 
 			var formhelper = $('.fileuploader').formhelper();
 	
