@@ -1192,95 +1192,114 @@
                 <div class="container-fluid page__container">
                     <div class="page-section">
                         <div class="card mb-lg-32pt">
-    
-                            <div class="row" style="    display: contents;">
-                               
-                               
+                            <div class="row" style=" display: contents;">
                                 <div class="container-fluid page__container page-section">
-    
-                                    <div class="row mb-32pt">
+                                    <div class="row">
                                         <div class="col-lg-12">
                                             <div class="page-separator">
                                                 <div class="page-separator__text">Admin Add/Edit Letter</div>
                                             </div>
-                                            <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
-                
-                                                <table class="table mb-0 thead-border-top-0 table-nowrap">
-                                                
-                                                    <tbody class="list" id="leaves">
-                                                       
-                                                        <tr>
-                                                            <td><strong style="margin-right: 88px;">Category of Organisation:</strong>
-                                                                <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                    <option value="" selected> Category of Organisation </option>
-                                                                    <option value=""> 1</option>
-                                                                    <option value=""> 2</option>
-                                                                    <option value=""> 3</option>
-                                                                  </select>
-                                                            </td>
-                                                           </tr>
-                                                           <tr>
-                                                            <td>
-                                                                <div>
-                                                                <strong style="margin-right:130px;"> Requested By: </strong>
-                                                                <input type="checkbox" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;"> Caregiver </label>
-                                                                <input type="checkbox" class="btn" name="r1" ><label style="margin-left: 10px; margin-right: 5px;">  Foster Family </label>
-                                                                <input type="checkbox" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;">  Social Worker</label>
-                                                                <input type="checkbox" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;">  Independent Youth</label>
-                                                            </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div>
-                                                                <strong style="margin-right:130px;"> Type of Letter : </strong>
-                                                                <input type="radio" class="btn" name="r1"><label style="margin-left: 10px; margin-right: 5px;"> Standard </label>
-                                                                <input type="radio" class="btn" name="r1" ><label style="margin-left: 10px; margin-right: 5px;">  Customrized </label>
-                                                            </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong style="margin-right: 88px;">Issuing Authority:</strong>
-                                                                <select class="btn" id="theme_selector" style="border: 1px solid green;">
-                                                                    <option value="" selected> CA - SH/ERY/AC - SH </option>
-                                                                    <option value=""> CA - FC - D</option>
-                                                                    <option value=""> DG</option>
-                                                                  </select>
-                                                            </td>
-                                                           </tr>
-                                                        <tr>
-                                                            <td><strong style="margin-right: 90px;">Purpose:</strong>
-                                                                <input type="text" name="" id="" class="btn" placeholder="For School Admission" style="border: 1px solid green;">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong style="margin-right: 111px;">Auto Generated :</strong>
-                                                                <input type="checkbox" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;">
-                                                                <label for="">Yes</label>
-                                                            </td>
-                                                        </tr>
-                                                        
-                                                        <tr>
-                                                            <td><strong style="margin-right: 111px;">Upload Document :</strong>
-                                                                <input type="file" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;">
-                                                            </td>
-                                                        </tr>
-                                                        
-                                                        <tr>
-                                                            <td>
-                                                                <button class="btn btn-primary">Save</button>
-                                                                <button class="btn btn-primary">Cancel</button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <label>Category of Organisation:</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8">
+                                                    <select class="btn" id="theme_selector" style="border: 1px solid green;">
+                                                        <option value="" selected> Category of Organisation </option>
+                                                        <option value=""> 1</option>
+                                                        <option value=""> 2</option>
+                                                        <option value=""> 3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <label>Requested By:</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8">
+                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox" class="custom-control-input" id="caregiver" value="customEx">
+                                                        <label class="custom-control-label" for="caregiver">Caregiver</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox" class="custom-control-input" id="fosterfamily" value="customEx">
+                                                        <label class="custom-control-label" for="fosterfamily">Foster Family</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox" class="custom-control-input" id="socialworker" value="customEx">
+                                                        <label class="custom-control-label" for="socialworker">Social Worker</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox" class="custom-control-input" id="independentyouth" value="customEx">
+                                                        <label class="custom-control-label" for="independentyouth">Independent Youth</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <label>Issuing Authority:</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8">
+                                                    <select class="btn" id="theme_selector" style="border: 1px solid green;">
+                                                        <option value="" selected> CA - SH/ERY/AC - SH </option>
+                                                        <option value=""> CA - FC - D</option>
+                                                        <option value=""> DG</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <label>Purpose:</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8">
+                                                    <input type="text" name="" id="" class="btn" placeholder="For School Admission" style="border: 1px solid green;">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <label>Auto Generated:</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8">
+                                                    <input type="checkbox" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;">
+                                                    <label for="">Yes</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-sm-12 col-md-4">
+                                                    <label>Type of Letter:</label>
+                                                </div>
+                                                <div class="col-sm-12 col-md-8">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" class="custom-control-input" id="standard" value="customEx">
+                                                        <label class="custom-control-label" for="standard">Standard</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" class="custom-control-input" id="customized" value="customEx">
+                                                        <label class="custom-control-label" for="customized">Customized</label>
+                                                    </div>
+                                                    <p class="mt-2"><em><u>Please download this standard template in MS Word Format</u></em></p>
+                                                    <p class="mt-2"><strong>After modification, please upload the letter in PDF format below to send customized letter.</strong></p>
+                                                    <strong style="margin-right: 70px;">Upload Document :</strong>
+                                                    <input type="file" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-4">
+                                                <div class="col-sm-12 d-flex justify-content-end">
+                                                    <button class="btn btn-primary">Save</button>
+                                                    <button class="btn btn-danger ml-2">Cancel</button>
+                                                </div>
                                             </div>
                                             
                                         </div>
                                     </div>
-        
-        
-        
+    
                                 </div>
     
                                 <div class="list-group-item">
@@ -1291,30 +1310,26 @@
     
                                                 <div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name"data-lists-values='["js-lists-values-employee-name", "js-lists-values-employer-name", "js-lists-values-projects", "js-lists-values-activity", "js-lists-values-earnings"]'>
                                                     <table class="table mb-0 thead-border-top-0 table-nowrap">
-                               <thead>
-                                <th>Category of Organisation</th>
-                                <th>Requested By:</th>
-                                <th>Type of Letter</th>
-                                <th>Issuing Authority</th>
-                                <th>Purpose</th>
-                                <th>Uploaded Document</th>
-                                </thead>
-                                <tbody class="list"
-                                       id="staff">
-            
-                                       <tr>
-                                        <td>School</td>
-                                        <td>Social Worker</td>
-                                        <td>Standard</td>
-                                        <td>DG</td>
-                                        <td>For School Admission </td>
-                                        <td>DOC</td>
-
-                                    </tr>
-            
-                                </tbody>
-                                                         </table>
-                                                  </div>
+                                                        <thead>
+                                                            <th>Category of Organisation</th>
+                                                            <th>Requested By:</th>
+                                                            <th>Type of Letter</th>
+                                                            <th>Issuing Authority</th>
+                                                            <th>Purpose</th>
+                                                            <th>Uploaded Document</th>
+                                                        </thead>
+                                                        <tbody class="list" id="staff">
+                                                            <tr>
+                                                                <td>School</td>
+                                                                <td>Social Worker</td>
+                                                                <td>Standard</td>
+                                                                <td>DG</td>
+                                                                <td>For School Admission </td>
+                                                                <td>DOC</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
     
                                                 <div class="card-footer p-8pt">
     
@@ -1347,9 +1362,8 @@
     
                                                 </div>
                                                 <!-- <div class="card-body bordet-top text-right">
-                  15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
-                </div> -->
-    
+                                                    15 <span class="text-50">of 1,430</span> <a href="#" class="text-50"><i class="material-icons ml-1">arrow_forward</i></a>
+                                                    </div> -->
                                             </div>
     
                                         </div>
@@ -1407,11 +1421,6 @@
                                 </a>
                             </li>
                        
-
-                       
-
-                        
-                      
                             <li class="sidebar-menu-item">
                                 <a class="sidebar-menu-button"
                                    data-toggle="collapse"
@@ -1785,8 +1794,6 @@
                                         </a>
                                     </li>
                                     
-                                   
-                                   
                                 </ul>
                             </li>
                             <li class="sidebar-menu-item ">
