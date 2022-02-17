@@ -314,6 +314,14 @@
         .parallax .parallax-image img {
             width: 100%;
         }
+
+        .box {
+            display: none;
+        }
+
+        .tox:not([dir=rtl]) .tox-statusbar__branding {
+            display: none;
+        }
         
         @media (max-width: 768px) {
             .parallax .parallax-image {
@@ -1276,17 +1284,59 @@
                                                 </div>
                                                 <div class="col-sm-12 col-md-8">
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" class="custom-control-input" id="standard" value="customEx">
+                                                        <input type="radio" class="custom-control-input" id="standard" value="standard">
                                                         <label class="custom-control-label" for="standard">Standard</label>
                                                     </div>
                                                     <div class="custom-control custom-radio custom-control-inline">
-                                                        <input type="radio" class="custom-control-input" id="customized" value="customEx">
+                                                        <input type="radio" class="custom-control-input" id="customized" value="customized">
                                                         <label class="custom-control-label" for="customized">Customized</label>
                                                     </div>
-                                                    <p class="mt-2"><em><u>Please download this standard template in MS Word Format</u></em></p>
-                                                    <p class="mt-2"><strong>After modification, please upload the letter in PDF format below to send customized letter.</strong></p>
-                                                    <strong style="margin-right: 70px;">Upload Document :</strong>
-                                                    <input type="file" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;">
+                                                    <div class="form-group standard box mt-4">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-4">
+                                                                <select class="custom-select" id="background" style="border: 1px solid green;">
+                                                                    <option selected>Select Background</option>
+                                                                    <option value="">Red</option>
+                                                                    <option value="">Green</option>
+                                                                    <option value="">Blue</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4">
+                                                                <select class="custom-select" id="keys" style="border: 1px solid green;">
+                                                                    <option selected>Select Keys</option>
+                                                                    <option value="">Red</option>
+                                                                    <option value="">Green</option>
+                                                                    <option value="">Blue</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-4">
+                                                                <button type="button" class="btn btn-primary"><i class="fas fa-plus"></i></button>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mt-2">
+                                                            <div class="col-sm-12">
+                                                                <textarea id="editor"></textarea>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="customized box mt-4">
+                                                        <select class="custom-select" id="template" style="border: 1px solid green;">
+                                                            <option selected>Select Template</option>
+                                                            <option value="">Red</option>
+                                                            <option value="">Green</option>
+                                                            <option value="">Blue</option>
+                                                        </select>
+                                                        <div class="mt-2">
+                                                            <textarea id="editors"></textarea>
+                                                        </div>
+                                                        <!-- <p class="mt-2"><em><u>Please download this standard template in MS Word Format</u></em></p>
+                                                        <p class="mt-2"><strong>After modification, please upload the letter in PDF format below to send customized letter.</strong></p>
+                                                        <strong style="margin-right: 70px;">Upload Document :</strong>
+                                                        <input type="file" name="" id="" class="btn" placeholder="Address" style="border: 1px solid green;"> -->
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -2024,6 +2074,33 @@
 
         <!-- App Settings (safe to remove) -->
         <script src="assets/js/app-settings.js"></script>
+
+        <!-- Tiny MCE -->
+        <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+
+        <script>
+            tinymce.init({
+              selector: 'textarea#editor',
+              menubar: false
+            });
+
+            tinymce.init({
+              selector: 'textarea#editors',
+              menubar: false
+            });
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $('input[type="radio"]').click(function(){
+                    var inputValue = $(this).attr("value");
+                    var targetBox = $("." + inputValue);
+                    $(".box").not(targetBox).hide();
+                    $(targetBox).show();
+                });
+            });
+        </script>
+
     </body>
 
 
