@@ -173,6 +173,34 @@
 									<textarea class="form-control" id="description" rows="3" placeholder="Description" required></textarea>
 								</div>
 							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Training Title:</label>
+								</div>
+								 <div class="col-8">
+									<input type="text" class="form-control" id="training-title" placeholder="Title">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Approx. Date & Time:</label>
+								</div>
+								 <div class="col-8">
+									<input type="datetime-local" class="form-control" id="date-time" placeholder="Approx. Date & Time">
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Reason:</label>
+								</div>
+								 <div class="col-8">
+									<select name="reason" class="custom-select" required>
+										<option selected="">Select Reason</option>
+										<option value="approved">Approved</option>
+										<option value="reject">Rejected</option>
+									</select>
+								</div>
+							</div>
 						</div>
 						<div class="card-footer d-flex justify-content-end">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>

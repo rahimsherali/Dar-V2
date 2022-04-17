@@ -203,15 +203,78 @@
 							</div>
 							<div class="row mt-3">
 								<div class="col-4">
+									<label>Nationality</label>
+								</div>
+								<div class="col-8">
+									<select name="nationality" class="custom-select" required>
+										<option selected="">Select Nationality</option>
+										<option value="pakistan">Pakistan</option>
+										<option value="saudi-arabia">Saudi Arabia</option>
+										<option value="uae">UAE</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>City</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="city" placeholder="City" required>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Contact Details</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="contact-details" placeholder="Contact Details" required>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Education</label>
+								</div>
+								<div class="col-8">
+									<input type="text" class="form-control" id="education" placeholder="Education" required>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Religion</label>
+								</div>
+								<div class="col-8">
+									<select name="religion" class="custom-select" required>
+										<option selected="">Select Religion</option>
+										<option value="muslim">Muslim</option>
+										<option value="hindu">Hindu</option>
+										<option value="christian">Christian</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
+									<label>Social Status</label>
+								</div>
+								<div class="col-8">
+									<select name="social-status" class="custom-select" required>
+										<option selected="">Select Social Status</option>
+										<option value="upper-class">Upper Class</option>
+										<option value="middle-class">Middle Class</option>
+										<option value="lower-class">Lower Class</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-4">
 									<label>Source of Income</label>
 								</div>
 								 <div class="col-8">
 									<div class="custom-control custom-radio custom-control-inline">
-										<input type="radio" class="custom-control-input" id="employeed" value="customEx" checked="">
+										<input type="radio" class="custom-control-input" id="employeed" value="customEx" name="income" checked="">
 										<label class="custom-control-label" for="employeed">Employeed</label>
 									</div>
 									<div class="custom-control custom-radio custom-control-inline">
-										<input type="radio" class="custom-control-input" id="businessowner" value="customEx">
+										<input type="radio" class="custom-control-input" id="businessowner" name="income" value="customEx">
 										<label class="custom-control-label" for="businessowner">Business Owner</label>
 									</div>
 								</div>

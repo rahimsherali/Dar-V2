@@ -15,10 +15,9 @@
 	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
-	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
-	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
 
 	<style>
 	.form-control {
@@ -96,6 +95,70 @@
 	.active>.sidebar-menu-button .sidebar-menu-text:after {
 		display: none
 	}
+
+	a:hover, a:focus {
+		outline: none;
+		text-decoration: none;
+	}
+
+	.tab .nav-tabs {
+		border-bottom: 5px solid gray;
+	}
+
+	ul.nav.nav-tabs li {
+    width: 33.33%;
+}
+
+	.tab .nav-tabs li a {
+		display: block;
+		padding: 10px;
+		border-radius: 0;
+		font-size: 20px;
+		color: #000;
+		text-align: center;
+		margin: 0 5px 30px 0;
+		z-index: 1;
+		position: relative;
+		transition: all 0.3s ease 0s;
+	}
+
+	.tab .nav-tabs li a:hover, .tab .nav-tabs li.active a {
+		color: #000;
+	}
+
+	.tab .nav-tabs li a:before {
+		content: "";
+		width: 15px;
+		height: 15px;
+		background: #5cb85c;
+		border-radius: 50%;
+		margin: 0 auto;
+		position: absolute;
+		bottom: -40px;
+		left: 0;
+		right: 0;
+	}
+
+	.tab .nav-tabs li a.active:before {
+		background: #d9534f;
+		border: 2px solid #fff;
+		box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
+		transform: scale(2);
+	}
+
+	.tab-content.tabs {
+    	padding-top: 30px;
+	}	
+
+	.document-icons {
+		font-size: 18px;
+	}
+
+	.document-text {
+		display: initial;
+		padding-left: 10px;
+	}
+
 	</style>
 </head>
 
@@ -145,7 +208,7 @@
 									<h3 class="my-auto">Tickets</h3>
 								</div>
 								<div class="col-sm-12 col-md-6 d-flex justify-content-end">
-									<a type="button" class="btn btn-primary" href="#">Add Ticket</a>
+									<a type="button" class="btn btn-primary" href="createticket.html">Add Ticket</a>
 								</div>
 							</div>
 						</div>
@@ -236,7 +299,10 @@
 											<td>ABC</td>
 											<td>Email</td>
 											<td>02/02/2022</td>
-											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+											<td>
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View</button>
+												<button type="button" class="btn btn-primary" href="">Edit</button>
+											</td>
 										</tr>
 										<tr>
 											<td>01</td>
@@ -249,7 +315,10 @@
 											<td>ABC</td>
 											<td>Portal</td>
 											<td>02/02/2022</td>
-											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+											<td>
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View</button>
+												<button type="button" class="btn btn-primary" href="">Edit</button>
+											</td>
 										</tr>
 										<tr>
 											<td>01</td>
@@ -262,7 +331,10 @@
 											<td>ABC</td>
 											<td>Phone</td>
 											<td>02/02/2022</td>
-											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+											<td>
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View</button>
+												<button type="button" class="btn btn-primary" href="">Edit</button>
+											</td>
 										</tr>
 										<tr>
 											<td>01</td>
@@ -275,7 +347,10 @@
 											<td>ABC</td>
 											<td>System</td>
 											<td>02/02/2022</td>
-											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+											<td>
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View</button>
+												<button type="button" class="btn btn-primary" href="">Edit</button>
+											</td>
 										</tr>
 										<tr>
 											<td>01</td>
@@ -288,7 +363,10 @@
 											<td>ABC</td>
 											<td>Walk-In</td>
 											<td>02/02/2022</td>
-											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+											<td>
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">View</button>
+												<button type="button" class="btn btn-primary" href="">Edit</button>
+											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -353,6 +431,330 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- The Modal -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog modal-xl">
+		  <div class="modal-content">
+		  
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title">View Ticket</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			
+			<!-- Modal body -->
+			<div class="modal-body">
+				<div class="tab" role="tabpanel">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="nav-item">
+							<a href="#details" aria-controls="details" role="tab" data-toggle="tab" class="nav-link active">
+								Details
+							</a>
+						</li>
+						<li role="presentation" class="nav-item">
+							<a href="#attachments" aria-controls="attachments" role="tab" data-toggle="tab" class="nav-link">
+								Attachments</a>
+							</li>
+						<li role="presentation" class="nav-item">
+							<a href="#tasks" aria-controls="tasks" role="tab" data-toggle="tab" class="nav-link">
+								Tasks
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content tabs">
+						<div role="tabpanel" class="tab-pane container active" id="details">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="list-group-item">
+										<h3>Service Request Information</h3>
+										<div class="row">
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Location:</label>
+												<select name="priority" class="custom-select">
+													<option selected="">Select Location</option>
+													<option value="approved">Location 1</option>
+													<option value="rejected">Location 2</option>
+												</select>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Affected User:</label>
+												<select class="affecteduser" name="affecteduser" class="custom-select" style="width:100%;" multiple="multiple">
+													<option value="">Select</option>
+													<option value="admin">Admin</option>
+													<option value="user">User</option> 
+													<option value="guest">Guest</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Designation:</label>
+												<input type="text" placeholder="Designation" id="designation" class="form-control">
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Department:</label>
+												<input type="text" placeholder="Department" id="department" class="form-control">
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-12 col-md-4">
+												<label class="form-label p-0">Business Phone:</label>
+												<input type="tel" placeholder="Business Phone" id="business-phone" class="form-control">
+											</div>
+											<div class="col-sm-12 col-md-4">
+												<label class="form-label p-0">Mobile:</label>
+												<input type="tel" placeholder="Mobile" id="mobile" class="form-control">
+											</div>
+											<div class="col-sm-12 col-md-4">
+												<label class="form-label p-0">Alternate Contact:</label>
+												<input type="tel" placeholder="Alternate Contact" id="alternatecontact" class="form-control">
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-12">
+												<label class="form-label p-0">Title:</label>
+												<input type="text" placeholder="Title" id="title" class="form-control">
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-12">
+												<label class="form-label p-0">Description:</label>
+												<textarea placeholder="Description" id="description" class="form-control"></textarea>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Classification Category:</label>
+												<select name="classification" class="custom-select">
+													<option selected="">Select Classification Category</option>
+													<option value="approved">Classification Category 1</option>
+													<option value="rejected">Classification Category 2</option>
+												</select>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Source:</label>
+												<select name="source" class="custom-select">
+													<option selected="">Select Source</option>
+													<option value="approved">Source 1</option>
+													<option value="rejected">Source 2</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Support Group:</label>
+												<select name="supportgroup" class="custom-select">
+													<option selected="">Select Support Group</option>
+													<option value="approved">Support Group 1</option>
+													<option value="rejected">Support Group 2</option>
+												</select>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Assigned To:</label>
+												<select class="assignedto" name="assignedto" class="custom-select" style="width:100%;" multiple="multiple">
+													<option value="">Select</option>
+													<option value="admin">Admin</option>
+													<option value="user">User</option> 
+													<option value="guest">Guest</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Follow Up:</label>
+												<select name="supportgroup" class="custom-select">
+													<option selected="">Select Follow Up</option>
+													<option value="approved">Follow Up 1</option>
+													<option value="rejected">Follow Up 2</option>
+												</select>
+											</div>
+											<div class="col-sm-12 col-md-6">
+												<label class="form-label p-0">Escalate:</label>
+												<select name="supportgroup" class="custom-select">
+													<option selected="">Select Escalate</option>
+													<option value="approved">Escalate 1</option>
+													<option value="rejected">Escalate 2</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane container fade" id="attachments">
+							<div class="row">
+								<div class="col-12">
+									<i class="fas fa-file-word document-icons"></i>
+									<h5 class="document-text">Test Document 1.docs (11.73 KB)</h5>
+								</div>
+								<div class="col-12 mt-4">
+									<i class="fas fa-file-word document-icons"></i>
+									<h5 class="document-text">Test Document 1 - Copy.docs (11.73 KB)</h5>
+								</div>
+								<div class="col-12 mt-4">
+									<i class="fas fa-file-word document-icons"></i>
+									<h5 class="document-text">Test Document 1 - Copy(2).docs (11.73 KB)</h5>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane container fade" id="tasks">
+							<div class="row">
+								<div class="list-group-item">
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+											<h3>Tasks & Procedures</h3>
+											<div class="row">
+												<div class="col-sm-12">
+													<label class="form-label">Title</label>
+													<input type="text" placeholder="Title" id="title" class="form-control">
+												</div>
+												<div class="col-sm-12 mt-3">
+													<label class="form-label">Description</label>
+													<textarea placeholder="Description" id="description" class="form-control"></textarea>
+												</div>
+												<div class="col-sm-12 mt-3">
+													<label class="form-label">Assign To</label>
+													<input type="text" placeholder="Assign To" id="assignto" class="form-control">
+												</div>
+												<div class="col-sm-12 mt-3">
+													<label class="form-label">Notes</label>
+													<textarea placeholder="Notes" id="notes" class="form-control"></textarea>
+												</div>
+												<div class="col-sm-12 col-md-6 mt-3">
+													<label class="form-label">Assign To</label>
+													<input type="text" placeholder="Assign To" id="assignto" class="form-control">
+												</div>
+												<div class="col-sm-12 col-md-6 mt-3">
+													<label class="form-label">Assign To</label>
+													<select name="assignto" class="custom-select">
+														<option selected="">Select</option>
+														<option value="">ABC</option>
+														<option value="">DEF</option>
+													</select>
+												</div>
+												<div class="col-sm-12 col-md-4 mt-3">
+													<label class="form-label">Due Date</label>
+													<input type="date" id="duedate" class="form-control">
+												</div>
+												<div class="col-sm-12 col-md-4 mt-3">
+													<label class="form-label">Reminder Date</label>
+													<input type="date" id="reminderdate" class="form-control">
+												</div>
+												<div class="col-sm-12 col-md-4 mt-3">
+													<label class="form-label">Frequency</label>
+													<select name="frequency" class="custom-select">
+														<option selected="">Select</option>
+														<option value="">ABC</option>
+														<option value="">DEF</option>
+													</select>
+												</div>
+												<div class="col-sm-12 mt-3">
+													<label class="form-label">Notes</label>
+													<textarea placeholder="Notes" id="notes" class="form-control"></textarea>
+												</div>
+												<div class="col-sm-12 mt-3 d-flex justify-content-end">
+													<button type="button" class="btn btn-primary">Add <span class="material-icons sidebar-menu-icon ml-2">arrow_forward</span></button>
+												</div>
+											</div>
+											
+											<div class="row">
+												<div class="col-md-12 col-sm-12">
+													<div class="table-responsive table-bordered mt-3"" data-toggle="lists" data-lists-sort-by="js-lists-values-from" data-lists-sort-desc="true" data-lists-values="[&quot;js-lists-values-name&quot;, &quot;js-lists-values-status&quot;, &quot;js-lists-values-policy&quot;, &quot;js-lists-values-reason&quot;, &quot;js-lists-values-days&quot;, &quot;js-lists-values-available&quot;, &quot;js-lists-values-from&quot;, &quot;js-lists-values-to&quot;]">
+														<table class="table mb-0 thead-border-top-0 table-nowrap">
+															<thead>
+																<tr>
+																	<th style="width:48px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-name">Department</a></th>
+																	<th style="width:48px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-status">Status</a></th>
+																	<th style="width:150px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-reason">Comments</a></th>
+																	<th style="width:48px"><a href="javascript:void(0)" class="sort desc" data-sort="js-lists-values-from">Date</a></th>
+																	<th style="width:48px"><a href="javascript:void(0)" class="sort" data-sort="js-lists-values-to">By</a></th>
+																</tr>
+															</thead>
+															<tbody class="list" id="leaves">
+																<tr>
+																	<td><small class="js-lists-values-policy text-50">Children Affairs Head</small></td>
+																	<td><p class="bg-warning text-white text-center py-1 mb-0">Pending</p></td>
+																	<td><small class="js-lists-values-policy text-50">Provide Approval</small></td>
+																	<td><small class="js-lists-values-to text-50">19/02/2021</small></td>
+																	<td class="pr-0">
+																		<div class="media flex-nowrap align-items-center" style="white-space:nowrap">
+																			<div class="avatar avatar-32pt mr-8pt"><span class="avatar-title rounded-circle">TP</span></div>
+																			<div class="media-body">
+																				<div class="d-flex align-items-center">
+																					<div class="flex d-flex flex-column">
+																						<p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p><small class="js-lists-values-email text-50">vida_glover@gmail.com</small></div>
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><small class="js-lists-values-policy text-50">Family care Department</small></td>
+																	<td><p class="bg-warning text-white text-center py-1 mb-0">Pending</p></td>
+																	<td><small class="js-lists-values-policy text-50">Provide Approval</small></td>
+																	<td><small class="js-lists-values-to text-50">19/02/2021</small></td>
+																	<td class="pr-0">
+																		<div class="media flex-nowrap align-items-center" style="white-space:nowrap">
+																			<div class="avatar avatar-32pt mr-8pt"><span class="avatar-title rounded-circle">TP</span></div>
+																			<div class="media-body">
+																				<div class="d-flex align-items-center">
+																					<div class="flex d-flex flex-column">
+																						<p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p><small class="js-lists-values-email text-50">vida_glover@gmail.com</small></div>
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td><small class="js-lists-values-policy text-50">Committee Affairs Head</small></td>
+																	<td><p class="bg-warning text-white text-center py-1 mb-0">Pending</p></td>
+																	<td><small class="js-lists-values-policy text-50">Provide Approval</small></td>
+																	<td><small class="js-lists-values-to text-50">19/02/2021</small></td>
+																	<td class="pr-0">
+																		<div class="media flex-nowrap align-items-center" style="white-space:nowrap">
+																			<div class="avatar avatar-32pt mr-8pt"><span class="avatar-title rounded-circle">TP</span></div>
+																			<div class="media-body">
+																				<div class="d-flex align-items-center">
+																					<div class="flex d-flex flex-column">
+																						<p class="mb-0"><strong class="js-lists-values-name">Tony Parks</strong></p><small class="js-lists-values-email text-50">vida_glover@gmail.com</small></div>
+																				</div>
+																			</div>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="card-footer p-8pt">
+														<ul class="pagination justify-content-start pagination-xsm m-0">
+															<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
+															<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
+																<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
+															</li>
+															<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+			
+		  </div>
+		</div>
+	  </div>
+
 	<div id="app-settings">
 		<app-settings layout-active="app" :layout-location="{
       'compact': 'compact-index.html',
@@ -384,8 +786,6 @@
 	<script src="assets/js/vector-maps.js"></script>
 	<script src="assets/vendor/list.min.js"></script>
 	<script src="assets/js/list.js"></script>
-	<script src="assets/vendor/select2/select2.min.js"></script>
-	<script src="assets/js/select2.js"></script>
 	<script src="assets/js/toggle-check-all.js"></script>
 	<script src="assets/js/check-selected-row.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -393,12 +793,20 @@
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script src="assets/js/app-settings.js"></script>
 	<script src="assets/vendor/daterangepicker.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
 
 	<script>
 		$(document).ready(function(){
 			$('#daterange').daterangepicker();
 		});
 		
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			$('.affecteduser').select2();
+			$('.assignedto').select2();
+		});
 	</script>
 
 </body>
