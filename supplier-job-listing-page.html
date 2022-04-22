@@ -15,6 +15,8 @@
 	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
 	<style>
 	.form-control {
@@ -81,8 +83,8 @@
 	}
 	
 	.activemenu {
-		background: #00a650;
-		color: #fff!important
+		background: #00a650 !important;
+		color: #fff !important
 	}
 	
 	div#app-settings {
@@ -134,114 +136,90 @@
 			</div>
 			<div class="container-fluid page__container">
 				<div class="page-section">
-					<div class="row card-group-row mb-lg-8pt">
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#9ecbe8">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">In Progress</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">230</h3></div>
+					<div class="card mb-lg-32pt">
+						<div class="card-header">
+							<div class="row">
+								<div class="col-sm-12 col-md-6">
+									<h3 class="my-auto">Job Listing</h3>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#e8abaa">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Overdue</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">43</h3></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#97e4ac">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Closed</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">1,529</h3></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#e3cca3">
-								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">By Me</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">12,352</h3></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 col-md-6">
-							<div class="card mb-lg-32pt">
-								<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-									<div class="card-header">
-										<form class="form-inline">
-											<h3 style="margin-bottom:0;display:inline;width:auto">Special Requset For Finanical Support</h3>
-											<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-												<p style="margin-bottom:0;display:inline;width:auto;float:right;margin-top:.5rem;margin-left:15px;color:#8a9199"><u>View All</u></p>
-											</div>
-										</form>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="form-label" for="title">Text</label>
+										<input type="text" class="form-control" id="text" placeholder="Text">
 									</div>
-									<table class="table mb-0 thead-border-top-0 table-nowrap">
-										<thead>
-											<th>Title</th>
-											<th>Facility</th>
-											<th>Status</th>
-											<th>Due</th>
-										</thead>
-										<tbody class="list" id="staff">
-											<tr>
-												<td>Jenell D.</td>
-												<td>Apt 21, Abu Dhabi</td>
-												<td>In Progress</td>
-												<td>25-08-2021</td>
-											</tr>
-											<tr>
-												<td>Jenell D.</td>
-												<td>Villa#22 Al Ain</td>
-												<td>In Progress</td>
-												<td>25-08-2021</td>
-											</tr>
-											<tr>
-												<td>Jenell D.</td>
-												<td>Villa#13 Al Ain</td>
-												<td>In Progress</td>
-												<td>25-08-2021</td>
-											</tr>
-											<tr>
-												<td>Jenell D.</td>
-												<td>Villa#4 Al Ain</td>
-												<td>In Progress</td>
-												<td>25-08-2021</td>
-											</tr>
-											<tr>
-												<td>Jenell D.</td>
-												<td>Villa#4 Al Ain</td>
-												<td>In Progress</td>
-												<td>25-08-2021</td>
-											</tr>
-											<tr>
-												<td>Jenell D.</td>
-												<td>Villa#4 Al Ain</td>
-												<td>In Progress</td>
-												<td>25-08-2021</td>
-											</tr>
-											<tr>
-												<td>Jenell D.</td>
-												<td>Villa#4 Al Ain</td>
-												<td>In Progress</td>
-												<td>25-08-2021</td>
-											</tr>
-										</tbody>
-									</table>
 								</div>
-								<div class="card-footer p-8pt">
+								<div class="col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="form-label" for="title">Title</label>
+										<input type="text" class="form-control" id="title" placeholder="Title">
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="form-label" for="date">Date</label>
+										<input type="date" class="form-control" id="date">
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="form-label" for="location">Location</label>
+										<input type="text" class="form-control" id="location" placeholder="Location">
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-4">
+									<div class="form-group">
+										<label class="form-label" for="date">Status</label>
+										<input type="text" class="form-control" id="status" placeholder="Statu">
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-4 mt-4">
+									<div class="form-group">
+										<button type="button" class="btn btn-primary w-100">Search</button>
+									</div>
+								</div>
+							</div>
+							<div class="table-responsive table-bordered">
+								<table class="table mb-0 thead-border-top-0 table-nowrap">
+									<thead>
+										<th>Title</th>
+                                        <th>Urgency</th>
+										<th>Location</th>
+										<th>Status</th>
+										<th>Action</th>
+									</thead>
+									<tbody class="list" id="staff">
+										<tr>
+											<td>ABC Coporation</td>
+                                            <td>Normal</td>
+											<td>Abu Dhabi</td>
+											<td><p class="bg-warning text-white text-center py-1 mb-0">Pending</p></td>
+											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+										</tr>
+										<tr>
+											<td>Star Electronics</td>
+                                            <td>Immediate</td>
+											<td>Al Ain</td>
+											<td><p class="bg-primary text-white text-center py-1 mb-0">Approved</p></td>
+											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+										</tr>
+										<tr>
+											<td>Electra Electronics</td>
+                                            <td>Normal</td>
+											<td>Abu Dhabi</td>
+											<td><p class="bg-danger text-white text-center py-1 mb-0">Incomplete</p></td>
+											<td><button type="button" class="btn btn-primary" href="">Edit</button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-sm-12">
 									<ul class="pagination justify-content-start pagination-xsm m-0">
 										<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
 										<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
@@ -251,16 +229,6 @@
 									</ul>
 								</div>
 							</div>
-						</div>
-						<div class="col-sm-12 col-md-6">
-							<div class="card">
-								<div class="card-body">
-									<figure class="highcharts-figure">
-										<div id="piechart"></div>
-									</figure>
-								</div>
-							</div>
-							
 						</div>
 					</div>
 				</div>
@@ -274,13 +242,13 @@
 		<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
 			<div class="mdk-drawer__content">
 				<div class="sidebar sidebar-light sidebar-left" data-perfect-scrollbar><a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right" data-boundary="window"><span class="material-icons">sync_alt</span></a>
-					<a href="index.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/Logo.png" alt="Dar Zayed"></a>
+					<a href="index.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/Logo.png" alt="Huma"></a>
 					<div class="sidebar-heading">Overview</div>
 					<ul class="sidebar-menu">
 						<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="index.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span> <span class="sidebar-menu-text">Dashboard</span></a></li>
 						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Application Catalog <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
 							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu">
-								<li class="sidebar-menu-item active"><a class="sidebar-menu-button" href="Childcare.html"><span class="sidebar-menu-text">Child Care</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Childcare.html"><span class="sidebar-menu-text">Child Care</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Correspondence</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Budget and Planning</span></a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="FacilityManagement.html"><span class="sidebar-menu-text">Facility Management</span></a></li>
@@ -290,12 +258,22 @@
 							</ul>
 						</li>
 						<li>
-							<div class="sidebar-heading mt-3">Call Center Management</div>
+							<div class="sidebar-heading mt-3">Facility Management</div>
 							<ul class="sidebar-menu">
-								<li class="sidebar-menu-item activemenu"><a class="sidebar-menu-button activemenu" href="callcentermanagement.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">tune</span> Dashboard</a></li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="tickets.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Tickets</a></li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="createticket.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Create Ticket</a></li>
-								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="classfication.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Classification</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="FacilityManagement.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Dashboard</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Administration-ServiceProvider.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Service Providers</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Administration–AddServiceProvider.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Add Service Provider</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Caregiver-BusinessSupportTeam-Administrators.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Caregiver/Business Support Team/Administrators</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Requests.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Request</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateNewRequest.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Create New Request</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="suppliers.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Suppliers</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="invite-supplier.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Invite Supplier</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="supplier-service-listing.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Supplier Service Listing</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="supplier-add-service.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Supplier - Add Service</a></li>
+								<li class="sidebar-menu-item activemenu"><a class="sidebar-menu-button activemenu" href="supplier-job-listing-page.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span>Supplier - Job Listing Page</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Educational Management</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="components_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Psychological Management</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span> Talent Management</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -310,13 +288,13 @@
 	</div>
 	<div id="app-settings">
 		<app-settings layout-active="app" :layout-location="{
-    'compact': 'compact-index.html',
-    'mini': 'mini-index.html',
-    'app': 'index.html',
-    'boxed': 'boxed-index.html',
-    'sticky': 'sticky-index.html',
-    'default': 'fixed-index.html'
-}" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
 	</div>
 	<script src="assets/vendor/jquery.min.js"></script>
 	<script src="assets/vendor/popper.min.js"></script>
@@ -339,67 +317,14 @@
 	<script src="assets/js/vector-maps.js"></script>
 	<script src="assets/vendor/list.min.js"></script>
 	<script src="assets/js/list.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
+	<script src="assets/js/select2.js"></script>
 	<script src="assets/js/toggle-check-all.js"></script>
 	<script src="assets/js/check-selected-row.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script src="assets/js/app-settings.js"></script>
-	<script src="assets/vendor/highcharts/code/highcharts.js"></script>
-	<script src="assets/vendor/highcharts/code/modules/exporting.js"></script>
-	<script src="assets/vendor/highcharts/code/modules/export-data.js"></script>
-	<script src="assets/vendor/highcharts/code/modules/accessibility.js"></script>
-
-	<script type="text/javascript">
-		// Build the chart
-		Highcharts.chart('piechart', {
-			chart: {
-				plotBackgroundColor: null,
-				plotBorderWidth: null,
-				plotShadow: false,
-				type: 'pie',
-			},
-			title: {
-				text: 'Request by Status'
-			},
-			tooltip: {
-				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-			},
-			accessibility: {
-				point: {
-					valueSuffix: '%'
-				}
-			},
-			credits: {
-				enabled: false
-			},
-			plotOptions: {
-				pie: {
-					allowPointSelect: true,
-					cursor: 'pointer',
-					dataLabels: {
-						enabled: false
-					},
-					showInLegend: true
-				}
-			},
-			series: [{
-				name: 'Facility',
-				colorByPoint: true,
-				data: [{
-					name: 'Not Started',
-					y: 61.41,
-					selected: true
-				}, {
-					name: 'In Progress',
-					y: 11.84
-				}, {
-					name: 'On Hold',
-					y: 10.85
-				}, {
-					name: 'Completed',
-					y: 4.67
-				}]
-			}]
-		});
-	</script>
 
 </body>
 
