@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>Dashboard</title>
+	<meta name="robots" content="noindex">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/smartwizard/css/smart_wizard_all.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/flatpickr.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/flatpickr-airbnb.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/quill.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/bootstrap-touchspin.css" rel="stylesheet">
+	<link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+</head>
+
+<body class="layout-app layout-sticky-subnav">
+	<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+		<div class="mdk-drawer-layout__content page-content">
+			<div class="navbar navbar-expand navbar-shadow px-0 pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+				<button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar"><span class="material-icons">menu</span></button>
+				<a href="index.html" class="navbar-brand mr-16pt d-lg-none"><img class="navbar-brand-icon mr-0 mr-lg-8pt" src="assets/images/Logo.svg" width="32" alt="Huma"></a>
+				<form class="search-form navbar-search d-none d-md-flex" style="width:20%;border-radius:10px" action="https://huma.demo.frontendmatter.com/index.html">
+					<input class="form-control" placeholder="Search Everything ...">
+					<button class="btn" type="submit"><i class="material-icons">search</i></button>
+				</form>
+				<div class="flex"></div>
+				<div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space:nowrap">
+					<div class="nav-item dropdown d-none d-sm-flex"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Select language</strong></div><a class="dropdown-item active" href="#">English</a> <a class="dropdown-item" href="#">عربي</a></div>
+					</div>
+				</div>
+				<div class="vl mr-16pt"></div>
+				<div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+					<div class="nav-item mr-16pt dropdown dropdown-notifications">
+						<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false"><i class="material-icons">notifications</i> <span class="badge badge-notifications badge-accent">2</span></button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div data-perfect-scrollbar class="position-relative">
+								<div class="dropdown-header"><strong>System notifications</strong></div>
+								<div class="list-group list-group-flush mb-0"><a href="javascript:void(0);" class="list-group-item list-group-item-action unread"><span class="d-flex align-items-center mb-1"><small class="text-black-50">3 minutes ago</small> <span class="ml-auto unread-indicator bg-accent"></span></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-accent">account_circle</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your profile information has not been synced correctly.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">5 hours ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-primary">group_add</i></span></span> <span class="flex d-flex flex-column"><strong class="text-black-100">Adrian. D</strong> <span class="text-black-70">Wants to join your private group.</span></span></span></a> <a href="javascript:void(0);" class="list-group-item list-group-item-action"><span class="d-flex align-items-center mb-1"><small class="text-black-50">1 day ago</small></span> <span class="d-flex"><span class="avatar avatar-xs mr-2"><span class="avatar-title rounded-circle bg-light"><i class="material-icons font-size-16pt text-warning">storage</i></span></span> <span class="flex d-flex flex-column"><span class="text-black-70">Your deploy was successful.</span></span></span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="vl mr-16pt" style="margin-top:16px"></div>
+					<div class="nav-item dropdown d-none d-sm-flex">
+						<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"><img width="32" height="32" class="rounded-circle mr-8pt" src="assets/images/people/50/guy-3.jpg" alt="account"> <span class="flex d-flex flex-column mr-8pt"><span class="navbar-text-100">Laza Bogdan</span> <small class="navbar-text-50">Administrator</small></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Account</strong></div><a class="dropdown-item" href="edit-account.html">Edit Account</a> <a class="dropdown-item" href="login.html">Logout</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="page__container">
+				<div class="page-section">
+					<div class="card mb-lg-32pt">
+						<div id="smartwizard">
+							<ul class="nav">
+								<li class="nav-item"><a class="nav-link" href="#step-1"><strong>Step 1:</strong> Define Source</a></li>
+								<li class="nav-item"><a class="nav-link" href="#step-2"><strong>Step 2:</strong> Basic Info</a></li>
+								<li class="nav-item"><a class="nav-link" href="#step-3"><strong>Step 3:</strong> Documents</a></li>
+								<li class="nav-item"><a class="nav-link" href="#step-4"><strong>Step 4:</strong> Family Details</a></li>
+								<li class="nav-item"><a class="nav-link" href="#step-5"><strong>Step 5:</strong> Registration Complete</a></li>
+							</ul>
+							<div class="tab-content" id="tabcontentdiv">
+								<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+									<div class="row">
+										<div class="col-lg-12 pr-lg-0">
+											<div class="page-section">
+												<div class="form-group row align-items-left mb-0" style="justify-content:center">
+													<div class="col-md-4 col-sm-4 text-left">
+														<h5 class="mb-4">File Number : CH-210908-0005</h5>
+													</div>
+													<div class="col-4">
+														<h4 class="mb-4"></h4>
+													</div>
+													<div class="col-4" id="othertext"></div>
+												</div>
+												<div class="form-group row align-items-center mb-0" style="justify-content:center">
+													<div class="col-12 text-center">
+														<h3 class="mb-4">From where you got the information about the child ?</h3></div>
+													<div class="col-8">
+														<select id="custom-select6" class="form-control custom-select">
+															<option selected>Select the source</option>
+															<option value="1">Abu dhabi Police</option>
+															<option value="2">XYZ institute</option>
+															<option value="3">Other</option>
+														</select>
+													</div>
+													<div class="col-8" id="othertext" style="display:none">
+														<label for="comment" class="form-label">Please Specify</label>
+														<textarea style="height:100px" class="form-control" name="comment" id="comment" rows="3" placeholder="Type here to reply to Matney ..."></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+									<div class="row">
+										<div class="col-12">
+											<h3>Please update basic info about the child ?</h3>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Does Child has an Identity:</label>
+											
+											<div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+												<input checked type="checkbox" id="subscribe" class="custom-control-input">
+												<label class="custom-control-label" for="subscribe">Yes</label>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Receiving Date :</label>
+											<input class="form-control" placeholder="Receiving Date"> </div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Child Picture:</label>
+											<div class="custom-file">
+												<input type="file" id="file" class="custom-file-input">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row mt-3">
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Full Name:</label>
+											<input class="form-control" placeholder="Comments"> </div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Middle Name:</label>
+											<input class="form-control" placeholder="Comments"> </div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Last Name:</label>
+											<input class="form-control" placeholder="Comments"> </div>
+									</div>
+
+									<div class="row mt-3">
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Gender:</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Gender</option>
+												<option value="1">Male</option>
+												<option value="2">Female</option>
+												<option value="3">Other</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Date Of Birth:</label>
+											<input class="form-control flatpickr-input active" placeholder="" tabindex="0" readonly> </div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Child AgeGroup:</label>
+											<select id="custom-select2" class="form-control custom-select">
+												<option selected>Select Child age group</option>
+												<option value="1">0 - 8</option>
+												<option value="2">8 - 16</option>
+												<option value="3">16 - 24</option>
+												<option value="3">24+</option>
+											</select>
+										</div>
+									</div>
+
+									
+									<div class="row mt-3">
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Nationality :</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Nationality</option>
+												<option value="1">UAE</option>
+												<option value="2">Oman</option>
+												<option value="3">ABC</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Mental State:</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select State</option>
+												<option value="1">Perception</option>
+												<option value="2">Pain</option>
+												<option value="3">Belief</option>
+												<option value="3">Desire</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Health State:</label>
+											<select id="custom-select2" class="form-control custom-select">
+												<option selected>Select state</option>
+												<option value="1">Stress</option>
+												<option value="1">Chronic pain</option>
+												<option value="2">Depression</option>
+												<option value="3">Injury</option>
+												<option value="3">Other</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="row mt-3">
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Educational Grade :</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Grade</option>
+												<option value="1">Nursery</option>
+												<option value="2">Primary</option>
+												<option value="2">Intermediate</option>
+												<option value="3">Graduation</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Status:</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Status</option>
+												<option value="1">Temporary</option>
+												<option value="2">Permanant</option>
+												<option value="3">Other</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12"></div>
+									</div>
+								</div>
+
+								<div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+									<div class="row">
+										<div class="col-12">
+											<h3>Please update documents received against the child ?</h3>
+										</div>
+									</div>
+											
+									<div class="row">
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Child Identity:</label>
+											<div class="custom-file">
+												<input type="file" id="file" class="custom-file-input">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Vaccination Certificate:</label>
+											<div class="custom-file">
+												<input type="file" id="file" class="custom-file-input">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Case Report:</label>
+											<div class="custom-file">
+												<input type="file" id="file" class="custom-file-input">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row mt-3">
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Court Report:</label>
+											<div class="custom-file">
+												<input type="file" id="file" class="custom-file-input">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Police Report :</label>
+											<div class="custom-file">
+												<input type="file" id="file" class="custom-file-input">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-12">
+											<label class="form-label p-0">Other Documents:</label>
+											<div class="custom-file">
+												<input type="file" id="file" class="custom-file-input">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+									<div class="row">
+										<div class="col-12">
+											<h3>Does Child has parents or relatives ?</h3>
+										</div>
+									</div>
+											
+									<div class="row">
+										<div class="col-md-12 col-sm-12">
+											<label class="form-label">Does Child has</label>
+										</div>
+									</div>
+
+									<div class="row mt-3">
+										<div class="col-4">
+											<label for="customCheck01">Mother</label>
+											
+											<div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+												<input checked type="checkbox" id="mothercheck" class="custom-control-input">
+												<label class="custom-control-label" for="subscribe4">Yes</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<label for="customCheck01">Father</label>
+											
+											<div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+												<input type="checkbox" id="subscribe5" class="custom-control-input">
+												<label class="custom-control-label" for="subscribe5">Yes</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<label for="customCheck01">Relative</label>
+											
+											<div class="custom-control custom-checkbox-toggle custom-control-inline mr-1">
+												<input type="checkbox" id="subscribe6" class="custom-control-input">
+												<label class="custom-control-label" for="subscribe6">Yes</label>
+											</div>
+										</div>
+									</div>
+									<div id="motherPortion" class="row mt-3">
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">Mother's Details</label>
+											<input class="form-control" placeholder="Mother Name"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<input class="form-control" placeholder="Date of Birth"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<input class="form-control" placeholder="Contact Number"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Nationality</option>
+												<option value="1">UAE</option>
+												<option value="2">Oman</option>
+												<option value="3">ABC</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Maritial Status</option>
+												<option value="1">Divorces</option>
+												<option value="2">MArried</option>
+												<option value="3">ABC</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<input class="form-control" placeholder="Identification Number">
+										</div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<div class="custom-file">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+									</div>
+									
+									<div id="fatherPortion" class="row mt-3" style="visibility:visible">
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">Father's Details</label>
+											<input class="form-control" placeholder="Father's Name"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<input class="form-control" placeholder="Date of Birth"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<input class="form-control" placeholder="Contact Number"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Nationality</option>
+												<option value="1">UAE</option>
+												<option value="2">Oman</option>
+												<option value="3">ABC</option>
+											</select>
+										</div>
+										<div class="col-12"> </div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Maritial Status</option>
+												<option value="1">Divorces</option>
+												<option value="2">MArried</option>
+												<option value="3">ABC</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<input class="form-control" placeholder="Identification Number">
+										</div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<div class="custom-file">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+									</div>
+									
+									<div id="relativePortion" class="row mt-3" style="visibility:visible">
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">Relative's Details</label>
+											<input class="form-control" placeholder="Relative's Name"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<input class="form-control" placeholder="Date of Birth"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<input class="form-control" placeholder="Contact Number"> </div>
+										<div class="col-md-3 col-sm-12">
+											<label class="form-label">&nbsp;</label>
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Nationality</option>
+												<option value="1">UAE</option>
+												<option value="2">Oman</option>
+												<option value="3">ABC</option>
+											</select>
+										</div>
+										<div class="col-12"></div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<select id="custom-select" class="form-control custom-select">
+												<option selected>Select Maritial Status</option>
+												<option value="1">Divorces</option>
+												<option value="2">MArried</option>
+												<option value="3">ABC</option>
+											</select>
+										</div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<input class="form-control" placeholder="Identification Number">
+										</div>
+										<div class="col-md-4 col-sm-12 mt-3">
+											<div class="custom-file">
+												<label for="file" class="custom-file-label">Choose file</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="step-5" class="tab-pane" role="tabpanel" aria-labelledby="step-5"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="js-fix-footer footer border-top-2">
+				<div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px!important;padding-bottom:15px!important">
+					<p class="measure-lead-max text-muted mb-0 small">&copy;  Copyrights 2022 Abu Dhabi Government. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+		<div class="mdk-drawer js-mdk-drawer" id="default-drawer" data-align="start" data-position="left" data-domfactory-upgraded="mdk-drawer" data-persistent="" data-opened="">
+			<div class="mdk-drawer__scrim"></div>
+			<div class="mdk-drawer__content">
+				<div class="sidebar sidebar-left ps ps--active-y" data-perfect-scrollbar=""><a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right" data-boundary="window" data-original-title=""><span class="material-icons">sync_alt</span></a>
+					<a href="index.html" class="sidebar-brand"><img class="sidebar-brand-icon" src="assets/images/logo/accent-teal-100@2x.png" alt="Huma"></a>
+					<div class="sidebar-heading">Overview</div>
+					<ul class="sidebar-menu">
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="index.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">insert_chart_outlined</span> <span class="sidebar-menu-text">Dashboard</span></a></li>
+						<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Application Catalog <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+							<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu">
+								<li class="sidebar-menu-item active"><a class="sidebar-menu-button" href="Childcare.html"><span class="sidebar-menu-text">Child Care</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Correspondence</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Budget and Planning</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Facility Maintenance</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Manpower</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Customer Support</span></a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="#"><span class="sidebar-menu-text">Performance Management</span></a></li>
+							</ul>
+						</li>
+						<li>
+							<div class="sidebar-heading mt-3">Child Care Management</div>
+							<ul class="sidebar-menu">
+								<li class="sidebar-menu-item activemenu"><a class="sidebar-menu-button activemenu" href="Childcare.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">tune</span> Dashboard</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Childprofile.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people</span> Children's Profile</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="MyTasks.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">message</span> My Tasks</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Registerachild.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Registering a Case <span class="ml-auto Roundd">1</span></a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Identity ManagementNew.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Identity Management <span class="ml-auto Roundd">2</span></a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span> Development Plan</a></li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu2"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Register a child <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu2">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Registerachild.html"><span class="sidebar-menu-text">Register</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Reviewachild.html"><span class="sidebar-menu-text">Review</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ApproveAChild.html"><span class="sidebar-menu-text">Approve</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReceiveAChild.html"><span class="sidebar-menu-text">Receive & Allocate</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu4"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Dev.Plan - Admin <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu4">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateDevSection.html"><span class="sidebar-menu-text">Add Development Section</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateAgeGroup.html"><span class="sidebar-menu-text">Add Age Group</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateDevelopmentPlan.html"><span class="sidebar-menu-text">Create Plan Template</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu3"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Dev.Plan - User <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu3">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateDevelopmentPlan.html"><span class="sidebar-menu-text">Initiate Development Plan</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ExecuteDevelopmentPlan.html"><span class="sidebar-menu-text">Execute Action Plan</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewActionPlanResults.html"><span class="sidebar-menu-text">Review Action Plan</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu6"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Child Identity <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu6">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="InitiateIdentity.html"><span class="sidebar-menu-text">Initiate Identity Process</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AReviewachild.html"><span class="sidebar-menu-text">Committee Review</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="AchildUpdate.html"><span class="sidebar-menu-text">Update/Manage Identity</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu7"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Foster Registration <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu7">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="RegisterFoster.html"><span class="sidebar-menu-text">Register</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewFoster.html"><span class="sidebar-menu-text">Review (Head)</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReviewFosterAssesment.html"><span class="sidebar-menu-text">Review (Assesment Team)</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu8"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Register A Case <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu8">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateCaseType.html"><span class="sidebar-menu-text">Admin - Add a Case</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="CreateCaseRisk.html"><span class="sidebar-menu-text">Admin - Add a Risk</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="RegisterACase.html"><span class="sidebar-menu-text">Register A Case</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="UpdateACase.html"><span class="sidebar-menu-text">Update A Case</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ExecuteCaseAction.html"><span class="sidebar-menu-text">Execute Action Plan</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu9"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Register A House <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu9">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminappliances.html"><span class="sidebar-menu-text">Admin - Appliances</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminservviceprovider.html"><span class="sidebar-menu-text">Admin - Service Provider</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminsupportservice.html"><span class="sidebar-menu-text">Admin - Support Services</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="registerahouse.html"><span class="sidebar-menu-text">Register a House</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu10"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Housing From Govt <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu10">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="facilitatinghouse.html"><span class="sidebar-menu-text">Facilitating House</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu11"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Field Visit <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu11">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="fieldvisit.html"><span class="sidebar-menu-text">Field Visit</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu13"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Child/Youth Letter <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
+									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu13">
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="addminaddedit.html"><span class="sidebar-menu-text">Admin Add/Edit Organisation</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="adminaddeditletter.html"><span class="sidebar-menu-text">Admin Add/Edit Letter Issues To Settings</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="initiaterequest.html"><span class="sidebar-menu-text">Initiate Request</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="reviewCA.html"><span class="sidebar-menu-text">Review</span></a></li>
+									</ul>
+								</li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Educational Management</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="components_menu"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Psychological Management</a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span> Talent Management</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="sidebar-heading">Bussiness Support services</div><a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a> <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a> <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a> <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+					<div class="ps__rail-x" style="left:0;bottom:0">
+						<div class="ps__thumb-x" tabindex="0" style="left:0;width:0"></div>
+					</div>
+					<div class="ps__rail-y" style="top:0;height:568px;right:0">
+						<div class="ps__thumb-y" tabindex="0" style="top:0;height:520px"></div>
+					</div>
+					<div class="ps__rail-x" style="left:0;bottom:0">
+						<div class="ps__thumb-x" tabindex="0" style="left:0;width:0"></div>
+					</div>
+					<div class="ps__rail-y" style="top:0;height:625px;right:0">
+						<div class="ps__thumb-y" tabindex="0" style="top:0;height:577px"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="app-settings">
+		<app-settings layout-active="app" :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+	</div>
+	<script src="assets/vendor/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<script src="assets/vendor/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap.min.js"></script>
+	<script src="assets/vendor/perfect-scrollbar.min.js"></script>
+	<script src="assets/vendor/dom-factory.js"></script>
+	<script src="assets/vendor/material-design-kit.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/hljs.js"></script>
+	<script src="assets/js/settings.js"></script>
+	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<script src="assets/js/flatpickr.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker.js"></script>
+	<script src="assets/js/daterangepicker.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/moment-range.js"></script>
+	<script src="assets/vendor/Chart.min.js"></script>
+	<script src="assets/js/chartjs.js"></script>
+	<script src="assets/js/page.analytics-dashboard.js"></script>
+	<script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+	<script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+	<script src="assets/js/vector-maps.js"></script>
+	<script src="assets/vendor/list.min.js"></script>
+	<script src="assets/js/list.js"></script>
+	<script src="assets/js/toggle-check-all.js"></script>
+	<script src="assets/js/check-selected-row.js"></script>
+	<script src="assets/vendor/jquery.min.js"></script>
+	<script src="assets/vendor/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap.min.js"></script>
+	<script src="assets/vendor/perfect-scrollbar.min.js"></script>
+	<script src="assets/vendor/dom-factory.js"></script>
+	<script src="assets/vendor/material-design-kit.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/hljs.js"></script>
+	<script src="assets/vendor/jquery.bootstrap-touchspin.js"></script>
+	<script src="assets/js/touchspin.js"></script>
+	<script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+	<script src="assets/js/flatpickr.js"></script>
+	<script src="assets/vendor/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker.js"></script>
+	<script src="assets/js/daterangepicker.js"></script>
+	<script src="assets/vendor/jquery.mask.min.js"></script>
+	<script src="assets/vendor/quill.min.js"></script>
+	<script src="assets/js/quill.js"></script>
+	<script src="assets/vendor/select2/select2.min.js"></script>
+	<script src="assets/js/select2.js"></script>
+	<script src="assets/js/app-settings.js"></script>
+	<script type="text/javascript" src="assets/vendor/smartwizard/js/jquery.smartWizard.min.js"></script>
+
+	<script type="text/javascript">
+		function nextstep() {
+			stepid += 1, $("#innerstep" + stepid.toString()).show(), 2 == stepid && $("#tabcontentdiv").height(610), 3 == stepid && $("#tabcontentdiv").height(810)
+		}
+		var stepid = 1;
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#subscribe5").attr("checked") && alert("ssss"), $('input[type="checkbox"]#subscribe5').click(function() {
+				1 == $(this).prop("checked") ? ($("#fatherPortion").css({
+					visibility: "visible"
+				}), $("#tabcontentdiv").addClass("myclasstwo")) : 0 == $(this).prop("checked") && ($("#fatherPortion").css({
+					visibility: "hidden"
+				}), $("#tabcontentdiv").removeClass("myclasstwo"))
+			}), $("#subscribe6").attr("checked") && alert("ssss"), $('input[type="checkbox"]#subscribe6').click(function() {
+				1 == $(this).prop("checked") ? ($("#relativePortion").css({
+					visibility: "visible"
+				}), $("#tabcontentdiv").addClass("myclasstwo")) : 0 == $(this).prop("checked") && ($("#relativePortion").css({
+					visibility: "hidden"
+				}), $("#tabcontentdiv").removeClass("myclasstwo"))
+			}), $("#custom-select6").on("change", function() {
+				"3" == $(this).val() ? ($("#othertext").css({
+					display: "block"
+				}), $("#tabcontentdiv").addClass("myclass")) : ($("#othertext").css({
+					display: "none"
+				}), $("#tabcontentdiv").removeClass("myclass"))
+			});
+			$("<button></button>").text("Finish").addClass("btn btn-info").on("click", function() {
+				alert("Finish Clicked")
+			}), $("<button></button>").text("Cancel").addClass("btn btn-danger").on("click", function() {
+				$("#smartwizard").smartWizard("reset")
+			});
+			$("#smartwizard").on("showStep", function(t, s, i, e, n) {
+				$("#prev-btn").removeClass("disabled"), $("#next-btn").removeClass("disabled"), "first" === n ? $("#prev-btn").addClass("disabled") : "last" === n ? $("#next-btn").addClass("disabled") : ($("#prev-btn").removeClass("disabled"), $("#next-btn").removeClass("disabled"))
+			}), $("#smartwizard").smartWizard({
+				selected: 0,
+				theme: "arrows",
+				transition: {
+					animation: "slide-horizontal"
+				},
+				toolbarSettings: {
+					toolbarPosition: "both"
+				}
+			}), $("#reset-btn").on("click", function() {
+				return $("#smartwizard").smartWizard("reset"), !0
+			}), $("#prev-btn").on("click", function() {
+				return $("#smartwizard").smartWizard("prev"), !0
+			}), $("#next-btn").on("click", function() {
+				return $("#smartwizard").smartWizard("next"), !0
+			}), $("#got_to_step").on("change", function() {
+				var t = $(this).val() - 1;
+				return $("#smartwizard").smartWizard("goToStep", t), !0
+			}), $("#dark_mode").on("click", function() {
+				var t = {
+					darkMode: $(this).prop("checked")
+				};
+				return $("#smartwizard").smartWizard("setOptions", t), !0
+			}), $("#is_justified").on("click", function() {
+				var t = {
+					justified: $(this).prop("checked")
+				};
+				return $("#smartwizard").smartWizard("setOptions", t), !0
+			}), $("#animation").on("change", function() {
+				var t = {
+					transition: {
+						animation: $(this).val()
+					}
+				};
+				return $("#smartwizard").smartWizard("setOptions", t), !0
+			}), $("#theme_selector").on("change", function() {
+				var t = {
+					theme: $(this).val()
+				};
+				return $("#smartwizard").smartWizard("setOptions", t), !0
+			})
+		});
+	</script>
+</body>
+
+</html>

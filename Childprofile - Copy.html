@@ -1,0 +1,3216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:43:37 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+
+    <style>
+        span.badge.badge-notifications.badge-accent {
+            top: -10px;
+            left: 40px;
+        }
+        /* Switch 1 Specific Styles Start */
+        
+        .box_1 {
+            background: #eee;
+        }
+        
+        input[type="checkbox"].switch_1 {
+            font-size: 14px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 3.5em;
+            height: 1.5em;
+            background: #ddd;
+            border-radius: 3em;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        
+        input[type="checkbox"].switch_1:checked {
+            background: #0ebeff;
+        }
+        
+        input[type="checkbox"].switch_1:after {
+            position: absolute;
+            content: "";
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            background: #fff;
+            -webkit-box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+            box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+            -webkit-transform: scale(.7);
+            transform: scale(.7);
+            left: 0;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+        
+        input[type="checkbox"].switch_1:checked:after {
+            left: calc(100% - 1.5em);
+        }
+        /* Switch 1 Specific Style End */
+        /* Switch 2 Specific Style Start */
+        
+        svg.checkbox {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        svg.checkbox .is_checked {
+            opacity: 0;
+            fill: yellow;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: translateX(200%) rotate(45deg);
+            transform: translateX(200%) rotate(45deg);
+            -webkit-transition: all .35s;
+            transition: all .35s;
+        }
+        
+        svg.checkbox .is_unchecked {
+            opacity: 1;
+            fill: #fff;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+            -webkit-transition: all .35s;
+            transition: all .35s;
+        }
+        /* Switch 4 Specific Style End */
+        
+        .bootstrap-select>.dropdown-toggle.bs-placeholder {
+            background-color: transparent!important;
+            border: 1px solid;
+        }
+        
+        .bootstrap-select .dropdown-toggle:focus,
+        .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+            outline: thin dotted #5cb85c!important;
+            outline: 0px auto -webkit-focus-ring-color!important;
+            outline-offset: 0px!important;
+        }
+        
+        .bdate {
+            position: absolute;
+            display: flex;
+        }
+    </style>
+
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- CARD CHILD -->
+    <link type="text/css" href="assets/css/cardChildGrid.css" rel="stylesheet">
+
+
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" href="assets/vendor/spinkit.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/vendor/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+
+    <!-- Tabs Filter CSS -->
+    <link type="text/css" href="assets/css/tabsfilter.css" rel="stylesheet">
+
+
+    <!-- Dark Mode CSS (optional) -->
+    <link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
+
+    <!-- Dark Mode CSS (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" integrity="sha512-ARJR74swou2y0Q2V9k0GbzQ/5vJ2RBSoCWokg4zkfM29Fb3vZEQyv0iWBMW/yvKgyHSR/7D64pFMmU8nYmbRkg==" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <!-- Vector Maps -->
+    <link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <!-- DateRangePicker -->
+    <link type="text/css" href="assets/vendor/daterangepicker.css" rel="stylesheet">
+
+    <!-- card-Check Box -->
+    <link type="text/css" href="assets/css/card-checkBox.css" rel="stylesheet">
+
+    <Style>
+        .form-label {
+            color: #272c33;
+            text-transform: uppercase;
+            font-size: .8125rem;
+            font-family: Exo\ 2, Helvetica Neue, Arial, sans-serif !important;
+            font-weight: 200;
+            letter-spacing: 2px;
+        }
+        
+        .clearfix {
+            content: '';
+            display: table;
+            clear: both;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 3em 1em;
+        }
+        
+        .download-cards {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .download-card {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 2em);
+            background: #fbfbfb;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 2em;
+            box-shadow: 0 1px 25px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid #d2d2d2;
+            border-left: 1px solid #dadada;
+            margin: 0 1em 2em 1em;
+        }
+        
+        @media (min-width: 700px) {
+            .download-cards[data-view='grid-view'] .download-card {
+                float: left;
+                width: calc(50% - 2em);
+            }
+            .download-cards[data-view='grid-view'] .download-card:nth-child(3) {
+                clear: both;
+            }
+            .download-cards[data-view='grid-view'] .download-card:nth-child(4) {
+                clear: initial;
+            }
+        }
+        
+        @media (min-width: 1000px) {
+            .download-cards[data-view='grid-view'] .download-card {
+                width: calc((100% / 2) - 2em);
+            }
+            .download-cards[data-view='grid-view'] .download-card:nth-child(3) {
+                clear: initial;
+            }
+            .download-cards[data-view='grid-view'] .download-card:nth-child(4) {
+                clear: both;
+            }
+        }
+        
+        .download-card__icon-box {
+            display: flex;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 2em;
+            text-align: center;
+        }
+        
+        @media (min-width: 700px) {
+            .download-card__icon-box {
+                justify-content: center;
+            }
+        }
+        
+        .download-card__icon-box img {
+            width: 100%;
+            max-width: 600px;
+            max-height: 185px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 700px) {
+            .download-cards[data-view='list-view'] .download-card__icon-box {
+                width: 200px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-right: 1px solid #e6e6e6;
+            }
+        }
+        
+        .download-card__content-box {
+            padding: 1em 1em 1em;
+            flex: 1;
+        }
+        
+        @media (min-width: 700px) {
+            .download-cards[data-view="list-view"] .download-card__content-box {
+                padding-left: calc(200px + 2em);
+            }
+        }
+        
+        .download-card__content-box__catagory {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 10px;
+            margin: 0 0 2em;
+        }
+        
+        .download-card__content-box__catagory::before {
+            content: '| ';
+            color: #ff4500;
+        }
+        
+        .download-card__content-box__title {
+            line-height: 1;
+            margin: 0 0 0.5em;
+            font-size: 18px;
+        }
+        
+        .download-card__content-box__description {
+            line-height: 1;
+            padding: 0;
+            margin: 0 0 1em;
+            clear: both;
+            color: #929292;
+            font-size: 11px;
+        }
+        
+        .download-card__content-box .button {
+            position: absolute;
+            bottom: 2em;
+            margin: 0;
+            color: #ff4500;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        .dc-view-switcher {
+            display: none;
+            margin: 1em;
+            text-align: right;
+        }
+        
+        @media (min-width: 700px) {
+            .dc-view-switcher {
+                display: block;
+            }
+        }
+        
+        .dc-view-switcher>button {
+            font-family: 'fontAwesome';
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            vertical-align: middle;
+            color: gray;
+            opacity: 0.3;
+            outline: none;
+            transition: opacity 0.4s ease;
+        }
+        
+        .dc-view-switcher>button[data-trigger="list-view"]::before {
+            font-family: Material Icons;
+            content: "\e241" !important;
+            display: flex;
+            align-items: center;
+            font-size: inherit;
+            color: inherit;
+        }
+        
+        .dc-view-switcher>button[data-trigger="grid-view"]::before {
+            font-family: Material Icons;
+            content: "\e5c3" !important;
+            display: flex;
+            align-items: center;
+            font-size: inherit;
+            color: inherit;
+        }
+        
+        .dc-view-switcher>button[data-trigger].active {
+            opacity: 1;
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.5rem + 2px);
+        }
+        
+        .navbar-nav .nav-link {
+            font-size: 0.9rem;
+        }
+        
+        .vl {
+            border-left: 1px solid #e8e8e8;
+            height: 30px;
+        }
+        
+        .sidebar-brand-icon {
+            display: flex;
+            width: 70%;
+            height: auto;
+        }
+        
+        [dir] .sidebar-light .open>.sidebar-menu-button {
+            background: #00a650;
+        }
+        
+        .sidebar-light .open>.sidebar-menu-button,
+        .sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
+            color: #ffffff;
+        }
+        
+        .sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
+            color: #ffffff;
+        }
+        
+        .leftMenu {
+            margin: 5px 10px;
+            border-radius: 6px !important;
+            background: #a39161 !important;
+            color: white;
+            border-color: #a39161 !important;
+            padding: 5px 0px !important;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .sidebar-heading {
+            line-height: 1.5rem;
+            font-size: .775rem;
+        }
+        
+        .sidebar-heading {
+            font-weight: 600;
+            font-family: Arial, sans-serif !important;
+            text-transform: uppercase;
+            letter-spacing: 0px !important;
+        }
+        
+        [dir] .card-header {
+            padding: 0.3rem 1rem;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
+        
+        .activemenu {
+            background: #00a650;
+            color: white !important;
+        }
+        
+        div#app-settings {
+            display: none;
+        }
+        
+        .active>.sidebar-menu-button .sidebar-menu-text:after {
+            display: none;
+        }
+        
+        input[type=range] {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        input[type=range],
+        .range {
+            border-radius: 0.75em;
+            overflow: hidden;
+            margin-bottom: 1.5em;
+        }
+        
+        input[type=range] {
+            background-color: #f5f7fa;
+            box-shadow: 0.3em 0.3em 0.4em var(--bs2) inset, -0.3em -0.3em 0.4em var(--bs1) inset;
+            display: block;
+            padding: 0 0.1em;
+            width: 100%;
+            height: 1.5em;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        input[type=range]:focus {
+            outline: transparent;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            background-color: #255ff4;
+            border: 0;
+            border-radius: 50%;
+            box-shadow: -0.3em -0.3em 0.5em #0937aa inset, 0 -0.2em 0.2em 0 #0004, 0.3em 0.9em 0.8em #0007;
+            cursor: pointer;
+            position: relative;
+            width: 1.3em;
+            height: 1.3em;
+            transition: all var(--transDur) linear;
+            z-index: 1;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        input[type=range]:focus::-webkit-slider-thumb {
+            background-color: #5583f6;
+            box-shadow: -0.3em -0.3em 0.5em #0b46da inset, 0 -0.2em 0.2em 0 #0004, 0.3em 0.9em 0.8em #0007;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            background-color: #255ff4;
+            border: 0;
+            border-radius: 50%;
+            box-shadow: -0.3em -0.3em 0.5em #0937aa inset, 0 -0.2em 0.2em 0 #0004, 0.3em 0.9em 0.8em #0007;
+            cursor: pointer;
+            position: relative;
+            width: 1.3em;
+            height: 1.3em;
+            transform: translateZ(1px);
+            transition: all var(--transDur) linear;
+            z-index: 1;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        input[type=range]:focus::-moz-range-thumb {
+            background-color: #5583f6;
+            box-shadow: -0.3em -0.3em 0.5em #0b46da inset, 0 -0.2em 0.2em 0 #0004, 0.3em 0.9em 0.8em #0007;
+        }
+        
+        input[type=range]::-moz-focus-outer {
+            border: 0;
+        }
+        
+        .range {
+            position: relative;
+            height: 1.5em;
+        }
+        
+        .range__ticks {
+            justify-content: space-evenly;
+            align-items: center;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            display: flex;
+            left: 0em;
+            width: calc(100% - 1.5em);
+            height: 100%;
+        }
+        
+        .range__tick,
+        .range__tick-text {
+            display: inline-block;
+        }
+        
+        .range__tick {
+            color: var(--tick);
+            font-size: 0.5em;
+            text-align: center;
+            width: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        .range__tick-text {
+            transform: translateX(-50%);
+        }
+        
+        [slider] {
+            position: relative;
+            height: 14px;
+            border-radius: 10px;
+            text-align: left;
+            margin: 0px 0 10px 0;
+        }
+        
+        [slider]>div {
+            position: absolute;
+            left: 13px;
+            right: 15px;
+            height: 14px;
+        }
+        
+        [slider]>div>[inverse-left] {
+            position: absolute;
+            left: 0;
+            height: 14px;
+            border-radius: 10px;
+            background-color: #CCC;
+            margin: 0 7px;
+        }
+        
+        [slider]>div>[inverse-right] {
+            position: absolute;
+            right: 0;
+            height: 14px;
+            border-radius: 10px;
+            background-color: #CCC;
+            margin: 0 7px;
+        }
+        
+        [slider]>div>[range] {
+            position: absolute;
+            left: 0;
+            height: 14px;
+            border-radius: 14px;
+            background-color: #00a650;
+        }
+        
+        [slider]>div>[thumb] {
+            position: absolute;
+            top: -7px;
+            z-index: 2;
+            height: 28px;
+            width: 28px;
+            text-align: left;
+            margin-left: -11px;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+            background-color: #FFF;
+            border-radius: 50%;
+            outline: none;
+        }
+        
+        [slider]>input[type=range] {
+            position: absolute;
+            pointer-events: none;
+            -webkit-appearance: none;
+            z-index: 3;
+            height: 14px;
+            top: -2px;
+            width: 100%;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+            filter: alpha(opacity=0);
+            -moz-opacity: 0;
+            -khtml-opacity: 0;
+            opacity: 0;
+        }
+        
+        div[slider]>input[type=range]::-ms-track {
+            -webkit-appearance: none;
+            background: transparent;
+            color: transparent;
+        }
+        
+        div[slider]>input[type=range]::-moz-range-track {
+            -moz-appearance: none;
+            background: transparent;
+            color: transparent;
+        }
+        
+        div[slider]>input[type=range]:focus::-webkit-slider-runnable-track {
+            background: transparent;
+            border: transparent;
+        }
+        
+        div[slider]>input[type=range]:focus {
+            outline: none;
+        }
+        
+        div[slider]>input[type=range]::-ms-thumb {
+            pointer-events: all;
+            width: 28px;
+            height: 28px;
+            border-radius: 0px;
+            border: 0 none;
+            background: red;
+        }
+        
+        div[slider]>input[type=range]::-moz-range-thumb {
+            pointer-events: all;
+            width: 28px;
+            height: 28px;
+            border-radius: 0px;
+            border: 0 none;
+            background: red;
+        }
+        
+        div[slider]>input[type=range]::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 28px;
+            height: 28px;
+            border-radius: 0px;
+            border: 0 none;
+            background: red;
+            -webkit-appearance: none;
+        }
+        
+        div[slider]>input[type=range]::-ms-fill-lower {
+            background: transparent;
+            border: 0 none;
+        }
+        
+        div[slider]>input[type=range]::-ms-fill-upper {
+            background: transparent;
+            border: 0 none;
+        }
+        
+        div[slider]>input[type=range]::-ms-tooltip {
+            display: none;
+        }
+        
+        [slider]>div>[sign] {
+            opacity: 0;
+            position: absolute;
+            margin-left: -11px;
+            top: -39px;
+            z-index: 3;
+            background-color: #1ABC9C;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 28px;
+            -webkit-border-radius: 28px;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        [slider]>div>[sign]:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            border-radius: 16px;
+            top: 19px;
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            border-top-width: 16px;
+            border-top-style: solid;
+            border-top-color: #1ABC9C;
+        }
+        
+        [slider]>div>[sign]>span {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 28px;
+        }
+        
+        [slider]:hover>div>[sign] {
+            opacity: 1;
+        }
+        
+        ul.a {
+            list-style-type: disclosure-closed;
+            padding: 0px 20px;
+        }
+    </Style>
+</head>
+
+<body class="layout-app layout-sticky-subnav ">
+
+
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+            <div class="navbar navbar-expand navbar-shadow px-0  pl-lg-16pt navbar-light bg-body" id="default-navbar" data-primary>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">menu</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="index.html" class="navbar-brand mr-16pt d-lg-none">
+                    <img class="navbar-brand-icon mr-0 mr-lg-8pt" src="./assets/images/Logo.svg" width="32" alt="Huma">
+
+                </a>
+
+                <!-- <button class="btn navbar-btn mr-16pt" data-toggle="modal" data-target="#apps">Apps <i class="material-icons">arrow_drop_down</i></button> -->
+
+                <form class="search-form navbar-search d-none d-md-flex " style="    width: 20%; border-radius: 10px;" action="https://huma.demo.frontendmatter.com/index.html">
+
+                    <input type="text" class="form-control" placeholder="Search Everything ...">
+                    <button class="btn" type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+                </form>
+
+                <div class="flex"></div>
+
+                <div class="nav navbar-nav flex-nowrap d-none d-lg-flex mr-16pt" style="white-space: nowrap;">
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">EN</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Select language</strong></div>
+                            <a class="dropdown-item active" href="#">English</a>
+                            <a class="dropdown-item" href="#">عربي</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="vl mr-16pt"></div>
+                <div class="nav navbar-nav flex-nowrap d-flex ml-0 mr-16pt">
+                    <div class="nav-item mr-16pt dropdown dropdown-notifications">
+                        <button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown" data-dropdown-disable-document-scroll data-caret="false">
+                            <i class="material-icons">notifications</i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">3 minutes ago</small>
+
+                                            <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-accent">account_circle</i>
+                                                </span>
+                                        </span>
+                                        <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                        </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">5 hours ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-primary">group_add</i>
+                                                </span>
+                                        </span>
+                                        <span class="flex d-flex flex-column">
+                                                <strong class="text-black-100">Adrian. D</strong>
+                                                <span class="text-black-70">Wants to join your private group.</span>
+                                        </span>
+                                        </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center mb-1">
+                                            <small class="text-black-50">1 day ago</small>
+
+                                        </span>
+                                        <span class="d-flex">
+                                            <span class="avatar avatar-xs mr-2">
+                                                <span class="avatar-title rounded-circle bg-light">
+                                                    <i class="material-icons font-size-16pt text-warning">storage</i>
+                                                </span>
+                                        </span>
+                                        <span class="flex d-flex flex-column">
+
+                                                <span class="text-black-70">Your deploy was successful.</span>
+                                        </span>
+                                        </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vl mr-16pt" style="margin-top: 16px;"></div>
+                    <div class="nav-item dropdown d-none d-sm-flex">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+                            <img width="32" height="32" class="rounded-circle mr-8pt" src="./assets/images/people/50/guy-3.jpg" alt="account" />
+                            <span class="flex d-flex flex-column mr-8pt">
+                                <span class="navbar-text-100">Laza Bogdan</span>
+                            <small class="navbar-text-50">Administrator</small>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="edit-account.html">Edit Account</a>
+                            <a class="dropdown-item" href="login.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <!-- Notifications dropdown -->
+                    <!-- // END Notifications dropdown -->
+                    <!-- Notifications dropdown -->
+                    <!-- // END Notifications dropdown -->
+                </div>
+
+
+
+            </div>
+
+            <!-- // END Header -->
+
+
+
+
+
+
+            <div class="container-fluid page__container">
+                <div class="page-section">
+                    <div class="card ">
+
+
+                        <div class="col-lg-12 d-flex page-section">
+                            <div class="flex" style="max-width: 100%">
+
+                                <div class="">
+                                    <div class="form-group ml-3 mr-3 mt-3">
+
+                                        <div style="height:42px; border: 1px solid #aeaeae!important;" class="search-form search-form--dark input-group-lg">
+                                            <input type="search" class="form-control" placeholder="Search in List" id="searchSample01">
+                                            <button class="btn" type="button"><i class="material-icons" style="font-size: 24px!important;">search</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="mr-4 mb-2">
+                                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="advanced collapsed" style="color: #5cb85c;float: right;"> 
+                                            Advance Search With Filters 
+                                            <i class="fa "></i> 
+                                        </a>
+
+                                    <style>
+                                        [data-toggle="collapse"] .fa:before {
+                                            content: "\f107";
+                                        }
+                                        
+                                        [data-toggle="collapse"].collapsed .fa:before {
+                                            content: "\f105";
+                                        }
+                                    </style>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class=" card-body tab-content">
+                                            <ul class="nav ">
+                                                <li class="nav-item">
+                                                    <a style="font-size: 20px;" class="nav-link active" data-toggle="tab" href="#basic">Basic</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#location">Identity</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a style="font-size: 20px;" class="nav-link" data-toggle="tab" href="#case">Case</a>
+                                                </li>
+                                            </ul>
+                                            <div id="basic" class=" tabBody tab-pane active">
+                                                <form action="" class="mt-3 ml-3">
+                                                    <div class="form-row">
+
+                                                        <div class=" col-md-4 col-sm-12 ">
+
+                                                            <div class="form-group ">
+                                                                <label class="form-label">Name<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Name"></i></label>
+
+                                                                <input style="height: 36px;" type="text" class="form-control" id="childName">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12 ">
+
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Mother Name:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Mother Name"></i></label>
+                                                                <input style="height: 36px;" type="text" class="form-control" id="motherName">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Age:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Age"></i></label>
+                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Age">
+                                                                 
+                                                                    <option value="1">0-8</option>
+                                                                    <option value="2">8-16</option>
+                                                                    <option value="3">16-24</option>
+                                                                    <option value="3">24+</option> 
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+
+                                                            <div class="form-group ">
+
+
+
+                                                                <div class="row">
+                                                                    <div class="col-6">
+                                                                        <label class="form-label" for="exampleInputEmail1">DOB (from):<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Start Date"></i></label>
+                                                                        <input style="height: 36px; " type="date" class="form-control " id=""></div>
+                                                                    <div class="col-6">
+                                                                        <label class="form-label" for="exampleInputEmail1">DOB (to):<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter End Date"></i></label>
+                                                                        <input style="height: 36px; " type="date" class="form-control " id=""></div>
+
+                                                                </div>
+
+
+                                                            </div>
+
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Association:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Select associations"></i></label>
+                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Association">
+                                                                 
+                                                                    <option value="1">Has Mother</option>
+                                                                    <option value="1">Has Father</option>
+                                                                    <option value="1">Has Relatives</option>
+                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group ">
+                                                                <label class="form-label" for="exampleInputEmail1">Receiving Type:<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Select recieving type"></i></label>
+                                                                <select multiple data-size="7" data-live-search="true" class="selectpicker form-control" title="Receiving Type">
+                                                                 
+                                                                    <option value="1">Picked Up</option>
+                                                                    <option value="1">Dropped</option>
+                                                                    
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <div class="form-group">
+                                                                <div class="custom-control custom-checkbox">
+                                                                    <input class="custom-control-input" type="checkbox" value="" id="invalidCheck01" required="" checked="">
+                                                                    <label class="custom-control-label" for="invalidCheck01">
+                                                                        Child Identity
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        <!-- <div class=" col-md-4 col-sm-12">
+                                                            <label class="form-label">Age Group<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Enter Your Age"></i></label>
+                                                            <select id="custom-select7" class="custom-select">
+                                                            <option selected="">Select</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">Other</option>
+                                                         </select>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <label class="form-label">Location</label>
+                                                            <select id="custom-select7" class="custom-select">
+                                                               <option selected="">Select</option>
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">Other</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12">
+                                                            <label class="form-label">Supervisor</label>
+                                                            <select id="custom-select7" class="custom-select">
+                                                               <option selected="">Select</option>
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">Other</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12 mt-3">
+                                                            <label class="form-label">Age Group</label>
+                                                            <select id="custom-select7" class="custom-select">
+                                                               <option selected="">Select</option>
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">Other</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class=" col-md-4 col-sm-12 mt-3">
+                                                            <label class="form-label">Age Group</label>
+                                                            <select id="custom-select7" class="custom-select">
+                                                               <option selected="">Select</option>
+                                                               <option value="1">1</option>
+                                                               <option value="2">2</option>
+                                                               <option value="3">Other</option>
+                                                            </select>
+
+                                                        </div> -->
+
+
+                                                        <!-- <div class=" col-md-4 col-sm-12">
+                                                        <label class="form-label">Supe</label>
+                                                        <input style="height: 38px!important;" type="text" class="form-control" placeholder="Middle name" data-toggle="tooltip" data-html="true" title="" data-original-title="Enter Middle Name">
+
+                                                    </div> -->
+
+
+                                                    </div>
+                                                    <!-- <div class="row">
+                                                        <div class="col-12">
+                                                            <button type="search" class="btn btn-primary">Search</button>
+                                                            <button type="reset" class="btn btn-secondary">Clear</button>
+
+                                                        </div>
+
+                                                    </div> -->
+                                                </form>
+                                            </div>
+
+
+
+                                            <div id="location" class=" tabBody tab-pane  ">
+                                                <div class=" col-md-4 col-sm-12 ">
+
+                                                    <div class="form-group ">
+                                                        <label class="form-label">Committee Apprvoed<i class="far fa-question-circle text-secondary ml-1" data-toggle="tooltip" data-placement="right" data-original-title="Yes/No"></i></label>
+
+                                                        <input style="top: 4px;" type="checkbox" class="switch_1 ml-3 mt-2">
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <div class="row mt-3">
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox">
+                                                            <div class="option_inner google">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-file-medical"></i></div>
+                                                              <div class="name">Health Card</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox">
+                                                            <div class="option_inner facebook">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-file-contract"></i></div>
+                                                              <div class="name">Birth Certificate</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox" checked>
+                                                            <div class="option_inner twitter">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-passport"></i></div>
+                                                              <div class="name">Passport</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <label class="option_item">
+                                                            <input type="checkbox" class="checkbox">
+                                                            <div class="option_inner instagram">
+                                                              <div class="tickmark"></div>
+                                                              <div class="icon"><i style="font-size: 36px;" class="fas fa-id-card"></i></div>
+                                                              <div class="name">Emirates ID</div>
+                                                            </div>
+                                                          </label>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+
+
+                                            </div>
+                                            <div id="case" class=" tabBody tab-pane ">
+                                                c
+                                            </div>
+                                            <div class="row ml-2 mt-4">
+                                                <div class="col-12">
+                                                    <button type="search" class="btn btn-primary">Search</button>
+                                                    <button type="reset" class="btn btn-secondary">Clear</button>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="container" style="padding-top: 20px;">
+                        <div class="">
+                            <div class="row mb-32pt">
+                                <div class="col-lg-2">
+                                    <div class="dc-view-switcher d-none">
+                                        <button data-trigger="grid-view"></button>
+                                        <button data-trigger="list-view" class="active"></button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6"></div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <div class="flex" style="max-width: 100%">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination pagination-sm ">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">first_page</span>
+                                                        <span class="sr-only">First</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true" class="material-icons">chevron_left</span>
+                                                        <span class="sr-only">Prev</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#" aria-label="1">
+                                                        <span>1</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="2">
+                                                        <span>2</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="3">
+                                                        <span>3</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="4">
+                                                        <span>4</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span aria-hidden="true" class="material-icons">chevron_right</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="sr-only">Last</span>
+                                                        <span aria-hidden="true" class="material-icons">last_page</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+                                                <a href="childprofileV2.html">
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+</a>
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img  src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img class="greyimage" src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+                                                <a href="childprofileV2.html">
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+</a>
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img  class="greyimage" src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" class="greyimage" src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                           
+                                            <div class="col-4  align-self-center">
+                                                <a href="childprofileV2.html">
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+</a>
+                                            </div>
+
+                                       
+
+
+                                        </div>
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+                                                <a href="childprofileV2.html">
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+</a>
+                                            </div>
+
+
+
+
+                                        </div>
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar8.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10" style="margin-bottom: 4px!important;">
+                                            <a class="childName" href="childprofileV2.html">Alessa Robert</a>
+                                        </h5>
+                                        <p style="margin-bottom: 4px!important;" class="text-muted">Active | Male | Born</p>
+
+                                        <hr>
+                                        <p class="text-muted m-t-15" style="margin-bottom: 4px;">Registration : 87%</p>
+                                        <ul class="list-unstyled activity-leval">
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li class="active"></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+<small style="
+    font-size: 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #84c984;
+">Identity</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+       <span class="badge badge-notifications badge-accent" style="position: absolute;height: 22px;width: 22px;left: 42px;">2</span>                                             <img class="greyimage" src="https://img.icons8.com/fluency/50/000000/court.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Cases</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div><small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #5cb85c;
+">Allocation</small>
+
+                                            </div>
+
+                                        </div>
+										
+										<div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="https://img.icons8.com/color/48/000000/age-timeline.png" style="
+    width: 36px;
+">
+                                                </div>
+<small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Plan</small>
+
+                                            </div>
+                                            <div class="col-4 align-self-center" style="
+">
+
+                                                <div style="
+">
+                                                    <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-global-education-online-learning-kiranshastry-lineal-color-kiranshastry.png" style="
+    width: 35px;
+">
+                                                </div>
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Education</small>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+                                                <a href="childprofileV2.html">
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <img src="https://img.icons8.com/office/40/000000/visible--v1.png" style="
+    width: 34px;
+">
+    
+    
+    
+                                                </div>
+    
+    <small style="
+    font-size: 12px;
+    color: cadetblue;
+    font-family: inherit;
+    font-size: 12px;
+    color: #80c880;
+">Details</small>
+</a>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <hr style="margin-bottom: 2px; margin-top: 10px;">
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto" style="top:8px">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-md-3">
+                                <div class="card2 user-card2">
+                                    <div class="col align-self-center text-right bg-white">
+                                        <div class="btn-group mr-2  d-flex flex-row-reverse">
+                                            <a href="#" class="dropdown-toggle mt-2" data-caret="false" data-toggle="dropdown" style="position: inherit; top: 20px;margin-top: 0px!important;">
+                                                <span class="material-icons"> more_vert</span>
+                                            </a>
+
+
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Create Child Identity</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Register A Case</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Assign House</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card2-block">
+
+                                        <div class="user-image">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar8.png" class="img-radius" alt="User-Profile-Image">
+                                        </div>
+                                        <h5 class="f-w-600 m-t-25 m-b-10"> <a class="childName" href="childprofileV2.html">Alessa Robert</a> </h5>
+                                        <p class="text-muted">Active | Male | Born 23.05.1992</p>
+
+                                        <hr>
+                                        <div class="row  justify-content-center user-social-link">
+
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/id-card.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="ID Card">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <span class="badge badge-notifications badge-accent" style="position: absolute; height: 22px;">2</span>
+                                                    <img src="assets/images/case-study.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Cases">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/passport.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Passport">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3 justify-content-center user-social-link">
+                                            <div class="col-4 align-self-center" style="left: 5px;">
+
+                                                <div>
+                                                    <img src="assets/images/registration2.png" alt="" width="30px" data-toggle="tooltip" data-placement="top" data-original-title="Registration">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-4 align-self-center">
+
+                                                <div>
+                                                    <img class="greyimage" src="assets/images/home.png" alt="" width="25px" data-toggle="tooltip" data-placement="top" data-original-title="House">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-4  align-self-center">
+
+                                                <div class="d-flex  justify-content-center">
+
+                                                    <a style="text-decoration: none;/* text-align: center; */" class="rounded-circle d-flex align-items-center border align-items-center text-50" href="#"><i class="material-icons icon-16pt m-1">add</i></a>
+                                                </div>
+
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                        <hr>
+                                        <div class="row justify-content-center user-social-link">
+                                            <div class="col-auto">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar-group flex mr-8pt">
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rahim">
+                                                            <a href="#"><img src="assets/images/256_luke-porter-261779-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Talha">
+                                                            <a href="#"><img src="assets/images/256_michael-dam-258165-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                        <div class="avatar avatar-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Hasnain">
+                                                            <a href="#"><img src="assets/images/256_rsz_1andy-lee-642320-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle"></a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="js-fix-footer footer border-top-2">
+                <div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px !important; padding-bottom:15px !important;">
+                    <p class="measure-lead-max text-muted mb-0 small">
+                        &copy;  Copyrights 2022 Abu Dhabi Government. All Rights Reserved.</p>
+                </div>
+
+            </div>
+
+            <!-- // END drawer-layout__content -->
+        </div>
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer" data-align="start" data-position="left" data-domfactory-upgraded="mdk-drawer" data-persistent="" data-opened="">
+            <div class="mdk-drawer__scrim"></div>
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-left ps ps--active-y" data-perfect-scrollbar="">
+
+                    <!-- Navbar toggler -->
+                    <a href="index.html" class="navbar-toggler navbar-toggler-right navbar-toggler-custom d-flex align-items-center justify-content-center position-absolute right-0 top-0" data-toggle="tooltip" data-title="Switch to Compact Vertical Layout" data-placement="right"
+                        data-boundary="window" data-original-title="" title="">
+                        <span class="material-icons">sync_alt</span>
+                    </a>
+
+                    <a href="index.html" class="sidebar-brand ">
+                        <img class="sidebar-brand-icon" src="assets/images/logo/accent-teal-100@2x.png" alt="Huma">
+
+                    </a>
+                    <div class="sidebar-heading">Overview</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button " href="index.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">insert_chart_outlined</span>
+                                <span class="sidebar-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Application Catalog
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu">
+                                <li class="sidebar-menu-item active">
+                                    <a class="sidebar-menu-button" href="Childcare.html">
+                                        <span class="sidebar-menu-text">Child Care</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Correspondence</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Budget and Planning</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Facility Maintenance</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Mainpower</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Customer Support</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                        <span class="sidebar-menu-text">Performance Management</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+
+                            <div class="sidebar-heading mt-3">Child Care Management</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Childcare.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left ">tune</span> Dashboard
+
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-menu-item activemenu">
+                                    <a class="sidebar-menu-button activemenu" href="Childprofile.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">people</span> Children's Profile
+
+                                    </a>
+
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="MyTasks.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">message</span>
+                                     My Tasks
+                                       
+                                    </a>
+                                
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item ">
+                            <a class="sidebar-menu-button "
+                               data-toggle="collapse"
+                               href="#dashboards_menu2">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left  " >link</span>
+                                Register a child
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent"
+                                id="dashboards_menu2">
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button"
+                                       href="Registerachild.html">
+                                        <span class="sidebar-menu-text">Register </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="Reviewachild.html">
+                                        <span class="sidebar-menu-text">Review</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="ApproveAChild.html">
+                                        <span class="sidebar-menu-text">Approve</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="ReceiveAChild.html">
+                                        <span class="sidebar-menu-text">Receive & Allocate</span>
+                                    </a>
+                                </li>
+                               
+                               
+                            </ul>
+                        </li>
+                        <li class="sidebar-menu-item" style="display: none;">
+                            <a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu3">
+                                <h6 style="font-size: 16px;" class=" mt-3 material-icons sidebar-menu-icon sidebar-menu-icon--left">Child care services</h6>
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu3">
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Registerachild.html">
+                                         Registering a Case
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " href="Identity ManagementNew.html">
+                                        Identity Management
+                                    </a>
+
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                         Development Plan
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item ">
+                                    <a class="sidebar-menu-button " data-toggle="collapse" href="#dashboards_menu2">
+                                     House Registration
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu2">
+                                        <li class="sidebar-menu-item ">
+                                            <a class="sidebar-menu-button" href="House.html">
+                                                <span class="sidebar-menu-text">Register House</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="HouseAppliance.html">
+                                                <span class="sidebar-menu-text">Appliance Master</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="HouseService.html">
+                                                <span class="sidebar-menu-text">Service Providers</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                          Educational Management
+
+                                        </a>
+
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="components_menu">
+                                            Psychological Management
+
+                                        </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="#">
+                                           Talent Management
+
+                                        </a>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="sidebar-heading">Bussiness Support services</div>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Task Management</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Messages</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">Support Desk</a>
+                    <a href="#" class="chip chip-outline-secondary leftMenu">My KPIs</a>
+
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps__rail-y" style="top: 0px; height: 568px; right: 0px;">
+                        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 520px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer -->
+
+        <!-- // END drawer-layout -->
+
+
+
+
+
+
+
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="app" :layout-location="{
+      'compact': 'compact-index.html',
+      'mini': 'mini-index.html',
+      'app': 'index.html',
+      'boxed': 'boxed-index.html',
+      'sticky': 'sticky-index.html',
+      'default': 'fixed-index.html'
+    }" sidebar-type="light" sidebar-variant="bg-body"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="assets/vendor/material-design-kit.js"></script>
+
+        <!-- App JS -->
+        <script src="assets/js/app.js"></script>
+
+        <!-- Highlight.js -->
+        <script src="assets/js/hljs.js"></script>
+
+        <!-- Global Settings -->
+        <script src="assets/js/settings.js"></script>
+
+        <!-- Flatpickr -->
+        <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+        <script src="assets/js/flatpickr.js"></script>
+
+        <!-- Moment.js -->
+        <script src="assets/vendor/moment.min.js"></script>
+        <script src="assets/vendor/moment-range.js"></script>
+
+        <!-- Chart.js -->
+        <script src="assets/vendor/Chart.min.js"></script>
+        <script src="assets/js/chartjs.js"></script>
+
+        <!-- Chart.js Samples -->
+        <script src="assets/js/page.analytics-dashboard.js"></script>
+
+        <!-- Select 2 -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js" integrity="sha512-yDlE7vpGDP7o2eftkCiPZ+yuUyEcaBwoJoIhdXv71KZWugFqEphIS3PU60lEkFaz8RxaVsMpSvQxMBaKVwA5xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Vector Maps -->
+        <script src="assets/vendor/jqvmap/jquery.vmap.min.js"></script>
+        <script src="assets/vendor/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="assets/js/vector-maps.js"></script>
+
+        <!-- List.js -->
+        <script src="assets/vendor/list.min.js"></script>
+        <script src="assets/js/list.js"></script>
+
+        <!-- DateRangePicker -->
+
+        <script src="assets/vendor/daterangepicker.js"></script>
+        <script src="assets/js/daterangepicker.js"></script>
+
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+
+
+
+        <!-- jQuery UI Autocomplte -->
+
+        <script src="assets/vendor/jquery-ui/jquery-ui.js"></script>
+        <script src="assets/js/Jquery-autocomplete.js"></script>
+
+
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+
+
+
+
+        <script>
+            var downloadGrid = (function() {
+
+                "use strict";
+
+                var $cardContainer = $('.download-cards');
+                var $downloadCard = $('.download-card__content-box');
+                var $viewTrigger = $('button').attr('data', 'trigger');
+
+                function swapTriggerActiveClass(e) {
+                    $viewTrigger.removeClass('active');
+                    $(e.target).addClass('active');
+                }
+
+                function swapView(e) {
+                    var $currentView = $(e.target).attr('data-trigger');
+                    $cardContainer.attr('data-view', $currentView);
+                }
+
+                $(document).ready(function() {
+                    // Event Listener
+                    $viewTrigger.click(function(e) {
+                        swapTriggerActiveClass(e);
+                        swapView(e);
+                    });
+                });
+
+            })();
+        </script>
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                let range1 = new NeumorphicRange({
+                        element: "#range1",
+                        tick: 1
+                    }),
+                    range2 = new NeumorphicRange({
+                        element: "#range2",
+                        tick: 4
+                    }),
+                    range3 = new NeumorphicRange({
+                        element: "#range3",
+                        tick: 10
+                    });
+            });
+
+            class NeumorphicRange {
+                constructor(args) {
+                    this.el = document.querySelector(args.element);
+                    this.min = +this.el.min || 0;
+                    this.max = +this.el.max || 100;
+                    this.step = +this.el.step || 1;
+                    this.tick = args.tick || this.step;
+                    this.addTicks();
+                }
+                addTicks() {
+                    // div to contain everything
+                    let wrap = document.createElement("div");
+                    wrap.className = "range";
+                    this.el.parentElement.insertBefore(wrap, this.el);
+                    wrap.appendChild(this.el);
+
+                    // div to contain the ticks
+                    let ticks = document.createElement("div");
+                    ticks.className = "range__ticks";
+                    wrap.appendChild(ticks);
+
+                    // draw the ticks
+                    for (let t = this.min; t <= this.max; t += this.tick) {
+                        // zero-width span to allow proper space between each tick
+                        let tick = document.createElement("span");
+                        tick.className = "range__tick";
+                        ticks.appendChild(tick);
+
+                        let tickText = document.createElement("span");
+                        tickText.className = "range__tick-text";
+                        tick.appendChild(tickText);
+                        tickText.textContent = t;
+                    }
+                }
+
+
+
+
+            }
+        </script>
+
+</body>
+
+
+<!-- Mirrored from huma.demo.frontendmatter.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Sep 2021 18:44:15 GMT -->
+
+</html>

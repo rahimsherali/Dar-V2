@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-	<title>Dashboard</title>
+	<title>Childcare</title>
 	<meta name="robots" content="noindex">
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COswald:300,400,500,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+	<link href="assets/css/fonts.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
@@ -16,83 +16,7 @@
 	<link type="text/css" href="assets/css/app.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/dark-mode.css" rel="stylesheet">
 	<link type="text/css" href="assets/vendor/jqvmap/jqvmap.min.css" rel="stylesheet">
-	<style>
-	.form-control {
-		display: block;
-		width: 100%;
-		height: calc(1.5em + .5rem + 2px)
-	}
-	
-	.navbar-nav .nav-link {
-		font-size: .9rem
-	}
-	
-	.vl {
-		border-left: 1px solid #e8e8e8;
-		height: 30px
-	}
-	
-	.sidebar-brand-icon {
-		display: flex;
-		width: 70%;
-		height: auto
-	}
-	
-	[dir] .sidebar-light .open>.sidebar-menu-button {
-		background: #00a650
-	}
-	
-	.sidebar-light .open>.sidebar-menu-button,
-	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-toggle-icon {
-		color: #fff
-	}
-	
-	.sidebar-light .open>.sidebar-menu-button .sidebar-menu-icon {
-		color: #fff
-	}
-	
-	.leftMenu {
-		margin: 5px 10px;
-		border-radius: 6px!important;
-		background: #a39161!important;
-		color: #fff;
-		border-color: #a39161!important;
-		padding: 5px 0!important;
-		font-size: 15px;
-		font-weight: 500
-	}
-	
-	.sidebar-heading {
-		line-height: 1.5rem;
-		font-size: .775rem
-	}
-	
-	.sidebar-heading {
-		font-weight: 600;
-		font-family: Arial, sans-serif!important;
-		text-transform: uppercase;
-		letter-spacing: 0!important
-	}
-	
-	[dir] .card-header {
-		padding: .3rem 1rem;
-		margin-bottom: 0;
-		background-color: #fff
-	}
-	
-	.activemenu {
-		background: #00a650;
-		color: #fff!important
-	}
-	
-	div#app-settings {
-		display: none
-	}
-	
-	.active>.sidebar-menu-button .sidebar-menu-text:after {
-		display: none
-	}
-	</style>
+	<link type="text/css" href="assets/DataTables/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 
 <body class="layout-app layout-sticky-subnav">
@@ -132,195 +56,175 @@
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid page__container">
+			<div class="page__container">
 				<div class="page-section">
-					<div class="row card-group-row mb-lg-8pt">
+					<div class="row card-group-row">
 						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#9ecbe8">
+							<div class="card card-group-row__card case-card">
 								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Cases</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">230</h3></div>
+									<h3 class="case-heading">Cases</h3>
+									<h3 class="case-count mb-0">230</h3>
 								</div>
 							</div>
 						</div>
 						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#e8abaa">
+							<div class="card card-group-row__card house-card">
 								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Houses</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">43</h3></div>
+									<h3 class="house-heading">Houses</h3>
+									<h3 class="house-count mb-0">43</h3>
 								</div>
 							</div>
 						</div>
 						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#97e4ac">
+							<div class="card card-group-row__card children-card">
 								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Children</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">1,529</h3></div>
+									<h3 class="children-heading">Children</h3>
+									<h3 class="children-count mb-0">1,529</h3>
 								</div>
 							</div>
 						</div>
 						<div class="col-xl-3 col-md-6 card-group-row__col">
-							<div class="card card-group-row__card" style="background:#e3cca3">
+							<div class="card card-group-row__card appliance-card">
 								<div class="card-body flex-column">
-									<div style="float:left;display:contents">
-										<h3 style="text-align:start;font-size:25px;margin:0;color:#fff">Appliances</h3></div>
-									<div style="float:right;display:contents">
-										<h3 style="text-align:end;font-size:38px;margin:0;color:#fff;text-shadow:-26px 10px 3px rgb(255 255 255 / 18%)">12,352</h3></div>
+									<h3 class="appliance-heading">Appliances</h3>
+									<h3 class="appliance-count mb-0">12,352</h3>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="card mb-lg-32pt">
-						<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-							<div class="card-header">
-								<form class="form-inline">
-									<h3 style="margin-bottom:0;display:inline;width:auto">Special Requset For Finanical Support</h3>
-									<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-										<p style="margin-bottom:0;display:inline;width:auto;float:right;margin-top:.5rem;margin-left:15px;color:#8a9199"><u>View All</u></p>
-									</div>
-								</form>
-							</div>
-							<table class="table mb-0 thead-border-top-0 table-nowrap">
-								<thead>
-									<th>Date</th>
-									<th>Title</th>
-									<th>ID</th>
-									<th>Type</th>
-									<th>Status</th>
-									<th>Created BY</th>
-									<th>Action</th>
-								</thead>
-								<tbody class="list" id="staff">
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Azlal</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#91dea8">Aooroved</span></td>
-										<td>Atif</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#f16a4e">Cancelled</span></td>
-										<td>Noshad</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Rahim</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-								</tbody>
-							</table>
+
+					<div class="card mb-4">
+						<div class="card-header py-3">
+							<form class="form-inline">
+								<h3 class="mb-0 d-inline w-auto">Special Requset For Finanical Support</h3>
+								<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+									<a type="button" class="btn btn-success view-btn" href="#">View All</a>
+								</div>
+							</form>
 						</div>
-						<div class="card-footer p-8pt">
-							<ul class="pagination justify-content-start pagination-xsm m-0">
-								<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
-								<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
-									<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
-								</li>
-								<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
-							</ul>
+						<div class="card-body">
+							<div class="table-responsive-xl" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
+								<table class="table table-striped table-bordered" id="financial">
+									<thead>
+										<th>Date</th>
+										<th>Title</th>
+										<th>ID</th>
+										<th>Type</th>
+										<th>Status</th>
+										<th>Created BY</th>
+										<th>Action</th>
+									</thead>
+									<tbody class="list" id="staff">
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
+											<td>Azlal</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#91dea8">Aooroved</span></td>
+											<td>Atif</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#f16a4e">Cancelled</span></td>
+											<td>Noshad</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
+											<td>Rahim</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
-					<div class="card mb-lg-32pt">
-						<div class="table-responsive" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
-							<div class="card-header">
-								<form class="form-inline">
-									<h3 style="margin-bottom:0;display:inline;width:auto">Special Requset For House Registration</h3>
-									<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
-										<p style="margin-bottom:0;display:inline;width:auto;float:right;margin-top:.5rem;margin-left:15px;color:#8a9199"><u>View All</u></p>
-									</div>
-								</form>
-							</div>
-							<table class="table mb-0 thead-border-top-0 table-nowrap">
-								<thead>
-									<th>Date</th>
-									<th>Title</th>
-									<th>ID</th>
-									<th>Type</th>
-									<th>Status</th>
-									<th>Created BY</th>
-									<th>Action</th>
-								</thead>
-								<tbody class="list" id="staff">
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Azlal</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#91dea8">Aooroved</span></td>
-										<td>Atif</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#f16a4e">Cancelled</span></td>
-										<td>Noshad</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-									<tr>
-										<td>23-02-2021</td>
-										<td>Lorem ipsum dolor sit amet, consectetur</td>
-										<td>34321</td>
-										<td>INbound</td>
-										<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
-										<td>Rahim</td>
-										<td><a href="#"><u>View</u></a></td>
-									</tr>
-								</tbody>
-							</table>
+
+					<div class="card mb-5">
+						<div class="card-header py-3">
+							<form class="form-inline">
+								<h3 class="mb-0 d-inline w-auto">Special Requset For House Registration</h3>
+								<div class="ml-auto mb-2 mb-sm-0 custom-control-inline mr-0">
+									<a type="button" class="btn btn-success view-btn" href="#">View All</a>
+								</div>
+							</form>
 						</div>
-						<div class="card-footer p-8pt">
-							<ul class="pagination justify-content-start pagination-xsm m-0">
-								<li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true" class="material-icons">chevron_left</span> <span>Prev</span></a></li>
-								<li class="page-item dropdown"><a class="page-link dropdown-toggle" data-toggle="dropdown" href="#" aria-label="Page"><span>1</span></a>
-									<div class="dropdown-menu"><a href="#" class="dropdown-item active">1</a> <a href="#" class="dropdown-item">2</a> <a href="#" class="dropdown-item">3</a> <a href="#" class="dropdown-item">4</a> <a href="#" class="dropdown-item">5</a></div>
-								</li>
-								<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span>Next</span> <span aria-hidden="true" class="material-icons">chevron_right</span></a></li>
-							</ul>
+						<div class="card-body">
+							<div class="table-responsive-lg" data-toggle="lists" data-lists-sort-by="js-lists-values-employee-name" data-lists-values="[&quot;js-lists-values-employee-name&quot;, &quot;js-lists-values-employer-name&quot;, &quot;js-lists-values-projects&quot;, &quot;js-lists-values-activity&quot;, &quot;js-lists-values-earnings&quot;]">
+								<table class="table table-striped table-bordered" id="house">
+									<thead>
+										<th>Date</th>
+										<th>Title</th>
+										<th>ID</th>
+										<th>Type</th>
+										<th>Status</th>
+										<th>Created BY</th>
+										<th>Action</th>
+									</thead>
+									<tbody class="list" id="staff">
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
+											<td>Azlal</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#91dea8">Aooroved</span></td>
+											<td>Atif</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#f16a4e">Cancelled</span></td>
+											<td>Noshad</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+										<tr>
+											<td>23-02-2021</td>
+											<td>Lorem ipsum dolor sit amet, consectetur</td>
+											<td>34321</td>
+											<td>INbound</td>
+											<td><span class="badge badge-dark" style="padding:.25em 1em;text-align:center;border-radius:.25rem;font-size:13px;background:#decb98">Pending</span></td>
+											<td>Rahim</td>
+											<td><a href="#"><u>View</u></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="js-fix-footer footer border-top-2">
 				<div class="container-fluid page__container page-section d-flex flex-column" style="padding-top:15px!important;padding-bottom:15px!important">
-					<p class="measure-lead-max text-muted mb-0 small">Copyht &copy; Abu Dhabi Government. All rights reserved</p>
+					<p class="measure-lead-max text-muted mb-0 small">&copy;  Copyrights 2022 Abu Dhabi Government. All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>
@@ -348,12 +252,12 @@
 								<li class="sidebar-menu-item activemenu"><a class="sidebar-menu-button activemenu" href="Childcare.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left activemenu">tune</span> Dashboard</a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Childprofile.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people</span> Children's Profile</a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="MyTasks.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">message</span> My Tasks</a></li>
-								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Registrachild.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Registering a Case <span class="ml-auto Roundd">1</span></a></li>
+								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Registerachild.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Registering a Case <span class="ml-auto Roundd">1</span></a></li>
 								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="Identity ManagementNew.html"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">view_compact</span> Identity Management <span class="ml-auto Roundd">2</span></a></li>
 								<li class="sidebar-menu-item" style="display:none"><a class="sidebar-menu-button" href="#"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span> Development Plan</a></li>
 								<li class="sidebar-menu-item"><a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu2"><span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">link</span> Register a child <span class="ml-auto sidebar-menu-toggle-icon"></span></a>
 									<ul class="sidebar-submenu collapse sm-indent" id="dashboards_menu2">
-										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Registrachild.html"><span class="sidebar-menu-text">Register</span></a></li>
+										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Registerachild.html"><span class="sidebar-menu-text">Register</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="Reviewachild.html"><span class="sidebar-menu-text">Review</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ApproveAChild.html"><span class="sidebar-menu-text">Approve</span></a></li>
 										<li class="sidebar-menu-item"><a class="sidebar-menu-button" href="ReceiveAChild.html"><span class="sidebar-menu-text">Receive & Allocate</span></a></li>
@@ -581,6 +485,16 @@
 	<script src="assets/js/toggle-check-all.js"></script>
 	<script src="assets/js/check-selected-row.js"></script>
 	<script src="assets/js/app-settings.js"></script>
+	<script src="assets/DataTables/js/jquery.dataTables.min.js"></script>
+	<script>
+		$(document).ready( function () {
+			$('#financial').DataTable();
+		} );
+
+		$(document).ready( function () {
+			$('#house').DataTable();
+		} );
+	</script>
 </body>
 
 </html>
